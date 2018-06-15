@@ -224,9 +224,9 @@ static NSString *const DCNewFeaturesCellID = @"DCNewFeaturesCell";
     if (!_isDefaultPass) return; //如果没有打开直接返回
     if (_finShowImageArray.count < 2) return; //一张图或者没有直接返回
     _collectionView.bounces = (scrollView.contentOffset.x > (_finShowImageArray.count - 2) * [UIScreen mainScreen].bounds.size.width) ? YES : NO;
-    if (scrollView.contentOffset.x >  (_finShowImageArray.count - 1) * [UIScreen mainScreen].bounds.size.width) {
-        [self skipButtonClick];
-    }
+//    if (scrollView.contentOffset.x >  (_finShowImageArray.count - 1) * [UIScreen mainScreen].bounds.size.width) {
+//        [self skipButtonClick];
+//    }
 }
 
 
@@ -243,6 +243,16 @@ static NSString *const DCNewFeaturesCellID = @"DCNewFeaturesCell";
 #pragma mark - 跳过点击
 - (void)skipButtonClick
 {
+    
+    NSString *bundleVersionkey = @"CFBundleShortVersionString";
+    
+
+    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[bundleVersionkey];
+    
+ 
+        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:bundleVersionkey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
     !self.dismissBlock ? : self.dismissBlock();
 }
 

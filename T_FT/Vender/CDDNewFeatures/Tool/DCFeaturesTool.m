@@ -24,8 +24,8 @@
         return false;
         
     }else{
-        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:bundleVersionkey];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+//        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:bundleVersionkey];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
         
         return true;
     }
