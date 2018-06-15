@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TFTabBarController.h
 //  T_FT
 //
 //  Created by James on 2018/6/3.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TFTabBarController : UITabBarController
 
 @end
-
