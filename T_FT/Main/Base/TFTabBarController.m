@@ -7,6 +7,11 @@
 //
 
 #import "TFTabBarController.h"
+#import "TFNavigationController.h"
+#import "HomeViewController.h"
+#import "ActivityViewController.h"
+#import "MeViewController.h"
+
 
 @interface TFTabBarController ()
 
@@ -16,7 +21,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    HomeViewController *first = [[HomeViewController alloc]init];
+    ActivityViewController *second = [[ActivityViewController alloc]init];
+    MeViewController *third = [[MeViewController alloc]init];
+
+    //    BDFourthViewController1 *fourth = [[BDFourthViewController1 alloc] init];
+//    first.title = @"体育投注";
+//    third.title = @"投注单";
+    
+    
+    
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:first];
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:second];
+    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:third];
+//    UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:fourth];
+    
+    nav1.tabBarItem.title = @"首页";
+    nav2.tabBarItem.title = @"活动";
+    nav3.tabBarItem.title = @"个人中心";
+ 
+    
+    self.viewControllers = @[nav1,nav2,nav3];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "DCNewFeaturesViewController.h"
+#import "TFTabBarController.h"
+#import "DCFeaturesTool.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +19,60 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    [self setUpRootViewController]; //设置根控制器
+    
+    [self.window makeKeyAndVisible];
+    
+//    NSLog(@"是否展示新特性页面：%@",[DCFeaturesTool dc_isShowNewFeatures] ? @"true" : @"false");
+    
+    
+    if (@available(iOS 11.0, *)) {
+        
+    }else{
+        
+    }
+    
     return YES;
+   
+ 
+}
+
+
+#pragma mark - 设置根控制器。使用CDDNewFeatures 实现 引导页
+- (void)setUpRootViewController
+{
+    UIViewController *dcHomeVc = [[TFTabBarController alloc]init];
+
+    if ([DCFeaturesTool dc_isShowNewFeatures]) {
+
+        DCNewFeaturesViewController *dcNewVc = [DCNewFeaturesViewController new];
+        [dcNewVc setUpFeatureAttribute:^(NSArray *__autoreleasing *usImageArray, NSArray *__autoreleasing *ixImageArray, NSString *__autoreleasing *imEnjoyImg, UIColor *__autoreleasing *selColor, BOOL *isDefaultPass, BOOL *showSkip, BOOL *showPageCount) {
+
+            *usImageArray = @[@"guide1",@"guide2",@"guide3",@"guide4"];
+            *ixImageArray = @[@"guide1_x",@"guide2_x",@"guide3_x",@"guide4_x"];
+
+            *showPageCount = YES;
+            *showSkip = YES;
+            *isDefaultPass = YES;
+            *imEnjoyImg = @"hidden";
+
+        } WithDismissBlock:^{ //点击跳过-方法一
+            [DCFeaturesTool dc_restoreRootViewController:dcHomeVc WithAnimations:DCFeaturesChangeVcGradient];
+        }];
+
+        //        dcNewVc.dismissBlock = ^{//点击跳过-方法二
+        //            [DCFeaturesTool dc_restoreRootViewController:dcHomeVc WithAnimations:DCFeaturesChangeVcGradient];
+        //        };
+
+        self.window.rootViewController = dcNewVc;
+
+    }else{
+
+        self.window.rootViewController = dcHomeVc;
+    }
 }
 
 
