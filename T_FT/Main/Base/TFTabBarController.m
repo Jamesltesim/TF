@@ -11,7 +11,7 @@
 #import "HomeViewController.h"
 #import "ActivityViewController.h"
 #import "MeViewController.h"
-
+#import "ADView.h"
 
 @interface TFTabBarController ()
 
@@ -44,7 +44,17 @@
     
     self.viewControllers = @[nav1,nav2,nav3];
     
+    if(0){
+        ADView *adview = [[ADView alloc]init];
+        [self.view addSubview:adview];
+    }
+  
 }
+
+//- (void)closeAction{
+////    [self.view removeFromSuperview];
+//}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

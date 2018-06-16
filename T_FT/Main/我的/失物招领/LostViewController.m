@@ -1,73 +1,66 @@
 //
-//  HomeViewController.m
+//  LostViewController.m
 //  T_FT
 //
-//  Created by James on 2018/6/3.
+//  Created by James on 2018/6/16.
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#import "HomeViewController.h"
-#import "SDCycleScrollView.h"
-#import "FruitCollectionViewCell.h"
-#import "UIScrollView+MJRefresh.h"
-#import "MJChiBaoZiHeader.h"
+#import "LostViewController.h"
+#import "LostCollectionViewCell.h"
+@interface LostViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
-
-@interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
-
-@property (nonatomic,strong) SDCycleScrollView *bannerView;
 @property (nonatomic,strong) UICollectionView *collectionView;
+
 @end
 
-@implementation HomeViewController{
-   
-}
-
-
+@implementation LostViewController
 
 #pragma -mark life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.title = @"失物招领公益平台";
     [self createCollectionView];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
-    
-    MJChiBaoZiHeader *header = [MJChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    // Hide the time
-    header.lastUpdatedTimeLabel.hidden = YES;
-    
-    // Hide the status
-    header.stateLabel.hidden = YES;
-    self.collectionView.mj_header = header;
-    //
-    //    // 马上进入刷新状态
-    [self.collectionView.mj_header beginRefreshing];
-
+//    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
+//
+//    MJChiBaoZiHeader *header = [MJChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+//    // Hide the time
+//    header.lastUpdatedTimeLabel.hidden = YES;
+//
+//    // Hide the status
+//    header.stateLabel.hidden = YES;
+//    self.collectionView.mj_header = header;
+//    //
+//    //    // 马上进入刷新状态
+//    [self.collectionView.mj_header beginRefreshing];
     
   
-    
+
 }
 
-- (void)loadNewData
-{
-    // 1.添加假数据
-    //    for (int i = 0; i<5; i++) {
-    //        [self.data insertObject:MJRandomData atIndex:0];
-    //    }
-    
-    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-    //    __weak UITableView *tableView = self.tableView;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // 刷新表格
-        //        [tableView reloadData];
-        
-        // 拿到当前的下拉刷新控件，结束刷新状态
-        [self.collectionView.mj_header endRefreshing];
-    });
-}
+
+
+//- (void)loadNewData
+//{
+//    // 1.添加假数据
+//    //    for (int i = 0; i<5; i++) {
+//    //        [self.data insertObject:MJRandomData atIndex:0];
+//    //    }
+//
+//    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
+//    //    __weak UITableView *tableView = self.tableView;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        // 刷新表格
+//        //        [tableView reloadData];
+//
+//        // 拿到当前的下拉刷新控件，结束刷新状态
+//        [self.collectionView.mj_header endRefreshing];
+//    });
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -90,9 +83,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    FruitCollectionViewCell *cell = (FruitCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
+    LostCollectionViewCell *cell = (LostCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
     
-//    cell.botlabel.text = [NSString stringWithFormat:@"{%ld,%ld}",(long)indexPath.section,(long)indexPath.row];
+    //    cell.botlabel.text = [NSString stringWithFormat:@"{%ld,%ld}",(long)indexPath.section,(long)indexPath.row];
     
     
     cell.backgroundColor = [UIColor yellowColor];
@@ -141,21 +134,16 @@
 //通过设置SupplementaryViewOfKind 来设置头部或者底部的view，其中 ReuseIdentifier 的值必须和 注册是填写的一致，本例都为 “reusableView”
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-   
+    
     UICollectionReusableView *headerView = nil;
-    if(indexPath.section == 0){
-        headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView" forIndexPath:indexPath];
-        [headerView addSubview:self.bannerView];
-        headerView.backgroundColor = [UIColor blueColor];
-        
-    }else{
+    
         headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
         headerView.backgroundColor =[UIColor grayColor];
         UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
         label.text = @"这是collectionView的头部";
         label.font = [UIFont systemFontOfSize:20];
         [headerView addSubview:label];
-    }
+    
     
     return headerView;
 }
@@ -164,9 +152,9 @@
 //点击item方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    FruitCollectionViewCell *cell = (FruitCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-//    NSString *msg = cell.botlabel.text;
-//    NSLog(@"%@",msg);
+    LostCollectionViewCell *cell = (LostCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    //    NSString *msg = cell.botlabel.text;
+    //    NSLog(@"%@",msg);
 }
 
 
@@ -193,7 +181,7 @@
     //3.注册collectionViewCell
     //注意，此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致 均为 cellId
     //    [mainCollectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
-    [_collectionView registerNib:[UINib nibWithNibName:@"FruitCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellId"];
+    [_collectionView registerNib:[UINib nibWithNibName:@"LostCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellId"];
     
     //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
@@ -205,40 +193,6 @@
     _collectionView.dataSource = self;
 }
 
-- (SDCycleScrollView *)bannerView{
-    if(!_bannerView){
-        // 情景二：采用网络图片实现
-        NSArray *imagesURLStrings = @[
-                                      @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                                      @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                                      @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
-                                      ];
-        
-        // 情景三：图片配文字
-        NSArray *titles = @[@"新建交流QQ群：185534916 ",
-                            @"disableScrollGesture可以设置禁止拖动",
-                            @"感谢您的支持，如果下载的",
-                            @"如果代码在使用过程中出现问题",
-                            @"您可以发邮件到gsdios@126.com"
-                            ];
-        
-         // 网络加载 --- 创建带标题的图片轮播器
-        _bannerView  = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.width, 130) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
-        
-        _bannerView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
-        //    cycleScrollView2.titlesGroup = titles;
-        _bannerView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
-        _bannerView.autoScrollTimeInterval = 5;
-        _bannerView.imageURLStringsGroup = imagesURLStrings;
-        //         --- 模拟加载延迟
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//
-//        });
-        
-
-    }
-    return _bannerView;
-}
 
 
 /*

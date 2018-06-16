@@ -11,6 +11,7 @@
 #import "ScrollImage.h"
 #import "MeCollectionViewCell.h"
 #import "ImgAndTextCollectionViewCell.h"
+#import "LostViewController.h"
 
 @interface MeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
     
@@ -49,6 +50,22 @@ static NSString *iden = @"cell";
     return _scrImage;
 }
 
+//- (void)viewDidAppear:(BOOL)animated{
+//    [super viewDidAppear:animated];
+//
+//     [self.navigationItem setHidesBackButton:NO];
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated{
+//    [super viewWillDisappear:animated];
+//    [self.navigationItem setHidesBackButton:YES];
+//      self.navigationController.navigationBar.hidden = YES;
+//}
+//- (void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//      self.navigationController.navigationBar.hidden = NO;
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
   
@@ -61,14 +78,22 @@ static NSString *iden = @"cell";
                       @{@"title":@"客服与帮助",@"img":@"-"},
                       @{@"title":@"帮助中心",@"img":@"-"},
                       @{@"title":@"签到惊喜",@"img":@"-"},
+                      
                       @{@"title":@"客户服务",@"img":@"-"},
                       @{@"title":@"我的收藏",@"img":@"-"},
                       @{@"title":@"欢迎评分",@"img":@"-"},
                       @{@"title":@"意见反馈",@"img":@"-"},
-                      @{@"title":@"人人贡献者",@"img":@"-"},
-                      @{@"title":@"校园合伙人",@"img":@"-"},
-                      @{@"title":@"设置",@"img":@"-"}
-                      ]
+                      
+                      @{@"title":@"设置",@"img":@"-"},
+                      @{@"title":@"失物招领公益平台",@"img":@"-"},
+                      @{@"title":@"test",@"img":@"-"},
+                      @{@"title":@"test",@"img":@"-"}
+                      ],
+                      
+                      @[ @{@"title":@"果园兼职",@"img":@"-"},
+                         @{@"title":@"校园合伙人",@"img":@"-"},
+                         @{@"title":@"人人贡献者",@"img":@"-"}
+                          ]
                       ];
     
 
@@ -106,7 +131,7 @@ static NSString *iden = @"cell";
         cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
         return cell;
         
-    }else if(indexPath.section == 1){
+    }else{
         ImgAndTextCollectionViewCell *cell = (ImgAndTextCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell1" forIndexPath:indexPath];
         
         //    cell.botlabel.text = [NSString stringWithFormat:@"{%ld,%ld}",(long)indexPath.section,(long)indexPath.row];
@@ -131,7 +156,7 @@ static NSString *iden = @"cell";
     if(indexPath.section == 0){
         CGFloat itemWidth = (self.view.width)/4;
         return CGSizeMake(itemWidth, itemWidth);
-    }else if (indexPath.section == 1){
+    }else {
         CGFloat itemWidth = (self.view.width)/4;
         return CGSizeMake(itemWidth, itemWidth+10);
     }
@@ -149,7 +174,7 @@ static NSString *iden = @"cell";
 {
     if(section == 0){
         return CGSizeMake(collectionView.width, 130);
-    }else if (section == 1){
+    }else{
         return CGSizeMake(collectionView.width, 10);
     }
     
@@ -188,7 +213,7 @@ static NSString *iden = @"cell";
         
         headerView.backgroundColor =[UIColor grayColor];
         UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
-        label.text = @"这是collectionView的头部";
+//        label.text = @"这是collectionView的头部";
         label.font = [UIFont systemFontOfSize:20];
         [headerView addSubview:label];
     }
@@ -203,6 +228,16 @@ static NSString *iden = @"cell";
     MeCollectionViewCell *cell = (MeCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     //    NSString *msg = cell.botlabel.text;
     //    NSLog(@"%@",msg);
+    
+    //失物招领
+    if([indexPath isEqual:[NSIndexPath indexPathForRow:11 inSection:1]]){
+        LostViewController *lost = [[LostViewController alloc]init];
+        [self.navigationController pushViewController:lost animated:YES];
+    }else{
+        UIViewController *controller = [[UIViewController alloc]init];
+        controller.view.backgroundColor = [UIColor whiteColor];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 
@@ -222,7 +257,7 @@ static NSString *iden = @"cell";
       
         
         //2.初始化collectionView
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, -STATUSVIEW_HEIGHT-44, self.view.width, self.view.height) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, -STATUSVIEW_HEIGHT-44, self.view.width, self.view.height + STATUSVIEW_HEIGHT + 44) collectionViewLayout:layout];
         [self.view addSubview:_collectionView];
         _collectionView.backgroundColor = [UIColor whiteColor];
         

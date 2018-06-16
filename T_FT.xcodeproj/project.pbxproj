@@ -26,6 +26,11 @@
 		1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02920C519950023C55D /* GradualNavBarController.m */; };
 		1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02C20C5250F0023C55D /* MeHeaderView.m */; };
 		1A2BE03020C5313C0023C55D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02F20C5313C0023C55D /* LoginViewController.m */; };
+		1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C614020D3D30C00EE4CB5 /* ADViewController.m */; };
+		1A9ABF8220D4E36700DC1F1B /* ADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8120D4E36700DC1F1B /* ADView.m */; };
+		1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8520D4E9E700DC1F1B /* LostViewController.m */; };
+		1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8820D4EA9500DC1F1B /* LostCollectionViewCell.m */; };
+		1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8920D4EA9500DC1F1B /* LostCollectionViewCell.xib */; };
 		1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */; };
 		1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */; };
 		1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDE0720D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m */; };
@@ -114,6 +119,15 @@
 		1A2BE02C20C5250F0023C55D /* MeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeHeaderView.m; sourceTree = "<group>"; };
 		1A2BE02E20C5313C0023C55D /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		1A2BE02F20C5313C0023C55D /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		1A8C613F20D3D30C00EE4CB5 /* ADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADViewController.h; sourceTree = "<group>"; };
+		1A8C614020D3D30C00EE4CB5 /* ADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADViewController.m; sourceTree = "<group>"; };
+		1A9ABF8020D4E36700DC1F1B /* ADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADView.h; sourceTree = "<group>"; };
+		1A9ABF8120D4E36700DC1F1B /* ADView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADView.m; sourceTree = "<group>"; };
+		1A9ABF8420D4E9E700DC1F1B /* LostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LostViewController.h; sourceTree = "<group>"; };
+		1A9ABF8520D4E9E700DC1F1B /* LostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostViewController.m; sourceTree = "<group>"; };
+		1A9ABF8720D4EA9500DC1F1B /* LostCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LostCollectionViewCell.h; sourceTree = "<group>"; };
+		1A9ABF8820D4EA9500DC1F1B /* LostCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCollectionViewCell.m; sourceTree = "<group>"; };
+		1A9ABF8920D4EA9500DC1F1B /* LostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LostCollectionViewCell.xib; sourceTree = "<group>"; };
 		1ABDDDF520D0F09200E900A8 /* MeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionViewCell.h; sourceTree = "<group>"; };
 		1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectionViewCell.m; sourceTree = "<group>"; };
 		1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -312,26 +326,14 @@
 		1A2BDFFB20C3C5500023C55D /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				1AF8247820CA768800587A6F /* ScrollImage.h */,
-				1AF8247920CA768800587A6F /* ScrollImage.m */,
+				1A9ABF8C20D4EBD400DC1F1B /* 失物招领 */,
+				1A9ABF8320D4E59400DC1F1B /* View */,
 				1A2BE02320C4DA390023C55D /* UIImage+imgaeWithColor.h */,
 				1A2BE02220C4DA390023C55D /* UIImage+imgaeWithColor.m */,
 				1A2BE00220C3C58E0023C55D /* MeViewController.h */,
 				1A2BE00320C3C58E0023C55D /* MeViewController.m */,
 				1A2BE02820C519950023C55D /* GradualNavBarController.h */,
 				1A2BE02920C519950023C55D /* GradualNavBarController.m */,
-				1A2BE02B20C5250F0023C55D /* MeHeaderView.h */,
-				1A2BE02C20C5250F0023C55D /* MeHeaderView.m */,
-				1AF8247F20CA76DC00587A6F /* 25.jpg */,
-				1AF8247D20CA76D600587A6F /* 19.jpg */,
-				1AF8247B20CA76D100587A6F /* 12.jpg */,
-				1AF8248120CA76E300587A6F /* 29.jpg */,
-				1ABDDDF520D0F09200E900A8 /* MeCollectionViewCell.h */,
-				1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */,
-				1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */,
-				1ABDDE0620D34A1D00E900A8 /* ImgAndTextCollectionViewCell.h */,
-				1ABDDE0720D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m */,
-				1ABDDE0820D34A1D00E900A8 /* ImgAndTextCollectionViewCell.xib */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -352,6 +354,50 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		1A8C614220D3D31100EE4CB5 /* 广告 */ = {
+			isa = PBXGroup;
+			children = (
+				1A8C613F20D3D30C00EE4CB5 /* ADViewController.h */,
+				1A8C614020D3D30C00EE4CB5 /* ADViewController.m */,
+				1A9ABF8020D4E36700DC1F1B /* ADView.h */,
+				1A9ABF8120D4E36700DC1F1B /* ADView.m */,
+			);
+			path = "广告";
+			sourceTree = "<group>";
+		};
+		1A9ABF8320D4E59400DC1F1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1AF8247820CA768800587A6F /* ScrollImage.h */,
+				1AF8247920CA768800587A6F /* ScrollImage.m */,
+				1A2BE02B20C5250F0023C55D /* MeHeaderView.h */,
+				1A2BE02C20C5250F0023C55D /* MeHeaderView.m */,
+				1AF8247F20CA76DC00587A6F /* 25.jpg */,
+				1AF8247D20CA76D600587A6F /* 19.jpg */,
+				1AF8247B20CA76D100587A6F /* 12.jpg */,
+				1AF8248120CA76E300587A6F /* 29.jpg */,
+				1ABDDDF520D0F09200E900A8 /* MeCollectionViewCell.h */,
+				1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */,
+				1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */,
+				1ABDDE0620D34A1D00E900A8 /* ImgAndTextCollectionViewCell.h */,
+				1ABDDE0720D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m */,
+				1ABDDE0820D34A1D00E900A8 /* ImgAndTextCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1A9ABF8C20D4EBD400DC1F1B /* 失物招领 */ = {
+			isa = PBXGroup;
+			children = (
+				1A9ABF8420D4E9E700DC1F1B /* LostViewController.h */,
+				1A9ABF8520D4E9E700DC1F1B /* LostViewController.m */,
+				1A9ABF8720D4EA9500DC1F1B /* LostCollectionViewCell.h */,
+				1A9ABF8820D4EA9500DC1F1B /* LostCollectionViewCell.m */,
+				1A9ABF8920D4EA9500DC1F1B /* LostCollectionViewCell.xib */,
+			);
+			path = "失物招领";
+			sourceTree = "<group>";
+		};
 		1ABDDE0F20D3A4A300E900A8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +412,7 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				1A8C614220D3D31100EE4CB5 /* 广告 */,
 				1ABDDE2920D3B62200E900A8 /* Masonry */,
 				1ABDDE2720D3B5F200E900A8 /* 字体渐变动画 */,
 				1ABDDE1120D3A4BF00E900A8 /* CDDNewFeatures */,
@@ -567,6 +614,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */,
 				1ABDDE5520D3BE0800E900A8 /* ActivityCollectionViewCell.xib in Resources */,
 				1AF8248220CA76E400587A6F /* 29.jpg in Resources */,
 				1AF8247C20CA76D100587A6F /* 12.jpg in Resources */,
@@ -652,7 +700,9 @@
 				1ABDDE1D20D3A4BF00E900A8 /* DCNewFeaturesCell.m in Sources */,
 				1A2BDFF520C3C5090023C55D /* TFNavigationController.m in Sources */,
 				1A2BE03020C5313C0023C55D /* LoginViewController.m in Sources */,
+				1A9ABF8220D4E36700DC1F1B /* ADView.m in Sources */,
 				1A2BE01820C3CB670023C55D /* UIView+Frame.m in Sources */,
+				1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */,
 				1A2BDFF220C3C4F50023C55D /* TFTabBarController.m in Sources */,
 				1ABDDE5420D3BE0800E900A8 /* ActivityCollectionViewCell.m in Sources */,
 				1A2BDFCD20C3C4390023C55D /* main.m in Sources */,
@@ -660,6 +710,7 @@
 				1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */,
 				1ABDDE4A20D3B62200E900A8 /* MASViewConstraint.m in Sources */,
 				1ABDDE4D20D3B62200E900A8 /* View+MASAdditions.m in Sources */,
+				1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */,
 				1ABDDE4720D3B62200E900A8 /* MASConstraintMaker.m in Sources */,
 				1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */,
 				1ABDDE4520D3B62200E900A8 /* MASCompositeConstraint.m in Sources */,
@@ -670,6 +721,7 @@
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,
 				1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */,
+				1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,
 				1ABDDE4820D3B62200E900A8 /* MASLayoutConstraint.m in Sources */,
 				1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */,
