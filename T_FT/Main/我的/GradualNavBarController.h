@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MeNavView.h"
 
 @interface GradualNavBarController : UIViewController
 
 
-- (void)setFollowScrollView:(UIScrollView *)scrollView;
+@property (nonatomic,strong) MeNavView *gradualNavView;
+
 @end

@@ -28,6 +28,8 @@
     // 取消掉底部的那根线
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
+    
+    [self.gradualNavView setBackImage:[[UIImage alloc] init]];
     //设置标题
     UILabel *title = [[UILabel alloc] init];
     title.text = @"个人主页";
@@ -36,6 +38,7 @@
     title.textColor = [UIColor colorWithWhite:0 alpha:0];
     
     self.navigationItem.titleView = title;
+    self.gradualNavView = [MeNavView creatNavView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -67,6 +70,7 @@
     UIImage *alphaImage = [UIImage imageWithColor:alphaColor];
     //修改导航条背景图片
     [self.navigationController.navigationBar setBackgroundImage:alphaImage forBarMetrics:UIBarMetricsDefault];
+    [self.gradualNavView setBackImage:alphaImage];
 }
 
 - (void)viewDidLoad {
@@ -74,6 +78,9 @@
     [self wjNavigationSettings];
 }
 
+- (void)setGradualNavView:(MeNavView *)gradualNavView{
+    _gradualNavView = gradualNavView;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
