@@ -52,7 +52,7 @@
     
     //根据透明度来生成图片
     //找最大值/
-    CGFloat alpha = (offset ) * 0.4/ 64.0;   // (200 - 64) / 136.0f
+    CGFloat alpha = (offset-44 ) * 0.4/ 44.0;   // (200 - 64) / 136.0f
     if (alpha >= 1) {
         alpha = 0.99;
     }else if (alpha < 0){
@@ -61,8 +61,8 @@
     
     NSLog(@"alpha:%lf  offset:%lf",alpha,offset);
     //拿到标题 标题文字的随着移动高度的变化而变化
-    UILabel *titleL = (UILabel *)self.navigationItem.titleView;
-    titleL.textColor = [UIColor colorWithWhite:0 alpha:alpha];
+//    UILabel *titleL = (UILabel *)self.navigationItem.titleView;
+//    titleL.textColor = [UIColor colorWithWhite:0 alpha:alpha];
     
     //把颜色生成图片
     UIColor *alphaColor = [UIColor colorWithWhite:1 alpha:alpha];
@@ -71,6 +71,7 @@
     //修改导航条背景图片
     [self.navigationController.navigationBar setBackgroundImage:alphaImage forBarMetrics:UIBarMetricsDefault];
     [self.gradualNavView setBackImage:alphaImage];
+    self.gradualNavView.titleColor = [UIColor colorWithWhite:0 alpha:alpha];
 }
 
 - (void)viewDidLoad {

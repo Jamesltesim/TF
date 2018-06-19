@@ -46,6 +46,10 @@
     self.titleLab.text = title;
 }
 
+- (void)setTitleColor:(UIColor *)titleColor{
+    self.titleLab.textColor = titleColor;
+}
+
 - (void)setHidenBottomLine:(BOOL)hidenBottomLine{
 //    _hidenBottomLine = hidenBottomLine;
     self.bottomLine.hidden = hidenBottomLine;

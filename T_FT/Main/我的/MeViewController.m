@@ -96,6 +96,7 @@ static NSString *iden = @"cell";
     if(!_navView){
         _navView = [MeNavView creatNavView];
         _navView.backgroundColor = [UIColor clearColor];
+        _navView.titleColor = [UIColor clearColor];
         _navView.hidenBottomLine = YES;
       
     }
@@ -119,6 +120,8 @@ static NSString *iden = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navView.title = @"个人中心";
     self.navigationController.navigationBar.hidden = YES;
  
     self.view.backgroundColor = [UIColor whiteColor];
@@ -128,6 +131,11 @@ static NSString *iden = @"cell";
                       @{@"title":@"优惠券",@"num":@"-"},
                       @{@"title":@"礼品",@"num":@"-"}
                       ],
+                      @[@{@"title":@"失物招领公益平台",@"img":@"-"},
+                        @{@"title":@"废品收购",@"img":@"-"},
+                        @{@"title":@"打印/复印",@"img":@"-"}
+                        ],
+                      
                     @[@{@"title":@"我的地址",@"img":@"-"},
                       @{@"title":@"客服与帮助",@"img":@"-"},
                       @{@"title":@"帮助中心",@"img":@"-"},
@@ -139,9 +147,7 @@ static NSString *iden = @"cell";
                       @{@"title":@"意见反馈",@"img":@"-"},
                       
                       @{@"title":@"设置",@"img":@"-"},
-                      @{@"title":@"失物招领公益平台",@"img":@"-"},
-                      @{@"title":@"废品收购",@"img":@"-"},
-                      @{@"title":@"打印/复印",@"img":@"-"}
+                    
                       ],
                       
                       @[ @{@"title":@"果园兼职",@"img":@"-"},
@@ -287,7 +293,7 @@ static NSString *iden = @"cell";
     //    NSLog(@"%@",msg);
     
     //失物招领
-    if([indexPath isEqual:[NSIndexPath indexPathForRow:9 inSection:1]]){
+    if([indexPath isEqual:[NSIndexPath indexPathForRow:0 inSection:1]]){
         LostViewController *lost = [[LostViewController alloc]init];
        
         [self.navigationController pushViewController:lost animated:YES];

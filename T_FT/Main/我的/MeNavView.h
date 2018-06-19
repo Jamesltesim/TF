@@ -14,6 +14,7 @@
 @property (nonatomic,strong) NSString *title;
 //
 @property (nonatomic) BOOL hidenBottomLine;  //defuit No
+@property (nonatomic,strong) UIColor *titleColor;
 
 
 - (void)addLeftButtonWithAction:(SEL)action;
