@@ -35,7 +35,7 @@ static NSString *iden = @"cell";
 
 - (instancetype)init{
     if(self = [super init]){
-        
+       
     }
     return self;
 }
@@ -95,6 +95,8 @@ static NSString *iden = @"cell";
 - (MeNavView *)navView{
     if(!_navView){
         _navView = [MeNavView creatNavView];
+        _navView.backgroundColor = [UIColor clearColor];
+        _navView.hidenBottomLine = YES;
       
     }
     return _navView;
@@ -138,8 +140,8 @@ static NSString *iden = @"cell";
                       
                       @{@"title":@"设置",@"img":@"-"},
                       @{@"title":@"失物招领公益平台",@"img":@"-"},
-                      @{@"title":@"test",@"img":@"-"},
-                      @{@"title":@"test",@"img":@"-"}
+                      @{@"title":@"废品收购",@"img":@"-"},
+                      @{@"title":@"打印/复印",@"img":@"-"}
                       ],
                       
                       @[ @{@"title":@"果园兼职",@"img":@"-"},
@@ -285,8 +287,9 @@ static NSString *iden = @"cell";
     //    NSLog(@"%@",msg);
     
     //失物招领
-    if([indexPath isEqual:[NSIndexPath indexPathForRow:11 inSection:1]]){
+    if([indexPath isEqual:[NSIndexPath indexPathForRow:9 inSection:1]]){
         LostViewController *lost = [[LostViewController alloc]init];
+       
         [self.navigationController pushViewController:lost animated:YES];
     }else{
         UIViewController *controller = [[UIViewController alloc]init];

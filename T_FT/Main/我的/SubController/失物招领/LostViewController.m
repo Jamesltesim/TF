@@ -11,6 +11,7 @@
 @interface LostViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic,strong) UICollectionView *collectionView;
+@property (nonatomic,strong) NSArray *dataArray;
 
 @end
 
@@ -21,10 +22,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.title = @"失物招领公益平台";
+    self.navView.title = @"失物招领公益平台";
     [self createCollectionView];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    
+    self.dataArray = @[@{@"name":@"可可",@"date":@"2018/6/19",@"address":@"天津-天津市-佳音里",@"desc":@"丢失证件"},
+                       @{@"name":@"可可",@"date":@"2018/6/19",@"address":@"天津-天津市-佳音里",@"desc":@"丢失证件"},
+                       @{@"name":@"可可",@"date":@"2018/6/19",@"address":@"天津-天津市-佳音里",@"desc":@"丢失证件"},
+                       @{@"name":@"可可",@"date":@"2018/6/19",@"address":@"天津-天津市-佳音里",@"desc":@"丢失证件"},
+                        @{@"name":@"可可",@"date":@"2018/6/19",@"address":@"天津-天津市-佳音里",@"desc":@"丢失证件"},
+                        @{@"name":@"可可",@"date":@"2018/6/19",@"address":@"天津-天津市-佳音里",@"desc":@"丢失证件"}
+                        ];
 //    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
 //
 //    MJChiBaoZiHeader *header = [MJChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
@@ -71,13 +81,13 @@
 //返回section个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 3;
+    return 1;
 }
 
 //每个section的item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 9;
+    return self.dataArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -86,9 +96,12 @@
     LostCollectionViewCell *cell = (LostCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
     
     //    cell.botlabel.text = [NSString stringWithFormat:@"{%ld,%ld}",(long)indexPath.section,(long)indexPath.row];
+    NSDictionary *dict = [self.dataArray objectAtIndex:indexPath.row];
     
-    
-    cell.backgroundColor = [UIColor yellowColor];
+    cell.headImgView.image = [UIImage imageNamed:@""];
+    cell.nameLab.text = dict[@"name"];
+    cell.dateLab.text = dict[@"date"];
+    cell.descLab.text = dict[@"desc"];
     
     return cell;
 }
@@ -153,6 +166,8 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LostCollectionViewCell *cell = (LostCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
+   
     //    NSString *msg = cell.botlabel.text;
     //    NSLog(@"%@",msg);
 }
@@ -167,14 +182,14 @@
     //设置collectionView滚动方向
     //    [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     //设置headerView的尺寸大小
-    layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 130);
+//    layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 130);
     //该方法也可以设置itemSize
     
     CGFloat itemWidth = (self.view.width-16)/2.0 - 3;
     layout.itemSize =CGSizeMake(itemWidth, 235);
     
     //2.初始化collectionView
-    _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, self.navView.bottom, self.view.width, self.view.height-self.navView.bottom) collectionViewLayout:layout];
     [self.view addSubview:_collectionView];
     _collectionView.backgroundColor = [UIColor whiteColor];
     

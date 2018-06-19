@@ -11,6 +11,8 @@
 @interface MeNavView()
 
 @property (nonatomic,strong) UIImageView *backImgView;
+@property (nonatomic,strong) UILabel *titleLab;
+@property (nonatomic,strong) UIView *bottomLine;
 
 @end
 
@@ -30,12 +32,41 @@
     
     self = [super initWithFrame:CGRectMake(0, 0,width , NAV_HEIGHT)];
     if (self) {
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor whiteColor];
         _backImgView = [[UIImageView alloc]initWithFrame:self.bounds];
         [self addSubview:_backImgView];
+        
+        [self addSubview:self.titleLab];
+        [self addSubview:self.bottomLine];
     }
     return self;
 }
+- (void)setTitle:(NSString *)title{
+    if(title)
+    self.titleLab.text = title;
+}
+
+- (void)setHidenBottomLine:(BOOL)hidenBottomLine{
+//    _hidenBottomLine = hidenBottomLine;
+    self.bottomLine.hidden = hidenBottomLine;
+}
+
+- (UIView *)bottomLine{
+    if(!_bottomLine){
+        _bottomLine = [[UIView alloc]initWithFrame:CGRectMake(0, self.bottom-0.5, self.width, 0.5)];
+        _bottomLine.backgroundColor = [UIColor colorWithRed:151/255.0 green:151/255.0 blue:151/255.0 alpha:1];
+    }
+    return _bottomLine;
+}
+
+- (UILabel *)titleLab{
+    if(!_titleLab){
+        _titleLab = [[UILabel alloc]initWithFrame:CGRectMake(0, STATUSVIEW_HEIGHT, self.width, self.height-STATUSVIEW_HEIGHT)];
+        _titleLab.textAlignment = NSTextAlignmentCenter;
+    }
+    return _titleLab;
+}
+
 - (void)setBackImage:(UIImage *)backImage{
     
     if(backImage)
@@ -47,7 +78,14 @@
 }
 
 - (void)addLeftButtonWithTarget:(id)target action:(SEL)action{
+    UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
     
+    CGFloat width = 25.0;
+    back.frame = CGRectMake(10, 0, width, width);
+    back.center = CGPointMake(10+width/2, (self.height- STATUSVIEW_HEIGHT)/2+STATUSVIEW_HEIGHT);
+    [back addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [back setBackgroundImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    [self addSubview:back];
 }
 
 /*

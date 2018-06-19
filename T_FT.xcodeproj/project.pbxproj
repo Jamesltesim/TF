@@ -32,6 +32,7 @@
 		1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8820D4EA9500DC1F1B /* LostCollectionViewCell.m */; };
 		1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8920D4EA9500DC1F1B /* LostCollectionViewCell.xib */; };
 		1AABE74720D7AD0F001BA4C9 /* MeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABE74620D7AD0F001BA4C9 /* MeNavView.m */; };
+		1AABE74B20D8B91F001BA4C9 /* MeSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABE74A20D8B91F001BA4C9 /* MeSubViewController.m */; };
 		1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */; };
 		1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */; };
 		1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDE0720D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m */; };
@@ -131,6 +132,8 @@
 		1A9ABF8920D4EA9500DC1F1B /* LostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LostCollectionViewCell.xib; sourceTree = "<group>"; };
 		1AABE74520D7AD0F001BA4C9 /* MeNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeNavView.h; sourceTree = "<group>"; };
 		1AABE74620D7AD0F001BA4C9 /* MeNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeNavView.m; sourceTree = "<group>"; };
+		1AABE74920D8B91F001BA4C9 /* MeSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeSubViewController.h; sourceTree = "<group>"; };
+		1AABE74A20D8B91F001BA4C9 /* MeSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeSubViewController.m; sourceTree = "<group>"; };
 		1ABDDDF520D0F09200E900A8 /* MeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionViewCell.h; sourceTree = "<group>"; };
 		1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectionViewCell.m; sourceTree = "<group>"; };
 		1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -329,7 +332,7 @@
 		1A2BDFFB20C3C5500023C55D /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				1A9ABF8C20D4EBD400DC1F1B /* 失物招领 */,
+				1AABE74820D8B8ED001BA4C9 /* SubController */,
 				1A9ABF8320D4E59400DC1F1B /* View */,
 				1A2BE02320C4DA390023C55D /* UIImage+imgaeWithColor.h */,
 				1A2BE02220C4DA390023C55D /* UIImage+imgaeWithColor.m */,
@@ -401,6 +404,16 @@
 				1A9ABF8920D4EA9500DC1F1B /* LostCollectionViewCell.xib */,
 			);
 			path = "失物招领";
+			sourceTree = "<group>";
+		};
+		1AABE74820D8B8ED001BA4C9 /* SubController */ = {
+			isa = PBXGroup;
+			children = (
+				1A9ABF8C20D4EBD400DC1F1B /* 失物招领 */,
+				1AABE74920D8B91F001BA4C9 /* MeSubViewController.h */,
+				1AABE74A20D8B91F001BA4C9 /* MeSubViewController.m */,
+			);
+			path = SubController;
 			sourceTree = "<group>";
 		};
 		1ABDDE0F20D3A4A300E900A8 /* Main */ = {
@@ -713,6 +726,7 @@
 				1A2BDFCD20C3C4390023C55D /* main.m in Sources */,
 				1ABDDE4620D3B62200E900A8 /* MASConstraint.m in Sources */,
 				1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */,
+				1AABE74B20D8B91F001BA4C9 /* MeSubViewController.m in Sources */,
 				1AABE74720D7AD0F001BA4C9 /* MeNavView.m in Sources */,
 				1ABDDE4A20D3B62200E900A8 /* MASViewConstraint.m in Sources */,
 				1ABDDE4D20D3B62200E900A8 /* View+MASAdditions.m in Sources */,

@@ -11,6 +11,10 @@
 @interface MeNavView : UIView
 
 @property (nonatomic,strong) UIImage *backImage;
+@property (nonatomic,strong) NSString *title;
+//
+@property (nonatomic) BOOL hidenBottomLine;  //defuit No
+
 
 - (void)addLeftButtonWithAction:(SEL)action;
 - (void)addLeftButtonWithTarget:(id)target action:(SEL)action;

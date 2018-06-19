@@ -6,8 +6,8 @@
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MeSubViewController.h"
 
-@interface LostViewController : UIViewController
+@interface LostViewController : MeSubViewController
 
 @end

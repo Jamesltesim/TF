@@ -12,7 +12,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.layer.borderColor = [UIColor grayColor].CGColor;
+    self.layer.borderWidth = 0.5;
 }
 
 @end
