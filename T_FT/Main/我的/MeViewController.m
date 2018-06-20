@@ -12,6 +12,7 @@
 #import "MeCollectionViewCell.h"
 #import "ImgAndTextCollectionViewCell.h"
 #import "LostViewController.h"
+#import "PrintPhotoViewController.h"
 #import "MeNavView.h"
 
 @interface MeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
@@ -134,6 +135,7 @@ static NSString *iden = @"cell";
                       @[@{@"title":@"失物招领公益平台",@"img":@"-"},
                         @{@"title":@"废品收购",@"img":@"-"},
                         @{@"title":@"打印/复印",@"img":@"-"}
+                        //打印照片参考趣印 有福 口袋冲印 app
                         ],
                       
                     @[@{@"title":@"我的地址",@"img":@"-"},
@@ -145,6 +147,7 @@ static NSString *iden = @"cell";
                       @{@"title":@"我的收藏",@"img":@"-"},
                       @{@"title":@"欢迎评分",@"img":@"-"},
                       @{@"title":@"意见反馈",@"img":@"-"},
+                      @{@"title":@"关于我们",@"img":@"-"},
                       
                       @{@"title":@"设置",@"img":@"-"},
                     
@@ -297,7 +300,12 @@ static NSString *iden = @"cell";
         LostViewController *lost = [[LostViewController alloc]init];
        
         [self.navigationController pushViewController:lost animated:YES];
-    }else{
+    }
+    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:2 inSection:1]]){
+        PrintPhotoViewController *print = [[PrintPhotoViewController alloc]init];
+        [self.navigationController pushViewController:print animated:YES];
+    }
+    else{
         UIViewController *controller = [[UIViewController alloc]init];
         controller.view.backgroundColor = [UIColor whiteColor];
         [self.navigationController pushViewController:controller animated:YES];

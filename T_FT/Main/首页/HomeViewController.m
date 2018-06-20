@@ -17,6 +17,7 @@
 
 @property (nonatomic,strong) SDCycleScrollView *bannerView;
 @property (nonatomic,strong) UICollectionView *collectionView;
+@property (nonatomic,strong) NSArray *dataArray;
 @end
 
 @implementation HomeViewController{
@@ -46,9 +47,6 @@
     //    // 马上进入刷新状态
     [self.collectionView.mj_header beginRefreshing];
 
-    
-  
-    
 }
 
 - (void)loadNewData
@@ -78,13 +76,18 @@
 //返回section个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 3;
+    return 2;
 }
 
 //每个section的item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 9;
+    if(section == 0){
+        return 4;
+    }else{
+        return 6;
+    }
+   
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -101,10 +104,18 @@
 }
 
 //设置每个item的尺寸
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return CGSizeMake(90, 130);
-//}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == 0){
+        return CGSizeMake(self.view.width-16, 165);
+      
+    }else{
+        
+        CGFloat itemWidth = (self.view.width-16)/2.0 - 3;
+        return CGSizeMake(itemWidth, 235);
+    }
+    return CGSizeMake(90, 130);
+}
 
 //footer的size
 //- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
@@ -181,9 +192,6 @@
     //设置headerView的尺寸大小
     layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 130);
     //该方法也可以设置itemSize
-    
-    CGFloat itemWidth = (self.view.width-16)/2.0 - 3;
-    layout.itemSize =CGSizeMake(itemWidth, 235);
     
     //2.初始化collectionView
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];

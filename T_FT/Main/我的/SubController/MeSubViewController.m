@@ -24,6 +24,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.navView = [MeNavView creatNavView];
     [self.navView addLeftButtonWithTarget:self action:@selector(back:)];
     [self.view addSubview:self.navView];
