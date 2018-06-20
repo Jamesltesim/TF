@@ -32,13 +32,6 @@
     [self.view addSubview:selectPhoto];
     
     
-    [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];    //创建监听者
-   // [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:self];    //移除监听者
-}
-
-- (void)selectedPhoto:(UIButton *)sender {
-    
-//    https://www.jianshu.com/p/3bbc69132ba0
     
     //获取相册访问权限
     PHAuthorizationStatus photoStatus = [PHPhotoLibrary authorizationStatus];
@@ -47,7 +40,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             switch (status) {
                 case PHAuthorizationStatusAuthorized: //已获取权限
-                    
+                    [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];    //创建监听者
                     [self readPhotos];
                     break;
                     
@@ -62,6 +55,15 @@
             }
         });
     }];
+ 
+   // [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:self];    //移除监听者
+}
+
+- (void)selectedPhoto:(UIButton *)sender {
+    
+//    https://www.jianshu.com/p/3bbc69132ba0
+    
+   
     
 
     
