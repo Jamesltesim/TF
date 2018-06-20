@@ -311,6 +311,8 @@
 				1A2BDFF420C3C5090023C55D /* TFNavigationController.m */,
 				1A2BDFF620C3C5180023C55D /* TFViewController.h */,
 				1A2BDFF720C3C5180023C55D /* TFViewController.m */,
+				1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */,
+				1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -318,8 +320,6 @@
 		1A2BDFF920C3C53D0023C55D /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
-				1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */,
-				1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */,
 				1A2BE00520C3C72A0023C55D /* Banner */,
 				1A2BDFFC20C3C5690023C55D /* HomeViewController.h */,
 				1A2BDFFD20C3C5690023C55D /* HomeViewController.m */,

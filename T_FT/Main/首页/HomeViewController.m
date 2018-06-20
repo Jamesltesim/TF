@@ -24,8 +24,6 @@
    
 }
 
-
-
 #pragma -mark life cycle
 
 - (void)viewDidLoad {
@@ -96,10 +94,8 @@
     FruitCollectionViewCell *cell = (FruitCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
     
 //    cell.botlabel.text = [NSString stringWithFormat:@"{%ld,%ld}",(long)indexPath.section,(long)indexPath.row];
-    
-    
-    cell.backgroundColor = [UIColor yellowColor];
-    
+    cell.hint.text = @"热\n销\n万\n件";
+    cell.youhui.text = @"限时特惠";
     return cell;
 }
 

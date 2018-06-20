@@ -11,6 +11,15 @@
 #import "TFTabBarController.h"
 #import "DCFeaturesTool.h"
 
+
+
+//参考
+//天天果园 app
+
+//趣印 有福 口袋冲印 app
+
+//找回app
+
 @interface AppDelegate ()
 
 @end
@@ -37,7 +46,7 @@
     
     return YES;
    
- 
+
 }
 
 
