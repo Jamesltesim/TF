@@ -38,6 +38,7 @@
 		1A873A1E20DB987400B1357E /* ShowImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A1C20DB987400B1357E /* ShowImageCollectionViewCell.xib */; };
 		1A873A2220DBA88200B1357E /* SeckillNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A2120DBA88200B1357E /* SeckillNavBarView.m */; };
 		1A873A2520DBAB6500B1357E /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A2420DBAB6500B1357E /* UIView+Gradient.m */; };
+		1A873A2B20DBC09100B1357E /* TFUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A2A20DBC09100B1357E /* TFUtils.m */; };
 		1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C614020D3D30C00EE4CB5 /* ADViewController.m */; };
 		1A9ABF8220D4E36700DC1F1B /* ADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8120D4E36700DC1F1B /* ADView.m */; };
 		1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8520D4E9E700DC1F1B /* LostViewController.m */; };
@@ -155,6 +156,8 @@
 		1A873A2120DBA88200B1357E /* SeckillNavBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeckillNavBarView.m; sourceTree = "<group>"; };
 		1A873A2320DBAB6500B1357E /* UIView+Gradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Gradient.h"; sourceTree = "<group>"; };
 		1A873A2420DBAB6500B1357E /* UIView+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gradient.m"; sourceTree = "<group>"; };
+		1A873A2920DBC09100B1357E /* TFUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFUtils.h; sourceTree = "<group>"; };
+		1A873A2A20DBC09100B1357E /* TFUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFUtils.m; sourceTree = "<group>"; };
 		1A8C613F20D3D30C00EE4CB5 /* ADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADViewController.h; sourceTree = "<group>"; };
 		1A8C614020D3D30C00EE4CB5 /* ADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADViewController.m; sourceTree = "<group>"; };
 		1A9ABF8020D4E36700DC1F1B /* ADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADView.h; sourceTree = "<group>"; };
@@ -447,6 +450,8 @@
 		1A873A2620DBBF9E00B1357E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1A873A2920DBC09100B1357E /* TFUtils.h */,
+				1A873A2A20DBC09100B1357E /* TFUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -821,6 +826,7 @@
 				1ABDDE2320D3B5BB00E900A8 /* MoreViewController.m in Sources */,
 				1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */,
 				1A2BE02020C3CD7E0023C55D /* FruitCollectionViewCell.m in Sources */,
+				1A873A2B20DBC09100B1357E /* TFUtils.m in Sources */,
 				1A2BDFF820C3C5180023C55D /* TFViewController.m in Sources */,
 				1A873A0320DA09E700B1357E /* PrintPhotoTableViewCell.m in Sources */,
 				1ABDDE1D20D3A4BF00E900A8 /* DCNewFeaturesCell.m in Sources */,
