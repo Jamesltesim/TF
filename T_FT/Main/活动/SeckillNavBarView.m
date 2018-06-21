@@ -16,7 +16,7 @@
     SeckillNavBarView *navView = [[SeckillNavBarView alloc] init];
     
     CGRect frame = navView.frame;
-    navView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height+60);
+    navView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height+50);
     navView.backgroundColor = [UIColor redColor];
     [navView gradualColorWithStartColor:[UIColor colorWithRed:236/255.0 green:85/255.0 blue:121/255.0 alpha:1] endColor:[UIColor colorWithRed:209/255.0 green:57/255.0 blue:43/255.0 alpha:1]];
 

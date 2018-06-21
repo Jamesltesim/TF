@@ -10,4 +10,5 @@
 
 @interface SeckillNavBarView : MeNavView
 
+@property (nonatomic,strong) NSArray *titles;
 @end

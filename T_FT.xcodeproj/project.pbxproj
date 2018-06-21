@@ -288,6 +288,10 @@
 		1A2BDFBC20C3C4370023C55D /* T_FT */ = {
 			isa = PBXGroup;
 			children = (
+				1A2BDFEF20C3C4D00023C55D /* BaseClass */,
+				1A873A2820DBBFC500B1357E /* Resource */,
+				1A873A2720DBBFB300B1357E /* Macros */,
+				1A873A2620DBBF9E00B1357E /* Utils */,
 				1ABDDE1020D3A4B600E900A8 /* Vender */,
 				1ABDDE0F20D3A4A300E900A8 /* Main */,
 				1A2BE01520C3CB670023C55D /* Category */,
@@ -323,7 +327,7 @@
 			path = T_FTUITests;
 			sourceTree = "<group>";
 		};
-		1A2BDFEF20C3C4D00023C55D /* Base */ = {
+		1A2BDFEF20C3C4D00023C55D /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
 				1A873A1F20DBA84C00B1357E /* View */,
@@ -334,7 +338,7 @@
 				1A2BDFF620C3C5180023C55D /* TFViewController.h */,
 				1A2BDFF720C3C5180023C55D /* TFViewController.m */,
 			);
-			path = Base;
+			path = BaseClass;
 			sourceTree = "<group>";
 		};
 		1A2BDFF920C3C53D0023C55D /* 首页 */ = {
@@ -440,6 +444,27 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1A873A2620DBBF9E00B1357E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1A873A2720DBBFB300B1357E /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		1A873A2820DBBFC500B1357E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		1A8C614220D3D31100EE4CB5 /* 广告 */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,7 +523,6 @@
 		1ABDDE0F20D3A4A300E900A8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				1A2BDFEF20C3C4D00023C55D /* Base */,
 				1A2BDFF920C3C53D0023C55D /* 首页 */,
 				1A2BDFFA20C3C54A0023C55D /* 活动 */,
 				1A2BDFFB20C3C5500023C55D /* 我的 */,
