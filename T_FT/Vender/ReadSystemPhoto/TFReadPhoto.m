@@ -68,13 +68,13 @@
     return models;
 }
 
-- (NSArray<TFImageDataModel *> *)getImage{
+- (void)getImage{
     NSMutableArray *models = [[NSMutableArray alloc] initWithCapacity:0];
     
     
     //    https://www.jianshu.com/p/00a1c8a6e3e0
     PHFetchOptions *options = [[PHFetchOptions alloc] init];
-    options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
+    options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
     
     //获取相机胶卷所有图片
     PHFetchResult *assets = [PHAsset fetchAssetsWithMediaType:PHAssetMediaTypeImage options:options];
@@ -126,8 +126,6 @@
         }];
         
     }
-    
-    return models;
 }
 
 @end

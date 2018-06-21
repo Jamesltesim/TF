@@ -8,6 +8,7 @@
 
 #import "ActivityViewController.h"
 #import "ActivityCollectionViewCell.h"
+#import "SeckillNavBarView.h"
 
 @interface ActivityViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
@@ -21,9 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createCollectionView];
+//    [self createCollectionView];
+//
     
+    self.navigationController.navigationBar.hidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    SeckillNavBarView *navView = [SeckillNavBarView creatNavView];
+    navView.title = @"秒杀";
+    navView.hidenBottomLine = YES;
+    [self.view addSubview:navView];
     
 //    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
 //

@@ -14,7 +14,11 @@
 @property (nonatomic,strong) NSString *title;
 //
 @property (nonatomic) BOOL hidenBottomLine;  //defuit No
+
+//隐藏底部线，隐藏
+@property (nonatomic) BOOL clearColor;
 @property (nonatomic,strong) UIColor *titleColor;
+
 
 
 - (void)addLeftButtonWithAction:(SEL)action;

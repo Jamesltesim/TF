@@ -96,10 +96,9 @@ static NSString *iden = @"cell";
 - (MeNavView *)navView{
     if(!_navView){
         _navView = [MeNavView creatNavView];
-        _navView.backgroundColor = [UIColor clearColor];
-        _navView.titleColor = [UIColor clearColor];
-        _navView.hidenBottomLine = YES;
-      
+        
+        _navView.clearColor = YES;
+    
     }
     return _navView;
 }

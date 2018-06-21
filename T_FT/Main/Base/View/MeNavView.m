@@ -55,6 +55,19 @@
     self.bottomLine.hidden = hidenBottomLine;
 }
 
+- (void)setClearColor:(BOOL)clearColor{
+    if(clearColor){
+        self.backgroundColor = [UIColor clearColor];
+        self.titleColor = [UIColor clearColor];
+        self.hidenBottomLine = YES;
+    }else{
+        self.backgroundColor = [UIColor whiteColor];
+        self.titleColor = [UIColor whiteColor];
+        self.hidenBottomLine = NO;
+    }
+  
+}
+
 - (UIView *)bottomLine{
     if(!_bottomLine){
         _bottomLine = [[UIView alloc]initWithFrame:CGRectMake(0, self.bottom-0.5, self.width, 0.5)];
