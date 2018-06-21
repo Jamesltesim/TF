@@ -13,7 +13,7 @@
 #import "MJChiBaoZiHeader.h"
 
 
-@interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
 
 @property (nonatomic,strong) SDCycleScrollView *bannerView;
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -63,12 +63,21 @@
         // 拿到当前的下拉刷新控件，结束刷新状态
         [self.collectionView.mj_header endRefreshing];
     });
+    
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+ 
+    if((scrollView.contentOffset.y+STATUSVIEW_HEIGHT+CONTENT_HEIGHT_NO_BAR_HERGHT) > scrollView.contentSize.height){
+        NSLog(@"ok l");
+    }
+}
 
 #pragma mark collectionView代理方法
 //返回section个数
@@ -192,11 +201,11 @@
 //    NSLog(@"%@",msg);
 }
 
-
-
 #pragma mark get set
 
 - (void)createCollectionView{
+    
+ 
     //1.初始化layout
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     //设置collectionView滚动方向
@@ -209,6 +218,7 @@
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     [self.view addSubview:_collectionView];
     _collectionView.backgroundColor = [UIColor whiteColor];
+    _collectionView.showsVerticalScrollIndicator = NO;
     
     //3.注册collectionViewCell
     //注意，此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致 均为 cellId
@@ -223,6 +233,11 @@
     //4.设置代理
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
+    
+    
+//    UIView *view = [[UIView alloc]initWithFrame:_collectionView.bounds];
+//    view.backgroundColor = [UIColor blueColor];
+//    _collectionView.backgroundView = view;
 }
 
 - (SDCycleScrollView *)bannerView{

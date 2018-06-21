@@ -31,6 +31,11 @@
 		1A873A0420DA09E700B1357E /* PrintPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0220DA09E700B1357E /* PrintPhotoTableViewCell.xib */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
+		1A873A1220DB536500B1357E /* TFReadPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A1120DB536500B1357E /* TFReadPhoto.m */; };
+		1A873A1520DB539500B1357E /* TFImageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A1420DB539500B1357E /* TFImageDataModel.m */; };
+		1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A1820DB96CA00B1357E /* ShowImageViewController.m */; };
+		1A873A1D20DB987400B1357E /* ShowImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A1B20DB987400B1357E /* ShowImageCollectionViewCell.m */; };
+		1A873A1E20DB987400B1357E /* ShowImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A1C20DB987400B1357E /* ShowImageCollectionViewCell.xib */; };
 		1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C614020D3D30C00EE4CB5 /* ADViewController.m */; };
 		1A9ABF8220D4E36700DC1F1B /* ADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8120D4E36700DC1F1B /* ADView.m */; };
 		1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8520D4E9E700DC1F1B /* LostViewController.m */; };
@@ -134,6 +139,16 @@
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
 		1A873A0920DA397B00B1357E /* PhotoDescViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoDescViewController.h; sourceTree = "<group>"; };
 		1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoDescViewController.m; sourceTree = "<group>"; };
+		1A873A1020DB536500B1357E /* TFReadPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFReadPhoto.h; sourceTree = "<group>"; };
+		1A873A1120DB536500B1357E /* TFReadPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFReadPhoto.m; sourceTree = "<group>"; };
+		1A873A1320DB539500B1357E /* TFImageDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFImageDataModel.h; sourceTree = "<group>"; };
+		1A873A1420DB539500B1357E /* TFImageDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFImageDataModel.m; sourceTree = "<group>"; };
+		1A873A1620DB546E00B1357E /* TFReadPhotoDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFReadPhotoDelegate.h; sourceTree = "<group>"; };
+		1A873A1720DB96CA00B1357E /* ShowImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowImageViewController.h; sourceTree = "<group>"; };
+		1A873A1820DB96CA00B1357E /* ShowImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowImageViewController.m; sourceTree = "<group>"; };
+		1A873A1A20DB987400B1357E /* ShowImageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowImageCollectionViewCell.h; sourceTree = "<group>"; };
+		1A873A1B20DB987400B1357E /* ShowImageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowImageCollectionViewCell.m; sourceTree = "<group>"; };
+		1A873A1C20DB987400B1357E /* ShowImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		1A8C613F20D3D30C00EE4CB5 /* ADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADViewController.h; sourceTree = "<group>"; };
 		1A8C614020D3D30C00EE4CB5 /* ADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADViewController.m; sourceTree = "<group>"; };
 		1A9ABF8020D4E36700DC1F1B /* ADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADView.h; sourceTree = "<group>"; };
@@ -386,8 +401,25 @@
 				1A873A0220DA09E700B1357E /* PrintPhotoTableViewCell.xib */,
 				1A873A0920DA397B00B1357E /* PhotoDescViewController.h */,
 				1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */,
+				1A873A1720DB96CA00B1357E /* ShowImageViewController.h */,
+				1A873A1820DB96CA00B1357E /* ShowImageViewController.m */,
+				1A873A1A20DB987400B1357E /* ShowImageCollectionViewCell.h */,
+				1A873A1B20DB987400B1357E /* ShowImageCollectionViewCell.m */,
+				1A873A1C20DB987400B1357E /* ShowImageCollectionViewCell.xib */,
 			);
 			path = "照片冲印";
+			sourceTree = "<group>";
+		};
+		1A873A0C20DB52C000B1357E /* ReadSystemPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				1A873A1020DB536500B1357E /* TFReadPhoto.h */,
+				1A873A1120DB536500B1357E /* TFReadPhoto.m */,
+				1A873A1320DB539500B1357E /* TFImageDataModel.h */,
+				1A873A1420DB539500B1357E /* TFImageDataModel.m */,
+				1A873A1620DB546E00B1357E /* TFReadPhotoDelegate.h */,
+			);
+			path = ReadSystemPhoto;
 			sourceTree = "<group>";
 		};
 		1A8C614220D3D31100EE4CB5 /* 广告 */ = {
@@ -459,6 +491,7 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				1A873A0C20DB52C000B1357E /* ReadSystemPhoto */,
 				1A8C614220D3D31100EE4CB5 /* 广告 */,
 				1ABDDE2920D3B62200E900A8 /* Masonry */,
 				1ABDDE2720D3B5F200E900A8 /* 字体渐变动画 */,
@@ -661,6 +694,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A873A1E20DB987400B1357E /* ShowImageCollectionViewCell.xib in Resources */,
 				1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */,
 				1ABDDE5520D3BE0800E900A8 /* ActivityCollectionViewCell.xib in Resources */,
 				1AF8248220CA76E400587A6F /* 29.jpg in Resources */,
@@ -750,7 +784,9 @@
 				1ABDDE1D20D3A4BF00E900A8 /* DCNewFeaturesCell.m in Sources */,
 				1A2BDFF520C3C5090023C55D /* TFNavigationController.m in Sources */,
 				1A2BE03020C5313C0023C55D /* LoginViewController.m in Sources */,
+				1A873A1220DB536500B1357E /* TFReadPhoto.m in Sources */,
 				1A9ABF8220D4E36700DC1F1B /* ADView.m in Sources */,
+				1A873A1D20DB987400B1357E /* ShowImageCollectionViewCell.m in Sources */,
 				1A2BE01820C3CB670023C55D /* UIView+Frame.m in Sources */,
 				1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */,
 				1A2BDFF220C3C4F50023C55D /* TFTabBarController.m in Sources */,
@@ -775,6 +811,8 @@
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,
 				1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */,
+				1A873A1520DB539500B1357E /* TFImageDataModel.m in Sources */,
+				1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */,
 				1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,
 				1ABDDE4820D3B62200E900A8 /* MASLayoutConstraint.m in Sources */,
