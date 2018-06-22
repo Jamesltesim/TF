@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A03A70520DC836200576A03 /* SeckillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A70320DC836200576A03 /* SeckillTableViewCell.m */; };
+		1A03A70620DC836200576A03 /* SeckillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A03A70420DC836200576A03 /* SeckillTableViewCell.xib */; };
+		1A03A70A20DC976600576A03 /* SoldoutProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A70920DC976600576A03 /* SoldoutProgressView.m */; };
 		1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BDFBE20C3C4370023C55D /* AppDelegate.m */; };
 		1A2BDFC520C3C4370023C55D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2BDFC320C3C4370023C55D /* Main.storyboard */; };
 		1A2BDFC720C3C4390023C55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2BDFC620C3C4390023C55D /* Assets.xcassets */; };
@@ -39,6 +42,7 @@
 		1A873A2220DBA88200B1357E /* SeckillNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A2120DBA88200B1357E /* SeckillNavBarView.m */; };
 		1A873A2520DBAB6500B1357E /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A2420DBAB6500B1357E /* UIView+Gradient.m */; };
 		1A873A2B20DBC09100B1357E /* TFUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A2A20DBC09100B1357E /* TFUtils.m */; };
+		1A873A2E20DBC78800B1357E /* TFUtils+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A2D20DBC78800B1357E /* TFUtils+Date.m */; };
 		1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C614020D3D30C00EE4CB5 /* ADViewController.m */; };
 		1A9ABF8220D4E36700DC1F1B /* ADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8120D4E36700DC1F1B /* ADView.m */; };
 		1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8520D4E9E700DC1F1B /* LostViewController.m */; };
@@ -95,6 +99,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A03A70220DC836200576A03 /* SeckillTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeckillTableViewCell.h; sourceTree = "<group>"; };
+		1A03A70320DC836200576A03 /* SeckillTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeckillTableViewCell.m; sourceTree = "<group>"; };
+		1A03A70420DC836200576A03 /* SeckillTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeckillTableViewCell.xib; sourceTree = "<group>"; };
+		1A03A70820DC976600576A03 /* SoldoutProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoldoutProgressView.h; sourceTree = "<group>"; };
+		1A03A70920DC976600576A03 /* SoldoutProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoldoutProgressView.m; sourceTree = "<group>"; };
 		1A2BDFBA20C3C4370023C55D /* T_FT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T_FT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2BDFBD20C3C4370023C55D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A2BDFBE20C3C4370023C55D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -158,6 +167,9 @@
 		1A873A2420DBAB6500B1357E /* UIView+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gradient.m"; sourceTree = "<group>"; };
 		1A873A2920DBC09100B1357E /* TFUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFUtils.h; sourceTree = "<group>"; };
 		1A873A2A20DBC09100B1357E /* TFUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFUtils.m; sourceTree = "<group>"; };
+		1A873A2C20DBC78800B1357E /* TFUtils+Date.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TFUtils+Date.h"; sourceTree = "<group>"; };
+		1A873A2D20DBC78800B1357E /* TFUtils+Date.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TFUtils+Date.m"; sourceTree = "<group>"; };
+		1A873A2F20DBC81E00B1357E /* TFUtilsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFUtilsHeader.h; sourceTree = "<group>"; };
 		1A8C613F20D3D30C00EE4CB5 /* ADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADViewController.h; sourceTree = "<group>"; };
 		1A8C614020D3D30C00EE4CB5 /* ADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADViewController.m; sourceTree = "<group>"; };
 		1A9ABF8020D4E36700DC1F1B /* ADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADView.h; sourceTree = "<group>"; };
@@ -265,6 +277,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		1A03A70720DC96F500576A03 /* 秒杀团购 */ = {
+			isa = PBXGroup;
+			children = (
+				1A03A70220DC836200576A03 /* SeckillTableViewCell.h */,
+				1A03A70320DC836200576A03 /* SeckillTableViewCell.m */,
+				1A03A70420DC836200576A03 /* SeckillTableViewCell.xib */,
+				1A873A2020DBA88200B1357E /* SeckillNavBarView.h */,
+				1A873A2120DBA88200B1357E /* SeckillNavBarView.m */,
+				1A03A70820DC976600576A03 /* SoldoutProgressView.h */,
+				1A03A70920DC976600576A03 /* SoldoutProgressView.m */,
+			);
+			path = "秒杀团购";
+			sourceTree = "<group>";
+		};
 		1A2BDFB120C3C4370023C55D = {
 			isa = PBXGroup;
 			children = (
@@ -360,8 +386,7 @@
 		1A2BDFFA20C3C54A0023C55D /* 活动 */ = {
 			isa = PBXGroup;
 			children = (
-				1A873A2020DBA88200B1357E /* SeckillNavBarView.h */,
-				1A873A2120DBA88200B1357E /* SeckillNavBarView.m */,
+				1A03A70720DC96F500576A03 /* 秒杀团购 */,
 				1A2BDFFF20C3C5860023C55D /* ActivityViewController.h */,
 				1A2BE00020C3C5860023C55D /* ActivityViewController.m */,
 				1ABDDE5120D3BE0800E900A8 /* ActivityCollectionViewCell.h */,
@@ -452,6 +477,9 @@
 			children = (
 				1A873A2920DBC09100B1357E /* TFUtils.h */,
 				1A873A2A20DBC09100B1357E /* TFUtils.m */,
+				1A873A2C20DBC78800B1357E /* TFUtils+Date.h */,
+				1A873A2D20DBC78800B1357E /* TFUtils+Date.m */,
+				1A873A2F20DBC81E00B1357E /* TFUtilsHeader.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -744,6 +772,7 @@
 				1A873A1E20DB987400B1357E /* ShowImageCollectionViewCell.xib in Resources */,
 				1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */,
 				1ABDDE5520D3BE0800E900A8 /* ActivityCollectionViewCell.xib in Resources */,
+				1A03A70620DC836200576A03 /* SeckillTableViewCell.xib in Resources */,
 				1AF8248220CA76E400587A6F /* 29.jpg in Resources */,
 				1AF8247C20CA76D100587A6F /* 12.jpg in Resources */,
 				1AF8247E20CA76D700587A6F /* 19.jpg in Resources */,
@@ -819,6 +848,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A873A2E20DBC78800B1357E /* TFUtils+Date.m in Sources */,
 				1A2BE00420C3C58E0023C55D /* MeViewController.m in Sources */,
 				1ABDDE1B20D3A4BF00E900A8 /* DCNewFeaturesViewController.m in Sources */,
 				1ABDDE4920D3B62200E900A8 /* MASViewAttribute.m in Sources */,
@@ -830,6 +860,7 @@
 				1A2BDFF820C3C5180023C55D /* TFViewController.m in Sources */,
 				1A873A0320DA09E700B1357E /* PrintPhotoTableViewCell.m in Sources */,
 				1ABDDE1D20D3A4BF00E900A8 /* DCNewFeaturesCell.m in Sources */,
+				1A03A70A20DC976600576A03 /* SoldoutProgressView.m in Sources */,
 				1A873A2220DBA88200B1357E /* SeckillNavBarView.m in Sources */,
 				1A2BDFF520C3C5090023C55D /* TFNavigationController.m in Sources */,
 				1A2BE03020C5313C0023C55D /* LoginViewController.m in Sources */,
@@ -857,6 +888,7 @@
 				1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */,
 				1A2BDFFE20C3C5690023C55D /* HomeViewController.m in Sources */,
 				1ABDDE4C20D3B62200E900A8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				1A03A70520DC836200576A03 /* SeckillTableViewCell.m in Sources */,
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,
 				1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */,

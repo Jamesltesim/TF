@@ -9,6 +9,8 @@
 #import "ActivityViewController.h"
 #import "ActivityCollectionViewCell.h"
 #import "SeckillNavBarView.h"
+#import "SeckillTableViewCell.h"
+
 
 @interface ActivityViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,
                                     UITableViewDelegate,UITableViewDataSource>
@@ -40,16 +42,9 @@
     [self.view addSubview:self.tabView];
     
     
+    self.navView.seckillTimes = @[@"18:00:00",@"18:00:00",@"18:00:00"];
     
-    NSString *dateString = @"2018-06-21 23:59:00";
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
-    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    
-    NSDate *mydate=[formatter dateFromString:dateString];
-    
-    NSLog(@"date:%@",mydate);
-    
-    NSLog(@"%d",[self compareOneDay:[NSDate date] withAnotherDay:mydate]);
+
     
     self.dataArray = @[@"1",@"2",@"3",@"4",@"5",@"1",@"2",@"3",@"4",@"5"];
     
@@ -70,35 +65,6 @@
     
 }
 
--(int)compareOneDay:(NSDate *)oneDay withAnotherDay:(NSDate *)anotherDay
-{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    
-    NSString *oneDayStr = [dateFormatter stringFromDate:oneDay];
-    
-    NSString *anotherDayStr = [dateFormatter stringFromDate:anotherDay];
-    
-    NSDate *dateA = [dateFormatter dateFromString:oneDayStr];
-    
-    NSDate *dateB = [dateFormatter dateFromString:anotherDayStr];
-    
-    NSComparisonResult result = [dateA compare:dateB];
-    
-    if (result == NSOrderedDescending) {
-        //NSLog(@"oneDay比 anotherDay时间晚");
-        return 1;
-    }
-    else if (result == NSOrderedAscending){
-        //NSLog(@"oneDay比 anotherDay时间早");
-        return -1;
-    }
-    //NSLog(@"两者时间是同一个时间");
-    return 0;
-    
-}
-
 
 - (UITableView *)tabView{
     if(!_tabView){
@@ -106,6 +72,7 @@
         
         _tabView.delegate = self;
         _tabView.dataSource = self;
+        [_tabView registerNib:[UINib nibWithNibName:@"SeckillTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     }
     return _tabView;
 }
@@ -115,7 +82,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    return 130;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -123,8 +90,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    cell.textLabel.text = self.dataArray[indexPath.row];
+    SeckillTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.yishou.text = @"已售21%";
+    [cell.button setTitle:@"去抢购" forState:UIControlStateNormal];
+    
+    for(int i=0;i<6000;i++){
+        cell.progressBar.progress = i/10000.0;
+    }
+   
     return cell;
 }
 

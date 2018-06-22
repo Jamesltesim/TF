@@ -10,5 +10,5 @@
 
 @interface SeckillNavBarView : MeNavView
 
-@property (nonatomic,strong) NSArray *titles;
+@property (nonatomic,strong) NSArray *seckillTimes;
 @end
