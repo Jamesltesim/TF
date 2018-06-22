@@ -10,6 +10,10 @@
 
 @interface SoldoutProgressView : UIView
 
+//@property (nonatomic) NSInteger slodCount;
+//@property (nonatomic) NSInteger totalCount;
 
+- (void)sold:(NSInteger)sold total:(CGFloat)total;
+- (instancetype)initWithFrame:(CGRect)frame sold:(NSInteger)sold total:(NSInteger)total;
 
 @end

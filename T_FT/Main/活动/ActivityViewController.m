@@ -94,9 +94,8 @@
     cell.yishou.text = @"已售21%";
     [cell.button setTitle:@"去抢购" forState:UIControlStateNormal];
     
-    for(int i=0;i<6000;i++){
-        cell.progressBar.progress = i/10000.0;
-    }
+    
+    [cell.soldStatus sold:50 total:100];
    
     return cell;
 }

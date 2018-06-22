@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SoldoutProgressView.h"
 
 @interface SeckillTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
@@ -17,5 +18,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet UILabel *yishou;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
-
+@property (weak, nonatomic) IBOutlet SoldoutProgressView *soldStatus;
 @end

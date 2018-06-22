@@ -12,12 +12,12 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.progressBar.layer.borderColor = [UIColor colorWithRed:202/255.0 green:121/255.0 blue:129/255.0 alpha:1].CGColor;
-    self.progressBar.layer.borderWidth = 1;
-    self.progressBar.layer.cornerRadius = 3.5;
-    self.progressBar.layer.masksToBounds = YES;
-    
-    self.button.layer.cornerRadius = 2;
+//    self.progressBar.layer.borderColor = [UIColor colorWithRed:202/255.0 green:121/255.0 blue:129/255.0 alpha:1].CGColor;
+//    self.progressBar.layer.borderWidth = 1;
+//    self.progressBar.layer.cornerRadius = 3.5;
+//    self.progressBar.layer.masksToBounds = YES;
+//    
+//    self.button.layer.cornerRadius = 2;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
