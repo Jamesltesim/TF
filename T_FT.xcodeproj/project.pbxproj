@@ -73,6 +73,8 @@
 		1ABDDE5420D3BE0800E900A8 /* ActivityCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDE5220D3BE0800E900A8 /* ActivityCollectionViewCell.m */; };
 		1ABDDE5520D3BE0800E900A8 /* ActivityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDE5320D3BE0800E900A8 /* ActivityCollectionViewCell.xib */; };
 		1AC711AF20E097F40099D2A9 /* NoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC711AE20E097F40099D2A9 /* NoiseViewController.m */; };
+		1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC816C720E102C700B1EE89 /* iBeaconViewController.m */; };
+		1AC816CA20E102C700B1EE89 /* iBeaconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC816C820E102C700B1EE89 /* iBeaconViewController.xib */; };
 		1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */; };
 		1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247920CA768800587A6F /* ScrollImage.m */; };
 		1AF8247C20CA76D100587A6F /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8247B20CA76D100587A6F /* 12.jpg */; };
@@ -232,6 +234,9 @@
 		1ABDDE5320D3BE0800E900A8 /* ActivityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCollectionViewCell.xib; sourceTree = "<group>"; };
 		1AC711AD20E097F40099D2A9 /* NoiseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoiseViewController.h; sourceTree = "<group>"; };
 		1AC711AE20E097F40099D2A9 /* NoiseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoiseViewController.m; sourceTree = "<group>"; };
+		1AC816C620E102C700B1EE89 /* iBeaconViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iBeaconViewController.h; sourceTree = "<group>"; };
+		1AC816C720E102C700B1EE89 /* iBeaconViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBeaconViewController.m; sourceTree = "<group>"; };
+		1AC816C820E102C700B1EE89 /* iBeaconViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iBeaconViewController.xib; sourceTree = "<group>"; };
 		1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
 		1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		1AF8247820CA768800587A6F /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
@@ -548,6 +553,7 @@
 		1AABE74820D8B8ED001BA4C9 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				1AC711F120E0FA1B0099D2A9 /* iBeacon */,
 				1AC711AC20E097A70099D2A9 /* 声噪 */,
 				1A8739FC20DA01CA00B1357E /* 照片冲印 */,
 				1A9ABF8C20D4EBD400DC1F1B /* 失物招领 */,
@@ -667,6 +673,16 @@
 				1AC711AE20E097F40099D2A9 /* NoiseViewController.m */,
 			);
 			path = "声噪";
+			sourceTree = "<group>";
+		};
+		1AC711F120E0FA1B0099D2A9 /* iBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				1AC816C620E102C700B1EE89 /* iBeaconViewController.h */,
+				1AC816C720E102C700B1EE89 /* iBeaconViewController.m */,
+				1AC816C820E102C700B1EE89 /* iBeaconViewController.xib */,
+			);
+			path = iBeacon;
 			sourceTree = "<group>";
 		};
 		60630A4EE00C41CD7C1B9D85 /* Frameworks */ = {
@@ -794,6 +810,7 @@
 				1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */,
 				1A2BE02120C3CD7E0023C55D /* FruitCollectionViewCell.xib in Resources */,
 				1A873A0420DA09E700B1357E /* PrintPhotoTableViewCell.xib in Resources */,
+				1AC816CA20E102C700B1EE89 /* iBeaconViewController.xib in Resources */,
 				1ABDDE0A20D34A1D00E900A8 /* ImgAndTextCollectionViewCell.xib in Resources */,
 				1A2BDFC720C3C4390023C55D /* Assets.xcassets in Resources */,
 				1A2BDFC520C3C4370023C55D /* Main.storyboard in Resources */,
@@ -896,6 +913,7 @@
 				1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */,
 				1ABDDE4720D3B62200E900A8 /* MASConstraintMaker.m in Sources */,
 				1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */,
+				1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */,
 				1ABDDE4520D3B62200E900A8 /* MASCompositeConstraint.m in Sources */,
 				1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */,
 				1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */,

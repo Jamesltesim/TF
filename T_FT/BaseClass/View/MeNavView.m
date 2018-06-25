@@ -71,7 +71,7 @@
 - (UIView *)bottomLine{
     if(!_bottomLine){
         _bottomLine = [[UIView alloc]initWithFrame:CGRectMake(0, self.bottom-0.5, self.width, 0.5)];
-        _bottomLine.backgroundColor = [UIColor colorWithRed:151/255.0 green:151/255.0 blue:151/255.0 alpha:1];
+        _bottomLine.backgroundColor = [UIColor colorWithRed:181/255.0 green:181/255.0 blue:181/255.0 alpha:0.6];
     }
     return _bottomLine;
 }

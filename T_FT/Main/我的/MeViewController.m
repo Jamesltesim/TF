@@ -15,6 +15,7 @@
 #import "PrintPhotoViewController.h"
 #import "MeNavView.h"
 #import "NoiseViewController.h"
+#import "iBeaconViewController.h"
 
 @interface MeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
     
@@ -136,7 +137,8 @@ static NSString *iden = @"cell";
                       @[@{@"title":@"失物招领公益平台",@"img":@"-"},
                         @{@"title":@"废品收购",@"img":@"-"},
                         @{@"title":@"打印/复印",@"img":@"-"}, //打印照片参考趣印 有福 口袋冲印 app
-                         @{@"title":@"噪声检测",@"img":@"-"}
+                         @{@"title":@"噪声检测",@"img":@"-"},
+                        @{@"title":@"iBeacon",@"img":@"-"}
                        
                         ],
                       
@@ -319,6 +321,10 @@ static NSString *iden = @"cell";
     else if ([indexPath isEqual:[NSIndexPath indexPathForRow:3 inSection:1]]){
         NoiseViewController *print = [[NoiseViewController alloc]init];
         [self.navigationController pushViewController:print animated:YES];
+    }
+    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:4 inSection:1]]){
+        iBeaconViewController *iBeacon = [[iBeaconViewController alloc]initWithNibName:@"iBeaconViewController" bundle:nil];
+        [self.navigationController pushViewController:iBeacon animated:YES];
     }
     
     else{

@@ -1,0 +1,13 @@
+//
+//  iBeaconViewController.h
+//  T_FT
+//
+//  Created by James on 2018/6/25.
+//  Copyright © 2018年 James. All rights reserved.
+//
+
+#import "MeSubViewController.h"
+
+@interface iBeaconViewController : MeSubViewController
+
+@end
