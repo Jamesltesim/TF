@@ -14,6 +14,7 @@
 #import "LostViewController.h"
 #import "PrintPhotoViewController.h"
 #import "MeNavView.h"
+#import "NoiseViewController.h"
 
 @interface MeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
     
@@ -57,7 +58,7 @@ static NSString *iden = @"cell";
         
         
         //2.初始化collectionView
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, -STATUSVIEW_HEIGHT, self.view.width, self.view.height+STATUSVIEW_HEIGHT) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, CONTENT_HEIGHT_WITH_BAR_HERGHT + NAV_HEIGHT) collectionViewLayout:layout];
         [self.view addSubview:_collectionView];
         _collectionView.backgroundColor = [UIColor whiteColor];
         
@@ -102,11 +103,11 @@ static NSString *iden = @"cell";
     }
     return _navView;
 }
-//- (void)viewDidAppear:(BOOL)animated{
-//    [super viewDidAppear:animated];
-//
-//     [self.navigationItem setHidesBackButton:NO];
-//}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+
+//    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+}
 //
 //- (void)viewWillDisappear:(BOOL)animated{
 //    [super viewWillDisappear:animated];
@@ -120,6 +121,7 @@ static NSString *iden = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     
     self.navView.title = @"个人中心";
     self.navigationController.navigationBar.hidden = YES;
@@ -133,8 +135,9 @@ static NSString *iden = @"cell";
                       ],
                       @[@{@"title":@"失物招领公益平台",@"img":@"-"},
                         @{@"title":@"废品收购",@"img":@"-"},
-                        @{@"title":@"打印/复印",@"img":@"-"}
-                        //打印照片参考趣印 有福 口袋冲印 app
+                        @{@"title":@"打印/复印",@"img":@"-"}, //打印照片参考趣印 有福 口袋冲印 app
+                         @{@"title":@"噪声检测",@"img":@"-"}
+                       
                         ],
                       
                     @[@{@"title":@"我的地址",@"img":@"-"},
@@ -159,8 +162,17 @@ static NSString *iden = @"cell";
                       ];
     
 
-//    self.automaticallyAdjustsScrollViewInsets = NO;
+ 
     [self.view addSubview:self.collectionView];
+    
+    if (@available(iOS 11.0, *)) {
+        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        
+    }
+    
        [self.view addSubview:self.navView];
     [self setGradualNavView:self.navView];
     
@@ -304,6 +316,11 @@ static NSString *iden = @"cell";
         PrintPhotoViewController *print = [[PrintPhotoViewController alloc]init];
         [self.navigationController pushViewController:print animated:YES];
     }
+    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:3 inSection:1]]){
+        NoiseViewController *print = [[NoiseViewController alloc]init];
+        [self.navigationController pushViewController:print animated:YES];
+    }
+    
     else{
         UIViewController *controller = [[UIViewController alloc]init];
         controller.view.backgroundColor = [UIColor whiteColor];
