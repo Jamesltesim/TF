@@ -17,6 +17,7 @@
 #import "NoiseViewController.h"
 #import "iBeaconViewController.h"
 
+
 @interface MeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
     
     CGFloat headerViewHeight;

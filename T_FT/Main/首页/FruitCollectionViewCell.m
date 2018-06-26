@@ -40,9 +40,9 @@
     self.price.textColor = [UIColor colorWithRed:240/255.0 green:132/255.0 blue:51/255.0 alpha:1];
     
     self.refer.textColor = [UIColor grayColor];
-    self.refer.font = [UIFont systemFontOfSize:15];
+  
     
-    
+    [self.hint changeLineSpaceWithSpace:2];
 }
 
 @end

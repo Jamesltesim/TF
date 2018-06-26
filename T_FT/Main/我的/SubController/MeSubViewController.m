@@ -14,6 +14,13 @@
 
 @implementation MeSubViewController
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    if(self = [super initWithCoder:aDecoder]){
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
 - (instancetype)init
 {
     self = [super init];
@@ -24,7 +31,13 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-      self.automaticallyAdjustsScrollViewInsets = NO;
+    if (@available(iOS 11.0, *)) {
+       
+        
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        
+    }
     self.view.backgroundColor = [UIColor whiteColor];
     self.navView = [MeNavView creatNavView];
     [self.navView addLeftButtonWithTarget:self action:@selector(back:)];

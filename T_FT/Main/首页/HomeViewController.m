@@ -44,6 +44,22 @@
     //
     //    // 马上进入刷新状态
     [self.collectionView.mj_header beginRefreshing];
+    
+    
+    self.dataArray = @[@[@{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                         @{@"name":@"甜心大苹果",@"price":@""},
+                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""}
+                         ],
+                       
+                       @[@{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""}]];
 
 }
 
@@ -83,17 +99,15 @@
 //返回section个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 2;
+    return self.dataArray.count;
 }
 
 //每个section的item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    if(section == 0){
-        return 4;
-    }else{
-        return 6;
-    }
+    
+    NSArray *array = self.dataArray[section];
+    return array.count;
    
 }
 
@@ -102,11 +116,13 @@
     
     FruitCollectionViewCell *cell = (FruitCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
     
-//    cell.botlabel.text = [NSString stringWithFormat:@"{%ld,%ld}",(long)indexPath.section,(long)indexPath.row];
+    NSArray *array = self.dataArray[indexPath.section];
+    NSDictionary *dict = array[indexPath.row];
+    
     cell.hint.text = @"热\n销\n万\n件";
     cell.youhui.text = @"限时特惠";
     
-    cell.name.text = @"美国西北樱桃";
+    cell.name.text = dict[@"name"];
     
     cell.desc.text = @"多汁脆嫩 浓郁甜心";
     

@@ -28,7 +28,7 @@
 #define CONTENT_FRAME_WITH_BAR_HERGHT      CGRectMake(0, NAV_HEIGHT, [[UIScreen mainScreen] bounds].size.width, CONTENT_HEIGHT_WITH_BAR_HERGHT)
 
 
-#import "UIView+Frame.h"
+#import "TFCategory.h"
 #import "TFUtilsHeader.h"
 
 

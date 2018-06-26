@@ -55,10 +55,12 @@
     } else {
         NSLog(@"该设备不支持 CLBeaconRegion 区域检测");
     }
-    
-    
-    
-   
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    // 停止检测区域
+    [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
 }
 
 - (CLLocationManager *)locationManager {
@@ -135,6 +137,24 @@
     
     
 }
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    
+    NSString *errorString;
+    NSLog(@"定位失败原因: %@",[error localizedDescription]);
+    switch([error code]) {
+        case kCLErrorLocationUnknown:
+            // do something...
+            break;
+        case kCLErrorDenied:
+            // do something...
+            break;
+            
+    
+            
+    }
+}
+
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
     // 发现有iBeacon设备进入扫描范围回调
