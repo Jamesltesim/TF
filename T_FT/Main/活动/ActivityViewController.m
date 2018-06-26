@@ -12,8 +12,11 @@
 #import "SeckillTableViewCell.h"
 
 
-@interface ActivityViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,
-                                    UITableViewDelegate,UITableViewDataSource>
+@interface ActivityViewController ()<UICollectionViewDataSource,
+                                    UICollectionViewDelegate,
+                                    UICollectionViewDelegateFlowLayout,
+                                    UITableViewDelegate,
+                                    UITableViewDataSource>
 
 @property (nonatomic,strong) UICollectionView *collectionView;
 @property (nonatomic,strong) UITableView *tabView;
