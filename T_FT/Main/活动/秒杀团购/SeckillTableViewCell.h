@@ -15,8 +15,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UILabel *tuan;
 @property (weak, nonatomic) IBOutlet UILabel *yuanjia;
-@property (weak, nonatomic) IBOutlet UIButton *button;
-@property (weak, nonatomic) IBOutlet UILabel *yishou;
-@property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
 @property (weak, nonatomic) IBOutlet SoldoutProgressView *soldStatus;
 @end
