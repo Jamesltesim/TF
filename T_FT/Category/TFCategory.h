@@ -9,6 +9,8 @@
 #ifndef TFCategory_h
 #define TFCategory_h
 
+
+#import "UIFont+Tool.h"
 #import "UILabel+TF.h"
 #import "UIView+Frame.h"
 

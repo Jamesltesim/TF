@@ -79,6 +79,7 @@
 		1AC8170320E22F8300B1EE89 /* FSPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC816FF20E22F8300B1EE89 /* FSPageContentView.m */; };
 		1AC8170420E22F8300B1EE89 /* FSSegmentTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8170220E22F8300B1EE89 /* FSSegmentTitleView.m */; };
 		1AC8170820E237D700B1EE89 /* EventCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8170720E237D700B1EE89 /* EventCalendar.m */; };
+		1AC8170B20E2454900B1EE89 /* UIFont+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8170A20E2454900B1EE89 /* UIFont+Tool.m */; };
 		1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */; };
 		1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247920CA768800587A6F /* ScrollImage.m */; };
 		1AF8247C20CA76D100587A6F /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8247B20CA76D100587A6F /* 12.jpg */; };
@@ -251,6 +252,8 @@
 		1AC8170220E22F8300B1EE89 /* FSSegmentTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSegmentTitleView.m; sourceTree = "<group>"; };
 		1AC8170620E237D700B1EE89 /* EventCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCalendar.h; sourceTree = "<group>"; };
 		1AC8170720E237D700B1EE89 /* EventCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCalendar.m; sourceTree = "<group>"; };
+		1AC8170920E2454900B1EE89 /* UIFont+Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Tool.h"; sourceTree = "<group>"; };
+		1AC8170A20E2454900B1EE89 /* UIFont+Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Tool.m"; sourceTree = "<group>"; };
 		1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
 		1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		1AF8247820CA768800587A6F /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
@@ -444,11 +447,13 @@
 		1A2BE01520C3CB670023C55D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1AC816CE20E1DF9F00B1EE89 /* TFCategory.h */,
 				1A2BE01620C3CB670023C55D /* UIView+Frame.h */,
 				1A2BE01720C3CB670023C55D /* UIView+Frame.m */,
 				1AC816CB20E1DE5E00B1EE89 /* UILabel+TF.h */,
 				1AC816CC20E1DE5E00B1EE89 /* UILabel+TF.m */,
-				1AC816CE20E1DF9F00B1EE89 /* TFCategory.h */,
+				1AC8170920E2454900B1EE89 /* UIFont+Tool.h */,
+				1AC8170A20E2454900B1EE89 /* UIFont+Tool.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -945,6 +950,7 @@
 				1A2BE01820C3CB670023C55D /* UIView+Frame.m in Sources */,
 				1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */,
 				1A2BDFF220C3C4F50023C55D /* TFTabBarController.m in Sources */,
+				1AC8170B20E2454900B1EE89 /* UIFont+Tool.m in Sources */,
 				1ABDDE5420D3BE0800E900A8 /* ActivityCollectionViewCell.m in Sources */,
 				1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */,
 				1A2BDFCD20C3C4390023C55D /* main.m in Sources */,

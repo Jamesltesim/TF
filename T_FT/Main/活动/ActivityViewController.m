@@ -40,12 +40,10 @@
     _navView = [SeckillNavBarView creatNavView];
     _navView.title = @"秒杀";
     _navView.hidenBottomLine = YES;
+    _navView.seckillTimes = @[@"16:00",@"18:00",@"20:00",@"22:00",@"00:00"];
     [self.view addSubview:_navView];
     
     [self.view addSubview:self.tabView];
-    
-    
-    self.navView.seckillTimes = @[@"18:00:00",@"18:00:00",@"18:00:00"];
     
 
     
