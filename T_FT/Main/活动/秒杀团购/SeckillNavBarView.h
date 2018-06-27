@@ -12,6 +12,8 @@
 
 @interface SeckillNavBarView : MeNavView
 
+@property (nonatomic, strong) FSSegmentTitleView *titleView;
+
 @property (nonatomic,strong) NSArray *seckillTimes;
 @property (nonatomic,strong) id<FSSegmentTitleViewDelegate> segmentTitleDelegate;
 @end

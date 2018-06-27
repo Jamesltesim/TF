@@ -80,6 +80,7 @@
 		1AC8170420E22F8300B1EE89 /* FSSegmentTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8170220E22F8300B1EE89 /* FSSegmentTitleView.m */; };
 		1AC8170820E237D700B1EE89 /* EventCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8170720E237D700B1EE89 /* EventCalendar.m */; };
 		1AC8170B20E2454900B1EE89 /* UIFont+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8170A20E2454900B1EE89 /* UIFont+Tool.m */; };
+		1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD2F0620E35F8F00301950 /* SeckillViewController.m */; };
 		1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */; };
 		1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247920CA768800587A6F /* ScrollImage.m */; };
 		1AF8247C20CA76D100587A6F /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8247B20CA76D100587A6F /* 12.jpg */; };
@@ -254,6 +255,8 @@
 		1AC8170720E237D700B1EE89 /* EventCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCalendar.m; sourceTree = "<group>"; };
 		1AC8170920E2454900B1EE89 /* UIFont+Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Tool.h"; sourceTree = "<group>"; };
 		1AC8170A20E2454900B1EE89 /* UIFont+Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Tool.m"; sourceTree = "<group>"; };
+		1ACD2F0520E35F8F00301950 /* SeckillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeckillViewController.h; sourceTree = "<group>"; };
+		1ACD2F0620E35F8F00301950 /* SeckillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeckillViewController.m; sourceTree = "<group>"; };
 		1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
 		1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		1AF8247820CA768800587A6F /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
@@ -313,6 +316,8 @@
 				1A873A2120DBA88200B1357E /* SeckillNavBarView.m */,
 				1A03A70820DC976600576A03 /* SoldoutProgressView.h */,
 				1A03A70920DC976600576A03 /* SoldoutProgressView.m */,
+				1ACD2F0520E35F8F00301950 /* SeckillViewController.h */,
+				1ACD2F0620E35F8F00301950 /* SeckillViewController.m */,
 			);
 			path = "秒杀团购";
 			sourceTree = "<group>";
@@ -928,6 +933,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */,
 				1A873A2E20DBC78800B1357E /* TFUtils+Date.m in Sources */,
 				1A2BE00420C3C58E0023C55D /* MeViewController.m in Sources */,
 				1AC816CD20E1DE5E00B1EE89 /* UILabel+TF.m in Sources */,

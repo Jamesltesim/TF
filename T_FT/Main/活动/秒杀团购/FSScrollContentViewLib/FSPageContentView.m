@@ -76,6 +76,7 @@ static NSString *collectionCellIdentifier = @"collectionCellIdentifier";
         [self.parentVC addChildViewController:childVC];
     }
 //    [self addSubview:self.collectionView];
+    
     [self.collectionView reloadData];
 }
 
@@ -179,7 +180,7 @@ static NSString *collectionCellIdentifier = @"collectionCellIdentifier";
     }
     _isSelectBtn = YES;
     _contentViewCurrentIndex = contentViewCurrentIndex;
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:contentViewCurrentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:contentViewCurrentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
 }
 
 - (void)setContentViewCanScroll:(BOOL)contentViewCanScroll

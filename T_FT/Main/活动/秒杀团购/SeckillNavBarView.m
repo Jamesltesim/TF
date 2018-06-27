@@ -12,7 +12,7 @@
 
 @interface SeckillNavBarView ()
 
-@property (nonatomic, strong) FSSegmentTitleView *titleView;
+
 
 @end
 
@@ -40,7 +40,7 @@
     self.titleView = [[FSSegmentTitleView alloc]initWithFrame:CGRectMake(0, NAV_HEIGHT, CGRectGetWidth(self.bounds), 50) titles:seckillTimes delegate:self.segmentTitleDelegate indicatorType:FSIndicatorTypeDefault];
     //    self.titleView.titleSelectFont = [UIFont systemFontOfSize:10];
     self.titleView.delegate = self.segmentTitleDelegate;
-    self.titleView.selectIndex = 2;
+    self.titleView.selectIndex = 0;
     [self addSubview:self.titleView];
 }
 
