@@ -16,16 +16,34 @@
                                     UICollectionViewDelegate,
                                     UICollectionViewDelegateFlowLayout,
                                     UITableViewDelegate,
-                                    UITableViewDataSource>
+                                    UITableViewDataSource,
+                                    FSPageContentViewDelegate,
+                                    FSSegmentTitleViewDelegate>
 
 @property (nonatomic,strong) UICollectionView *collectionView;
 @property (nonatomic,strong) UITableView *tabView;
 @property (nonatomic,strong) SeckillNavBarView *navView;
 @property (nonatomic,strong) NSArray *dataArray;
 
+@property (nonatomic, strong) FSPageContentView *pageContentView;
+
 @end
 
 @implementation ActivityViewController
+
+
+#pragma mark --
+- (void)FSSegmentTitleView:(FSSegmentTitleView *)titleView startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex
+{
+    self.pageContentView.contentViewCurrentIndex = endIndex;
+//    self.title = @[@"全部",@"服饰穿搭",@"生活百货",@"美食吃货",@"美容护理",@"母婴儿童",@"数码家电",@"其他"][endIndex];
+}
+
+- (void)FSContenViewDidEndDecelerating:(FSPageContentView *)contentView startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex
+{
+//    self.titleView.selectIndex = endIndex;
+//    self.title = @[@"全部",@"服饰穿搭",@"生活百货",@"美食吃货",@"美容护理",@"母婴儿童",@"数码家电",@"其他"][endIndex];
+}
 
 #pragma -mark life cycle
 
@@ -38,6 +56,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     _navView = [SeckillNavBarView creatNavView];
+    _navView.segmentTitleDelegate = self;
     _navView.title = @"秒杀";
     _navView.hidenBottomLine = YES;
     _navView.seckillTimes = @[@"16:00",@"18:00",@"20:00",@"22:00",@"00:00"];

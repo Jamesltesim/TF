@@ -18,6 +18,8 @@
 //    self.progressBar.layer.masksToBounds = YES;
 //    
 //    self.button.layer.cornerRadius = 2;
+    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

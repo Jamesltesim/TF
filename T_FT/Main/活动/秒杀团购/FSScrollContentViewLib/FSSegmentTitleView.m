@@ -42,12 +42,13 @@
 {
     self.itemMargin = 20;
     self.selectIndex = 0;
-    self.titleNormalColor = [UIColor blackColor];
+    self.titleNormalColor = [UIColor colorWithRed:237/255.0 green:159/255.0 blue:169/255.0 alpha:1];
     self.titleSelectColor = [UIColor whiteColor];
-    self.titleFont = [UIFont systemFontOfSize:15];
-    self.indicatorColor = self.titleSelectColor;
+//    self.titleFont = [UIFont systemFontOfSize:15];
+     self.titleFont = [UIFont getFontSizeWithType:TGFontTypeSix size:17.5];
+    self.indicatorColor = [UIColor clearColor];
     self.indicatorExtension = 5.f;
-    self.titleSelectFont = self.titleFont;
+    self.titleSelectFont = [UIFont getFontSizeWithType:TGFontTypeSix size:21];
 }
 //重新布局frame
 - (void)layoutSubviews
