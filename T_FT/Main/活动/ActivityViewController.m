@@ -57,11 +57,11 @@
     SeckillViewController *controller5 = [[SeckillViewController alloc]init];
     
     
-    controller1.adjustmentRect = CGRectMake(0, self.navView.bottom, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
-    controller2.adjustmentRect = CGRectMake(0, self.navView.bottom, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
-    controller3.adjustmentRect = CGRectMake(0, self.navView.bottom, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
-    controller4.adjustmentRect = CGRectMake(0, self.navView.bottom, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
-    controller5.adjustmentRect = CGRectMake(0, self.navView.bottom, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
+    controller1.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
+    controller2.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
+    controller3.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
+    controller4.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
+    controller5.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
     
     self.pageContentView = [[FSPageContentView alloc]initWithFrame:CGRectMake(0, self.navView.bottom, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT) childVCs:@[controller1,controller2,controller3,controller4,controller5] parentVC:self delegate:self];
     self.pageContentView.contentViewCurrentIndex = 0;

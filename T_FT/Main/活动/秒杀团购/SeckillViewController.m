@@ -35,17 +35,14 @@
                        @{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(20)},
                        @{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(39)}];
     
+//    NSLog(@"rect:%@",NSStringFromCGRect(self.adjustmentRect));
+    self.tabView.frame = self.adjustmentRect;
     [self.view addSubview:self.tabView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)setAdjustmentRect:(CGRect)adjustmentRect{
-    self.tabView.frame = adjustmentRect;
-    [self.tabView reloadData];
 }
 
 - (UITableView *)tabView{
