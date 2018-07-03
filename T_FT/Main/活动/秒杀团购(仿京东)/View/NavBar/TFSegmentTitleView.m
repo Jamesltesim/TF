@@ -77,15 +77,15 @@
 }
 
 - (void)closeLabelSelected:(TFCloseBothLabel *)label{
-    label.titleFont = [UIFont getFontSizeWithType:TGFontTypeSix size:21.5];
-    label.hintFont = [UIFont getFontSizeWithType:TGFontTypeSix size:13];
+    label.titleFont = [UIFont getFontSizeWithType:TGFontTypeSix size:19.5];
+    label.hintFont = [UIFont systemFontOfSize:12.5];;
     label.titleColor = [UIColor whiteColor];
     label.hintColor = [UIColor whiteColor];
 }
 
 - (void)closeLabelNormal:(TFCloseBothLabel *)label{
-    label.titleFont = [UIFont getFontSizeWithType:TGFontTypeSix size:19.5];
-    label.hintFont = [UIFont getFontSizeWithType:TGFontTypeSix size:12.5];
+    label.titleFont = [UIFont getFontSizeWithType:TGFontTypeSix size:17.5];
+    label.hintFont = [UIFont systemFontOfSize:12.5];
     label.titleColor = [UIColor colorWithRed:237/255.0 green:159/255.0 blue:169/255.0 alpha:1];
     label.hintColor = [UIColor colorWithRed:237/255.0 green:159/255.0 blue:169/255.0 alpha:1];
 }

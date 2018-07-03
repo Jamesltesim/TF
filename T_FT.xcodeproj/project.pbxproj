@@ -46,7 +46,6 @@
 		1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8520D4E9E700DC1F1B /* LostViewController.m */; };
 		1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8820D4EA9500DC1F1B /* LostCollectionViewCell.m */; };
 		1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8920D4EA9500DC1F1B /* LostCollectionViewCell.xib */; };
-		1A9BDF4F20E38F9100B53DE3 /* SeckillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BDF4E20E38F9100B53DE3 /* SeckillButton.m */; };
 		1AABE74720D7AD0F001BA4C9 /* MeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABE74620D7AD0F001BA4C9 /* MeNavView.m */; };
 		1AABE74B20D8B91F001BA4C9 /* MeSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABE74A20D8B91F001BA4C9 /* MeSubViewController.m */; };
 		1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */; };
@@ -187,8 +186,6 @@
 		1A9ABF8720D4EA9500DC1F1B /* LostCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LostCollectionViewCell.h; sourceTree = "<group>"; };
 		1A9ABF8820D4EA9500DC1F1B /* LostCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCollectionViewCell.m; sourceTree = "<group>"; };
 		1A9ABF8920D4EA9500DC1F1B /* LostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LostCollectionViewCell.xib; sourceTree = "<group>"; };
-		1A9BDF4D20E38F9100B53DE3 /* SeckillButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeckillButton.h; sourceTree = "<group>"; };
-		1A9BDF4E20E38F9100B53DE3 /* SeckillButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeckillButton.m; sourceTree = "<group>"; };
 		1AABE74520D7AD0F001BA4C9 /* MeNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeNavView.h; sourceTree = "<group>"; };
 		1AABE74620D7AD0F001BA4C9 /* MeNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeNavView.m; sourceTree = "<group>"; };
 		1AABE74920D8B91F001BA4C9 /* MeSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeSubViewController.h; sourceTree = "<group>"; };
@@ -311,21 +308,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		1A03A70720DC96F500576A03 /* 秒杀团购 */ = {
+		1A03A70720DC96F500576A03 /* 秒杀团购(仿京东) */ = {
 			isa = PBXGroup;
 			children = (
-				1AC816FD20E22F8300B1EE89 /* FSScrollContentViewLib */,
-				1A03A70220DC836200576A03 /* SeckillTableViewCell.h */,
-				1A03A70320DC836200576A03 /* SeckillTableViewCell.m */,
-				1A03A70420DC836200576A03 /* SeckillTableViewCell.xib */,
-				1A873A2020DBA88200B1357E /* SeckillNavBarView.h */,
-				1A873A2120DBA88200B1357E /* SeckillNavBarView.m */,
-				1A03A70820DC976600576A03 /* SoldoutProgressView.h */,
-				1A03A70920DC976600576A03 /* SoldoutProgressView.m */,
 				1ACD2F0520E35F8F00301950 /* SeckillViewController.h */,
 				1ACD2F0620E35F8F00301950 /* SeckillViewController.m */,
+				1AE959A820EB7EBB00C5BDE4 /* View */,
 			);
-			path = "秒杀团购";
+			path = "秒杀团购(仿京东)";
 			sourceTree = "<group>";
 		};
 		1A2BDFB120C3C4370023C55D = {
@@ -425,9 +415,7 @@
 			children = (
 				1AE959A220EB4D6B00C5BDE4 /* TFCloseBothLabel.h */,
 				1AE959A320EB4D6B00C5BDE4 /* TFCloseBothLabel.m */,
-				1AE959A520EB5CDF00C5BDE4 /* TFSegmentTitleView.h */,
-				1AE959A620EB5CDF00C5BDE4 /* TFSegmentTitleView.m */,
-				1A03A70720DC96F500576A03 /* 秒杀团购 */,
+				1A03A70720DC96F500576A03 /* 秒杀团购(仿京东) */,
 				1A2BDFFF20C3C5860023C55D /* ActivityViewController.h */,
 				1A2BE00020C3C5860023C55D /* ActivityViewController.m */,
 				1ABDDE5120D3BE0800E900A8 /* ActivityCollectionViewCell.h */,
@@ -724,18 +712,6 @@
 			path = iBeacon;
 			sourceTree = "<group>";
 		};
-		1AC816FD20E22F8300B1EE89 /* FSScrollContentViewLib */ = {
-			isa = PBXGroup;
-			children = (
-				1AC816FE20E22F8300B1EE89 /* FSPageContentView.h */,
-				1AC816FF20E22F8300B1EE89 /* FSPageContentView.m */,
-				1AC8170020E22F8300B1EE89 /* FSScrollContentView.h */,
-				1A9BDF4D20E38F9100B53DE3 /* SeckillButton.h */,
-				1A9BDF4E20E38F9100B53DE3 /* SeckillButton.m */,
-			);
-			path = FSScrollContentViewLib;
-			sourceTree = "<group>";
-		};
 		1AC8170520E237C300B1EE89 /* 添加事件到日历提醒 */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +719,33 @@
 				1AC8170720E237D700B1EE89 /* EventCalendar.m */,
 			);
 			path = "添加事件到日历提醒";
+			sourceTree = "<group>";
+		};
+		1AE959A820EB7EBB00C5BDE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A03A70220DC836200576A03 /* SeckillTableViewCell.h */,
+				1A03A70320DC836200576A03 /* SeckillTableViewCell.m */,
+				1A03A70420DC836200576A03 /* SeckillTableViewCell.xib */,
+				1A03A70820DC976600576A03 /* SoldoutProgressView.h */,
+				1A03A70920DC976600576A03 /* SoldoutProgressView.m */,
+				1AE959A920EB7EFC00C5BDE4 /* NavBar */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1AE959A920EB7EFC00C5BDE4 /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				1A873A2020DBA88200B1357E /* SeckillNavBarView.h */,
+				1A873A2120DBA88200B1357E /* SeckillNavBarView.m */,
+				1AE959A520EB5CDF00C5BDE4 /* TFSegmentTitleView.h */,
+				1AE959A620EB5CDF00C5BDE4 /* TFSegmentTitleView.m */,
+				1AC816FE20E22F8300B1EE89 /* FSPageContentView.h */,
+				1AC816FF20E22F8300B1EE89 /* FSPageContentView.m */,
+				1AC8170020E22F8300B1EE89 /* FSScrollContentView.h */,
+			);
+			path = NavBar;
 			sourceTree = "<group>";
 		};
 		60630A4EE00C41CD7C1B9D85 /* Frameworks */ = {
@@ -990,7 +993,6 @@
 				1ABDDE4C20D3B62200E900A8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				1A03A70520DC836200576A03 /* SeckillTableViewCell.m in Sources */,
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
-				1A9BDF4F20E38F9100B53DE3 /* SeckillButton.m in Sources */,
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,
 				1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */,
 				1AC8170820E237D700B1EE89 /* EventCalendar.m in Sources */,
