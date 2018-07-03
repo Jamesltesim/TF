@@ -9,11 +9,10 @@
 #import "ActivityViewController.h"
 #import "SeckillNavBarView.h"
 #import "SeckillViewController.h"
-
-
+#import "TFSegmentTitleView.h"
 
 @interface ActivityViewController ()<FSPageContentViewDelegate,
-                                     FSSegmentTitleViewDelegate>
+                                     TFSegmentTitleViewDelegate>
 
 //@property (nonatomic,strong) UICollectionView *collectionView;
 
@@ -27,7 +26,7 @@
 
 
 #pragma mark --
-- (void)FSSegmentTitleView:(FSSegmentTitleView *)titleView startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex
+- (void)TFSegmentTitleView:(TFSegmentTitleView *)titleView startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex
 {
     self.pageContentView.contentViewCurrentIndex = endIndex;
 //    self.title = @[@"全部",@"服饰穿搭",@"生活百货",@"美食吃货",@"美容护理",@"母婴儿童",@"数码家电",@"其他"][endIndex];
@@ -36,6 +35,8 @@
 - (void)FSContenViewDidEndDecelerating:(FSPageContentView *)contentView startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex
 {
     self.navView.titleView.selectIndex = endIndex;
+    
+    
 //    self.title = @[@"全部",@"服饰穿搭",@"生活百货",@"美食吃货",@"美容护理",@"母婴儿童",@"数码家电",@"其他"][endIndex];
 }
 
@@ -47,8 +48,15 @@
     self.navigationController.navigationBar.hidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.navView.seckillTimes = @[@"16:00",@"18:00",@"20:00",@"22:00",@"00:00"];
+//    self.navView.seckillTimes = @[@"16:00\n即将开始",@"18:00",@"20:00",@"22:00",@"00:00"];
     [self.view addSubview:self.navView];
+    self.navView.segmentTitleDelegate = self;
+     [self.navView.titleView loadTitles: @[@"16:00",@"18:00",@"20:00",@"22:00",@"24:00"]];
+    
+
+
+    
+    
     
     SeckillViewController *controller1 = [[SeckillViewController alloc]init];
     SeckillViewController *controller2 = [[SeckillViewController alloc]init];

@@ -8,12 +8,12 @@
 
 #import "MeNavView.h"
 #import "FSScrollContentView.h"
-
+#import "TFSegmentTitleView.h"
 
 @interface SeckillNavBarView : MeNavView
 
-@property (nonatomic, strong) FSSegmentTitleView *titleView;
+@property (nonatomic, strong) TFSegmentTitleView *titleView;
 
 @property (nonatomic,strong) NSArray *seckillTimes;
-@property (nonatomic,strong) id<FSSegmentTitleViewDelegate> segmentTitleDelegate;
+@property (nonatomic,strong) id<TFSegmentTitleViewDelegate> segmentTitleDelegate;
 @end

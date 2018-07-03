@@ -23,10 +23,11 @@
     SeckillNavBarView *navView = [[SeckillNavBarView alloc] init];
     
     CGRect frame = navView.frame;
-    navView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height+50);
+    navView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height+70);
     navView.backgroundColor = [UIColor redColor];
     [navView gradualColorWithStartColor:[UIColor colorWithRed:236/255.0 green:85/255.0 blue:121/255.0 alpha:1] endColor:[UIColor colorWithRed:209/255.0 green:57/255.0 blue:43/255.0 alpha:1]];
 
+    [navView addSubview:navView.titleView];
     return navView;
     
 //    236 85 121
@@ -35,14 +36,24 @@
     
 }
 
-
-- (void)setSeckillTimes:(NSArray *)seckillTimes{
-    self.titleView = [[FSSegmentTitleView alloc]initWithFrame:CGRectMake(0, NAV_HEIGHT, CGRectGetWidth(self.bounds), 50) titles:seckillTimes delegate:self.segmentTitleDelegate indicatorType:FSIndicatorTypeDefault];
-    //    self.titleView.titleSelectFont = [UIFont systemFontOfSize:10];
-    self.titleView.delegate = self.segmentTitleDelegate;
-    self.titleView.selectIndex = 0;
-    [self addSubview:self.titleView];
+- (void)setSegmentTitleDelegate:(id<TFSegmentTitleViewDelegate>)segmentTitleDelegate{
+    self.titleView.delegate = segmentTitleDelegate;
 }
+
+- (TFSegmentTitleView *)titleView{
+    if(!_titleView){
+        _titleView = [[TFSegmentTitleView alloc]initWithFrame:CGRectMake(0, NAV_HEIGHT, CGRectGetWidth(self.bounds), 70)];
+    }
+    return _titleView;
+}
+
+//- (void)setSeckillTimes:(NSArray *)seckillTimes{
+//    self.titleView = [[FSSegmentTitleView alloc]initWithFrame:CGRectMake(0, NAV_HEIGHT, CGRectGetWidth(self.bounds), 70) titles:seckillTimes delegate:self.segmentTitleDelegate indicatorType:FSIndicatorTypeDefault];
+//    //    self.titleView.titleSelectFont = [UIFont systemFontOfSize:10];
+//    self.titleView.delegate = self.segmentTitleDelegate;
+//    self.titleView.selectIndex = 0;
+//    [self addSubview:self.titleView];
+//}
 
 /*
 // Only override drawRect: if you perform custom drawing.

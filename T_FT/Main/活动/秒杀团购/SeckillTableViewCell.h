@@ -16,4 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *tuan;
 @property (weak, nonatomic) IBOutlet UILabel *yuanjia;
 @property (weak, nonatomic) IBOutlet SoldoutProgressView *soldStatus;
+
+
 @end
