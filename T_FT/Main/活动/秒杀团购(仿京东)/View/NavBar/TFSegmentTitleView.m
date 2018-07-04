@@ -44,12 +44,45 @@
 
 - (void)loadTitles:(NSArray<NSString *> *)titles{
     int flog = 0;
+    
+    NSString *dateString = [TFUtils getCurrentYearAndMonthAndDay];
+    
+   
+
+    NSMutableArray *marr = [[NSMutableArray alloc] initWithCapacity:0];
+    for(NSString *title in titles){
+//        NSLog(@"%@",[TFUtils dateFromString:[NSString stringWithFormat:@"%@ %@",dateString,title]]);
+        [marr addObject: [TFUtils dateFromString:[NSString stringWithFormat:@"%@ %@:00",dateString,title]]];
+    }
+   
+    int index = [TFUtils compareBetween:marr];
+    
+    NSMutableArray *hints = [[NSMutableArray alloc] initWithCapacity:0];
+    if(index == -1){
+        for(int i=0;i<titles.count;i++){
+            [hints addObject:@"即将开始"];
+        }
+    }else{
+        for(int i=0;i<titles.count;i++){
+            if(i == index){
+                 [hints addObject:@"抢购中"];
+            }else{
+                 [hints addObject:@"即将开始"];
+            }
+           
+        }
+    }
+    
+    
+    NSString *hintString = nil;
     for(NSString *title in titles){
         
+       
+    
         CGFloat width = self.width/titles.count;
         TFCloseBothLabel *lab = [[TFCloseBothLabel alloc] initWithFrame:CGRectMake(width*flog, 0, width, self.height)];
         lab.title = title;
-        lab.hint = @"开始";
+        lab.hint = hints[flog];
         lab.tag = flog;
         lab.userInteractionEnabled = YES;
         [self closeLabelNormal:lab];
@@ -78,14 +111,14 @@
 
 - (void)closeLabelSelected:(TFCloseBothLabel *)label{
     label.titleFont = [UIFont getFontSizeWithType:TGFontTypeSix size:19.5];
-    label.hintFont = [UIFont systemFontOfSize:12.5];;
+    label.hintFont = [UIFont systemFontOfSize:11.5];;
     label.titleColor = [UIColor whiteColor];
     label.hintColor = [UIColor whiteColor];
 }
 
 - (void)closeLabelNormal:(TFCloseBothLabel *)label{
     label.titleFont = [UIFont getFontSizeWithType:TGFontTypeSix size:17.5];
-    label.hintFont = [UIFont systemFontOfSize:12.5];
+    label.hintFont = [UIFont systemFontOfSize:11.5];
     label.titleColor = [UIColor colorWithRed:237/255.0 green:159/255.0 blue:169/255.0 alpha:1];
     label.hintColor = [UIColor colorWithRed:237/255.0 green:159/255.0 blue:169/255.0 alpha:1];
 }

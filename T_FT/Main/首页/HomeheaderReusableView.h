@@ -1,5 +1,5 @@
 //
-//  FruitCollectionViewCell.h
+//  HomeheaderReusableView.h
 //  T_FT
 //
 //  Created by James on 2018/7/4.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FruitCollectionViewCell : UICollectionViewCell
+@interface HomeheaderReusableView : UICollectionReusableView
 
 @end

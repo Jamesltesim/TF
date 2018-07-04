@@ -8,10 +8,12 @@
 
 #import "HomeViewController.h"
 #import "SDCycleScrollView.h"
+#import "DrinksCollectionViewCell.h"
 #import "FruitCollectionViewCell.h"
+
 #import "UIScrollView+MJRefresh.h"
 #import "MJChiBaoZiHeader.h"
-
+#import "HomeheaderReusableView.h"
 
 @interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
 
@@ -105,7 +107,6 @@
 //每个section的item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    
     NSArray *array = self.dataArray[section];
     return array.count;
    
@@ -114,30 +115,36 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    FruitCollectionViewCell *cell = (FruitCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
-    
-    NSArray *array = self.dataArray[indexPath.section];
-    NSDictionary *dict = array[indexPath.row];
-    
-    cell.hint.text = @"热\n销\n万\n件";
-    cell.youhui.text = @"限时特惠";
-    
-    cell.name.text = dict[@"name"];
-    
-    cell.desc.text = @"多汁脆嫩 浓郁甜心";
-    
-    NSString *price = @"¥189/22个";
-    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString: price];
-    [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14.0f] range:NSMakeRange(0,  1)];
-    NSArray *strArray = [price componentsSeparatedByString:@"/"];
-    NSString *string0 = strArray[0];
-    NSString *string1 = strArray[1];
-    [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16.0f] range:NSMakeRange(string0.length+1,  string1.length)];
-//    [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0,  1)];
-    cell.price.attributedText =  attributedStr;
-    
-    cell.refer.text = @"参考价:¥199";
-    return cell;
+    if(indexPath.section == 0){
+        DrinksCollectionViewCell *cell = (DrinksCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"DrinksCollectionViewCell" forIndexPath:indexPath];
+        
+        NSArray *array = self.dataArray[indexPath.section];
+        NSDictionary *dict = array[indexPath.row];
+        
+        cell.hint.text = @"热\n销\n万\n件";
+        cell.youhui.text = @"限时特惠";
+        
+        cell.closeBothView.title =dict[@"name"];
+        cell.closeBothView.hint = @"多汁脆嫩 浓郁甜心";
+        
+        
+        NSString *price = @"¥189/22个";
+        NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString: price];
+        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14.0f] range:NSMakeRange(0,  1)];
+        NSArray *strArray = [price componentsSeparatedByString:@"/"];
+        NSString *string0 = strArray[0];
+        NSString *string1 = strArray[1];
+        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16.0f] range:NSMakeRange(string0.length+1,  string1.length)];
+        //    [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0,  1)];
+        cell.price.attributedText =  attributedStr;
+        
+        cell.refer.text = @"参考价:¥199";
+        return cell;
+    }else{
+         FruitCollectionViewCell *cell = (FruitCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"FruitCollectionViewCell" forIndexPath:indexPath];
+        return cell;
+    }
+    return nil;
 }
 
 //设置每个item的尺寸
@@ -147,9 +154,9 @@
         return CGSizeMake(self.view.width-16, 165);
       
     }else{
-        
-        CGFloat itemWidth = (self.view.width-16)/2.0 - 3;
-        return CGSizeMake(itemWidth, 235);
+        CGFloat itemWidth = (self.view.width-8*4)/3.0 ;
+//        CGFloat itemWidth = (self.view.width-16)/2.0 - 3;
+        return CGSizeMake(itemWidth, itemWidth+40);
     }
     return CGSizeMake(90, 130);
 }
@@ -198,11 +205,11 @@
         
     }else{
         headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
-        headerView.backgroundColor =[UIColor grayColor];
-        UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
-        label.text = @"这是collectionView的头部";
-        label.font = [UIFont systemFontOfSize:20];
-        [headerView addSubview:label];
+        headerView.backgroundColor =[UIColor whiteColor];
+//        UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
+//        label.text = @"这是collectionView的头部";
+//        label.font = [UIFont systemFontOfSize:20];
+//        [headerView addSubview:label];
     }
     
     return headerView;
@@ -212,10 +219,22 @@
 //点击item方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    FruitCollectionViewCell *cell = (FruitCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    DrinksCollectionViewCell *cell = (DrinksCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
 //    NSString *msg = cell.botlabel.text;
 //    NSLog(@"%@",msg);
 }
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    
+    if(section == 0){
+        return CGSizeMake(self.view.frame.size.width, 130);
+    }
+    return CGSizeMake(self.view.frame.size.width, 30);
+}
+
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
+//
+//}
 
 #pragma mark get set
 
@@ -239,10 +258,11 @@
     //3.注册collectionViewCell
     //注意，此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致 均为 cellId
     //    [mainCollectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
-    [_collectionView registerNib:[UINib nibWithNibName:@"FruitCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellId"];
-    
+    [_collectionView registerNib:[UINib nibWithNibName:@"DrinksCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"DrinksCollectionViewCell"];
+     [_collectionView registerNib:[UINib nibWithNibName:@"FruitCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"FruitCollectionViewCell"];
     //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView
-    [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
+
+    [_collectionView registerNib:[UINib nibWithNibName:@"HomeheaderReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView"];
     
     

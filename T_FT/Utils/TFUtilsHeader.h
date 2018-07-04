@@ -10,5 +10,6 @@
 #define TFUtilsHeader_h
 
 #import "TFUtils+Date.h"
+#import "TFUtils+Device.h"
 
 #endif /* TFUtilsHeader_h */

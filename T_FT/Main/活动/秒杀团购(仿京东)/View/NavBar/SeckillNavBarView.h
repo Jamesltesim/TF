@@ -16,4 +16,8 @@
 
 @property (nonatomic,strong) NSArray *seckillTimes;
 @property (nonatomic,strong) id<TFSegmentTitleViewDelegate> segmentTitleDelegate;
+
+
+
+- (void)viewWillAppear;
 @end

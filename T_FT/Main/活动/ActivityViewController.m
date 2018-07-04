@@ -42,6 +42,10 @@
 
 #pragma -mark life cycle
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -51,11 +55,7 @@
 //    self.navView.seckillTimes = @[@"16:00\n即将开始",@"18:00",@"20:00",@"22:00",@"00:00"];
     [self.view addSubview:self.navView];
     self.navView.segmentTitleDelegate = self;
-     [self.navView.titleView loadTitles: @[@"16:00",@"18:00",@"20:00",@"22:00",@"24:00"]];
-    
-
-
-    
+    [self.navView.titleView loadTitles: @[@"10:00",@"12:00",@"14:00",@"16:00",@"18:00"]];
     
     
     SeckillViewController *controller1 = [[SeckillViewController alloc]init];

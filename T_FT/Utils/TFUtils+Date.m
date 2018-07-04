@@ -10,7 +10,7 @@
 
 @implementation TFUtils (Date)
 
-+ (NSDate *)compareBetween:(NSArray<NSDate *> *)dates{
++ (int)compareBetween:(NSArray<NSDate *> *)dates{
 
     NSDate *first = dates[0];
     NSDate *last = dates.lastObject;
@@ -20,13 +20,13 @@
         for(int i=1;i<dates.count;i++){
             NSDate * tmp= dates[i-1];
             if([self compareWithNow:tmp between:dates[i]]){
-                return tmp;
+                return i-1;
             }
         }
         
     }
     
-    return nil;
+    return -1;
 }
 
 + (BOOL)compareWithNow:(NSDate *)earlyDate between:(NSDate *)laterDate{
@@ -82,5 +82,29 @@
     return 0;
     
 }
+
++ (NSString *)getCurrentYearAndMonthAndDay{
+    NSDate *date = [NSDate date];
+    
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];//东八区时间
+    fmt.dateFormat = @"yyyy-MM-dd";
+    return [fmt stringFromDate:date];;
+}
+
++ (NSDate *)dateFromString:(NSString *)dateString{
+    // 时间字符串
+//    NSString *string = @"2016-10-03 14:01:00";
+    
+    // 日期格式化类
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];//东八区时间
+    // 设置日期格式(为了转换成功)
+    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    // NSString * -> NSDate *
+    NSDate *date = [fmt dateFromString:dateString];
+    return date;
+}
+
 
 @end

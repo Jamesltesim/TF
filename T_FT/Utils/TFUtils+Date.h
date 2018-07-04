@@ -50,8 +50,14 @@
  在时间数组中判断，当前时间是在哪个时间段以内
 
  @param dates 时间数组
- @return 当前时间段的的开始时间，如果不在范围内 返回 nsnull
+ @return 当前时间段的的开始时间，如果不在范围内 返回 -1
  */
-+ (NSDate *)compareBetween:(NSArray <NSDate *> *)dates;
++ (int)compareBetween:(NSArray <NSDate *> *)dates;
 
+
+//  年月日
+// yyyy-MM-dd HH:mm:ss 需要满足这种格式
++ (NSString *)getCurrentYearAndMonthAndDay;
+
++ (NSDate *)dateFromString:(NSString *)dateString;
 @end

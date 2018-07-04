@@ -27,4 +27,10 @@
 @property (nonatomic,strong) UIColor *titleColor;
 @property (nonatomic,strong) UIColor *hintColor;
 
+@property (nonatomic) NSInteger numberOfLinesForTitle;
+@property (nonatomic) NSInteger numberOfLinesForHint;
+
+//默认 居中
+@property (nonatomic) NSTextAlignment textAlignment;
+
 @end

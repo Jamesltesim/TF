@@ -23,8 +23,8 @@
 		1A2BE00120C3C5860023C55D /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE00020C3C5860023C55D /* ActivityViewController.m */; };
 		1A2BE00420C3C58E0023C55D /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE00320C3C58E0023C55D /* MeViewController.m */; };
 		1A2BE01820C3CB670023C55D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE01720C3CB670023C55D /* UIView+Frame.m */; };
-		1A2BE02020C3CD7E0023C55D /* FruitCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE01E20C3CD7E0023C55D /* FruitCollectionViewCell.m */; };
-		1A2BE02120C3CD7E0023C55D /* FruitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2BE01F20C3CD7E0023C55D /* FruitCollectionViewCell.xib */; };
+		1A2BE02020C3CD7E0023C55D /* DrinksCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE01E20C3CD7E0023C55D /* DrinksCollectionViewCell.m */; };
+		1A2BE02120C3CD7E0023C55D /* DrinksCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2BE01F20C3CD7E0023C55D /* DrinksCollectionViewCell.xib */; };
 		1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02220C4DA390023C55D /* UIImage+imgaeWithColor.m */; };
 		1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02920C519950023C55D /* GradualNavBarController.m */; };
 		1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02C20C5250F0023C55D /* MeHeaderView.m */; };
@@ -82,6 +82,11 @@
 		1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD2F0620E35F8F00301950 /* SeckillViewController.m */; };
 		1AE959A420EB4D6B00C5BDE4 /* TFCloseBothLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959A320EB4D6B00C5BDE4 /* TFCloseBothLabel.m */; };
 		1AE959A720EB5CDF00C5BDE4 /* TFSegmentTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959A620EB5CDF00C5BDE4 /* TFSegmentTitleView.m */; };
+		1AE959AD20ECA04C00C5BDE4 /* HomeheaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959AB20ECA04C00C5BDE4 /* HomeheaderReusableView.m */; };
+		1AE959AE20ECA04C00C5BDE4 /* HomeheaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE959AC20ECA04C00C5BDE4 /* HomeheaderReusableView.xib */; };
+		1AE959B220ECA56B00C5BDE4 /* FruitCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959B020ECA56B00C5BDE4 /* FruitCollectionViewCell.m */; };
+		1AE959B320ECA56B00C5BDE4 /* FruitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE959B120ECA56B00C5BDE4 /* FruitCollectionViewCell.xib */; };
+		1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959B520ECA81200C5BDE4 /* TFUtils+Device.m */; };
 		1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */; };
 		1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247920CA768800587A6F /* ScrollImage.m */; };
 		1AF8247C20CA76D100587A6F /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8247B20CA76D100587A6F /* 12.jpg */; };
@@ -142,9 +147,9 @@
 		1A2BE01620C3CB670023C55D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		1A2BE01720C3CB670023C55D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		1A2BE01920C3CB9B0023C55D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		1A2BE01D20C3CD7E0023C55D /* FruitCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FruitCollectionViewCell.h; sourceTree = "<group>"; };
-		1A2BE01E20C3CD7E0023C55D /* FruitCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FruitCollectionViewCell.m; sourceTree = "<group>"; };
-		1A2BE01F20C3CD7E0023C55D /* FruitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitCollectionViewCell.xib; sourceTree = "<group>"; };
+		1A2BE01D20C3CD7E0023C55D /* DrinksCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinksCollectionViewCell.h; sourceTree = "<group>"; };
+		1A2BE01E20C3CD7E0023C55D /* DrinksCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinksCollectionViewCell.m; sourceTree = "<group>"; };
+		1A2BE01F20C3CD7E0023C55D /* DrinksCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksCollectionViewCell.xib; sourceTree = "<group>"; };
 		1A2BE02220C4DA390023C55D /* UIImage+imgaeWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+imgaeWithColor.m"; sourceTree = "<group>"; };
 		1A2BE02320C4DA390023C55D /* UIImage+imgaeWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+imgaeWithColor.h"; sourceTree = "<group>"; };
 		1A2BE02820C519950023C55D /* GradualNavBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradualNavBarController.h; sourceTree = "<group>"; };
@@ -260,6 +265,14 @@
 		1AE959A320EB4D6B00C5BDE4 /* TFCloseBothLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFCloseBothLabel.m; sourceTree = "<group>"; };
 		1AE959A520EB5CDF00C5BDE4 /* TFSegmentTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFSegmentTitleView.h; sourceTree = "<group>"; };
 		1AE959A620EB5CDF00C5BDE4 /* TFSegmentTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFSegmentTitleView.m; sourceTree = "<group>"; };
+		1AE959AA20ECA04C00C5BDE4 /* HomeheaderReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeheaderReusableView.h; sourceTree = "<group>"; };
+		1AE959AB20ECA04C00C5BDE4 /* HomeheaderReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeheaderReusableView.m; sourceTree = "<group>"; };
+		1AE959AC20ECA04C00C5BDE4 /* HomeheaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeheaderReusableView.xib; sourceTree = "<group>"; };
+		1AE959AF20ECA56B00C5BDE4 /* FruitCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FruitCollectionViewCell.h; sourceTree = "<group>"; };
+		1AE959B020ECA56B00C5BDE4 /* FruitCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FruitCollectionViewCell.m; sourceTree = "<group>"; };
+		1AE959B120ECA56B00C5BDE4 /* FruitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitCollectionViewCell.xib; sourceTree = "<group>"; };
+		1AE959B420ECA81200C5BDE4 /* TFUtils+Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TFUtils+Device.h"; sourceTree = "<group>"; };
+		1AE959B520ECA81200C5BDE4 /* TFUtils+Device.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TFUtils+Device.m"; sourceTree = "<group>"; };
 		1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
 		1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		1AF8247820CA768800587A6F /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
@@ -403,9 +416,15 @@
 				1A2BE00520C3C72A0023C55D /* Banner */,
 				1A2BDFFC20C3C5690023C55D /* HomeViewController.h */,
 				1A2BDFFD20C3C5690023C55D /* HomeViewController.m */,
-				1A2BE01D20C3CD7E0023C55D /* FruitCollectionViewCell.h */,
-				1A2BE01E20C3CD7E0023C55D /* FruitCollectionViewCell.m */,
-				1A2BE01F20C3CD7E0023C55D /* FruitCollectionViewCell.xib */,
+				1A2BE01D20C3CD7E0023C55D /* DrinksCollectionViewCell.h */,
+				1A2BE01E20C3CD7E0023C55D /* DrinksCollectionViewCell.m */,
+				1A2BE01F20C3CD7E0023C55D /* DrinksCollectionViewCell.xib */,
+				1AE959AF20ECA56B00C5BDE4 /* FruitCollectionViewCell.h */,
+				1AE959B020ECA56B00C5BDE4 /* FruitCollectionViewCell.m */,
+				1AE959B120ECA56B00C5BDE4 /* FruitCollectionViewCell.xib */,
+				1AE959AA20ECA04C00C5BDE4 /* HomeheaderReusableView.h */,
+				1AE959AB20ECA04C00C5BDE4 /* HomeheaderReusableView.m */,
+				1AE959AC20ECA04C00C5BDE4 /* HomeheaderReusableView.xib */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -509,11 +528,13 @@
 		1A873A2620DBBF9E00B1357E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1A873A2F20DBC81E00B1357E /* TFUtilsHeader.h */,
 				1A873A2920DBC09100B1357E /* TFUtils.h */,
 				1A873A2A20DBC09100B1357E /* TFUtils.m */,
 				1A873A2C20DBC78800B1357E /* TFUtils+Date.h */,
 				1A873A2D20DBC78800B1357E /* TFUtils+Date.m */,
-				1A873A2F20DBC81E00B1357E /* TFUtilsHeader.h */,
+				1AE959B420ECA81200C5BDE4 /* TFUtils+Device.h */,
+				1AE959B520ECA81200C5BDE4 /* TFUtils+Device.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -873,10 +894,12 @@
 				1AF8248220CA76E400587A6F /* 29.jpg in Resources */,
 				1AF8247C20CA76D100587A6F /* 12.jpg in Resources */,
 				1AF8247E20CA76D700587A6F /* 19.jpg in Resources */,
+				1AE959B320ECA56B00C5BDE4 /* FruitCollectionViewCell.xib in Resources */,
 				1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */,
 				1ABDDE5020D3B6EB00E900A8 /* LaunchScreen.storyboard in Resources */,
+				1AE959AE20ECA04C00C5BDE4 /* HomeheaderReusableView.xib in Resources */,
 				1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */,
-				1A2BE02120C3CD7E0023C55D /* FruitCollectionViewCell.xib in Resources */,
+				1A2BE02120C3CD7E0023C55D /* DrinksCollectionViewCell.xib in Resources */,
 				1AC816CA20E102C700B1EE89 /* iBeaconViewController.xib in Resources */,
 				1ABDDE0A20D34A1D00E900A8 /* ImgAndTextCollectionViewCell.xib in Resources */,
 				1A2BDFC720C3C4390023C55D /* Assets.xcassets in Resources */,
@@ -955,7 +978,7 @@
 				1ABDDE4B20D3B62200E900A8 /* NSArray+MASAdditions.m in Sources */,
 				1ABDDE2320D3B5BB00E900A8 /* MoreViewController.m in Sources */,
 				1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */,
-				1A2BE02020C3CD7E0023C55D /* FruitCollectionViewCell.m in Sources */,
+				1A2BE02020C3CD7E0023C55D /* DrinksCollectionViewCell.m in Sources */,
 				1A873A2B20DBC09100B1357E /* TFUtils.m in Sources */,
 				1A2BDFF820C3C5180023C55D /* TFViewController.m in Sources */,
 				1ABDDE1D20D3A4BF00E900A8 /* DCNewFeaturesCell.m in Sources */,
@@ -983,6 +1006,7 @@
 				1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */,
 				1ABDDE4720D3B62200E900A8 /* MASConstraintMaker.m in Sources */,
 				1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */,
+				1AE959B220ECA56B00C5BDE4 /* FruitCollectionViewCell.m in Sources */,
 				1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */,
 				1AC816FB20E2238100B1EE89 /* PrintPhotoTableViewCell.m in Sources */,
 				1ABDDE4520D3B62200E900A8 /* MASCompositeConstraint.m in Sources */,
@@ -1000,11 +1024,13 @@
 				1A873A1520DB539500B1357E /* TFImageDataModel.m in Sources */,
 				1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */,
 				1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */,
+				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,
 				1AE959A720EB5CDF00C5BDE4 /* TFSegmentTitleView.m in Sources */,
 				1ABDDE4820D3B62200E900A8 /* MASLayoutConstraint.m in Sources */,
 				1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */,
 				1A2BE00120C3C5860023C55D /* ActivityViewController.m in Sources */,
+				1AE959AD20ECA04C00C5BDE4 /* HomeheaderReusableView.m in Sources */,
 				1ABDDE4E20D3B62200E900A8 /* ViewController+MASAdditions.m in Sources */,
 				1AC711AF20E097F40099D2A9 /* NoiseViewController.m in Sources */,
 				1AC8170320E22F8300B1EE89 /* FSPageContentView.m in Sources */,
