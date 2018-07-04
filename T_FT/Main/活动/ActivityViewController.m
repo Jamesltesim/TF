@@ -11,12 +11,15 @@
 #import "SeckillViewController.h"
 #import "TFSegmentTitleView.h"
 
+
 @interface ActivityViewController ()<FSPageContentViewDelegate,
                                      TFSegmentTitleViewDelegate>
 
 //@property (nonatomic,strong) UICollectionView *collectionView;
 
 @property (nonatomic,strong) SeckillNavBarView *navView;
+
+
 
 @property (nonatomic, strong) FSPageContentView *pageContentView;
 
@@ -39,6 +42,9 @@
     
 //    self.title = @[@"全部",@"服饰穿搭",@"生活百货",@"美食吃货",@"美容护理",@"母婴儿童",@"数码家电",@"其他"][endIndex];
 }
+
+
+
 
 #pragma -mark life cycle
 
@@ -78,6 +84,8 @@
     
    
 }
+
+
 
 - (SeckillNavBarView *)navView{
     if(!_navView){

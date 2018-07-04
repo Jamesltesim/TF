@@ -93,7 +93,7 @@
     
  
     if((scrollView.contentOffset.y+STATUSVIEW_HEIGHT+CONTENT_HEIGHT_NO_BAR_HERGHT) > scrollView.contentSize.height){
-        NSLog(@"ok l");
+
     }
 }
 
@@ -151,7 +151,30 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section == 0){
-        return CGSizeMake(self.view.width-16, 165);
+        CGFloat height = 0.;
+        switch ([TFUtils deviceScreenSize]) {
+                
+            case TFScreenSize_3_5:
+                height = 165;
+                break;
+            case TFScreenSize_4_0:
+                height = 165;
+                break;
+            case TFScreenSize_4_7:
+                height = 165;
+                break;
+            case TFScreenSize_5_5:
+                height = 165;
+                break;
+            case TFScreenSize_5_8:
+                height = 165;
+                break;
+            default:
+                height = 0.;
+                break;
+        }
+            
+        return CGSizeMake(self.view.width-16, height);
       
     }else{
         CGFloat itemWidth = (self.view.width-8*4)/3.0 ;

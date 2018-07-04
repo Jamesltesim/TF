@@ -8,6 +8,7 @@
 
 #import "SeckillViewController.h"
 #import "SeckillTableViewCell.h"
+#import "ScrollImage.h"
 
 @interface SeckillViewController ()<
                                     UITableViewDelegate,
@@ -15,6 +16,9 @@
 
 @property (nonatomic,strong) UITableView *tabView;
 @property (nonatomic,strong) NSArray *dataArray;
+
+@property (nonatomic,strong) ScrollImage *headerView;
+
 @end
 
 @implementation SeckillViewController
@@ -45,12 +49,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (ScrollImage *)headerView{
+    if(!_headerView){
+        UIImage *image1 = [UIImage imageNamed:@"12.jpg"];
+        UIImage *image2 = [UIImage imageNamed:@"19.jpg"];
+        UIImage *image3 = [UIImage imageNamed:@"25.jpg"];
+        UIImage *image4 = [UIImage imageNamed:@"29.jpg"];
+        NSMutableArray *array = @[image1, image2, image3, image4].mutableCopy;
+        _headerView = [[ScrollImage alloc] initWithFrame:CGRectMake(0, 50, self.view.width/2+15, 100) withArray:array];
+       
+    }
+    return _headerView;
+}
+
 - (UITableView *)tabView{
     if(!_tabView){
         _tabView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
         
         _tabView.delegate = self;
         _tabView.dataSource = self;
+        _tabView.tableHeaderView = self.headerView;
         [_tabView registerNib:[UINib nibWithNibName:@"SeckillTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     }
     return _tabView;

@@ -48,7 +48,7 @@
     for (UIImage *image in _imageArr) {
         UIImageView *imageV = [[UIImageView alloc] initWithImage:image];
         imageV.frame = CGRectMake(index * backFrame.size.width + 10*(index+1), 10, backFrame.size.width, backFrame.size.height-20);
-        imageV.layer.cornerRadius = imageV.width/12.0;
+        imageV.layer.cornerRadius = imageV.width/26.0;
         imageV.layer.masksToBounds = YES;
         // 给图片加手势
         imageV.userInteractionEnabled = YES;
