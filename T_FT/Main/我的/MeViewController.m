@@ -130,17 +130,18 @@ static NSString *iden = @"cell";
  
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.labArray = @[@[@{@"title":@"积分",@"num":@"-"},
+    self.labArray = @[
+                      @[@{@"title":@"积分",@"num":@"-"},
                       @{@"title":@"资产.充值",@"num":@"-"},
                       @{@"title":@"优惠券",@"num":@"-"},
                       @{@"title":@"礼品",@"num":@"-"}
                       ],
+                      
                       @[@{@"title":@"失物招领公益平台",@"img":@"-"},
                         @{@"title":@"废品收购",@"img":@"-"},
                         @{@"title":@"打印/复印",@"img":@"-"}, //打印照片参考趣印 有福 口袋冲印 app
-                         @{@"title":@"噪声检测",@"img":@"-"},
+                        @{@"title":@"噪声检测",@"img":@"-"},
                         @{@"title":@"iBeacon",@"img":@"-"}
-                       
                         ],
                       
                     @[@{@"title":@"我的地址",@"img":@"-"},
@@ -153,16 +154,16 @@ static NSString *iden = @"cell";
                       @{@"title":@"欢迎评分",@"img":@"-"},
                       @{@"title":@"意见反馈",@"img":@"-"},
                       @{@"title":@"关于我们",@"img":@"-"},
-                      
                       @{@"title":@"设置",@"img":@"-"},
                     
                       ],
                       
                       @[ @{@"title":@"果园兼职",@"img":@"-"},
                          @{@"title":@"校园合伙人",@"img":@"-"},
-                         @{@"title":@"人人贡献者",@"img":@"-"}
+                         @{@"title":@"人人贡献者",@"img":@"-"},
+                         @{@"title":@"面包猎人",@"img":@"-"}
                           ]
-                      ];
+                ];
     
 
  
@@ -240,6 +241,7 @@ static NSString *iden = @"cell";
         CGFloat itemWidth = (self.view.width)/4;
         return CGSizeMake(itemWidth, itemWidth+10);
     }
+    
     return CGSizeZero;
 }
 
@@ -285,12 +287,13 @@ static NSString *iden = @"cell";
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     
-    UICollectionReusableView *headerView = nil;
-    headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
+    UICollectionReusableView *headerView = [UICollectionReusableView new];
+    
     if(indexPath.section == 0){
+        headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
         [headerView addSubview:[[MeHeaderView alloc]initWithFrame:CGRectMake(0, 0, collectionView.width, 130)]];
     }else{
-        
+        headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView" forIndexPath:indexPath];
         headerView.backgroundColor =[UIColor grayColor];
         UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
 //        label.text = @"这是collectionView的头部";

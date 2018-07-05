@@ -15,11 +15,13 @@
 #import "MJChiBaoZiHeader.h"
 #import "HomeheaderReusableView.h"
 
+
 @interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
 
 @property (nonatomic,strong) SDCycleScrollView *bannerView;
 @property (nonatomic,strong) UICollectionView *collectionView;
 @property (nonatomic,strong) NSArray *dataArray;
+
 @end
 
 @implementation HomeViewController{
@@ -62,6 +64,11 @@
                          @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
                          @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
                          @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""}]];
+    
+    
+    
+//    [self.view insertSubview:self.stretchView atIndex:0];
+    
 
 }
 
@@ -91,9 +98,30 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
+    
+//    CGFloat height = scrollView.frame.size.height;
+//    CGFloat contentOffsetY = scrollView.contentOffset.y;
+//    CGFloat bottomOffset = scrollView.contentSize.height - contentOffsetY;
+//    if (bottomOffset <= height)
+//    {
+//        //在最底部
+////        self.currentIsInBottom = YES;
+//
+//    }
+//    else
+//    {
+////        self.currentIsInBottom = NO;
+//    }
+
+//    NSLog(@"%@",NSStringFromCGRect(self.collectionView.backgroundView.frame));
  
     if((scrollView.contentOffset.y+STATUSVIEW_HEIGHT+CONTENT_HEIGHT_NO_BAR_HERGHT) > scrollView.contentSize.height){
-
+        NSLog(@"到底部了");
+        
+      
+//        NSLog(@"%f",(scrollView.contentOffset.y+STATUSVIEW_HEIGHT+CONTENT_HEIGHT_NO_BAR_HERGHT) - scrollView.contentSize.height);
+        
+        
     }
 }
 
@@ -260,6 +288,8 @@
 //}
 
 #pragma mark get set
+
+
 
 - (void)createCollectionView{
     
