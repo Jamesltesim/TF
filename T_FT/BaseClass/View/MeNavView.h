@@ -15,7 +15,10 @@
 //
 @property (nonatomic) BOOL hidenBottomLine;  //defuit No
 
-//隐藏底部线，隐藏
+//0 ~ 1
+@property (nonatomic) CGFloat bottomLineAlpha;
+
+//隐藏底部线，背景色 title字体颜色
 @property (nonatomic) BOOL clearColor;
 @property (nonatomic,strong) UIColor *titleColor;
 

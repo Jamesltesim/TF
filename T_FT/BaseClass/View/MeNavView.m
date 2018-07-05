@@ -52,20 +52,27 @@
 
 - (void)setHidenBottomLine:(BOOL)hidenBottomLine{
 //    _hidenBottomLine = hidenBottomLine;
-    self.bottomLine.hidden = hidenBottomLine;
+    self.bottomLine.alpha = (hidenBottomLine == YES?1:0);
 }
 
 - (void)setClearColor:(BOOL)clearColor{
     if(clearColor){
         self.backgroundColor = [UIColor clearColor];
         self.titleColor = [UIColor clearColor];
-        self.hidenBottomLine = YES;
+//        self.hidenBottomLine = YES;
+        self.bottomLine.alpha = (clearColor == NO?1:0);
     }else{
         self.backgroundColor = [UIColor whiteColor];
         self.titleColor = [UIColor whiteColor];
-        self.hidenBottomLine = NO;
+//        self.hidenBottomLine = NO;
+        self.bottomLine.alpha = (clearColor == NO?1:0);
+        
     }
   
+}
+
+- (void)setBottomLineAlpha:(CGFloat)bottomLineAlpha{
+    self.bottomLine.alpha = bottomLineAlpha;
 }
 
 - (UIView *)bottomLine{

@@ -182,7 +182,7 @@ static NSString *iden = @"cell";
        [self.view addSubview:self.navView];
     [self setGradualNavView:self.navView];
     
-    
+    NSLog(@"%@",self.navView);
 }
 
 #pragma mark collectionView代理方法

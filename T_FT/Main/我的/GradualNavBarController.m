@@ -29,16 +29,9 @@
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
     
-    [self.gradualNavView setBackImage:[[UIImage alloc] init]];
-    //设置标题
-    UILabel *title = [[UILabel alloc] init];
-    title.text = @"个人主页";
-    [title sizeToFit];
-    // 开始的时候看不见，所以alpha值为0
-    title.textColor = [UIColor colorWithWhite:0 alpha:0];
-    
-    self.navigationItem.titleView = title;
-    self.gradualNavView = [MeNavView creatNavView];
+//    [self.gradualNavView setBackImage:[[UIImage alloc] init]];
+  
+//    self.gradualNavView = [MeNavView creatNavView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -52,7 +45,7 @@
     
     //根据透明度来生成图片
     //找最大值/
-    CGFloat alpha = (offset-44 ) * 0.4/ 44.0;   // (200 - 64) / 136.0f
+    CGFloat alpha = (offset-64 ) * 0.4/ 44.0;   // (200 - 64) / 136.0f
     if (alpha >= 1) {
         alpha = 0.99;
     }else if (alpha < 0){
@@ -72,6 +65,8 @@
     [self.navigationController.navigationBar setBackgroundImage:alphaImage forBarMetrics:UIBarMetricsDefault];
     [self.gradualNavView setBackImage:alphaImage];
     self.gradualNavView.titleColor = [UIColor colorWithWhite:0 alpha:alpha];
+    self.gradualNavView.bottomLineAlpha = alpha;
+//    self.gradualNavView.clearColor = [UIColor colorWithWhite:0 alpha:alpha];
 }
 
 - (void)viewDidLoad {
