@@ -18,6 +18,7 @@
 #import "iBeaconViewController.h"
 
 
+
 @interface MeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
     
     CGFloat headerViewHeight;
@@ -39,7 +40,7 @@ static NSString *iden = @"cell";
 
 - (instancetype)init{
     if(self = [super init]){
-       
+        headerViewHeight = 150;
     }
     return self;
 }
@@ -78,6 +79,7 @@ static NSString *iden = @"cell";
         //4.设置代理
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
+        _collectionView.backgroundColor = [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1];
     }
     
     
@@ -208,8 +210,8 @@ static NSString *iden = @"cell";
         NSDictionary *dict = [array objectAtIndex:indexPath.row];
         cell.title.text = dict[@"title"];
         cell.number.text = dict[@"num"];
-        
-        cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
+        cell.backgroundColor = [UIColor whiteColor];
+//        cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
         return cell;
         
     }else{
@@ -223,7 +225,8 @@ static NSString *iden = @"cell";
         cell.title.text = dict[@"title"];
         cell.imgView.image = [UIImage imageNamed:dict[@"img"]];
         
-        cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
+//        cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
+        cell.backgroundColor = [UIColor whiteColor];
         
         return cell;
     }
@@ -235,10 +238,10 @@ static NSString *iden = @"cell";
 {
     
     if(indexPath.section == 0){
-        CGFloat itemWidth = (self.view.width)/4;
+        CGFloat itemWidth = (self.view.width-3)/4;
         return CGSizeMake(itemWidth, itemWidth);
     }else {
-        CGFloat itemWidth = (self.view.width)/4;
+        CGFloat itemWidth = (self.view.width-3)/4;
         return CGSizeMake(itemWidth, itemWidth+10);
     }
     
@@ -255,7 +258,7 @@ static NSString *iden = @"cell";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
     if(section == 0){
-        return CGSizeMake(collectionView.width, 130);
+        return CGSizeMake(collectionView.width, headerViewHeight);
     }else{
         return CGSizeMake(collectionView.width, 10);
     }
@@ -266,20 +269,21 @@ static NSString *iden = @"cell";
 //设置每个item的UIEdgeInsets
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
+    
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 //设置每个item水平间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 0;
+    return 1;
 }
 
 
 //设置每个item垂直间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 0;
+    return 1;
 }
 
 
@@ -291,10 +295,10 @@ static NSString *iden = @"cell";
     
     if(indexPath.section == 0){
         headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
-        [headerView addSubview:[[MeHeaderView alloc]initWithFrame:CGRectMake(0, 0, collectionView.width, 130)]];
+        [headerView addSubview:[[MeHeaderView alloc]initWithFrame:CGRectMake(0, 0, collectionView.width, headerViewHeight)]];
     }else{
         headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView" forIndexPath:indexPath];
-        headerView.backgroundColor =[UIColor grayColor];
+        headerView.backgroundColor =[UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1];
         UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
 //        label.text = @"这是collectionView的头部";
         label.font = [UIFont systemFontOfSize:20];

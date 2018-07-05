@@ -87,6 +87,8 @@
 		1AE959B220ECA56B00C5BDE4 /* FruitCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959B020ECA56B00C5BDE4 /* FruitCollectionViewCell.m */; };
 		1AE959B320ECA56B00C5BDE4 /* FruitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE959B120ECA56B00C5BDE4 /* FruitCollectionViewCell.xib */; };
 		1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959B520ECA81200C5BDE4 /* TFUtils+Device.m */; };
+		1AE959C020EE0D2900C5BDE4 /* ACollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959BE20EE0D2900C5BDE4 /* ACollectionViewCell.m */; };
+		1AE959C120EE0D2900C5BDE4 /* ACollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE959BF20EE0D2900C5BDE4 /* ACollectionViewCell.xib */; };
 		1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */; };
 		1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247920CA768800587A6F /* ScrollImage.m */; };
 		1AF8247C20CA76D100587A6F /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8247B20CA76D100587A6F /* 12.jpg */; };
@@ -273,6 +275,9 @@
 		1AE959B120ECA56B00C5BDE4 /* FruitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitCollectionViewCell.xib; sourceTree = "<group>"; };
 		1AE959B420ECA81200C5BDE4 /* TFUtils+Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TFUtils+Device.h"; sourceTree = "<group>"; };
 		1AE959B520ECA81200C5BDE4 /* TFUtils+Device.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TFUtils+Device.m"; sourceTree = "<group>"; };
+		1AE959BD20EE0D2900C5BDE4 /* ACollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACollectionViewCell.h; sourceTree = "<group>"; };
+		1AE959BE20EE0D2900C5BDE4 /* ACollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACollectionViewCell.m; sourceTree = "<group>"; };
+		1AE959BF20EE0D2900C5BDE4 /* ACollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ACollectionViewCell.xib; sourceTree = "<group>"; };
 		1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
 		1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		1AF8247820CA768800587A6F /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
@@ -425,6 +430,9 @@
 				1AE959AA20ECA04C00C5BDE4 /* HomeheaderReusableView.h */,
 				1AE959AB20ECA04C00C5BDE4 /* HomeheaderReusableView.m */,
 				1AE959AC20ECA04C00C5BDE4 /* HomeheaderReusableView.xib */,
+				1AE959BD20EE0D2900C5BDE4 /* ACollectionViewCell.h */,
+				1AE959BE20EE0D2900C5BDE4 /* ACollectionViewCell.m */,
+				1AE959BF20EE0D2900C5BDE4 /* ACollectionViewCell.xib */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -895,6 +903,7 @@
 				1AF8247C20CA76D100587A6F /* 12.jpg in Resources */,
 				1AF8247E20CA76D700587A6F /* 19.jpg in Resources */,
 				1AE959B320ECA56B00C5BDE4 /* FruitCollectionViewCell.xib in Resources */,
+				1AE959C120EE0D2900C5BDE4 /* ACollectionViewCell.xib in Resources */,
 				1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */,
 				1ABDDE5020D3B6EB00E900A8 /* LaunchScreen.storyboard in Resources */,
 				1AE959AE20ECA04C00C5BDE4 /* HomeheaderReusableView.xib in Resources */,
@@ -1009,6 +1018,7 @@
 				1AE959B220ECA56B00C5BDE4 /* FruitCollectionViewCell.m in Sources */,
 				1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */,
 				1AC816FB20E2238100B1EE89 /* PrintPhotoTableViewCell.m in Sources */,
+				1AE959C020EE0D2900C5BDE4 /* ACollectionViewCell.m in Sources */,
 				1ABDDE4520D3B62200E900A8 /* MASCompositeConstraint.m in Sources */,
 				1AE959A420EB4D6B00C5BDE4 /* TFCloseBothLabel.m in Sources */,
 				1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */,

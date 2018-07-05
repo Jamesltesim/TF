@@ -14,6 +14,7 @@
 #import "UIScrollView+MJRefresh.h"
 #import "MJChiBaoZiHeader.h"
 #import "HomeheaderReusableView.h"
+#import "ACollectionViewCell.h"
 
 
 @interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
@@ -25,7 +26,7 @@
 @end
 
 @implementation HomeViewController{
-   
+    
 }
 
 #pragma -mark life cycle
@@ -67,9 +68,9 @@
     
     
     
-//    [self.view insertSubview:self.stretchView atIndex:0];
+    //    [self.view insertSubview:self.stretchView atIndex:0];
     
-
+    
 }
 
 - (void)loadNewData
@@ -89,7 +90,7 @@
         [self.collectionView.mj_header endRefreshing];
     });
     
-
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -99,27 +100,27 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     
-//    CGFloat height = scrollView.frame.size.height;
-//    CGFloat contentOffsetY = scrollView.contentOffset.y;
-//    CGFloat bottomOffset = scrollView.contentSize.height - contentOffsetY;
-//    if (bottomOffset <= height)
-//    {
-//        //在最底部
-////        self.currentIsInBottom = YES;
-//
-//    }
-//    else
-//    {
-////        self.currentIsInBottom = NO;
-//    }
-
-//    NSLog(@"%@",NSStringFromCGRect(self.collectionView.backgroundView.frame));
- 
+    //    CGFloat height = scrollView.frame.size.height;
+    //    CGFloat contentOffsetY = scrollView.contentOffset.y;
+    //    CGFloat bottomOffset = scrollView.contentSize.height - contentOffsetY;
+    //    if (bottomOffset <= height)
+    //    {
+    //        //在最底部
+    ////        self.currentIsInBottom = YES;
+    //
+    //    }
+    //    else
+    //    {
+    ////        self.currentIsInBottom = NO;
+    //    }
+    
+    //    NSLog(@"%@",NSStringFromCGRect(self.collectionView.backgroundView.frame));
+    
     if((scrollView.contentOffset.y+STATUSVIEW_HEIGHT+CONTENT_HEIGHT_NO_BAR_HERGHT) > scrollView.contentSize.height){
         NSLog(@"到底部了");
         
-      
-//        NSLog(@"%f",(scrollView.contentOffset.y+STATUSVIEW_HEIGHT+CONTENT_HEIGHT_NO_BAR_HERGHT) - scrollView.contentSize.height);
+        
+        //        NSLog(@"%f",(scrollView.contentOffset.y+STATUSVIEW_HEIGHT+CONTENT_HEIGHT_NO_BAR_HERGHT) - scrollView.contentSize.height);
         
         
     }
@@ -137,39 +138,84 @@
 {
     NSArray *array = self.dataArray[section];
     return array.count;
-   
+    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
     if(indexPath.section == 0){
-        DrinksCollectionViewCell *cell = (DrinksCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"DrinksCollectionViewCell" forIndexPath:indexPath];
+        ACollectionViewCell *cell = (ACollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ACollectionViewCell" forIndexPath:indexPath];
         
-        NSArray *array = self.dataArray[indexPath.section];
-        NSDictionary *dict = array[indexPath.row];
+        
+                NSArray *array = self.dataArray[indexPath.section];
+                NSDictionary *dict = array[indexPath.row];
         
         cell.hint.text = @"热\n销\n万\n件";
         cell.youhui.text = @"限时特惠";
+        cell.name.text = dict[@"name"];
+        cell.detail.text = @"多汁脆嫩 浓郁甜心";
         
-        cell.closeBothView.title =dict[@"name"];
-        cell.closeBothView.hint = @"多汁脆嫩 浓郁甜心";
         
         
         NSString *price = @"¥189/22个";
         NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString: price];
-        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14.0f] range:NSMakeRange(0,  1)];
+        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12.0f] range:NSMakeRange(0,  1)];
         NSArray *strArray = [price componentsSeparatedByString:@"/"];
         NSString *string0 = strArray[0];
         NSString *string1 = strArray[1];
-        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16.0f] range:NSMakeRange(string0.length+1,  string1.length)];
+        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15.0f] range:NSMakeRange(string0.length+1,  string1.length)];
         //    [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0,  1)];
         cell.price.attributedText =  attributedStr;
         
-        cell.refer.text = @"参考价:¥199";
+        //        NSArray *array = self.dataArray[indexPath.section];
+        //        NSDictionary *dict = array[indexPath.row];
+        //
+        //        cell.hint.text = @"热\n销\n万\n件";
+        //        cell.youhui.text = @"限时特惠";
+        //
+        //        cell.closeBothView.title =dict[@"name"];
+        //        cell.closeBothView.hint = @"多汁脆嫩 浓郁甜心";
+        //
+        //
+        //        NSString *price = @"¥189/22个";
+        //        NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString: price];
+        //        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14.0f] range:NSMakeRange(0,  1)];
+        //        NSArray *strArray = [price componentsSeparatedByString:@"/"];
+        //        NSString *string0 = strArray[0];
+        //        NSString *string1 = strArray[1];
+        //        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16.0f] range:NSMakeRange(string0.length+1,  string1.length)];
+        //        //    [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0,  1)];
+        //        cell.price.attributedText =  attributedStr;
+        //
+        //        cell.refer.text = @"参考价:¥199";
         return cell;
+        //        DrinksCollectionViewCell *cell = (DrinksCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"DrinksCollectionViewCell" forIndexPath:indexPath];
+        //
+        //        NSArray *array = self.dataArray[indexPath.section];
+        //        NSDictionary *dict = array[indexPath.row];
+        //
+        //        cell.hint.text = @"热\n销\n万\n件";
+        //        cell.youhui.text = @"限时特惠";
+        //
+        //        cell.closeBothView.title =dict[@"name"];
+        //        cell.closeBothView.hint = @"多汁脆嫩 浓郁甜心";
+        //
+        //
+        //        NSString *price = @"¥189/22个";
+        //        NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString: price];
+        //        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14.0f] range:NSMakeRange(0,  1)];
+        //        NSArray *strArray = [price componentsSeparatedByString:@"/"];
+        //        NSString *string0 = strArray[0];
+        //        NSString *string1 = strArray[1];
+        //        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16.0f] range:NSMakeRange(string0.length+1,  string1.length)];
+        //        //    [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0,  1)];
+        //        cell.price.attributedText =  attributedStr;
+        //
+        //        cell.refer.text = @"参考价:¥199";
+        //        return cell;
     }else{
-         FruitCollectionViewCell *cell = (FruitCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"FruitCollectionViewCell" forIndexPath:indexPath];
+        FruitCollectionViewCell *cell = (FruitCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"FruitCollectionViewCell" forIndexPath:indexPath];
         return cell;
     }
     return nil;
@@ -201,12 +247,12 @@
                 height = 0.;
                 break;
         }
-            
+        
         return CGSizeMake(self.view.width-16, height);
-      
+        
     }else{
         CGFloat itemWidth = (self.view.width-8*4)/3.0 ;
-//        CGFloat itemWidth = (self.view.width-16)/2.0 - 3;
+        //        CGFloat itemWidth = (self.view.width-16)/2.0 - 3;
         return CGSizeMake(itemWidth, itemWidth+40);
     }
     return CGSizeMake(90, 130);
@@ -247,7 +293,7 @@
 //通过设置SupplementaryViewOfKind 来设置头部或者底部的view，其中 ReuseIdentifier 的值必须和 注册是填写的一致，本例都为 “reusableView”
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-   
+    
     UICollectionReusableView *headerView = nil;
     if(indexPath.section == 0){
         headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView" forIndexPath:indexPath];
@@ -257,10 +303,10 @@
     }else{
         headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
         headerView.backgroundColor =[UIColor whiteColor];
-//        UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
-//        label.text = @"这是collectionView的头部";
-//        label.font = [UIFont systemFontOfSize:20];
-//        [headerView addSubview:label];
+        //        UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
+        //        label.text = @"这是collectionView的头部";
+        //        label.font = [UIFont systemFontOfSize:20];
+        //        [headerView addSubview:label];
     }
     
     return headerView;
@@ -271,8 +317,8 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     DrinksCollectionViewCell *cell = (DrinksCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-//    NSString *msg = cell.botlabel.text;
-//    NSLog(@"%@",msg);
+    //    NSString *msg = cell.botlabel.text;
+    //    NSLog(@"%@",msg);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
@@ -293,7 +339,7 @@
 
 - (void)createCollectionView{
     
- 
+    
     //1.初始化layout
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     //设置collectionView滚动方向
@@ -312,9 +358,11 @@
     //注意，此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致 均为 cellId
     //    [mainCollectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
     [_collectionView registerNib:[UINib nibWithNibName:@"DrinksCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"DrinksCollectionViewCell"];
-     [_collectionView registerNib:[UINib nibWithNibName:@"FruitCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"FruitCollectionViewCell"];
+    [_collectionView registerNib:[UINib nibWithNibName:@"ACollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ACollectionViewCell"];
+    
+    [_collectionView registerNib:[UINib nibWithNibName:@"FruitCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"FruitCollectionViewCell"];
     //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView
-
+    
     [_collectionView registerNib:[UINib nibWithNibName:@"HomeheaderReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView"];
     
@@ -324,9 +372,9 @@
     _collectionView.dataSource = self;
     
     
-//    UIView *view = [[UIView alloc]initWithFrame:_collectionView.bounds];
-//    view.backgroundColor = [UIColor blueColor];
-//    _collectionView.backgroundView = view;
+    //    UIView *view = [[UIView alloc]initWithFrame:_collectionView.bounds];
+    //    view.backgroundColor = [UIColor blueColor];
+    //    _collectionView.backgroundView = view;
 }
 
 - (SDCycleScrollView *)bannerView{
@@ -346,7 +394,7 @@
                             @"您可以发邮件到gsdios@126.com"
                             ];
         
-         // 网络加载 --- 创建带标题的图片轮播器
+        // 网络加载 --- 创建带标题的图片轮播器
         _bannerView  = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.width, 130) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
         
         _bannerView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
@@ -355,24 +403,25 @@
         _bannerView.autoScrollTimeInterval = 5;
         _bannerView.imageURLStringsGroup = imagesURLStrings;
         //         --- 模拟加载延迟
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//
-//        });
+        //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //
+        //        });
         
-
+        
     }
     return _bannerView;
 }
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
+
