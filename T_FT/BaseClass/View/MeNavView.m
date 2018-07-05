@@ -52,7 +52,7 @@
 
 - (void)setHidenBottomLine:(BOOL)hidenBottomLine{
 //    _hidenBottomLine = hidenBottomLine;
-    self.bottomLine.alpha = (hidenBottomLine == YES?1:0);
+    self.bottomLine.alpha = (hidenBottomLine == NO?1:0);
 }
 
 - (void)setClearColor:(BOOL)clearColor{

@@ -57,7 +57,7 @@
         UIImage *image4 = [UIImage imageNamed:@"29.jpg"];
         NSMutableArray *array = @[image1, image2, image3, image4].mutableCopy;
         _headerView = [[ScrollImage alloc] initWithFrame:CGRectMake(0, 50, self.view.width/2+15, 100) withArray:array];
-       
+        _headerView.backgroundColor = [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1];
     }
     return _headerView;
 }
@@ -96,10 +96,15 @@
     NSString *seckill_price = dict[@"seckill_price"];
     NSString *original_price = dict[@"original_price"];
     
+    
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"¥%@",seckill_price]];
+    [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12.0f] range:NSMakeRange(0,  1)];
+    
+    
     SeckillTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     [cell.soldStatus sold:[sold_count integerValue]  total:[count integerValue]];
     cell.name.text = name;
-    cell.price.text = seckill_price;
+    cell.price.attributedText = attributedStr;
     cell.yuanjia.text = original_price;
     
     return cell;

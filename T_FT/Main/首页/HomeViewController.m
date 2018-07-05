@@ -232,16 +232,16 @@
                 height = 165;
                 break;
             case TFScreenSize_4_0:
-                height = 165;
+                height = 125;
                 break;
             case TFScreenSize_4_7:
-                height = 165;
+                height = 140;
                 break;
             case TFScreenSize_5_5:
-                height = 165;
+                height = 162;
                 break;
             case TFScreenSize_5_8:
-                height = 165;
+                height = 145;
                 break;
             default:
                 height = 0.;
