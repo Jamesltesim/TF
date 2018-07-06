@@ -44,8 +44,13 @@
         TFReadPhoto *readPhoto = [[TFReadPhoto alloc]init];
         readPhoto.delegate = self;
         NSArray *array = [readPhoto readSystemPhoto];
-        NSLog(@"array:%@",array);
+//        NSLog(@"array:%@",array);
     
+    [readPhoto readSystemPhotoAccordingTime];
+}
+
+- (void)getImagesWithTime:(NSDictionary *)imageDict{
+    NSLog(@"getImagesWithTime:%@",imageDict);
 }
 
 - (void)getImages:(NSArray<TFImageDataModel *> *)images{
@@ -180,7 +185,31 @@
     //该方法也可以设置itemSize
     
     CGFloat itemWidth = (self.view.width-16-10)/3.0;
-    layout.itemSize =CGSizeMake(itemWidth, 185);
+    
+    CGFloat height = 0.;
+    switch ([TFUtils deviceScreenSize]) {
+            
+        case TFScreenSize_3_5:
+            height = 165;
+            break;
+        case TFScreenSize_4_0:
+            height = 125;
+            break;
+        case TFScreenSize_4_7:
+            height = 140;
+            break;
+        case TFScreenSize_5_5:
+            height = 152;
+            break;
+        case TFScreenSize_5_8:
+            height = 145;
+            break;
+        default:
+            height = 0.;
+            break;
+    }
+    
+    layout.itemSize =CGSizeMake(itemWidth, height);
     
     //2.初始化collectionView
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];

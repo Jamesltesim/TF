@@ -52,20 +52,17 @@ static NSString *iden = @"cell";
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
- [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
-
    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-   
+     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.navView.title = @"个人中心";
     self.navigationController.navigationBar.hidden = YES;
  

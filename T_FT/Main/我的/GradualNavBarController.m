@@ -50,8 +50,17 @@
         alpha = 0.99;
     }else if (alpha < 0){
         alpha = 0;
+        
+        
+        
     }
     
+    if(alpha >0.3){
+         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+      
+    }else{
+          [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
     NSLog(@"alpha:%lf  offset:%lf",alpha,offset);
     //拿到标题 标题文字的随着移动高度的变化而变化
 //    UILabel *titleL = (UILabel *)self.navigationItem.titleView;

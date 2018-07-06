@@ -29,5 +29,7 @@ typedef NS_ENUM(NSInteger, TFReadPhotoAuthorityStatus) {
 
 - (void)getImages:(NSArray <TFImageDataModel *>*)images;
 
+- (void)getImagesWithTime:(NSDictionary *)imageDict;
+
 
 @end

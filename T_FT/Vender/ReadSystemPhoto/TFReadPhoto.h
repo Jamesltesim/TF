@@ -23,4 +23,6 @@
 
 - (NSArray <TFImageDataModel *> *)readSystemPhoto;
 
+- (void)readSystemPhotoAccordingTime;
+
 @end
