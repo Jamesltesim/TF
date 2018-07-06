@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MeHeaderViewDelegate;
+
 @interface MeHeaderView : UIView
 
+@property (nonatomic,strong) id<MeHeaderViewDelegate> delegate;
+
 - (instancetype)initWithFrame:(CGRect)frame login:(BOOL)isLogin;
+
+@end
+
+
+@protocol MeHeaderViewDelegate <NSObject>
+
+- (void)logoutViewClick;
 
 @end

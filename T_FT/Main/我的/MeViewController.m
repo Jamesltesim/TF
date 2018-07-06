@@ -19,7 +19,10 @@
 
 
 
-@interface MeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
+@interface MeViewController ()<UICollectionViewDataSource,
+                                UICollectionViewDelegate,
+                                UICollectionViewDelegateFlowLayout,
+                                MeHeaderViewDelegate>{
     
     CGFloat headerViewHeight;
 }
@@ -38,6 +41,8 @@
 
 static NSString *iden = @"cell";
 
+
+#pragma mark cycle life
 - (instancetype)init{
     if(self = [super init]){
         headerViewHeight = 150;
@@ -45,93 +50,22 @@ static NSString *iden = @"cell";
     return self;
 }
 
-#pragma mark get set
-
-- (UICollectionView *)collectionView{
-    
-    if(!_collectionView){
-        //1.初始化layout
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        //设置collectionView滚动方向
-        //    [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-        //设置headerView的尺寸大小
-        //        layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 130);
-        //该方法也可以设置itemSize
-        
-        
-        
-        //2.初始化collectionView
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, CONTENT_HEIGHT_WITH_BAR_HERGHT + NAV_HEIGHT) collectionViewLayout:layout];
-        [self.view addSubview:_collectionView];
-        _collectionView.backgroundColor = [UIColor whiteColor];
-        
-        //3.注册collectionViewCell
-        //注意，此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致 均为 cellId
-        //    [mainCollectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
-        [_collectionView registerNib:[UINib nibWithNibName:@"MeCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellId"];
-        [_collectionView registerNib:[UINib nibWithNibName:@"ImgAndTextCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell1"];
-        
-        //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView
-        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
-        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView"];
-        
-        
-        //4.设置代理
-        _collectionView.delegate = self;
-        _collectionView.dataSource = self;
-        _collectionView.backgroundColor = [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1];
-    }
-    
-    
-    return _collectionView;
-}
-- (ScrollImage *)scrImage{
-    if(!_scrImage){
-        UIImage *image1 = [UIImage imageNamed:@"12.jpg"];
-        UIImage *image2 = [UIImage imageNamed:@"19.jpg"];
-        UIImage *image3 = [UIImage imageNamed:@"25.jpg"];
-        UIImage *image4 = [UIImage imageNamed:@"29.jpg"];
-        NSMutableArray *array = @[image1, image2, image3, image4].mutableCopy;
-        _scrImage = [[ScrollImage alloc] initWithFrame:CGRectMake(0, 50, self.view.width/2+15, 130) withArray:array];
-        _scrImage.backgroundColor = [UIColor blueColor];
-    }
-    return _scrImage;
-}
-
-- (TFNavView *)navView{
-    if(!_navView){
-        _navView = [TFNavView creatNavView];
-        
-        _navView.clearColor = YES;
-    
-    }
-    return _navView;
-}
-
-//- (UIStatusBarStyle)preferredStatusBarStyle{
-//    return UIStatusBarStyleLightContent;
-//}
-
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+ [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
-//    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
 }
-//
-//- (void)viewWillDisappear:(BOOL)animated{
-//    [super viewWillDisappear:animated];
-//    [self.navigationItem setHidesBackButton:YES];
-//      self.navigationController.navigationBar.hidden = YES;
-//}
-//- (void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:animated];
-//      self.navigationController.navigationBar.hidden = NO;
-//}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+
+   
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+   
     self.navView.title = @"个人中心";
     self.navigationController.navigationBar.hidden = YES;
  
@@ -193,6 +127,76 @@ static NSString *iden = @"cell";
     
     NSLog(@"%@",self.navView);
 }
+
+#pragma mark get set
+
+- (UICollectionView *)collectionView{
+    
+    if(!_collectionView){
+        //1.初始化layout
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        //设置collectionView滚动方向
+        //    [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+        //设置headerView的尺寸大小
+        //        layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 130);
+        //该方法也可以设置itemSize
+        
+        
+        
+        //2.初始化collectionView
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, CONTENT_HEIGHT_WITH_BAR_HERGHT + NAV_HEIGHT) collectionViewLayout:layout];
+        [self.view addSubview:_collectionView];
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        
+        //3.注册collectionViewCell
+        //注意，此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致 均为 cellId
+        //    [mainCollectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
+        [_collectionView registerNib:[UINib nibWithNibName:@"MeCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellId"];
+        [_collectionView registerNib:[UINib nibWithNibName:@"ImgAndTextCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell1"];
+        
+        //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView
+        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
+        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView"];
+        
+        
+        //4.设置代理
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.backgroundColor = [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1];
+    }
+    
+    
+    return _collectionView;
+}
+- (ScrollImage *)scrImage{
+    if(!_scrImage){
+        UIImage *image1 = [UIImage imageNamed:@"12.jpg"];
+        UIImage *image2 = [UIImage imageNamed:@"19.jpg"];
+        UIImage *image3 = [UIImage imageNamed:@"25.jpg"];
+        UIImage *image4 = [UIImage imageNamed:@"29.jpg"];
+        NSMutableArray *array = @[image1, image2, image3, image4].mutableCopy;
+        _scrImage = [[ScrollImage alloc] initWithFrame:CGRectMake(0, 50, self.view.width/2+15, 130) withArray:array];
+        _scrImage.backgroundColor = [UIColor blueColor];
+    }
+    return _scrImage;
+}
+
+- (TFNavView *)navView{
+    if(!_navView){
+        _navView = [TFNavView creatNavView];
+        
+        _navView.clearColor = YES;
+        
+    }
+    return _navView;
+}
+
+#pragma mark MeHeaderViewDelegate
+//需要处理登陆
+- (void)logoutViewClick{
+    
+}
+
 
 #pragma mark collectionView代理方法
 //返回section个数

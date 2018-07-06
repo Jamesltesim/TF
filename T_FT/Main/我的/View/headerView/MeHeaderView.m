@@ -45,7 +45,17 @@
         [headerView addSubview:headerView.logoutView];
     }
     
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(logoutViewClick:)];
+    [headerView.logoutView addGestureRecognizer:tap];
+    
     return headerView;
+}
+
+- (void)logoutViewClick:(UITapGestureRecognizer *)tap {
+    if([self.delegate respondsToSelector:@selector(logoutViewClick)]){
+        [self.delegate logoutViewClick];
+    }
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
