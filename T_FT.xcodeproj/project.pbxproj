@@ -30,6 +30,9 @@
 		1A66B8BB20EF1ACC00464F4E /* UIViewController+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8BA20EF1ACC00464F4E /* UIViewController+Network.m */; };
 		1A66B8BE20EF1C9400464F4E /* TFNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8BD20EF1C9400464F4E /* TFNetworkConfig.m */; };
 		1A66B8C220EF1F8600464F4E /* UIViewController+Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8C120EF1F8600464F4E /* UIViewController+Home.m */; };
+		1A66B8C620EF41D200464F4E /* timg1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B8C520EF41D200464F4E /* timg1.jpeg */; };
+		1A66B8CA20EF429000464F4E /* LogoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8C920EF429000464F4E /* LogoutView.m */; };
+		1A66B8CD20EF429B00464F4E /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8CC20EF429B00464F4E /* LoginView.m */; };
 		1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
@@ -165,6 +168,11 @@
 		1A66B8BF20EF1D1300464F4E /* TFNetworkHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFNetworkHeader.h; sourceTree = "<group>"; };
 		1A66B8C020EF1F8600464F4E /* UIViewController+Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Home.h"; sourceTree = "<group>"; };
 		1A66B8C120EF1F8600464F4E /* UIViewController+Home.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Home.m"; sourceTree = "<group>"; };
+		1A66B8C520EF41D200464F4E /* timg1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg1.jpeg; sourceTree = "<group>"; };
+		1A66B8C820EF429000464F4E /* LogoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoutView.h; sourceTree = "<group>"; };
+		1A66B8C920EF429000464F4E /* LogoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogoutView.m; sourceTree = "<group>"; };
+		1A66B8CB20EF429B00464F4E /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		1A66B8CC20EF429B00464F4E /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -505,6 +513,19 @@
 			path = network;
 			sourceTree = "<group>";
 		};
+		1A66B8C720EF425D00464F4E /* headerView */ = {
+			isa = PBXGroup;
+			children = (
+				1A2BE02B20C5250F0023C55D /* MeHeaderView.h */,
+				1A2BE02C20C5250F0023C55D /* MeHeaderView.m */,
+				1A66B8C820EF429000464F4E /* LogoutView.h */,
+				1A66B8C920EF429000464F4E /* LogoutView.m */,
+				1A66B8CB20EF429B00464F4E /* LoginView.h */,
+				1A66B8CC20EF429B00464F4E /* LoginView.m */,
+			);
+			path = headerView;
+			sourceTree = "<group>";
+		};
 		1A8739FC20DA01CA00B1357E /* 照片冲印 */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,10 +613,10 @@
 		1A9ABF8320D4E59400DC1F1B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A66B8C720EF425D00464F4E /* headerView */,
 				1AF8247820CA768800587A6F /* ScrollImage.h */,
 				1AF8247920CA768800587A6F /* ScrollImage.m */,
-				1A2BE02B20C5250F0023C55D /* MeHeaderView.h */,
-				1A2BE02C20C5250F0023C55D /* MeHeaderView.m */,
+				1A66B8C520EF41D200464F4E /* timg1.jpeg */,
 				1AF8247F20CA76DC00587A6F /* 25.jpg */,
 				1AF8247D20CA76D600587A6F /* 19.jpg */,
 				1AF8247B20CA76D100587A6F /* 12.jpg */,
@@ -922,6 +943,7 @@
 				1AE959B320ECA56B00C5BDE4 /* FruitCollectionViewCell.xib in Resources */,
 				1AE959C120EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib in Resources */,
 				1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */,
+				1A66B8C620EF41D200464F4E /* timg1.jpeg in Resources */,
 				1ABDDE5020D3B6EB00E900A8 /* LaunchScreen.storyboard in Resources */,
 				1AE959AE20ECA04C00C5BDE4 /* HomeheaderReusableView.xib in Resources */,
 				1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */,
@@ -1037,6 +1059,7 @@
 				1AC816FB20E2238100B1EE89 /* PrintPhotoTableViewCell.m in Sources */,
 				1AE959C020EE0D2900C5BDE4 /* DrinksCollectionViewCell.m in Sources */,
 				1ABDDE4520D3B62200E900A8 /* MASCompositeConstraint.m in Sources */,
+				1A66B8CA20EF429000464F4E /* LogoutView.m in Sources */,
 				1AE959A420EB4D6B00C5BDE4 /* TFCloseBothLabel.m in Sources */,
 				1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */,
 				1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */,
@@ -1051,6 +1074,7 @@
 				1A873A1520DB539500B1357E /* TFImageDataModel.m in Sources */,
 				1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */,
 				1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */,
+				1A66B8CD20EF429B00464F4E /* LoginView.m in Sources */,
 				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
 				1A66B8BE20EF1C9400464F4E /* TFNetworkConfig.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,

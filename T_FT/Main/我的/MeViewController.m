@@ -107,6 +107,11 @@ static NSString *iden = @"cell";
     }
     return _navView;
 }
+
+//- (UIStatusBarStyle)preferredStatusBarStyle{
+//    return UIStatusBarStyleLightContent;
+//}
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
 
@@ -126,7 +131,7 @@ static NSString *iden = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.navView.title = @"个人中心";
     self.navigationController.navigationBar.hidden = YES;
  
@@ -158,6 +163,7 @@ static NSString *iden = @"cell";
                       
                       @{@"title":@"每月账本",@"img":@"-"}, //详情见 柠檬记账 小程序
                                                          // 拓展项目，校园记账 自动生成
+                                                         // 账单地图
                       @{@"title":@"关于我们",@"img":@"-"},
                       @{@"title":@"设置",@"img":@"-"},
                     
@@ -298,7 +304,7 @@ static NSString *iden = @"cell";
     
     if(indexPath.section == 0){
         headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
-        [headerView addSubview:[[MeHeaderView alloc]initWithFrame:CGRectMake(0, 0, collectionView.width, headerViewHeight)]];
+        [headerView addSubview:[[MeHeaderView alloc]initWithFrame:CGRectMake(0, 0, collectionView.width, headerViewHeight) login:NO]];
     }else{
         headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView" forIndexPath:indexPath];
         headerView.backgroundColor =[UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1];

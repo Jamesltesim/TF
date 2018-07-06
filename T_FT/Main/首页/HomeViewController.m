@@ -168,27 +168,6 @@
         //    [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0,  1)];
         cell.price.attributedText =  attributedStr;
         
-        //        NSArray *array = self.dataArray[indexPath.section];
-        //        NSDictionary *dict = array[indexPath.row];
-        //
-        //        cell.hint.text = @"热\n销\n万\n件";
-        //        cell.youhui.text = @"限时特惠";
-        //
-        //        cell.closeBothView.title =dict[@"name"];
-        //        cell.closeBothView.hint = @"多汁脆嫩 浓郁甜心";
-        //
-        //
-        //        NSString *price = @"¥189/22个";
-        //        NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString: price];
-        //        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14.0f] range:NSMakeRange(0,  1)];
-        //        NSArray *strArray = [price componentsSeparatedByString:@"/"];
-        //        NSString *string0 = strArray[0];
-        //        NSString *string1 = strArray[1];
-        //        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16.0f] range:NSMakeRange(string0.length+1,  string1.length)];
-        //        //    [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0,  1)];
-        //        cell.price.attributedText =  attributedStr;
-        //
-        //        cell.refer.text = @"参考价:¥199";
         return cell;
         //        DrinksCollectionViewCell *cell = (DrinksCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"DrinksCollectionViewCell" forIndexPath:indexPath];
         //

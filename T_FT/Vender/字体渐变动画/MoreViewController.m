@@ -9,7 +9,7 @@
 #import "MoreViewController.h"
 #import "WHGradientHelper.h"
 #import "Globals.h"
-#import "Masonry.h"
+
 
 @interface MoreViewController ()
 

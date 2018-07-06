@@ -7,7 +7,7 @@
 //
 
 #import "SoldoutProgressView.h"
-#import "Masonry.h"
+
 
 @interface SoldoutProgressView()
 
