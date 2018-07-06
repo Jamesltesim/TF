@@ -13,7 +13,7 @@
 #import "ImgAndTextCollectionViewCell.h"
 #import "LostViewController.h"
 #import "PrintPhotoViewController.h"
-#import "MeNavView.h"
+//#import "MeNavView.h"
 #import "NoiseViewController.h"
 #import "iBeaconViewController.h"
 
@@ -29,7 +29,7 @@
 @property (nonatomic,strong) UICollectionView *collectionView;
 @property (nonatomic,strong) NSArray *labArray;
 
-@property (nonatomic,strong) MeNavView *navView;
+@property (nonatomic,strong) TFNavView *navView;
 
 
 @end
@@ -98,9 +98,9 @@ static NSString *iden = @"cell";
     return _scrImage;
 }
 
-- (MeNavView *)navView{
+- (TFNavView *)navView{
     if(!_navView){
-        _navView = [MeNavView creatNavView];
+        _navView = [TFNavView creatNavView];
         
         _navView.clearColor = YES;
     
@@ -155,6 +155,9 @@ static NSString *iden = @"cell";
                       @{@"title":@"我的收藏",@"img":@"-"},
                       @{@"title":@"欢迎评分",@"img":@"-"},
                       @{@"title":@"意见反馈",@"img":@"-"},
+                      
+                      @{@"title":@"每月账本",@"img":@"-"}, //详情见 柠檬记账 小程序
+                                                         // 拓展项目，校园记账 自动生成
                       @{@"title":@"关于我们",@"img":@"-"},
                       @{@"title":@"设置",@"img":@"-"},
                     

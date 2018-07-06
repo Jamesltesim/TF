@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MeNavView : UIView
+@interface TFNavView : UIView
 
 @property (nonatomic,strong) UIImage *backImage;
 @property (nonatomic,strong) NSString *title;

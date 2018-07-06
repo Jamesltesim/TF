@@ -7,5 +7,7 @@ pod 'SDCycleScrollView','~> 1.75'
 
 pod 'SDWebImage', '>= 4.0.0'
 
+pod 'AFNetworking'
+
 pod 'MJRefresh'
 

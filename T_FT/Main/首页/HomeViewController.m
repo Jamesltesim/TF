@@ -14,7 +14,7 @@
 #import "UIScrollView+MJRefresh.h"
 #import "MJChiBaoZiHeader.h"
 #import "HomeheaderReusableView.h"
-#import "ACollectionViewCell.h"
+
 
 
 @interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
@@ -70,7 +70,7 @@
     
     //    [self.view insertSubview:self.stretchView atIndex:0];
     
-    
+    [self GET:nil parameters:nil success:nil requestFailure:nil];
 }
 
 - (void)loadNewData
@@ -145,7 +145,7 @@
 {
     
     if(indexPath.section == 0){
-        ACollectionViewCell *cell = (ACollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ACollectionViewCell" forIndexPath:indexPath];
+        DrinksCollectionViewCell *cell = (DrinksCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"DrinksCollectionViewCell" forIndexPath:indexPath];
         
         
                 NSArray *array = self.dataArray[indexPath.section];
@@ -238,7 +238,7 @@
                 height = 140;
                 break;
             case TFScreenSize_5_5:
-                height = 162;
+                height = 152;
                 break;
             case TFScreenSize_5_8:
                 height = 145;
@@ -358,7 +358,7 @@
     //注意，此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致 均为 cellId
     //    [mainCollectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
     [_collectionView registerNib:[UINib nibWithNibName:@"DrinksCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"DrinksCollectionViewCell"];
-    [_collectionView registerNib:[UINib nibWithNibName:@"ACollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ACollectionViewCell"];
+
     
     [_collectionView registerNib:[UINib nibWithNibName:@"FruitCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"FruitCollectionViewCell"];
     //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView

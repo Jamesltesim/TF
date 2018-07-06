@@ -74,7 +74,7 @@
     [self wjNavigationSettings];
 }
 
-- (void)setGradualNavView:(MeNavView *)gradualNavView{
+- (void)setGradualNavView:(TFNavView *)gradualNavView{
     _gradualNavView = gradualNavView;
 }
 - (void)didReceiveMemoryWarning {

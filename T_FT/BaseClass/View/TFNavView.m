@@ -6,9 +6,9 @@
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#import "MeNavView.h"
+#import "TFNavView.h"
 
-@interface MeNavView()
+@interface TFNavView()
 
 @property (nonatomic,strong) UIImageView *backImgView;
 @property (nonatomic,strong) UILabel *titleLab;
@@ -16,11 +16,11 @@
 
 @end
 
-@implementation MeNavView
+@implementation TFNavView
 
 
 + (instancetype)creatNavView{
-    MeNavView *nav = [[MeNavView alloc]init];
+    TFNavView *nav = [[TFNavView alloc]init];
     
     
     return nav;

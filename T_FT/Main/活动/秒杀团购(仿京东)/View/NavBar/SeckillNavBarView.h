@@ -6,11 +6,11 @@
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#import "MeNavView.h"
+#import "TFNavView.h"
 #import "FSScrollContentView.h"
 #import "TFSegmentTitleView.h"
 
-@interface SeckillNavBarView : MeNavView
+@interface SeckillNavBarView : TFNavView
 
 @property (nonatomic, strong) TFSegmentTitleView *titleView;
 

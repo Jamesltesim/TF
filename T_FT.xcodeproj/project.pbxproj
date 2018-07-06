@@ -23,12 +23,13 @@
 		1A2BE00120C3C5860023C55D /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE00020C3C5860023C55D /* ActivityViewController.m */; };
 		1A2BE00420C3C58E0023C55D /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE00320C3C58E0023C55D /* MeViewController.m */; };
 		1A2BE01820C3CB670023C55D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE01720C3CB670023C55D /* UIView+Frame.m */; };
-		1A2BE02020C3CD7E0023C55D /* DrinksCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE01E20C3CD7E0023C55D /* DrinksCollectionViewCell.m */; };
-		1A2BE02120C3CD7E0023C55D /* DrinksCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2BE01F20C3CD7E0023C55D /* DrinksCollectionViewCell.xib */; };
 		1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02220C4DA390023C55D /* UIImage+imgaeWithColor.m */; };
 		1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02920C519950023C55D /* GradualNavBarController.m */; };
 		1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02C20C5250F0023C55D /* MeHeaderView.m */; };
 		1A2BE03020C5313C0023C55D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02F20C5313C0023C55D /* LoginViewController.m */; };
+		1A66B8BB20EF1ACC00464F4E /* UIViewController+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8BA20EF1ACC00464F4E /* UIViewController+Network.m */; };
+		1A66B8BE20EF1C9400464F4E /* TFNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8BD20EF1C9400464F4E /* TFNetworkConfig.m */; };
+		1A66B8C220EF1F8600464F4E /* UIViewController+Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8C120EF1F8600464F4E /* UIViewController+Home.m */; };
 		1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
@@ -46,7 +47,7 @@
 		1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8520D4E9E700DC1F1B /* LostViewController.m */; };
 		1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8820D4EA9500DC1F1B /* LostCollectionViewCell.m */; };
 		1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8920D4EA9500DC1F1B /* LostCollectionViewCell.xib */; };
-		1AABE74720D7AD0F001BA4C9 /* MeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABE74620D7AD0F001BA4C9 /* MeNavView.m */; };
+		1AABE74720D7AD0F001BA4C9 /* TFNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABE74620D7AD0F001BA4C9 /* TFNavView.m */; };
 		1AABE74B20D8B91F001BA4C9 /* MeSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABE74A20D8B91F001BA4C9 /* MeSubViewController.m */; };
 		1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */; };
 		1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */; };
@@ -87,8 +88,8 @@
 		1AE959B220ECA56B00C5BDE4 /* FruitCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959B020ECA56B00C5BDE4 /* FruitCollectionViewCell.m */; };
 		1AE959B320ECA56B00C5BDE4 /* FruitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE959B120ECA56B00C5BDE4 /* FruitCollectionViewCell.xib */; };
 		1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959B520ECA81200C5BDE4 /* TFUtils+Device.m */; };
-		1AE959C020EE0D2900C5BDE4 /* ACollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959BE20EE0D2900C5BDE4 /* ACollectionViewCell.m */; };
-		1AE959C120EE0D2900C5BDE4 /* ACollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE959BF20EE0D2900C5BDE4 /* ACollectionViewCell.xib */; };
+		1AE959C020EE0D2900C5BDE4 /* DrinksCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959BE20EE0D2900C5BDE4 /* DrinksCollectionViewCell.m */; };
+		1AE959C120EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE959BF20EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib */; };
 		1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */; };
 		1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247920CA768800587A6F /* ScrollImage.m */; };
 		1AF8247C20CA76D100587A6F /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8247B20CA76D100587A6F /* 12.jpg */; };
@@ -149,9 +150,6 @@
 		1A2BE01620C3CB670023C55D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		1A2BE01720C3CB670023C55D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		1A2BE01920C3CB9B0023C55D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		1A2BE01D20C3CD7E0023C55D /* DrinksCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinksCollectionViewCell.h; sourceTree = "<group>"; };
-		1A2BE01E20C3CD7E0023C55D /* DrinksCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinksCollectionViewCell.m; sourceTree = "<group>"; };
-		1A2BE01F20C3CD7E0023C55D /* DrinksCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksCollectionViewCell.xib; sourceTree = "<group>"; };
 		1A2BE02220C4DA390023C55D /* UIImage+imgaeWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+imgaeWithColor.m"; sourceTree = "<group>"; };
 		1A2BE02320C4DA390023C55D /* UIImage+imgaeWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+imgaeWithColor.h"; sourceTree = "<group>"; };
 		1A2BE02820C519950023C55D /* GradualNavBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradualNavBarController.h; sourceTree = "<group>"; };
@@ -160,6 +158,13 @@
 		1A2BE02C20C5250F0023C55D /* MeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeHeaderView.m; sourceTree = "<group>"; };
 		1A2BE02E20C5313C0023C55D /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		1A2BE02F20C5313C0023C55D /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		1A66B8B920EF1ACC00464F4E /* UIViewController+Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Network.h"; sourceTree = "<group>"; };
+		1A66B8BA20EF1ACC00464F4E /* UIViewController+Network.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Network.m"; sourceTree = "<group>"; };
+		1A66B8BC20EF1C9400464F4E /* TFNetworkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFNetworkConfig.h; sourceTree = "<group>"; };
+		1A66B8BD20EF1C9400464F4E /* TFNetworkConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkConfig.m; sourceTree = "<group>"; };
+		1A66B8BF20EF1D1300464F4E /* TFNetworkHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFNetworkHeader.h; sourceTree = "<group>"; };
+		1A66B8C020EF1F8600464F4E /* UIViewController+Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Home.h"; sourceTree = "<group>"; };
+		1A66B8C120EF1F8600464F4E /* UIViewController+Home.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Home.m"; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -193,8 +198,8 @@
 		1A9ABF8720D4EA9500DC1F1B /* LostCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LostCollectionViewCell.h; sourceTree = "<group>"; };
 		1A9ABF8820D4EA9500DC1F1B /* LostCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCollectionViewCell.m; sourceTree = "<group>"; };
 		1A9ABF8920D4EA9500DC1F1B /* LostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LostCollectionViewCell.xib; sourceTree = "<group>"; };
-		1AABE74520D7AD0F001BA4C9 /* MeNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeNavView.h; sourceTree = "<group>"; };
-		1AABE74620D7AD0F001BA4C9 /* MeNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeNavView.m; sourceTree = "<group>"; };
+		1AABE74520D7AD0F001BA4C9 /* TFNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFNavView.h; sourceTree = "<group>"; };
+		1AABE74620D7AD0F001BA4C9 /* TFNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNavView.m; sourceTree = "<group>"; };
 		1AABE74920D8B91F001BA4C9 /* MeSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeSubViewController.h; sourceTree = "<group>"; };
 		1AABE74A20D8B91F001BA4C9 /* MeSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeSubViewController.m; sourceTree = "<group>"; };
 		1ABDDDF520D0F09200E900A8 /* MeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionViewCell.h; sourceTree = "<group>"; };
@@ -275,9 +280,9 @@
 		1AE959B120ECA56B00C5BDE4 /* FruitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitCollectionViewCell.xib; sourceTree = "<group>"; };
 		1AE959B420ECA81200C5BDE4 /* TFUtils+Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TFUtils+Device.h"; sourceTree = "<group>"; };
 		1AE959B520ECA81200C5BDE4 /* TFUtils+Device.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TFUtils+Device.m"; sourceTree = "<group>"; };
-		1AE959BD20EE0D2900C5BDE4 /* ACollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACollectionViewCell.h; sourceTree = "<group>"; };
-		1AE959BE20EE0D2900C5BDE4 /* ACollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACollectionViewCell.m; sourceTree = "<group>"; };
-		1AE959BF20EE0D2900C5BDE4 /* ACollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ACollectionViewCell.xib; sourceTree = "<group>"; };
+		1AE959BD20EE0D2900C5BDE4 /* DrinksCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinksCollectionViewCell.h; sourceTree = "<group>"; };
+		1AE959BE20EE0D2900C5BDE4 /* DrinksCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinksCollectionViewCell.m; sourceTree = "<group>"; };
+		1AE959BF20EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksCollectionViewCell.xib; sourceTree = "<group>"; };
 		1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
 		1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		1AF8247820CA768800587A6F /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
@@ -404,6 +409,7 @@
 		1A2BDFEF20C3C4D00023C55D /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				1A66B8B820EF194000464F4E /* network */,
 				1A873A1F20DBA84C00B1357E /* View */,
 				1A2BDFF020C3C4F50023C55D /* TFTabBarController.h */,
 				1A2BDFF120C3C4F50023C55D /* TFTabBarController.m */,
@@ -421,18 +427,15 @@
 				1A2BE00520C3C72A0023C55D /* Banner */,
 				1A2BDFFC20C3C5690023C55D /* HomeViewController.h */,
 				1A2BDFFD20C3C5690023C55D /* HomeViewController.m */,
-				1A2BE01D20C3CD7E0023C55D /* DrinksCollectionViewCell.h */,
-				1A2BE01E20C3CD7E0023C55D /* DrinksCollectionViewCell.m */,
-				1A2BE01F20C3CD7E0023C55D /* DrinksCollectionViewCell.xib */,
 				1AE959AF20ECA56B00C5BDE4 /* FruitCollectionViewCell.h */,
 				1AE959B020ECA56B00C5BDE4 /* FruitCollectionViewCell.m */,
 				1AE959B120ECA56B00C5BDE4 /* FruitCollectionViewCell.xib */,
 				1AE959AA20ECA04C00C5BDE4 /* HomeheaderReusableView.h */,
 				1AE959AB20ECA04C00C5BDE4 /* HomeheaderReusableView.m */,
 				1AE959AC20ECA04C00C5BDE4 /* HomeheaderReusableView.xib */,
-				1AE959BD20EE0D2900C5BDE4 /* ACollectionViewCell.h */,
-				1AE959BE20EE0D2900C5BDE4 /* ACollectionViewCell.m */,
-				1AE959BF20EE0D2900C5BDE4 /* ACollectionViewCell.xib */,
+				1AE959BD20EE0D2900C5BDE4 /* DrinksCollectionViewCell.h */,
+				1AE959BE20EE0D2900C5BDE4 /* DrinksCollectionViewCell.m */,
+				1AE959BF20EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -488,6 +491,20 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		1A66B8B820EF194000464F4E /* network */ = {
+			isa = PBXGroup;
+			children = (
+				1A66B8B920EF1ACC00464F4E /* UIViewController+Network.h */,
+				1A66B8BA20EF1ACC00464F4E /* UIViewController+Network.m */,
+				1A66B8BC20EF1C9400464F4E /* TFNetworkConfig.h */,
+				1A66B8BD20EF1C9400464F4E /* TFNetworkConfig.m */,
+				1A66B8BF20EF1D1300464F4E /* TFNetworkHeader.h */,
+				1A66B8C020EF1F8600464F4E /* UIViewController+Home.h */,
+				1A66B8C120EF1F8600464F4E /* UIViewController+Home.m */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 		1A8739FC20DA01CA00B1357E /* 照片冲印 */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,8 +542,8 @@
 			children = (
 				1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */,
 				1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */,
-				1AABE74520D7AD0F001BA4C9 /* MeNavView.h */,
-				1AABE74620D7AD0F001BA4C9 /* MeNavView.m */,
+				1AABE74520D7AD0F001BA4C9 /* TFNavView.h */,
+				1AABE74620D7AD0F001BA4C9 /* TFNavView.m */,
 				1A873A2320DBAB6500B1357E /* UIView+Gradient.h */,
 				1A873A2420DBAB6500B1357E /* UIView+Gradient.m */,
 			);
@@ -903,12 +920,11 @@
 				1AF8247C20CA76D100587A6F /* 12.jpg in Resources */,
 				1AF8247E20CA76D700587A6F /* 19.jpg in Resources */,
 				1AE959B320ECA56B00C5BDE4 /* FruitCollectionViewCell.xib in Resources */,
-				1AE959C120EE0D2900C5BDE4 /* ACollectionViewCell.xib in Resources */,
+				1AE959C120EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib in Resources */,
 				1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */,
 				1ABDDE5020D3B6EB00E900A8 /* LaunchScreen.storyboard in Resources */,
 				1AE959AE20ECA04C00C5BDE4 /* HomeheaderReusableView.xib in Resources */,
 				1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */,
-				1A2BE02120C3CD7E0023C55D /* DrinksCollectionViewCell.xib in Resources */,
 				1AC816CA20E102C700B1EE89 /* iBeaconViewController.xib in Resources */,
 				1ABDDE0A20D34A1D00E900A8 /* ImgAndTextCollectionViewCell.xib in Resources */,
 				1A2BDFC720C3C4390023C55D /* Assets.xcassets in Resources */,
@@ -981,13 +997,14 @@
 				1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */,
 				1A873A2E20DBC78800B1357E /* TFUtils+Date.m in Sources */,
 				1A2BE00420C3C58E0023C55D /* MeViewController.m in Sources */,
+				1A66B8C220EF1F8600464F4E /* UIViewController+Home.m in Sources */,
 				1AC816CD20E1DE5E00B1EE89 /* UILabel+TF.m in Sources */,
 				1ABDDE1B20D3A4BF00E900A8 /* DCNewFeaturesViewController.m in Sources */,
 				1ABDDE4920D3B62200E900A8 /* MASViewAttribute.m in Sources */,
+				1A66B8BB20EF1ACC00464F4E /* UIViewController+Network.m in Sources */,
 				1ABDDE4B20D3B62200E900A8 /* NSArray+MASAdditions.m in Sources */,
 				1ABDDE2320D3B5BB00E900A8 /* MoreViewController.m in Sources */,
 				1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */,
-				1A2BE02020C3CD7E0023C55D /* DrinksCollectionViewCell.m in Sources */,
 				1A873A2B20DBC09100B1357E /* TFUtils.m in Sources */,
 				1A2BDFF820C3C5180023C55D /* TFViewController.m in Sources */,
 				1ABDDE1D20D3A4BF00E900A8 /* DCNewFeaturesCell.m in Sources */,
@@ -1009,7 +1026,7 @@
 				1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */,
 				1AABE74B20D8B91F001BA4C9 /* MeSubViewController.m in Sources */,
 				1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */,
-				1AABE74720D7AD0F001BA4C9 /* MeNavView.m in Sources */,
+				1AABE74720D7AD0F001BA4C9 /* TFNavView.m in Sources */,
 				1ABDDE4A20D3B62200E900A8 /* MASViewConstraint.m in Sources */,
 				1ABDDE4D20D3B62200E900A8 /* View+MASAdditions.m in Sources */,
 				1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */,
@@ -1018,7 +1035,7 @@
 				1AE959B220ECA56B00C5BDE4 /* FruitCollectionViewCell.m in Sources */,
 				1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */,
 				1AC816FB20E2238100B1EE89 /* PrintPhotoTableViewCell.m in Sources */,
-				1AE959C020EE0D2900C5BDE4 /* ACollectionViewCell.m in Sources */,
+				1AE959C020EE0D2900C5BDE4 /* DrinksCollectionViewCell.m in Sources */,
 				1ABDDE4520D3B62200E900A8 /* MASCompositeConstraint.m in Sources */,
 				1AE959A420EB4D6B00C5BDE4 /* TFCloseBothLabel.m in Sources */,
 				1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */,
@@ -1035,6 +1052,7 @@
 				1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */,
 				1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */,
 				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
+				1A66B8BE20EF1C9400464F4E /* TFNetworkConfig.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,
 				1AE959A720EB5CDF00C5BDE4 /* TFSegmentTitleView.m in Sources */,
 				1ABDDE4820D3B62200E900A8 /* MASLayoutConstraint.m in Sources */,

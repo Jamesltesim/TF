@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MeNavView.h"
+#import "TFNavView.h"
 
 @interface MeSubViewController : UIViewController
 
-@property (nonatomic,strong) MeNavView *navView;
+@property (nonatomic,strong) TFNavView *navView;
 
 @end

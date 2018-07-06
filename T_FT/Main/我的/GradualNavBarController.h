@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MeNavView.h"
+#import "TFNavView.h"
 
 @interface GradualNavBarController : UIViewController
 
 
-@property (nonatomic,strong) MeNavView *gradualNavView;
+@property (nonatomic,strong) TFNavView *gradualNavView;
 
 @end
