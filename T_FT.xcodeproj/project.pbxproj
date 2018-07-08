@@ -101,6 +101,7 @@
 		1AF8248220CA76E400587A6F /* 29.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8248120CA76E300587A6F /* 29.jpg */; };
 		6EEF6CBA9CF5EB966E1DC692 /* libPods-T_FT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39451EEDC3CD637294838251 /* libPods-T_FT.a */; };
 		9027FEB920F1B193003F0A51 /* TFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEB820F1B192003F0A51 /* TFWebViewController.m */; };
+		9027FEBC20F1B778003F0A51 /* TFUtils+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEBB20F1B778003F0A51 /* TFUtils+UIColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,6 +306,8 @@
 		8B979648983910F66FE81A7A /* Pods-T_FT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T_FT.release.xcconfig"; path = "Pods/Target Support Files/Pods-T_FT/Pods-T_FT.release.xcconfig"; sourceTree = "<group>"; };
 		9027FEB720F1B192003F0A51 /* TFWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFWebViewController.h; sourceTree = "<group>"; };
 		9027FEB820F1B192003F0A51 /* TFWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFWebViewController.m; sourceTree = "<group>"; };
+		9027FEBA20F1B778003F0A51 /* TFUtils+UIColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TFUtils+UIColor.h"; sourceTree = "<group>"; };
+		9027FEBB20F1B778003F0A51 /* TFUtils+UIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TFUtils+UIColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -586,6 +589,8 @@
 				1A873A2D20DBC78800B1357E /* TFUtils+Date.m */,
 				1AE959B420ECA81200C5BDE4 /* TFUtils+Device.h */,
 				1AE959B520ECA81200C5BDE4 /* TFUtils+Device.m */,
+				9027FEBA20F1B778003F0A51 /* TFUtils+UIColor.h */,
+				9027FEBB20F1B778003F0A51 /* TFUtils+UIColor.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1084,6 +1089,7 @@
 				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
 				1A66B8BE20EF1C9400464F4E /* TFNetworkConfig.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,
+				9027FEBC20F1B778003F0A51 /* TFUtils+UIColor.m in Sources */,
 				1AE959A720EB5CDF00C5BDE4 /* TFSegmentTitleView.m in Sources */,
 				1ABDDE4820D3B62200E900A8 /* MASLayoutConstraint.m in Sources */,
 				1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */,
