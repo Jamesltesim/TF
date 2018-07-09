@@ -44,6 +44,7 @@
 		1A66B8ED20F35E1B00464F4E /* ShoppingCarData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8EC20F35E1B00464F4E /* ShoppingCarData.m */; };
 		1A66B8F020F35F0000464F4E /* GoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8EF20F35F0000464F4E /* GoodModel.m */; };
 		1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8F420F363EA00464F4E /* ShoppingCarModel.m */; };
+		1A66B8F820F376A000464F4E /* UIView+LXShadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8F620F3769F00464F4E /* UIView+LXShadowPath.m */; };
 		1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
@@ -206,6 +207,8 @@
 		1A66B8EF20F35F0000464F4E /* GoodModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodModel.m; sourceTree = "<group>"; };
 		1A66B8F320F363EA00464F4E /* ShoppingCarModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCarModel.h; sourceTree = "<group>"; };
 		1A66B8F420F363EA00464F4E /* ShoppingCarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarModel.m; sourceTree = "<group>"; };
+		1A66B8F620F3769F00464F4E /* UIView+LXShadowPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXShadowPath.m"; sourceTree = "<group>"; };
+		1A66B8F720F3769F00464F4E /* UIView+LXShadowPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LXShadowPath.h"; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -528,6 +531,8 @@
 		1A2BE01520C3CB670023C55D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1A66B8F720F3769F00464F4E /* UIView+LXShadowPath.h */,
+				1A66B8F620F3769F00464F4E /* UIView+LXShadowPath.m */,
 				1AC816CE20E1DF9F00B1EE89 /* TFCategory.h */,
 				1A2BE01620C3CB670023C55D /* UIView+Frame.h */,
 				1A2BE01720C3CB670023C55D /* UIView+Frame.m */,
@@ -1164,6 +1169,7 @@
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,
 				1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */,
 				1AC8170820E237D700B1EE89 /* EventCalendar.m in Sources */,
+				1A66B8F820F376A000464F4E /* UIView+LXShadowPath.m in Sources */,
 				1A873A2520DBAB6500B1357E /* UIView+Gradient.m in Sources */,
 				1A873A1520DB539500B1357E /* TFImageDataModel.m in Sources */,
 				1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */,

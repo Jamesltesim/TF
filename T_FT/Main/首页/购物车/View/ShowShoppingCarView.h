@@ -10,4 +10,5 @@
 
 @interface ShowShoppingCarView : UIView
 
+- (void)setNumber:(NSInteger)count price:(CGFloat)price;
 @end

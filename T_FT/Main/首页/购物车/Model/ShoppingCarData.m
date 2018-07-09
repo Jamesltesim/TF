@@ -39,7 +39,7 @@
 
 + (void)showOrder{
     ShoppingCarData *data = [self shareInstance];
-    NSLog(@"当前购物车中的数据：%@",[data.goodsDict objectForKey:GOODS_KEY]);
+    NSLog(@"当前购物车中的数据：%@",data.goodsDict);
 }
 
 + (CGFloat)getTotalPrices{
@@ -58,21 +58,25 @@
 + (void)addGood:(GoodModel *)model{
     ShoppingCarModel *good = [self findModelWithId:model.goodId];
       ShoppingCarData *data = [self shareInstance];
-    NSNumber *priceNum = [data.goodsDict objectForKey:PRICE_KEY];
-    CGFloat price = [priceNum floatValue];
+    CGFloat price = [[data.goodsDict objectForKey:PRICE_KEY] floatValue];
+   
+    NSNumber *priceNumber = nil;
     //当前购物车中已经有该商品
     if(good){
         good.count ++;
         
-        
-        priceNum = [NSNumber numberWithFloat:(price + good.price)];
+        price +=  good.price;
+        priceNumber = [NSNumber numberWithFloat:price];
     }else{
        //当前购物车中没有该商品
       
          NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
         [marr addObject:[ShoppingCarModel initWithGoodModel:model]];
-         priceNum = [NSNumber numberWithFloat:(price + model.price)];
+        price +=  model.price;
+         priceNumber = [NSNumber numberWithFloat:price];
     }
+    
+    [data.goodsDict setObject:priceNumber forKey:PRICE_KEY];
 }
 
 + (void)subGood:(GoodModel *)model{

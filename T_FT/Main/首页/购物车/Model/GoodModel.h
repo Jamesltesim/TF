@@ -14,7 +14,8 @@
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *content;
 @property (nonatomic,strong) NSString *imgUrl;
-
 @property (nonatomic) CGFloat price;
+
+@property (nonatomic) BOOL isHaveSlideFood;
 
 @end

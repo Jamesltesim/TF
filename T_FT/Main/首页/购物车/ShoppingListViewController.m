@@ -12,6 +12,7 @@
 #import "ShoppingListImageCell.h"
 #import "ShowShoppingCarView.h"
 #import "ShoppingCarData.h"
+#import "UIView+LXShadowPath.h"
 
 @interface ShoppingListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -62,7 +63,7 @@
     model4.goodId = @(1004);
     model4.title = @"Ferrero - Toffee Almond Roca Harmony";
     model4.content = @"Scoops of Ferrero and Toffee Almond Roca Gelato topped with whipped cream,caramel syrup and brownie chunks";
-    model4.imgUrl = @"www";
+    model4.imgUrl = @"";
     model4.price = 200.00;
     
     GoodModel *model5 = [[GoodModel alloc] init];
@@ -105,7 +106,7 @@
     
     _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-50-HOME_INDICATOR_HEIGHT, SCREEN_WIDTH, 50)];
     
-    
+      [_carView LX_SetShadowPathWith:[UIColor blackColor] shadowOpacity:0.01 shadowRadius:2 shadowSide:LXShadowPathTop shadowPathWidth:30];
 }
 
 - (ScrollTitleView *)scrollTitle{
@@ -161,18 +162,23 @@
     
       GoodModel *model = self.dataArray[indexPath.row];
     
-    if(!self.carView.superview){
-        [self.view addSubview:self.carView];
-        tableView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, SCREEN_HEIGHT-50-self.scrollTitle.bottom);
-        
-        [ShoppingCarData addGood:model];
+    //如果需要选择辅食 就弹出新界面
+    if(model.isHaveSlideFood){
         
     }else{
-        [self.carView removeFromSuperview];
-         tableView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, SCREEN_HEIGHT-self.scrollTitle.bottom);
-        [ShoppingCarData subGood:model];
+//        否则 就更新购物篮
+        
+        if(!self.carView.superview){
+            [self.view addSubview:self.carView];
+            tableView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, SCREEN_HEIGHT-50-self.scrollTitle.bottom);
+        }
+        
+        [ShoppingCarData addGood:model];
     }
+  
     
+    
+     [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
     [ShoppingCarData showOrder];
 }
 

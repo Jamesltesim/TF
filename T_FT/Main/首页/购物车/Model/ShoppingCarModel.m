@@ -22,7 +22,12 @@
 + (instancetype)initWithGoodModel:(GoodModel *)good{
     ShoppingCarModel *model = [[ShoppingCarModel alloc] init];
     model.goodId = good.goodId;
+    model.title = good.title;
+    model.price = good.price;
     return model;
 }
 
+- (NSString *)description{
+    return [NSString stringWithFormat:@"count:%ld title:%@ price:%.2f",self.count,self.title,self.price];
+}
 @end

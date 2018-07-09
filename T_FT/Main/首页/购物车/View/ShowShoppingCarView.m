@@ -18,6 +18,10 @@
 
 @implementation ShowShoppingCarView
 
+- (void)setNumber:(NSInteger)count price:(CGFloat)price{
+    self.number.text = [NSString stringWithFormat:@"%ld",count];
+    self.price.text = [NSString stringWithFormat:@"¥ %.2f",price];
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

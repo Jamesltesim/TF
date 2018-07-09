@@ -35,11 +35,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9k-HU-FXq" userLabel="price">
-                                <rect key="frame" x="362.5" y="155.5" width="36.5" height="15"/>
+                                <rect key="frame" x="364.5" y="155.5" width="34.5" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="qsP-BE-4i0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
