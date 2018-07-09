@@ -11,7 +11,7 @@
 #import "TFTabBarController.h"
 #import "DCFeaturesTool.h"
 
-
+#import "ShoppingListViewController.h"
 
 //参考
 //天天果园 app
@@ -78,7 +78,8 @@
 
     }else{
 
-        self.window.rootViewController = dcHomeVc;
+        self.window.rootViewController = [ShoppingListViewController new];
+        //self.window.rootViewController = dcHomeVc;
     }
 }
 

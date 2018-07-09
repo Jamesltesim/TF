@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="123" id="KGk-i7-Jjw" customClass="ShoppingListTextCell">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="123"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="122.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAE-Ng-j5C">
+                        <rect key="frame" x="8" y="8" width="484" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBS-EM-HAb">
+                        <rect key="frame" x="8" y="32.5" width="484" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.6705882352941176" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNk-ok-EpV">
+                        <rect key="frame" x="453.5" y="93" width="36.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="pNk-ok-EpV" secondAttribute="bottom" constant="10" id="2iX-La-L3E"/>
+                    <constraint firstItem="pNk-ok-EpV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WBS-EM-HAb" secondAttribute="bottom" constant="2" id="Fiv-jE-Mog"/>
+                    <constraint firstItem="WBS-EM-HAb" firstAttribute="leading" secondItem="PAE-Ng-j5C" secondAttribute="leading" id="JhI-aQ-Uf4"/>
+                    <constraint firstItem="PAE-Ng-j5C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Klj-hU-WUW"/>
+                    <constraint firstItem="WBS-EM-HAb" firstAttribute="trailing" secondItem="PAE-Ng-j5C" secondAttribute="trailing" id="Nae-H2-pcG"/>
+                    <constraint firstItem="WBS-EM-HAb" firstAttribute="top" secondItem="PAE-Ng-j5C" secondAttribute="bottom" constant="5" id="QDn-td-adj"/>
+                    <constraint firstAttribute="trailing" secondItem="PAE-Ng-j5C" secondAttribute="trailing" constant="8" id="bJq-Nx-2sO"/>
+                    <constraint firstAttribute="trailing" secondItem="pNk-ok-EpV" secondAttribute="trailing" constant="10" id="eaw-1V-knu"/>
+                    <constraint firstItem="PAE-Ng-j5C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="n9E-dK-2x4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="content" destination="WBS-EM-HAb" id="iKP-Q7-8rG"/>
+                <outlet property="price" destination="pNk-ok-EpV" id="ceg-q0-tZK"/>
+                <outlet property="title" destination="PAE-Ng-j5C" id="XY2-N3-Iy1"/>
+            </connections>
+            <point key="canvasLocation" x="-56" y="14.5"/>
+        </tableViewCell>
+    </objects>
+</document>
