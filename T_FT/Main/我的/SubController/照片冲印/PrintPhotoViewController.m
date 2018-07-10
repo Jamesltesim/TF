@@ -49,7 +49,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSArray *sizeArray = @[@"89mm X 89mm",@"89mm X 127mm",@"102mm X 152mm",@"114mm X 152mm",@"127mm X 178mm",@""];
+    
+    NSArray*contentArray = @[@"由高端干式扩印设备制作,使用日本原装进口相纸和墨水，防水不褪色，色彩与京都均将超越冲印",
+                             @"由高端干式扩印设备制作,使用日本原装进口相纸和墨水，防水不褪色，色彩与京都均将超越冲印",
+                             @"由高端干式扩印设备制作,使用日本原装进口相纸和墨水，防水不褪色，色彩与京都均将超越冲印",
+                             @"由高端干式扩印设备制作,使用日本原装进口相纸和墨水，防水不褪色，色彩与京都均将超越冲印",
+                             @"由高端干式扩印设备制作,使用日本原装进口相纸和墨水，防水不褪色，色彩与京都均将超越冲印",
+                             @"由高端干式扩印设备制作,使用日本原装进口相纸和墨水，防水不褪色，色彩与京都均将超越冲印"];
+    
+    NSArray *priceArray = @[@"¥1.00/张",@"¥0.7/张",@"¥0.80/张",@"¥0.9/张",@"¥2.00/张",@""];
     PhotoDescViewController *controller = [[PhotoDescViewController alloc]init];
+    
+    controller.sizeString = sizeArray[indexPath.row];
+     controller.contentString = contentArray[indexPath.row];
+     controller.priceString = priceArray[indexPath.row];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

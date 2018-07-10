@@ -10,4 +10,7 @@
 
 @interface PhotoDescViewController : MeSubViewController
 
+@property (nonatomic,strong) NSString *sizeString;
+@property (nonatomic,strong) NSString *contentString;
+@property (nonatomic,strong) NSString *priceString;
 @end
