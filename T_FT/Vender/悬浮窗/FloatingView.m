@@ -128,11 +128,13 @@
         }];
         return;
     }else if (panPoint.y >kScreenHeight- kk_HEIGHT/2 - STATUSVIEW_HEIGHT){
+         [UIView animateWithDuration:animateDuration animations:^{
         if(panPoint.x <= kScreenWidth/2){
             self.center = CGPointMake(kk_WIDTH/2, kScreenHeight- kk_HEIGHT/2 - HOME_INDICATOR_HEIGHT);
         }else{
             self.center = CGPointMake(kScreenHeight-kk_WIDTH/2, kScreenHeight- kk_HEIGHT/2 - HOME_INDICATOR_HEIGHT);
         }
+         }];
         return;
     }
     

@@ -7,12 +7,38 @@
 //
 
 #import "ShoppingListTextCell.h"
+#import "TriangleView.h"
+
+@interface ShoppingListTextCell()
+
+@property (weak, nonatomic) IBOutlet TriangleView *triangle;
+
+@end
 
 @implementation ShoppingListTextCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+  self.triangle.hidden = YES;
+}
+
+- (void)hidenTriangle{
+    if(!self.triangle.isHidden){
+        self.triangle.hidden = YES;
+    }
+}
+
+- (void)showCount:(NSInteger)count{
+    [self.triangle showCount:count];
+}
+
+- (void)setGoodsCount:(NSInteger)count{
+    if(count){
+        [self showCount:count];
+    }else{
+        [self hidenTriangle];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

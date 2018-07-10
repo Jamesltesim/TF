@@ -37,6 +37,31 @@
 
 #pragma mark - 公开方法
 
++ (NSInteger)countOfGood:(GoodModel *)model{
+    ShoppingCarData *data = [self shareInstance];
+    NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
+    
+    for(ShoppingCarModel *good in marr){
+        if([good.goodId isEqualToNumber:model.goodId]){
+            return good.count;
+        }
+    }
+    
+    return 0;
+}
+
++ (BOOL)existGood:(GoodModel *)model{
+    ShoppingCarData *data = [self shareInstance];
+    NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
+    
+    for(ShoppingCarModel *good in marr){
+        if([good.goodId isEqualToNumber:model.goodId]){
+            return YES;
+        }
+    }
+    
+    return NO;
+}
 + (void)showOrder{
     ShoppingCarData *data = [self shareInstance];
     NSLog(@"当前购物车中的数据：%@",data.goodsDict);
@@ -52,7 +77,13 @@
     ShoppingCarData *data = [self shareInstance];
     NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
     
-    return marr.count;
+    
+    NSInteger count = 0;
+    
+    for(ShoppingCarModel *model in marr){
+        count += model.count;
+    }
+    return count;
 }
 
 + (void)addGood:(GoodModel *)model{

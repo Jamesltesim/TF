@@ -13,13 +13,11 @@
 #import "ActivityViewController.h"
 #import "MeViewController.h"
 #import "ADView.h"
-#import "FloatingView.h"
 
-@interface TFTabBarController ()<UITabBarControllerDelegate>
+
+@interface TFTabBarController ()
 
 @property (nonatomic,strong) HomeViewController *HomeController;
-
-@property (nonatomic,strong) FloatingView *floatView;
 
 @end
 
@@ -50,59 +48,105 @@
     
     self.viewControllers = @[nav1,nav2,nav3];
     
-    
-    self.delegate = self;
+
     if(0){
         ADView *adview = [[ADView alloc]init];
         [self.view addSubview:adview];
     }
-  
-    ///////
-    self.floatView = [[FloatingView alloc]initWithFrame:CGRectMake(kScreenWidth-80, kScreenHeight-150, 60, 60) mainImageName:@"timg1.png" bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
     
-    [self.view addSubview:self.floatView];
-    
-         __weak __typeof(self)weakSelf = self;
-    self.floatView.callService = ^{
-     
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
-        
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"拨打候鸟旅居网客服电话？" message:@"4000301679" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-        UIAlertAction *defintAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            
-            UIApplication *app = [UIApplication sharedApplication];
-            
-            NSString *strUrl = [NSString stringWithFormat:@"tel://4000301679"];
-            
-            NSURL *url = [NSURL URLWithString:strUrl];
-            
-            [app openURL:url ];
-        }];
-        
-        [alert addAction:cancleAction];
-        [alert addAction:defintAction];
-        [strongSelf presentViewController:alert animated:YES completion:nil];
-        
-        
-    };
+   
+    //注册截屏通知
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(userDidTakeScreenshot:)
+                                                 name:UIApplicationUserDidTakeScreenshotNotification object:nil];
 }
 
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-    if([viewController isKindOfClass:[HomeNavigationController class]]){
-        self.floatView.hidden = NO;
-    }else{
-        self.floatView.hidden = YES;
-    }
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationUserDidTakeScreenshotNotification object:nil];
 }
-//- (void)closeAction{
-////    [self.view removeFromSuperview];
-//}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)userDidTakeScreenshot:(NSNotification *)notification{
+
+    NSLog(@"检测到截屏");
+    //人为截屏, 模拟用户截屏行为, 获取所截图片
+//    UIImage *image_ = [self imageWithScreenshot];
+//
+//    //添加显示
+//    UIImageView *imgvPhoto = [[UIImageView alloc]initWithImage:image_];
+//    imgvPhoto.frame = CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/2, self.view.frame.size.width/2, self.view.frame.size.height/2);
+//    //添加边框
+//    CALayer * layer = [imgvPhoto layer];
+//    layer.borderColor = [
+//                         [UIColor whiteColor] CGColor];
+//    layer.borderWidth = 5.0f;
+//    //添加四个边阴影
+//    imgvPhoto.layer.shadowColor = [UIColor blackColor].CGColor;
+//    imgvPhoto.layer.shadowOffset = CGSizeMake(0, 0);
+//    imgvPhoto.layer.shadowOpacity = 0.5;
+//    imgvPhoto.layer.shadowRadius = 10.0;
+//    //添加两个边阴影
+//    imgvPhoto.layer.shadowColor = [UIColor blackColor].CGColor;
+//    imgvPhoto.layer.shadowOffset = CGSizeMake(4, 4);
+//    imgvPhoto.layer.shadowOpacity = 0.5;
+//    imgvPhoto.layer.shadowRadius = 2.0;
+//    [self.view addSubview:imgvPhoto];
+    
+}
+//截取当前屏幕
+- (NSData *)dataWithScreenshotInPNGFormat
+{
+    CGSize imageSize = CGSizeZero;
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    if (UIInterfaceOrientationIsPortrait(orientation))
+        imageSize = [UIScreen mainScreen].bounds.size;
+    else
+        imageSize = CGSizeMake([UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width);
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    for (UIWindow *window in [[UIApplication sharedApplication] windows])
+    {
+        CGContextSaveGState(context);
+        CGContextTranslateCTM(context, window.center.x, window.center.y);
+        CGContextConcatCTM(context, window.transform);
+        CGContextTranslateCTM(context, -window.bounds.size.width * window.layer.anchorPoint.x, -window.bounds.size.height * window.layer.anchorPoint.y);
+        if (orientation == UIInterfaceOrientationLandscapeLeft)
+        {
+            CGContextRotateCTM(context, M_PI_2);
+            CGContextTranslateCTM(context, 0, -imageSize.width);
+        }
+        else if (orientation == UIInterfaceOrientationLandscapeRight)
+        {
+            CGContextRotateCTM(context, -M_PI_2);
+            CGContextTranslateCTM(context, -imageSize.height, 0);
+        } else if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
+            CGContextRotateCTM(context, M_PI);
+            CGContextTranslateCTM(context, -imageSize.width, -imageSize.height);
+        }
+        if ([window respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)])
+        {
+            [window drawViewHierarchyInRect:window.bounds afterScreenUpdates:YES];
+        }
+        else
+        {
+            [window.layer renderInContext:context];
+        }
+        CGContextRestoreGState(context);
+    }
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return UIImagePNGRepresentation(image);
+}
+
+//返回截取到的图片
+- (UIImage *)imageWithScreenshot
+{
+    NSData *imageData = [self dataWithScreenshotInPNGFormat];
+    return [UIImage imageWithData:imageData];
 }
 
 /*

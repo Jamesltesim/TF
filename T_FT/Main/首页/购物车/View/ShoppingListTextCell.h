@@ -6,9 +6,9 @@
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ShoppingTableViewCell.h"
 
-@interface ShoppingListTextCell : UITableViewCell
+@interface ShoppingListTextCell : ShoppingTableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *content;

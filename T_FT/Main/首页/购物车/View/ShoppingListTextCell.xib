@@ -37,6 +37,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irG-6b-227" userLabel="triangle" customClass="TriangleView">
+                        <rect key="frame" x="467" y="0.0" width="33" height="33"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="33" id="7O9-Ky-gro"/>
+                            <constraint firstAttribute="height" constant="33" id="iSG-lQ-e8E"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="pNk-ok-EpV" secondAttribute="bottom" constant="10" id="2iX-La-L3E"/>
@@ -47,7 +55,9 @@
                     <constraint firstItem="WBS-EM-HAb" firstAttribute="top" secondItem="PAE-Ng-j5C" secondAttribute="bottom" constant="5" id="QDn-td-adj"/>
                     <constraint firstAttribute="trailing" secondItem="PAE-Ng-j5C" secondAttribute="trailing" constant="8" id="bJq-Nx-2sO"/>
                     <constraint firstAttribute="trailing" secondItem="pNk-ok-EpV" secondAttribute="trailing" constant="10" id="eaw-1V-knu"/>
+                    <constraint firstItem="irG-6b-227" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="j5j-oQ-uM1"/>
                     <constraint firstItem="PAE-Ng-j5C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="n9E-dK-2x4"/>
+                    <constraint firstAttribute="trailing" secondItem="irG-6b-227" secondAttribute="trailing" id="yTi-Rq-aka"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
@@ -55,6 +65,7 @@
                 <outlet property="content" destination="WBS-EM-HAb" id="iKP-Q7-8rG"/>
                 <outlet property="price" destination="pNk-ok-EpV" id="ceg-q0-tZK"/>
                 <outlet property="title" destination="PAE-Ng-j5C" id="XY2-N3-Iy1"/>
+                <outlet property="triangle" destination="irG-6b-227" id="mHy-xj-Xrp"/>
             </connections>
             <point key="canvasLocation" x="-56" y="14.5"/>
         </tableViewCell>

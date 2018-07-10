@@ -14,19 +14,34 @@
 #import "UIScrollView+MJRefresh.h"
 #import "MJChiBaoZiHeader.h"
 #import "HomeheaderReusableView.h"
+#import "FloatingView.h"
+#import "HomeNavigationController.h"
+#import "ShoppingListViewController.h"
 
 
-
-@interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
+@interface HomeViewController ()<UICollectionViewDataSource,
+                                 UICollectionViewDelegate,
+                                 UICollectionViewDelegateFlowLayout,
+                                 UIScrollViewDelegate,
+                                 UITabBarControllerDelegate>
 
 @property (nonatomic,strong) SDCycleScrollView *bannerView;
 @property (nonatomic,strong) UICollectionView *collectionView;
 @property (nonatomic,strong) NSArray *dataArray;
+@property (nonatomic,strong) FloatingView *floatView;
 
 @end
 
 @implementation HomeViewController{
     
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    if([viewController isKindOfClass:[HomeNavigationController class]]){
+        self.floatView.hidden = NO;
+    }else{
+        self.floatView.hidden = YES;
+    }
 }
 
 #pragma -mark life cycle
@@ -35,14 +50,23 @@
     [super viewWillAppear:animated];
     
      [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+  
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+      self.floatView.hidden = NO;
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+      self.floatView.hidden = YES;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createCollectionView];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.tabBarController.delegate = self;
     // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
     
     MJChiBaoZiHeader *header = [MJChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
@@ -75,6 +99,37 @@
     
     
     //    [self.view insertSubview:self.stretchView atIndex:0];
+    
+    
+    //悬浮窗
+    self.floatView = [[FloatingView alloc]initWithFrame:CGRectMake(kScreenWidth-80, kScreenHeight-150, 60, 60) mainImageName:@"timg1.png" bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
+    
+    [self.tabBarController.view addSubview:self.floatView];
+    
+    __weak __typeof(self)weakSelf = self;
+    self.floatView.callService = ^{
+        
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"拨打候鸟旅居网客服电话？" message:@"4000301679" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+//        UIAlertAction *defintAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//
+//            UIApplication *app = [UIApplication sharedApplication];
+//
+//            NSString *strUrl = [NSString stringWithFormat:@"tel://4000301679"];
+//
+//            NSURL *url = [NSURL URLWithString:strUrl];
+//
+//            [app openURL:url ];
+//        }];
+//
+//        [alert addAction:cancleAction];
+//        [alert addAction:defintAction];
+//        [strongSelf presentViewController:alert animated:YES completion:nil];
+        [strongSelf.navigationController pushViewController:[[ShoppingListViewController alloc]init] animated:YES];
+        
+    };
     
     [self GET:nil parameters:nil success:nil requestFailure:nil];
 }

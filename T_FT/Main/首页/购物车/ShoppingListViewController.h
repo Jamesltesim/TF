@@ -6,8 +6,8 @@
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#import "TFViewController.h"
+#import "MeSubViewController.h"
 
-@interface ShoppingListViewController : TFViewController
+@interface ShoppingListViewController : MeSubViewController
 
 @end
