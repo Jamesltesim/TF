@@ -78,8 +78,8 @@
 
     }else{
 
-        self.window.rootViewController = [ShoppingListViewController new];
-        //self.window.rootViewController = dcHomeVc;
+//        self.window.rootViewController = [ShoppingListViewController new];
+        self.window.rootViewController = dcHomeVc;
     }
 }
 

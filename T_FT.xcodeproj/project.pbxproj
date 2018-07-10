@@ -45,6 +45,10 @@
 		1A66B8F020F35F0000464F4E /* GoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8EF20F35F0000464F4E /* GoodModel.m */; };
 		1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8F420F363EA00464F4E /* ShoppingCarModel.m */; };
 		1A66B8F820F376A000464F4E /* UIView+LXShadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8F620F3769F00464F4E /* UIView+LXShadowPath.m */; };
+		1A66B90220F4465800464F4E /* JYCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8FF20F4465800464F4E /* JYCWindow.m */; };
+		1A66B90320F4465800464F4E /* FloatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B90120F4465800464F4E /* FloatingView.m */; };
+		1A66B90520F44BDA00464F4E /* timg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B90420F44BDA00464F4E /* timg1.png */; };
+		1A66B90820F44CA000464F4E /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B90720F44CA000464F4E /* HomeNavigationController.m */; };
 		1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
@@ -209,6 +213,13 @@
 		1A66B8F420F363EA00464F4E /* ShoppingCarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarModel.m; sourceTree = "<group>"; };
 		1A66B8F620F3769F00464F4E /* UIView+LXShadowPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXShadowPath.m"; sourceTree = "<group>"; };
 		1A66B8F720F3769F00464F4E /* UIView+LXShadowPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LXShadowPath.h"; sourceTree = "<group>"; };
+		1A66B8FE20F4465800464F4E /* JYCWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYCWindow.h; sourceTree = "<group>"; };
+		1A66B8FF20F4465800464F4E /* JYCWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYCWindow.m; sourceTree = "<group>"; };
+		1A66B90020F4465800464F4E /* FloatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingView.h; sourceTree = "<group>"; };
+		1A66B90120F4465800464F4E /* FloatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingView.m; sourceTree = "<group>"; };
+		1A66B90420F44BDA00464F4E /* timg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timg1.png; sourceTree = "<group>"; };
+		1A66B90620F44CA000464F4E /* HomeNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeNavigationController.h; sourceTree = "<group>"; };
+		1A66B90720F44CA000464F4E /* HomeNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeNavigationController.m; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -487,6 +498,8 @@
 				1AE959BD20EE0D2900C5BDE4 /* DrinksCollectionViewCell.h */,
 				1AE959BE20EE0D2900C5BDE4 /* DrinksCollectionViewCell.m */,
 				1AE959BF20EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib */,
+				1A66B90620F44CA000464F4E /* HomeNavigationController.h */,
+				1A66B90720F44CA000464F4E /* HomeNavigationController.m */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -612,6 +625,18 @@
 				1A66B8E920F344C400464F4E /* ShowShoppingCarView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1A66B8FD20F4463B00464F4E /* 悬浮窗 */ = {
+			isa = PBXGroup;
+			children = (
+				1A66B90420F44BDA00464F4E /* timg1.png */,
+				1A66B8FE20F4465800464F4E /* JYCWindow.h */,
+				1A66B8FF20F4465800464F4E /* JYCWindow.m */,
+				1A66B90020F4465800464F4E /* FloatingView.h */,
+				1A66B90120F4465800464F4E /* FloatingView.m */,
+			);
+			path = "悬浮窗";
 			sourceTree = "<group>";
 		};
 		1A8739FC20DA01CA00B1357E /* 照片冲印 */ = {
@@ -759,6 +784,7 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				1A66B8FD20F4463B00464F4E /* 悬浮窗 */,
 				1AC8170520E237C300B1EE89 /* 添加事件到日历提醒 */,
 				1A873A0C20DB52C000B1357E /* ReadSystemPhoto */,
 				1A8C614220D3D31100EE4CB5 /* 广告 */,
@@ -1025,6 +1051,7 @@
 			files = (
 				1A873A1E20DB987400B1357E /* ShowImageCollectionViewCell.xib in Resources */,
 				1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */,
+				1A66B90520F44BDA00464F4E /* timg1.png in Resources */,
 				1ABDDE5520D3BE0800E900A8 /* ActivityCollectionViewCell.xib in Resources */,
 				1A03A70620DC836200576A03 /* SeckillTableViewCell.xib in Resources */,
 				1AF8248220CA76E400587A6F /* 29.jpg in Resources */,
@@ -1124,6 +1151,7 @@
 				1A873A2B20DBC09100B1357E /* TFUtils.m in Sources */,
 				1A66B8DA20F2F31D00464F4E /* ShoppingCarViewController.m in Sources */,
 				1A2BDFF820C3C5180023C55D /* TFViewController.m in Sources */,
+				1A66B90320F4465800464F4E /* FloatingView.m in Sources */,
 				1ABDDE1D20D3A4BF00E900A8 /* DCNewFeaturesCell.m in Sources */,
 				1A03A70A20DC976600576A03 /* SoldoutProgressView.m in Sources */,
 				1A873A2220DBA88200B1357E /* SeckillNavBarView.m in Sources */,
@@ -1163,6 +1191,7 @@
 				1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */,
 				1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */,
 				1A2BDFFE20C3C5690023C55D /* HomeViewController.m in Sources */,
+				1A66B90820F44CA000464F4E /* HomeNavigationController.m in Sources */,
 				1ABDDE4C20D3B62200E900A8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				1A03A70520DC836200576A03 /* SeckillTableViewCell.m in Sources */,
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
@@ -1175,6 +1204,7 @@
 				1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */,
 				1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */,
 				1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */,
+				1A66B90220F4465800464F4E /* JYCWindow.m in Sources */,
 				1A66B8CD20EF429B00464F4E /* LoginView.m in Sources */,
 				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
 				1A66B8BE20EF1C9400464F4E /* TFNetworkConfig.m in Sources */,
