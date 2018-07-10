@@ -73,6 +73,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setupToolView];
     
     /*
@@ -112,7 +113,7 @@
 #pragma mark - start load web
 
 - (void)startLoad {
-    NSString *urlString = @"http://www.baidu.com";
+    NSString *urlString = (self.urlString == nil?@"http://www.baidu.com":self.urlString);
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     request.timeoutInterval = 15.0f;
     [self.wkWebView loadRequest:request];

@@ -10,4 +10,5 @@
 
 @interface TFWebViewController : UIViewController
 
+@property (nonatomic,strong) NSString *urlString;
 @end

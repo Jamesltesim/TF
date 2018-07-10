@@ -11,6 +11,8 @@
 #import "HomeViewController.h"
 #import "HomeNavigationController.h"
 #import "ActivityViewController.h"
+#import "DiscoveryViewController.h"
+
 #import "MeViewController.h"
 #import "ADView.h"
 
@@ -28,6 +30,8 @@
     
     self.HomeController = [[HomeViewController alloc]init];
     ActivityViewController *second = [[ActivityViewController alloc]init];
+    
+    DiscoveryViewController *discovery = [[DiscoveryViewController alloc]init];
     MeViewController *third = [[MeViewController alloc]init];
 
     //    BDFourthViewController1 *fourth = [[BDFourthViewController1 alloc] init];
@@ -38,15 +42,17 @@
     
     UINavigationController *nav1 = [[HomeNavigationController alloc] initWithRootViewController:self.HomeController];
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:second];
+    UINavigationController *discoveryNav = [[UINavigationController alloc] initWithRootViewController:discovery];
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:third];
 //    UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:fourth];
     
     nav1.tabBarItem.title = @"首页";
     nav2.tabBarItem.title = @"活动";
+    discoveryNav.tabBarItem.title = @"发现";
     nav3.tabBarItem.title = @"个人中心";
  
     
-    self.viewControllers = @[nav1,nav2,nav3];
+    self.viewControllers = @[nav1,nav2,discoveryNav,nav3];
     
 
     if(0){
