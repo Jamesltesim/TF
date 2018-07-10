@@ -8,20 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol ScrollTitleViewDelegate;
+#import "ShoppingCarDelegate.h"
 
 @interface ScrollTitleView : UIView
 
-@property (nonatomic,strong) id<ScrollTitleViewDelegate> delegate;
+@property (nonatomic,strong) id<ShoppingCarDelegate> delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titles;
 
 @end
 
-@protocol ScrollTitleViewDelegate<NSObject>
-
-- (void)scrollTitleView:(ScrollTitleView *)scrollView didSelectedAtIndex:(NSInteger)index;
-
-- (void)scrollTitleView:(ScrollTitleView *)scrollView didSelectedAtTitle:(NSString *)title;
-
-@end
+//@protocol ScrollTitleViewDelegate<NSObject>
+//
+//- (void)scrollTitleView:(ScrollTitleView *)scrollView didSelectedAtIndex:(NSInteger)index;
+//
+//- (void)scrollTitleView:(ScrollTitleView *)scrollView didSelectedAtTitle:(NSString *)title;
+//
+//@end

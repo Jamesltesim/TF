@@ -226,6 +226,7 @@
 		1A66B90A20F4886E00464F4E /* TriangleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TriangleView.m; sourceTree = "<group>"; };
 		1A66B90C20F49B8400464F4E /* ShoppingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingTableViewCell.h; sourceTree = "<group>"; };
 		1A66B90D20F49B8400464F4E /* ShoppingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingTableViewCell.m; sourceTree = "<group>"; };
+		1A66B90F20F4B44400464F4E /* ShoppingCarDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCarDelegate.h; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -599,6 +600,7 @@
 				1A66B8D620F2F31300464F4E /* ShoppingListViewController.m */,
 				1A66B8D820F2F31D00464F4E /* ShoppingCarViewController.h */,
 				1A66B8D920F2F31D00464F4E /* ShoppingCarViewController.m */,
+				1A66B90F20F4B44400464F4E /* ShoppingCarDelegate.h */,
 			);
 			path = "购物车";
 			sourceTree = "<group>";

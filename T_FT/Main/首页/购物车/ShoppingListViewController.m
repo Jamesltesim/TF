@@ -14,7 +14,7 @@
 #import "ShoppingCarData.h"
 #import "UIView+LXShadowPath.h"
 
-@interface ShoppingListViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ShoppingListViewController ()<UITableViewDelegate,UITableViewDataSource,ShoppingCarDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSArray *dataArray;
@@ -104,7 +104,7 @@
     self.dataArray = @[model1,model2,model3,model4,model5,model6,model7,model8,model9];
     
     _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-50-HOME_INDICATOR_HEIGHT, SCREEN_WIDTH, 50)];
-    
+    _carView.delegate = self;
       [_carView LX_SetShadowPathWith:[UIColor blackColor] shadowOpacity:0.01 shadowRadius:2 shadowSide:LXShadowPathTop shadowPathWidth:30];
     
     if([ShoppingCarData getCount]){
@@ -127,6 +127,7 @@
 - (ScrollTitleView *)scrollTitle{
     if(!_scrollTitle){
         _scrollTitle = [[ScrollTitleView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 70) titles:@[@"第一个",@"第二个回复大家撒哈拉",@"第三个v 蝴蝶结撒谎",@"第四个范德萨快乐",@"fdasfdsafdsgnreguehie"]];
+        _scrollTitle.delegate = self;
     }
     return _scrollTitle;
 }
@@ -151,6 +152,15 @@
         self.tableView.frame =CGRectMake(0, self.scrollTitle.bottom, self.view.width, self.view.height - self.scrollTitle.height-HOME_INDICATOR_HEIGHT);
     }
     
+}
+#pragma mark ---  ShoppingCarDelegate  ---
+
+- (void)cashierDeskTap{
+    
+}
+
+- (void)scrollTitleView:(ScrollTitleView *)scrollView didSelectedAtTitle:(NSString *)title{
+    NSLog(@"title:%@",title);
 }
 
 #pragma mark ---  UITableViewDelegate  ---

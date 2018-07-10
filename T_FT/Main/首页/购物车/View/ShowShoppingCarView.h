@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShoppingCarDelegate.h"
 
 @interface ShowShoppingCarView : UIView
+
+@property (nonatomic,strong) id<ShoppingCarDelegate> delegate;
 
 - (void)setNumber:(NSInteger)count price:(CGFloat)price;
 @end
