@@ -92,7 +92,7 @@
         
         
         [self performSelector:@selector(justbegin) withObject:nil afterDelay:statusChangeDuration];
-        
+       
         
     }
     return self;
@@ -202,6 +202,7 @@
     CGPoint panPoint = [p locationInView:[[UIApplication sharedApplication] keyWindow]];
     if(p.state == UIGestureRecognizerStateBegan)
     {
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(justbegin) object:nil];
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(changeStatus) object:nil];
         _mainImageButton.alpha = normalAlpha;
     }
@@ -223,19 +224,19 @@
 {
     [self stopAnimation];
     
-    _mainImageButton.alpha = normalAlpha;
-    
-    //拉出悬浮窗
-    if (self.center.x == 0) {
-        self.center = CGPointMake(kk_WIDTH/2, self.center.y);
-    }else if (self.center.x == kScreenWidth) {
-        self.center = CGPointMake(kScreenWidth - kk_WIDTH/2, self.center.y);
-    }else if (self.center.y == 0) {
-        self.center = CGPointMake(self.center.x, kk_HEIGHT/2);
-    }else if (self.center.y == kScreenHeight) {
-        self.center = CGPointMake(self.center.x, kScreenHeight - kk_HEIGHT/2);
-    }
-    
+//    _mainImageButton.alpha = normalAlpha;
+//
+//    //拉出悬浮窗
+//    if (self.center.x == 0) {
+//        self.center = CGPointMake(kk_WIDTH/2, self.center.y);
+//    }else if (self.center.x == kScreenWidth) {
+//        self.center = CGPointMake(kScreenWidth - kk_WIDTH/2, self.center.y);
+//    }else if (self.center.y == 0) {
+//        self.center = CGPointMake(self.center.x, kk_HEIGHT/2);
+//    }else if (self.center.y == kScreenHeight) {
+//        self.center = CGPointMake(self.center.x, kScreenHeight - kk_HEIGHT/2);
+//    }
+//
     
     if (self.callService) {
         

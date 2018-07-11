@@ -10,6 +10,7 @@
 #import "SDCycleScrollView.h"
 #import "DrinksCollectionViewCell.h"
 #import "FruitCollectionViewCell.h"
+#import "BundlingCollectionViewCell_1.h"
 
 #import "UIScrollView+MJRefresh.h"
 #import "MJChiBaoZiHeader.h"
@@ -17,14 +18,17 @@
 #import "FloatingView.h"
 #import "HomeNavigationController.h"
 #import "ShoppingListViewController.h"
+#import "TFAPICenter.h"
 #import "TFAPIHomeBanner.h"
+
 
 
 @interface HomeViewController ()<UICollectionViewDataSource,
                                  UICollectionViewDelegate,
                                  UICollectionViewDelegateFlowLayout,
                                  UIScrollViewDelegate,
-                                 UITabBarControllerDelegate>
+                                 UITabBarControllerDelegate,
+                                 TFAPICallBackProtocol>
 
 @property (nonatomic,strong) SDCycleScrollView *bannerView;
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -51,7 +55,7 @@
     [super viewWillAppear:animated];
     
      [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-    TFAPIHomeBanner *homebanner = [[TFAPIHomeBanner alloc]init];
+  
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -65,6 +69,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createCollectionView];
+    
+
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.tabBarController.delegate = self;
@@ -83,6 +89,11 @@
     
     
     self.dataArray = @[@[@{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                         @{@"name":@"甜心大苹果",@"price":@""},
+                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""}
+                         ],
+  
+                        @[@{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
                          @{@"name":@"甜心大苹果",@"price":@""},
                          @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
                          @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""}
@@ -131,6 +142,22 @@
         [strongSelf.navigationController pushViewController:[[ShoppingListViewController alloc]init] animated:YES];
         
     };
+
+//    [TFAPICenter loadData:TFAPIRequestNameForHomeBannner delegate:weakSelf];
+    TFAPIHomeBanner *apiBanner = [[TFAPIHomeBanner alloc]init];
+    apiBanner.delegate = self;
+    [apiBanner loadData];
+}
+
+
+#pragma mark - TFAPICallBackProtocol
+
+- (void)TFAPICallBackDidSuccess:(TFAPIBaseManager *)manager{
+    NSLog(@"%@ %@",NSStringFromSelector(_cmd),manager);
+}
+
+- (void)TFAPIWithHomeBanner:(TFAPIBaseManager *)manager success:(requestSuccessBlock)success failurere:(requestFailureBlock)failurere{
+    
 }
 
 - (void)loadNewData
@@ -205,11 +232,17 @@
 {
     
     if(indexPath.section == 0){
+    
+       BundlingCollectionViewCell_1 *cell = (BundlingCollectionViewCell_1 *)[collectionView dequeueReusableCellWithReuseIdentifier:@"BundlingCollectionViewCell_1" forIndexPath:indexPath];
+        cell.backgroundColor = [UIColor yellowColor];
+        return cell;
+
+    }else if (indexPath.section == 1){
         DrinksCollectionViewCell *cell = (DrinksCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"DrinksCollectionViewCell" forIndexPath:indexPath];
         
         
-                NSArray *array = self.dataArray[indexPath.section];
-                NSDictionary *dict = array[indexPath.row];
+        NSArray *array = self.dataArray[indexPath.section];
+        NSDictionary *dict = array[indexPath.row];
         
         cell.hint.text = @"热\n销\n万\n件";
         cell.youhui.text = @"限时特惠";
@@ -229,31 +262,9 @@
         cell.price.attributedText =  attributedStr;
         
         return cell;
-        //        DrinksCollectionViewCell *cell = (DrinksCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"DrinksCollectionViewCell" forIndexPath:indexPath];
-        //
-        //        NSArray *array = self.dataArray[indexPath.section];
-        //        NSDictionary *dict = array[indexPath.row];
-        //
-        //        cell.hint.text = @"热\n销\n万\n件";
-        //        cell.youhui.text = @"限时特惠";
-        //
-        //        cell.closeBothView.title =dict[@"name"];
-        //        cell.closeBothView.hint = @"多汁脆嫩 浓郁甜心";
-        //
-        //
-        //        NSString *price = @"¥189/22个";
-        //        NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString: price];
-        //        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14.0f] range:NSMakeRange(0,  1)];
-        //        NSArray *strArray = [price componentsSeparatedByString:@"/"];
-        //        NSString *string0 = strArray[0];
-        //        NSString *string1 = strArray[1];
-        //        [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16.0f] range:NSMakeRange(string0.length+1,  string1.length)];
-        //        //    [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0,  1)];
-        //        cell.price.attributedText =  attributedStr;
-        //
-        //        cell.refer.text = @"参考价:¥199";
-        //        return cell;
-    }else{
+    }
+    
+    else{
         FruitCollectionViewCell *cell = (FruitCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"FruitCollectionViewCell" forIndexPath:indexPath];
         return cell;
     }
@@ -264,6 +275,32 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section == 0){
+        CGFloat height = 0.;
+        switch ([TFUtils deviceScreenSize]) {
+                
+            case TFScreenSize_3_5:
+                height = 165;
+                break;
+            case TFScreenSize_4_0:
+                height = 145;
+                break;
+            case TFScreenSize_4_7:
+                height = 170;
+                break;
+            case TFScreenSize_5_5:
+                height = 200;
+                break;
+            case TFScreenSize_5_8:
+                height = 205;
+                break;
+            default:
+                height = 0.;
+                break;
+        }
+        
+        return CGSizeMake(self.view.width, height);
+        
+    }else if (indexPath.section == 1){
         CGFloat height = 0.;
         switch ([TFUtils deviceScreenSize]) {
                 
@@ -288,8 +325,9 @@
         }
         
         return CGSizeMake(self.view.width-16, height);
-        
-    }else{
+    }
+    
+    else{
         CGFloat itemWidth = (self.view.width-8*4)/3.0 ;
         //        CGFloat itemWidth = (self.view.width-16)/2.0 - 3;
         return CGSizeMake(itemWidth, itemWidth+40);
@@ -312,12 +350,18 @@
 //设置每个item的UIEdgeInsets
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
+    if(section == 0){
+       return UIEdgeInsetsMake(0, 0, 0, 0);
+    }
     return UIEdgeInsetsMake(8, 8, 8, 8);
 }
 
 //设置每个item水平间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
+    if(section == 0){
+        return 0.;
+    }
     return 5;
 }
 
@@ -325,6 +369,9 @@
 //设置每个item垂直间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
+    if(section == 0){
+        return 0.;
+    }
     return 8;
 }
 
@@ -397,11 +444,10 @@
     //注意，此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致 均为 cellId
     //    [mainCollectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
     [_collectionView registerNib:[UINib nibWithNibName:@"DrinksCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"DrinksCollectionViewCell"];
-
-    
     [_collectionView registerNib:[UINib nibWithNibName:@"FruitCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"FruitCollectionViewCell"];
-    //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView
+    [_collectionView registerNib:[UINib nibWithNibName:@"BundlingCollectionViewCell_1" bundle:nil] forCellWithReuseIdentifier:@"BundlingCollectionViewCell_1"];
     
+    //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView
     [_collectionView registerNib:[UINib nibWithNibName:@"HomeheaderReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView"];
     

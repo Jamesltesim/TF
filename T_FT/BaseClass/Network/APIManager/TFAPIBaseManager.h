@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "TFAPICallBackProtocol.h"
+#import "TFBaseManagerDelegate.h"
+
+
+
+
 
 @interface TFAPIBaseManager : NSObject
 
@@ -26,7 +31,7 @@
 ///**
 // * 加载数据
 // */
-//- (void)loadData;
+- (void)loadData;
 ///**
 // * 取消请求
 // */

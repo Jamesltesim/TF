@@ -7,7 +7,7 @@
 //
 
 #import "TFAPIHomeBanner.h"
-#import "TFBaseManagerDelegate.h"
+
 
 @interface TFAPIHomeBanner()<TFBaseManagerDelegate>
 
