@@ -17,6 +17,7 @@
 #import "FloatingView.h"
 #import "HomeNavigationController.h"
 #import "ShoppingListViewController.h"
+#import "TFAPIHomeBanner.h"
 
 
 @interface HomeViewController ()<UICollectionViewDataSource,
@@ -50,7 +51,7 @@
     [super viewWillAppear:animated];
     
      [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-  
+    TFAPIHomeBanner *homebanner = [[TFAPIHomeBanner alloc]init];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -130,8 +131,6 @@
         [strongSelf.navigationController pushViewController:[[ShoppingListViewController alloc]init] animated:YES];
         
     };
-    
-    [self GET:nil parameters:nil success:nil requestFailure:nil];
 }
 
 - (void)loadNewData
