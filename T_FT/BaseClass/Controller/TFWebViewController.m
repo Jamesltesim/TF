@@ -67,7 +67,9 @@
  */
 
 - (void)dealloc {
-    [self.wkWebView removeObserver:self forKeyPath:@"estimatedProgress"];
+    
+    //这行代码 要查
+//    [self.wkWebView removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 
 - (void)viewDidLoad {

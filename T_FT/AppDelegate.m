@@ -12,6 +12,7 @@
 #import "DCFeaturesTool.h"
 
 #import "ShoppingListViewController.h"
+#import "LoginViewController.h"
 
 //参考
 //天天果园 app
@@ -83,7 +84,9 @@
     }else{
 
 //        self.window.rootViewController = [ShoppingListViewController new];
-        self.window.rootViewController = dcHomeVc;
+        self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil]];
+        
+//        self.window.rootViewController = dcHomeVc;
     }
 }
 

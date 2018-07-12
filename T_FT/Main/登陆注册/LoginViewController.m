@@ -14,24 +14,63 @@
 #import <AddressBook/ABRecord.h>
 //#import "AddressBook.h"
 
+#import "TFLocalHTMLViewController.h"
 
 @interface LoginViewController ()
 @property (nonatomic,strong) NSMutableArray *list;
+@property (weak, nonatomic) IBOutlet UITextField *userText;
+@property (weak, nonatomic) IBOutlet UITextField *pwdText;
+@property (weak, nonatomic) IBOutlet UIButton *eye;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+
 @end
 
 @implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     self.list = [[NSMutableArray alloc] initWithCapacity:0];
     
     //申请访问通讯录权限
     [self requestAuthorizationForAddressBook];
     
     //获得 通讯录内容
-       [self getmyAddressbook];
+    [self getmyAddressbook];
     
+    
+    
+    self.loginBtn.layer.cornerRadius = self.loginBtn.height/2.2;
+    NSLog(@"%lf",self.loginBtn.height);
+    //关闭键盘上方联想功能
+    self.userText.autocorrectionType = UITextAutocorrectionTypeNo;
+    self.pwdText.autocorrectionType = UITextAutocorrectionTypeNo;
+    //点击背景 取消键盘
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewClick:)];
+    [self.view addGestureRecognizer:tap];
+    
+    
+    
+}
+- (IBAction)eyeClick:(UIButton *)sender {
+    if(sender.tag++%2){
+         [sender setImage:[UIImage imageNamed:@"login_eye_close"] forState:UIControlStateNormal];
+       
+    }else{
+        [sender setImage:[UIImage imageNamed:@"login_eye_open"] forState:UIControlStateNormal];
+    }
+}
+
+- (void)viewClick:(UITapGestureRecognizer *)tap {
+    if(self.userText.isFirstResponder) [self.userText resignFirstResponder];
+     if(self.pwdText.isFirstResponder) [self.pwdText resignFirstResponder];
+}
+
+- (IBAction)policyAction:(id)sender {
+    
+    TFLocalHTMLViewController *htmlController = [[TFLocalHTMLViewController alloc]init];
+    
+    [self.navigationController pushViewController:htmlController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,7 +96,7 @@
         
     }else
     {
-//        [HTools showTextOnlyHud:@"请升级系统" delay:1.0];
+        //        [HTools showTextOnlyHud:@"请升级系统" delay:1.0];
     }
     
     
@@ -80,21 +119,21 @@
         
         NSString *givenName = contact.givenName;
         NSString *familyName = contact.familyName;
-        NSLog(@"givenName=%@, familyName=%@", givenName, familyName);
+        //        NSLog(@"givenName=%@, familyName=%@", givenName, familyName);
         
-//        NSString *nameStr = [NSString stringWithFormat:@"%@%@",contact.familyName,contact.givenName];
+        //        NSString *nameStr = [NSString stringWithFormat:@"%@%@",contact.familyName,contact.givenName];
         
         NSArray *phoneNumbers = contact.phoneNumbers;
         
         for (CNLabeledValue *labelValue in phoneNumbers) {
             // 2.1.获取电话号码的KEY
-//            NSString *phoneLabel = labelValue.label;
+            //            NSString *phoneLabel = labelValue.label;
             
             // 2.2.获取电话号码
             CNPhoneNumber *phoneNumer = labelValue.value;
             NSString *phoneValue = phoneNumer.stringValue;
             
-            NSLog(@" %@", phoneValue);
+            //            NSLog(@" %@", phoneValue);
             
             [self.list addObject:@{@"givenName":givenName,
                                    @"familyName":familyName,
@@ -104,7 +143,7 @@
             
         }
         
-//        [_myDict setObject:phoneNumber.stringValue forKey:nameStr];
+        //        [_myDict setObject:phoneNumber.stringValue forKey:nameStr];
         
         
         //    *stop = YES; // 停止循环，相当于break；
