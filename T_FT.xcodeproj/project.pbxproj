@@ -57,6 +57,8 @@
 		1A66B92D20F6F75800464F4E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B92B20F6F75800464F4E /* LoginViewController.xib */; };
 		1A66B93320F7203400464F4E /* TFLocalHTMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B93220F7203400464F4E /* TFLocalHTMLViewController.m */; };
 		1A66B93520F7213100464F4E /* policy.html in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B93420F7213100464F4E /* policy.html */; };
+		1A66B93A20F74AA600464F4E /* FingerprintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B93820F74AA600464F4E /* FingerprintViewController.m */; };
+		1A66B93D20F751D700464F4E /* fingerprint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B93C20F751D700464F4E /* fingerprint@2x.png */; };
 		1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
@@ -243,6 +245,9 @@
 		1A66B93120F7203400464F4E /* TFLocalHTMLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFLocalHTMLViewController.h; sourceTree = "<group>"; };
 		1A66B93220F7203400464F4E /* TFLocalHTMLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFLocalHTMLViewController.m; sourceTree = "<group>"; };
 		1A66B93420F7213100464F4E /* policy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = policy.html; sourceTree = "<group>"; };
+		1A66B93720F74AA600464F4E /* FingerprintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FingerprintViewController.h; sourceTree = "<group>"; };
+		1A66B93820F74AA600464F4E /* FingerprintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FingerprintViewController.m; sourceTree = "<group>"; };
+		1A66B93C20F751D700464F4E /* fingerprint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fingerprint@2x.png"; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -723,6 +728,16 @@
 			path = "登陆注册";
 			sourceTree = "<group>";
 		};
+		1A66B93620F74A7600464F4E /* 指纹识别 */ = {
+			isa = PBXGroup;
+			children = (
+				1A66B93C20F751D700464F4E /* fingerprint@2x.png */,
+				1A66B93720F74AA600464F4E /* FingerprintViewController.h */,
+				1A66B93820F74AA600464F4E /* FingerprintViewController.m */,
+			);
+			path = "指纹识别";
+			sourceTree = "<group>";
+		};
 		1A8739FC20DA01CA00B1357E /* 照片冲印 */ = {
 			isa = PBXGroup;
 			children = (
@@ -870,6 +885,7 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				1A66B93620F74A7600464F4E /* 指纹识别 */,
 				1A66B8FD20F4463B00464F4E /* 悬浮窗 */,
 				1AC8170520E237C300B1EE89 /* 添加事件到日历提醒 */,
 				1A873A0C20DB52C000B1357E /* ReadSystemPhoto */,
@@ -1139,6 +1155,7 @@
 				1A66B92820F5FCD000464F4E /* BundlingCollectionViewCell_1.xib in Resources */,
 				1A66B93520F7213100464F4E /* policy.html in Resources */,
 				1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */,
+				1A66B93D20F751D700464F4E /* fingerprint@2x.png in Resources */,
 				1A66B90520F44BDA00464F4E /* timg1.png in Resources */,
 				1ABDDE5520D3BE0800E900A8 /* ActivityCollectionViewCell.xib in Resources */,
 				1A03A70620DC836200576A03 /* SeckillTableViewCell.xib in Resources */,
@@ -1280,6 +1297,7 @@
 				1A66B8E620F3397F00464F4E /* ShoppingListTextCell.m in Sources */,
 				1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */,
 				1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */,
+				1A66B93A20F74AA600464F4E /* FingerprintViewController.m in Sources */,
 				1A2BDFFE20C3C5690023C55D /* HomeViewController.m in Sources */,
 				1A66B90820F44CA000464F4E /* HomeNavigationController.m in Sources */,
 				1ABDDE4C20D3B62200E900A8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,

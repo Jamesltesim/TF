@@ -15,6 +15,7 @@
 //#import "AddressBook.h"
 
 #import "TFLocalHTMLViewController.h"
+#import "FingerprintViewController.h"
 
 @interface LoginViewController ()
 @property (nonatomic,strong) NSMutableArray *list;
@@ -22,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *pwdText;
 @property (weak, nonatomic) IBOutlet UIButton *eye;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+@property (weak, nonatomic) IBOutlet UIButton *forgetBtn;
+@property (weak, nonatomic) IBOutlet UIView *VlineNearForgetPwd;
 
 @end
 
@@ -42,6 +45,10 @@
     
     self.loginBtn.layer.cornerRadius = self.loginBtn.height/2.2;
     NSLog(@"%lf",self.loginBtn.height);
+    
+   //textfield右侧输入的时候显示删除按钮
+    self.userText.clearButtonMode=UITextFieldViewModeWhileEditing;
+    self.pwdText.clearButtonMode=UITextFieldViewModeWhileEditing;
     //关闭键盘上方联想功能
     self.userText.autocorrectionType = UITextAutocorrectionTypeNo;
     self.pwdText.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -50,6 +57,50 @@
     [self.view addGestureRecognizer:tap];
     
     
+    
+}
+
+//新用户注册
+- (IBAction)newUserRegister:(id)sender {
+    
+    FingerprintViewController *finger = [[FingerprintViewController alloc]initWithDismissViewControllerAnimated:NO before:^{
+        NSLog(@"指纹识别成功 do something 然后消失");
+    }];
+    [self.navigationController pushViewController:finger animated:NO];
+    
+}
+
+
+- (IBAction)forgetPwd:(id)sender {
+    
+
+}
+
+- (IBAction)verificationCodeLogin:(UIButton *)sender {
+    NSString *title =sender.titleLabel.text;
+    
+    if([title isEqualToString:@"短信验证码登录"]){
+        self.userText.text = @"中国(+86)";
+        self.userText.userInteractionEnabled = NO;
+        self.pwdText.placeholder = @"请输入手机号";
+        
+        self.eye.hidden = YES;
+        self.forgetBtn.hidden = YES;
+        self.VlineNearForgetPwd.hidden = YES;
+        
+        [sender setTitle:@"账号密码登录" forState:UIControlStateNormal];
+    }else if ([title isEqualToString:@"账号密码登录"]){
+        self.userText.text = @"";
+        self.userText.placeholder = @"用户名/手机号";
+        self.userText.userInteractionEnabled = YES;
+        
+         self.pwdText.placeholder = @"请输入密码";
+        
+        self.eye.hidden = NO;
+        self.forgetBtn.hidden = NO;
+         self.VlineNearForgetPwd.hidden = NO;
+         [sender setTitle:@"短信验证码登录" forState:UIControlStateNormal];
+    }
     
 }
 - (IBAction)eyeClick:(UIButton *)sender {
