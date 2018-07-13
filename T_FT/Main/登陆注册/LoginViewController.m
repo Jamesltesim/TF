@@ -97,7 +97,7 @@
     
     [self verificationCodeLogin:self.loginOrRegisterBtn];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textfieldChanged:) name:UITextFieldTextDidChangeNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textfieldChanged:) name:UITextFieldTextDidChangeNotification object:nil];
     
     self.headerImgView.image = [TFQRCodeImage initWithContent:[NSString stringWithFormat:@"%s",getSerialWithUid(123456789)]];
 

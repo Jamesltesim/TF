@@ -143,6 +143,8 @@
 		9027FEE320F8EF25003F0A51 /* LYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEDB20F8EF25003F0A51 /* LYEmptyView.m */; };
 		9027FEE420F8EF25003F0A51 /* noNetwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9027FEDD20F8EF25003F0A51 /* noNetwork@2x.png */; };
 		9027FEE520F8EF25003F0A51 /* LYEmptyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEE020F8EF25003F0A51 /* LYEmptyBaseView.m */; };
+		90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBBDD320F8FCD500D71B62 /* TBKeyChain.m */; };
+		90BBBDD820F8FCD600D71B62 /* TBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBBDD420F8FCD500D71B62 /* TBCommon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -428,6 +430,10 @@
 		9027FEE020F8EF25003F0A51 /* LYEmptyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyBaseView.m; sourceTree = "<group>"; };
 		9027FEE620F8EF43003F0A51 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		907FD33420F8F09F00789067 /* Macros_size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros_size.h; sourceTree = "<group>"; };
+		90BBBDD320F8FCD500D71B62 /* TBKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKeyChain.m; sourceTree = "<group>"; };
+		90BBBDD420F8FCD500D71B62 /* TBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCommon.m; sourceTree = "<group>"; };
+		90BBBDD520F8FCD500D71B62 /* TBCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCommon.h; sourceTree = "<group>"; };
+		90BBBDD620F8FCD500D71B62 /* TBKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBKeyChain.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -951,6 +957,7 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				90BBBDD220F8FCC400D71B62 /* Common */,
 				9027FED620F8EF09003F0A51 /* 空View处理 */,
 				9027FECA20F8E4A8003F0A51 /* 二维码视图 */,
 				9027FEC220F8E003003F0A51 /* 一种算法 */,
@@ -1160,6 +1167,17 @@
 			path = Macros;
 			sourceTree = "<group>";
 		};
+		90BBBDD220F8FCC400D71B62 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				90BBBDD520F8FCD500D71B62 /* TBCommon.h */,
+				90BBBDD420F8FCD500D71B62 /* TBCommon.m */,
+				90BBBDD620F8FCD500D71B62 /* TBKeyChain.h */,
+				90BBBDD320F8FCD500D71B62 /* TBKeyChain.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1362,6 +1380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */,
 				1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */,
 				1A873A2E20DBC78800B1357E /* TFUtils+Date.m in Sources */,
 				1A2BE00420C3C58E0023C55D /* MeViewController.m in Sources */,
@@ -1393,6 +1412,7 @@
 				1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */,
 				1A2BDFF220C3C4F50023C55D /* TFTabBarController.m in Sources */,
 				1A66B92720F5FCD000464F4E /* BundlingCollectionViewCell_1.m in Sources */,
+				90BBBDD820F8FCD600D71B62 /* TBCommon.m in Sources */,
 				1AC8170B20E2454900B1EE89 /* UIFont+Tool.m in Sources */,
 				1ABDDE5420D3BE0800E900A8 /* ActivityCollectionViewCell.m in Sources */,
 				1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */,
