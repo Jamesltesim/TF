@@ -14,6 +14,7 @@
 #import "ShoppingListViewController.h"
 #import "LoginViewController.h"
 
+#import<CoreTelephony/CTCellularData.h>
 //参考
 //天天果园 app
 
@@ -45,7 +46,44 @@
         
     }
 
-
+    
+//    检测应用中是否有联网权限
+//    CTCellularData *cellularData = [[CTCellularData alloc]init];
+//    cellularData.cellularDataRestrictionDidUpdateNotifier =  ^(CTCellularDataRestrictedState state){
+//        //获取联网状态
+//        switch (state) {
+//            case kCTCellularDataRestricted:
+//                NSLog(@"Restricrted");
+//                break;
+//            case kCTCellularDataNotRestricted:
+//                NSLog(@"Not Restricted");
+//                break;
+//            case kCTCellularDataRestrictedStateUnknown:
+//                NSLog(@"Unknown");
+//                break;
+//            default:
+//                break;
+//        };
+//    };
+//
+    
+//    查询应用是否有联网功能
+//    CTCellularData *cellularData = [[CTCellularData alloc]init];
+//    CTCellularDataRestrictedState state = cellularData.restrictedState;
+//    switch (state) {
+//        case kCTCellularDataRestricted:
+//            NSLog(@"Restricrted");
+//            break;
+//        case kCTCellularDataNotRestricted:
+//            NSLog(@"Not Restricted");
+//            break;
+//        case kCTCellularDataRestrictedStateUnknown:
+//            NSLog(@"Unknown");
+//            break;
+//        default:
+//            break;
+//    }
+    
     
     return YES;
 }

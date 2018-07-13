@@ -60,6 +60,11 @@
 		1A66B93D20F751D700464F4E /* fingerprint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B93C20F751D700464F4E /* fingerprint@2x.png */; };
 		1A66B94020F844CB00464F4E /* TFVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B93F20F844CB00464F4E /* TFVerification.m */; };
 		1A66B94320F844ED00464F4E /* TFVerificationLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B94220F844ED00464F4E /* TFVerificationLog.m */; };
+		1A66B94820F881D000464F4E /* TFSystemPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B94720F881D000464F4E /* TFSystemPermission.m */; };
+		1A66B94B20F8825900464F4E /* PermissionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B94A20F8825800464F4E /* PermissionTool.m */; };
+		1A66B94E20F8826000464F4E /* PhotosTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B94D20F8826000464F4E /* PhotosTool.m */; };
+		1A66B97620F8946800464F4E /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B97420F8946800464F4E /* KeychainWrapper.m */; };
+		1A66B97820F8949D00464F4E /* KeyChain_ReadMe.txt in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B97720F8949D00464F4E /* KeyChain_ReadMe.txt */; };
 		1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
@@ -251,6 +256,16 @@
 		1A66B93F20F844CB00464F4E /* TFVerification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFVerification.m; sourceTree = "<group>"; };
 		1A66B94120F844ED00464F4E /* TFVerificationLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFVerificationLog.h; sourceTree = "<group>"; };
 		1A66B94220F844ED00464F4E /* TFVerificationLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFVerificationLog.m; sourceTree = "<group>"; };
+		1A66B94620F881D000464F4E /* TFSystemPermission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFSystemPermission.h; sourceTree = "<group>"; };
+		1A66B94720F881D000464F4E /* TFSystemPermission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFSystemPermission.m; sourceTree = "<group>"; };
+		1A66B94920F8825800464F4E /* PermissionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionTool.h; sourceTree = "<group>"; };
+		1A66B94A20F8825800464F4E /* PermissionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionTool.m; sourceTree = "<group>"; };
+		1A66B94C20F8826000464F4E /* PhotosTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosTool.h; sourceTree = "<group>"; };
+		1A66B94D20F8826000464F4E /* PhotosTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosTool.m; sourceTree = "<group>"; };
+		1A66B97320F8946800464F4E /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		1A66B97420F8946800464F4E /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		1A66B97520F8946800464F4E /* KeychainConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainConfiguration.h; sourceTree = "<group>"; };
+		1A66B97720F8949D00464F4E /* KeyChain_ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = KeyChain_ReadMe.txt; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -750,6 +765,30 @@
 			path = "验证正则";
 			sourceTree = "<group>";
 		};
+		1A66B94520F881A200464F4E /* 系统权限 */ = {
+			isa = PBXGroup;
+			children = (
+				1A66B94C20F8826000464F4E /* PhotosTool.h */,
+				1A66B94D20F8826000464F4E /* PhotosTool.m */,
+				1A66B94920F8825800464F4E /* PermissionTool.h */,
+				1A66B94A20F8825800464F4E /* PermissionTool.m */,
+				1A66B94620F881D000464F4E /* TFSystemPermission.h */,
+				1A66B94720F881D000464F4E /* TFSystemPermission.m */,
+			);
+			path = "系统权限";
+			sourceTree = "<group>";
+		};
+		1A66B97220F8944700464F4E /* key chain */ = {
+			isa = PBXGroup;
+			children = (
+				1A66B97520F8946800464F4E /* KeychainConfiguration.h */,
+				1A66B97320F8946800464F4E /* KeychainWrapper.h */,
+				1A66B97420F8946800464F4E /* KeychainWrapper.m */,
+				1A66B97720F8949D00464F4E /* KeyChain_ReadMe.txt */,
+			);
+			path = "key chain";
+			sourceTree = "<group>";
+		};
 		1A8739FC20DA01CA00B1357E /* 照片冲印 */ = {
 			isa = PBXGroup;
 			children = (
@@ -897,6 +936,8 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				1A66B97220F8944700464F4E /* key chain */,
+				1A66B94520F881A200464F4E /* 系统权限 */,
 				1A66B94420F87C8800464F4E /* 验证正则 */,
 				1A66B93620F74A7600464F4E /* 指纹识别 */,
 				1A66B8FD20F4463B00464F4E /* 悬浮窗 */,
@@ -1260,6 +1301,7 @@
 				1A66B8E220F2F66100464F4E /* ScrollTitleView.m in Sources */,
 				1AC816CD20E1DE5E00B1EE89 /* UILabel+TF.m in Sources */,
 				1ABDDE1B20D3A4BF00E900A8 /* DCNewFeaturesViewController.m in Sources */,
+				1A66B94820F881D000464F4E /* TFSystemPermission.m in Sources */,
 				1ABDDE4920D3B62200E900A8 /* MASViewAttribute.m in Sources */,
 				1A66B91C20F5DA7800464F4E /* TFAPIHomeBanner.m in Sources */,
 				1ABDDE4B20D3B62200E900A8 /* NSArray+MASAdditions.m in Sources */,
@@ -1300,6 +1342,7 @@
 				1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */,
 				1ABDDE4720D3B62200E900A8 /* MASConstraintMaker.m in Sources */,
 				1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */,
+				1A66B97820F8949D00464F4E /* KeyChain_ReadMe.txt in Sources */,
 				1AE959B220ECA56B00C5BDE4 /* FruitCollectionViewCell.m in Sources */,
 				1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */,
 				1AC816FB20E2238100B1EE89 /* PrintPhotoTableViewCell.m in Sources */,
@@ -1310,6 +1353,7 @@
 				1AE959A420EB4D6B00C5BDE4 /* TFCloseBothLabel.m in Sources */,
 				1A66B8E620F3397F00464F4E /* ShoppingListTextCell.m in Sources */,
 				1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */,
+				1A66B97620F8946800464F4E /* KeychainWrapper.m in Sources */,
 				1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */,
 				1A66B93A20F74AA600464F4E /* FingerprintViewController.m in Sources */,
 				1A2BDFFE20C3C5690023C55D /* HomeViewController.m in Sources */,
@@ -1329,6 +1373,8 @@
 				1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */,
 				1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */,
 				1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */,
+				1A66B94E20F8826000464F4E /* PhotosTool.m in Sources */,
+				1A66B94B20F8825900464F4E /* PermissionTool.m in Sources */,
 				1A66B8CD20EF429B00464F4E /* LoginView.m in Sources */,
 				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,

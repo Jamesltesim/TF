@@ -19,7 +19,12 @@
 #import "TFVerification.h"
 
 @interface LoginViewController ()
+
 @property (nonatomic,strong) NSMutableArray *list;
+
+//判断是手机号登录/注册  还是账号密码登录
+@property (nonatomic) BOOL isPhoneNumberLogin;
+
 @property (weak, nonatomic) IBOutlet UITextField *userText;
 @property (weak, nonatomic) IBOutlet UITextField *pwdText;
 @property (weak, nonatomic) IBOutlet UIButton *eye;
@@ -35,17 +40,16 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.list = [[NSMutableArray alloc] initWithCapacity:0];
-    
-    //申请访问通讯录权限
-    [self requestAuthorizationForAddressBook];
-    
-    //获得 通讯录内容
-    [self getmyAddressbook];
+    self.navigationController.navigationBar.hidden = YES;
+//    //申请访问通讯录权限
+//    [self requestAuthorizationForAddressBook];
+//
+//    //获得 通讯录内容
+//    [self getmyAddressbook];
     
     
     
     self.loginBtn.layer.cornerRadius = self.loginBtn.height/2.2;
-    NSLog(@"%lf",self.loginBtn.height);
     
    //textfield输入的时候 右侧显示删除按钮
     self.userText.clearButtonMode=UITextFieldViewModeWhileEditing;
@@ -56,8 +60,6 @@
     //点击背景 取消键盘
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewClick:)];
     [self.view addGestureRecognizer:tap];
-    
-    NSLog(@"TFLoginVerification:%d", [TFVerification checkTelNumber:@"14510157697"]);
     
 }
 
@@ -83,27 +85,38 @@
     if([title isEqualToString:@"短信验证码登录"]){
         self.userText.text = @"中国(+86)";
         self.userText.userInteractionEnabled = NO;
+        
         self.pwdText.placeholder = @"请输入手机号";
+        self.pwdText.keyboardType = UIKeyboardTypeNumberPad;
+    
+        [self.forgetBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
         
         self.eye.hidden = YES;
-        self.forgetBtn.hidden = YES;
+      
         self.VlineNearForgetPwd.hidden = YES;
         
         [sender setTitle:@"账号密码登录" forState:UIControlStateNormal];
     }else if ([title isEqualToString:@"账号密码登录"]){
-        self.userText.text = @"";
+       
         self.userText.placeholder = @"用户名/手机号";
         self.userText.userInteractionEnabled = YES;
         
          self.pwdText.placeholder = @"请输入密码";
+         self.pwdText.keyboardType = UIKeyboardTypeDefault;
+        
+        [self.forgetBtn setTitle:@"忘记密码" forState:UIControlStateNormal];
         
         self.eye.hidden = NO;
-        self.forgetBtn.hidden = NO;
          self.VlineNearForgetPwd.hidden = NO;
          [sender setTitle:@"短信验证码登录" forState:UIControlStateNormal];
     }
     
+    self.userText.text = @"";
+    self.pwdText.text = @"";
+  
+    
 }
+
 - (IBAction)eyeClick:(UIButton *)sender {
     if(sender.tag++%2){
          [sender setImage:[UIImage imageNamed:@"login_eye_close"] forState:UIControlStateNormal];
