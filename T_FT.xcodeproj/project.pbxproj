@@ -134,6 +134,9 @@
 		6EEF6CBA9CF5EB966E1DC692 /* libPods-T_FT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39451EEDC3CD637294838251 /* libPods-T_FT.a */; };
 		9027FEB920F1B193003F0A51 /* TFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEB820F1B192003F0A51 /* TFWebViewController.m */; };
 		9027FEBC20F1B778003F0A51 /* TFUtils+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEBB20F1B778003F0A51 /* TFUtils+UIColor.m */; };
+		9027FEC820F8E276003F0A51 /* algorithm.c in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEC620F8E276003F0A51 /* algorithm.c */; };
+		9027FED020F8E6FE003F0A51 /* TFQRCodeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FECF20F8E6FE003F0A51 /* TFQRCodeImageView.m */; };
+		9027FED320F8E86D003F0A51 /* TFQRCodeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FED220F8E86D003F0A51 /* TFQRCodeImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -399,6 +402,13 @@
 		9027FEB820F1B192003F0A51 /* TFWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFWebViewController.m; sourceTree = "<group>"; };
 		9027FEBA20F1B778003F0A51 /* TFUtils+UIColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TFUtils+UIColor.h"; sourceTree = "<group>"; };
 		9027FEBB20F1B778003F0A51 /* TFUtils+UIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TFUtils+UIColor.m"; sourceTree = "<group>"; };
+		9027FEC620F8E276003F0A51 /* algorithm.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = algorithm.c; sourceTree = "<group>"; };
+		9027FEC720F8E276003F0A51 /* algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = algorithm.h; sourceTree = "<group>"; };
+		9027FEC920F8E2DC003F0A51 /* algorithm_readMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = algorithm_readMe.txt; sourceTree = "<group>"; };
+		9027FECE20F8E6FE003F0A51 /* TFQRCodeImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFQRCodeImageView.h; sourceTree = "<group>"; };
+		9027FECF20F8E6FE003F0A51 /* TFQRCodeImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFQRCodeImageView.m; sourceTree = "<group>"; };
+		9027FED120F8E86D003F0A51 /* TFQRCodeImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFQRCodeImage.h; sourceTree = "<group>"; };
+		9027FED220F8E86D003F0A51 /* TFQRCodeImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFQRCodeImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -936,6 +946,8 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				9027FECA20F8E4A8003F0A51 /* 二维码视图 */,
+				9027FEC220F8E003003F0A51 /* 一种算法 */,
 				1A66B97220F8944700464F4E /* key chain */,
 				1A66B94520F881A200464F4E /* 系统权限 */,
 				1A66B94420F87C8800464F4E /* 验证正则 */,
@@ -1093,6 +1105,27 @@
 				39451EEDC3CD637294838251 /* libPods-T_FT.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9027FEC220F8E003003F0A51 /* 一种算法 */ = {
+			isa = PBXGroup;
+			children = (
+				9027FEC620F8E276003F0A51 /* algorithm.c */,
+				9027FEC720F8E276003F0A51 /* algorithm.h */,
+				9027FEC920F8E2DC003F0A51 /* algorithm_readMe.txt */,
+			);
+			path = "一种算法";
+			sourceTree = "<group>";
+		};
+		9027FECA20F8E4A8003F0A51 /* 二维码视图 */ = {
+			isa = PBXGroup;
+			children = (
+				9027FECE20F8E6FE003F0A51 /* TFQRCodeImageView.h */,
+				9027FECF20F8E6FE003F0A51 /* TFQRCodeImageView.m */,
+				9027FED120F8E86D003F0A51 /* TFQRCodeImage.h */,
+				9027FED220F8E86D003F0A51 /* TFQRCodeImage.m */,
+			);
+			path = "二维码视图";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1338,11 +1371,13 @@
 				1AABE74720D7AD0F001BA4C9 /* TFNavView.m in Sources */,
 				1A66B94320F844ED00464F4E /* TFVerificationLog.m in Sources */,
 				1ABDDE4A20D3B62200E900A8 /* MASViewConstraint.m in Sources */,
+				9027FED320F8E86D003F0A51 /* TFQRCodeImage.m in Sources */,
 				1ABDDE4D20D3B62200E900A8 /* View+MASAdditions.m in Sources */,
 				1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */,
 				1ABDDE4720D3B62200E900A8 /* MASConstraintMaker.m in Sources */,
 				1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */,
 				1A66B97820F8949D00464F4E /* KeyChain_ReadMe.txt in Sources */,
+				9027FED020F8E6FE003F0A51 /* TFQRCodeImageView.m in Sources */,
 				1AE959B220ECA56B00C5BDE4 /* FruitCollectionViewCell.m in Sources */,
 				1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */,
 				1AC816FB20E2238100B1EE89 /* PrintPhotoTableViewCell.m in Sources */,
@@ -1368,6 +1403,7 @@
 				1A66B91220F5BCE500464F4E /* TFAPIBaseManager.m in Sources */,
 				1A66B92C20F6F75800464F4E /* LoginViewController.m in Sources */,
 				1A66B8F820F376A000464F4E /* UIView+LXShadowPath.m in Sources */,
+				9027FEC820F8E276003F0A51 /* algorithm.c in Sources */,
 				1A873A2520DBAB6500B1357E /* UIView+Gradient.m in Sources */,
 				1A873A1520DB539500B1357E /* TFImageDataModel.m in Sources */,
 				1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */,

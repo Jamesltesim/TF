@@ -15,6 +15,8 @@
 #import "LoginViewController.h"
 
 #import<CoreTelephony/CTCellularData.h>
+
+#import "algorithm.h"
 //参考
 //天天果园 app
 
@@ -27,8 +29,7 @@
 @end
 
 @implementation AppDelegate
-
-
+//
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -46,7 +47,7 @@
         
     }
 
-    
+    NSLog(@"%s",getSerialWithUid(123456789));
 //    检测应用中是否有联网权限
 //    CTCellularData *cellularData = [[CTCellularData alloc]init];
 //    cellularData.cellularDataRestrictionDidUpdateNotifier =  ^(CTCellularDataRestrictedState state){

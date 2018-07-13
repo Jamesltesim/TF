@@ -16,6 +16,7 @@
                 <outlet property="VlineNearForgetPwd" destination="RKZ-BE-2ef" id="v4A-3E-Feb"/>
                 <outlet property="eye" destination="vj6-OE-yUT" id="fm4-YH-EQ4"/>
                 <outlet property="forgetBtn" destination="Wpw-94-9Zd" id="tV2-Ia-NOw"/>
+                <outlet property="headerImgView" destination="Q0f-cz-aLT" id="9lj-Uz-mhJ"/>
                 <outlet property="loginBtn" destination="aJG-97-JXv" id="F0O-bn-yjC"/>
                 <outlet property="loginOrRegisterBtn" destination="Xg2-mg-3t3" id="hqH-mo-YlP"/>
                 <outlet property="pwdText" destination="UAS-eg-IfM" id="Dew-2E-IYc"/>

@@ -18,6 +18,9 @@
 #import "FingerprintViewController.h"
 #import "TFVerification.h"
 
+#import "TFQRCodeImage.h"
+#import "algorithm.h"
+
 @interface LoginViewController ()<UITextFieldDelegate>
 
 @property (nonatomic,strong) NSMutableArray *list;
@@ -37,6 +40,7 @@
 @property (weak, nonatomic) IBOutlet UIView *VlineNearForgetPwd;
 @property (weak, nonatomic) IBOutlet UIButton *loginOrRegisterBtn;
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;
+@property (weak, nonatomic) IBOutlet UIImageView *headerImgView;
 
 @end
 
@@ -57,6 +61,11 @@
         
     }
     return self;
+}
+
+- (void)dealloc
+{
+//       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textfieldChanged:) name:UITextFieldTextDidChangeNotification object:nil];
 }
 
 - (void)viewDidLoad {
@@ -89,6 +98,9 @@
     [self verificationCodeLogin:self.loginOrRegisterBtn];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textfieldChanged:) name:UITextFieldTextDidChangeNotification object:nil];
+    
+    self.headerImgView.image = [TFQRCodeImage initWithContent:[NSString stringWithFormat:@"%s",getSerialWithUid(123456789)]];
+
     
 }
 
