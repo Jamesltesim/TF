@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *forgetBtn;
 @property (weak, nonatomic) IBOutlet UIView *VlineNearForgetPwd;
+@property (weak, nonatomic) IBOutlet UIButton *loginOrRegisterBtn;
+@property (weak, nonatomic) IBOutlet UILabel *titleLab;
 
 @end
 
@@ -39,6 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.titleLab.text = self.loginOrRegisterBtn.titleLabel.text;
     self.list = [[NSMutableArray alloc] initWithCapacity:0];
     self.navigationController.navigationBar.hidden = YES;
 //    //申请访问通讯录权限
@@ -61,6 +64,23 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewClick:)];
     [self.view addGestureRecognizer:tap];
     
+    
+    [self verificationCodeLogin:self.loginOrRegisterBtn];
+    
+}
+- (IBAction)backAction:(id)sender {
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+//    if(self.navigationController){
+//
+//        [self.navigationController popViewControllerAnimated:YES];
+//    }else{
+//        [self dismissViewControllerAnimated:YES completion:^{
+//
+//        }];
+//    }
 }
 
 //新用户注册
@@ -74,15 +94,22 @@
 }
 
 
-- (IBAction)forgetPwd:(id)sender {
+- (IBAction)forgetPwd:(UIButton *)sender {
     
-
+    if([sender.titleLabel.text isEqualToString:@"忘记密码"]){
+        
+    }else if ([sender.titleLabel.text isEqualToString:@"获取验证码"]){
+        //验证手机号正确性
+        
+        //发送验证码
+    }
 }
 
 - (IBAction)verificationCodeLogin:(UIButton *)sender {
     NSString *title =sender.titleLabel.text;
     
-    if([title isEqualToString:@"短信验证码登录"]){
+    //如果用户点击了【短信验证码登录/注册】
+    if([title isEqualToString:@"短信验证码登录/注册"]){
         self.userText.text = @"中国(+86)";
         self.userText.userInteractionEnabled = NO;
         
@@ -96,8 +123,10 @@
         self.VlineNearForgetPwd.hidden = YES;
         
         [sender setTitle:@"账号密码登录" forState:UIControlStateNormal];
+        
+         //如果用户点击了【账号密码登录】
     }else if ([title isEqualToString:@"账号密码登录"]){
-       
+        self.userText.text = @"";
         self.userText.placeholder = @"用户名/手机号";
         self.userText.userInteractionEnabled = YES;
         
@@ -108,12 +137,11 @@
         
         self.eye.hidden = NO;
          self.VlineNearForgetPwd.hidden = NO;
-         [sender setTitle:@"短信验证码登录" forState:UIControlStateNormal];
+         [sender setTitle:@"短信验证码登录/注册" forState:UIControlStateNormal];
     }
     
-    self.userText.text = @"";
     self.pwdText.text = @"";
-  
+    self.titleLab.text = self.loginOrRegisterBtn.titleLabel.text;
     
 }
 

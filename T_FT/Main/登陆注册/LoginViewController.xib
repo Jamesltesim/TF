@@ -17,7 +17,9 @@
                 <outlet property="eye" destination="vj6-OE-yUT" id="fm4-YH-EQ4"/>
                 <outlet property="forgetBtn" destination="Wpw-94-9Zd" id="tV2-Ia-NOw"/>
                 <outlet property="loginBtn" destination="aJG-97-JXv" id="F0O-bn-yjC"/>
+                <outlet property="loginOrRegisterBtn" destination="Xg2-mg-3t3" id="hqH-mo-YlP"/>
                 <outlet property="pwdText" destination="UAS-eg-IfM" id="Dew-2E-IYc"/>
+                <outlet property="titleLab" destination="Zoi-wj-g87" id="bcE-Mi-igY"/>
                 <outlet property="userText" destination="nee-j3-KlI" id="00i-vA-tIU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,6 +29,35 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZjW-Yf-Hh7" userLabel="navView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zoi-wj-g87">
+                            <rect key="frame" x="173.5" y="12.5" width="29" height="20"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flL-Ej-Q8g" userLabel="back">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="1Mx-Sm-F5h"/>
+                            </constraints>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="tne-i3-ZSV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.98039215690000003" green="0.90196078430000004" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="Zoi-wj-g87" firstAttribute="centerX" secondItem="ZjW-Yf-Hh7" secondAttribute="centerX" id="2WU-xj-Ivk"/>
+                        <constraint firstItem="flL-Ej-Q8g" firstAttribute="top" secondItem="ZjW-Yf-Hh7" secondAttribute="top" id="88N-wq-HbT"/>
+                        <constraint firstItem="Zoi-wj-g87" firstAttribute="centerY" secondItem="ZjW-Yf-Hh7" secondAttribute="centerY" id="Bcl-Ul-Dhe"/>
+                        <constraint firstAttribute="height" constant="44" id="OQ5-Es-Rpa"/>
+                        <constraint firstItem="flL-Ej-Q8g" firstAttribute="leading" secondItem="ZjW-Yf-Hh7" secondAttribute="leading" id="tco-6W-X7N"/>
+                        <constraint firstAttribute="bottom" secondItem="flL-Ej-Q8g" secondAttribute="bottom" id="wJo-f9-vRV"/>
+                    </constraints>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jingdong" translatesAutoresizingMaskIntoConstraints="NO" id="Q0f-cz-aLT" userLabel="header">
                     <rect key="frame" x="149" y="131.5" width="76" height="76"/>
                     <constraints>
@@ -132,8 +163,8 @@
                             <rect key="frame" x="0.0" y="223" width="335" height="30"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xg2-mg-3t3">
-                                    <rect key="frame" x="0.0" y="0.5" width="108" height="30"/>
-                                    <state key="normal" title="短信验证码登录">
+                                    <rect key="frame" x="0.0" y="0.5" width="143" height="30"/>
+                                    <state key="normal" title="短信验证码登录/注册">
                                         <color key="titleColor" red="0.51372549019607838" green="0.51372549019607838" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </state>
                                     <connections>
@@ -276,6 +307,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="pkZ-0R-kfV" secondAttribute="trailing" id="62C-Bf-vV7"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ZjW-Yf-Hh7" secondAttribute="trailing" id="CA6-gn-aQg"/>
                 <constraint firstItem="pkZ-0R-kfV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Fti-gk-Nw0"/>
                 <constraint firstItem="Q0f-cz-aLT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="H5x-aN-dKC"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="bn4-F9-TcC" secondAttribute="trailing" constant="20" id="Hzq-qS-ZHM"/>
@@ -283,12 +315,14 @@
                 <constraint firstItem="bn4-F9-TcC" firstAttribute="top" secondItem="Q0f-cz-aLT" secondAttribute="bottom" id="fBb-1j-xWn"/>
                 <constraint firstItem="pkZ-0R-kfV" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="jRU-Oi-fck"/>
                 <constraint firstItem="bn4-F9-TcC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="kYA-o4-i3U"/>
+                <constraint firstItem="ZjW-Yf-Hh7" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="sC3-wN-wyI"/>
                 <constraint firstItem="bn4-F9-TcC" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.38" id="sSN-Nv-FJM"/>
                 <constraint firstItem="bn4-F9-TcC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vWA-GY-D3R"/>
                 <constraint firstItem="pkZ-0R-kfV" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.19" id="x4f-iT-vVM"/>
+                <constraint firstItem="ZjW-Yf-Hh7" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="xTQ-pk-ZLe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="33.5" y="53.5"/>
+            <point key="canvasLocation" x="-101.5" y="-229.5"/>
         </view>
     </objects>
     <resources>
