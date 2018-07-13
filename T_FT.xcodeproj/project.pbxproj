@@ -41,7 +41,6 @@
 		1A66B8F020F35F0000464F4E /* GoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8EF20F35F0000464F4E /* GoodModel.m */; };
 		1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8F420F363EA00464F4E /* ShoppingCarModel.m */; };
 		1A66B8F820F376A000464F4E /* UIView+LXShadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8F620F3769F00464F4E /* UIView+LXShadowPath.m */; };
-		1A66B90220F4465800464F4E /* JYCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8FF20F4465800464F4E /* JYCWindow.m */; };
 		1A66B90320F4465800464F4E /* FloatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B90120F4465800464F4E /* FloatingView.m */; };
 		1A66B90520F44BDA00464F4E /* timg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B90420F44BDA00464F4E /* timg1.png */; };
 		1A66B90820F44CA000464F4E /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B90720F44CA000464F4E /* HomeNavigationController.m */; };
@@ -59,6 +58,8 @@
 		1A66B93520F7213100464F4E /* policy.html in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B93420F7213100464F4E /* policy.html */; };
 		1A66B93A20F74AA600464F4E /* FingerprintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B93820F74AA600464F4E /* FingerprintViewController.m */; };
 		1A66B93D20F751D700464F4E /* fingerprint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B93C20F751D700464F4E /* fingerprint@2x.png */; };
+		1A66B94020F844CB00464F4E /* TFVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B93F20F844CB00464F4E /* TFVerification.m */; };
+		1A66B94320F844ED00464F4E /* TFVerificationLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B94220F844ED00464F4E /* TFVerificationLog.m */; };
 		1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
@@ -214,8 +215,6 @@
 		1A66B8F420F363EA00464F4E /* ShoppingCarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarModel.m; sourceTree = "<group>"; };
 		1A66B8F620F3769F00464F4E /* UIView+LXShadowPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXShadowPath.m"; sourceTree = "<group>"; };
 		1A66B8F720F3769F00464F4E /* UIView+LXShadowPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LXShadowPath.h"; sourceTree = "<group>"; };
-		1A66B8FE20F4465800464F4E /* JYCWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYCWindow.h; sourceTree = "<group>"; };
-		1A66B8FF20F4465800464F4E /* JYCWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYCWindow.m; sourceTree = "<group>"; };
 		1A66B90020F4465800464F4E /* FloatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingView.h; sourceTree = "<group>"; };
 		1A66B90120F4465800464F4E /* FloatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingView.m; sourceTree = "<group>"; };
 		1A66B90420F44BDA00464F4E /* timg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timg1.png; sourceTree = "<group>"; };
@@ -248,6 +247,10 @@
 		1A66B93720F74AA600464F4E /* FingerprintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FingerprintViewController.h; sourceTree = "<group>"; };
 		1A66B93820F74AA600464F4E /* FingerprintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FingerprintViewController.m; sourceTree = "<group>"; };
 		1A66B93C20F751D700464F4E /* fingerprint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fingerprint@2x.png"; sourceTree = "<group>"; };
+		1A66B93E20F844CB00464F4E /* TFVerification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFVerification.h; sourceTree = "<group>"; };
+		1A66B93F20F844CB00464F4E /* TFVerification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFVerification.m; sourceTree = "<group>"; };
+		1A66B94120F844ED00464F4E /* TFVerificationLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFVerificationLog.h; sourceTree = "<group>"; };
+		1A66B94220F844ED00464F4E /* TFVerificationLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFVerificationLog.m; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -454,6 +457,10 @@
 		1A2BDFBC20C3C4370023C55D /* T_FT */ = {
 			isa = PBXGroup;
 			children = (
+				1A2BDFBD20C3C4370023C55D /* AppDelegate.h */,
+				1A2BDFBE20C3C4370023C55D /* AppDelegate.m */,
+				1A2BDFC320C3C4370023C55D /* Main.storyboard */,
+				1ABDDE4F20D3B6EB00E900A8 /* LaunchScreen.storyboard */,
 				1A2BDFEF20C3C4D00023C55D /* BaseClass */,
 				1A873A2820DBBFC500B1357E /* Resource */,
 				1A873A2720DBBFB300B1357E /* Macros */,
@@ -461,10 +468,6 @@
 				1ABDDE1020D3A4B600E900A8 /* Vender */,
 				1ABDDE0F20D3A4A300E900A8 /* Main */,
 				1A2BE01520C3CB670023C55D /* Category */,
-				1A2BDFBD20C3C4370023C55D /* AppDelegate.h */,
-				1A2BDFBE20C3C4370023C55D /* AppDelegate.m */,
-				1A2BDFC320C3C4370023C55D /* Main.storyboard */,
-				1ABDDE4F20D3B6EB00E900A8 /* LaunchScreen.storyboard */,
 				1A2BDFC620C3C4390023C55D /* Assets.xcassets */,
 				1A2BDFCB20C3C4390023C55D /* Info.plist */,
 				1A2BDFCC20C3C4390023C55D /* main.m */,
@@ -655,8 +658,6 @@
 			isa = PBXGroup;
 			children = (
 				1A66B90420F44BDA00464F4E /* timg1.png */,
-				1A66B8FE20F4465800464F4E /* JYCWindow.h */,
-				1A66B8FF20F4465800464F4E /* JYCWindow.m */,
 				1A66B90020F4465800464F4E /* FloatingView.h */,
 				1A66B90120F4465800464F4E /* FloatingView.m */,
 			);
@@ -736,6 +737,17 @@
 				1A66B93820F74AA600464F4E /* FingerprintViewController.m */,
 			);
 			path = "指纹识别";
+			sourceTree = "<group>";
+		};
+		1A66B94420F87C8800464F4E /* 验证正则 */ = {
+			isa = PBXGroup;
+			children = (
+				1A66B93E20F844CB00464F4E /* TFVerification.h */,
+				1A66B93F20F844CB00464F4E /* TFVerification.m */,
+				1A66B94120F844ED00464F4E /* TFVerificationLog.h */,
+				1A66B94220F844ED00464F4E /* TFVerificationLog.m */,
+			);
+			path = "验证正则";
 			sourceTree = "<group>";
 		};
 		1A8739FC20DA01CA00B1357E /* 照片冲印 */ = {
@@ -885,6 +897,7 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				1A66B94420F87C8800464F4E /* 验证正则 */,
 				1A66B93620F74A7600464F4E /* 指纹识别 */,
 				1A66B8FD20F4463B00464F4E /* 悬浮窗 */,
 				1AC8170520E237C300B1EE89 /* 添加事件到日历提醒 */,
@@ -1281,6 +1294,7 @@
 				1AABE74B20D8B91F001BA4C9 /* MeSubViewController.m in Sources */,
 				1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */,
 				1AABE74720D7AD0F001BA4C9 /* TFNavView.m in Sources */,
+				1A66B94320F844ED00464F4E /* TFVerificationLog.m in Sources */,
 				1ABDDE4A20D3B62200E900A8 /* MASViewConstraint.m in Sources */,
 				1ABDDE4D20D3B62200E900A8 /* View+MASAdditions.m in Sources */,
 				1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */,
@@ -1305,6 +1319,7 @@
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,
 				1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */,
+				1A66B94020F844CB00464F4E /* TFVerification.m in Sources */,
 				1AC8170820E237D700B1EE89 /* EventCalendar.m in Sources */,
 				1A66B91220F5BCE500464F4E /* TFAPIBaseManager.m in Sources */,
 				1A66B92C20F6F75800464F4E /* LoginViewController.m in Sources */,
@@ -1314,7 +1329,6 @@
 				1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */,
 				1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */,
 				1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */,
-				1A66B90220F4465800464F4E /* JYCWindow.m in Sources */,
 				1A66B8CD20EF429B00464F4E /* LoginView.m in Sources */,
 				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,

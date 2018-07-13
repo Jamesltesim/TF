@@ -16,6 +16,7 @@
 
 #import "TFLocalHTMLViewController.h"
 #import "FingerprintViewController.h"
+#import "TFVerification.h"
 
 @interface LoginViewController ()
 @property (nonatomic,strong) NSMutableArray *list;
@@ -46,7 +47,7 @@
     self.loginBtn.layer.cornerRadius = self.loginBtn.height/2.2;
     NSLog(@"%lf",self.loginBtn.height);
     
-   //textfield右侧输入的时候显示删除按钮
+   //textfield输入的时候 右侧显示删除按钮
     self.userText.clearButtonMode=UITextFieldViewModeWhileEditing;
     self.pwdText.clearButtonMode=UITextFieldViewModeWhileEditing;
     //关闭键盘上方联想功能
@@ -56,7 +57,7 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewClick:)];
     [self.view addGestureRecognizer:tap];
     
-    
+    NSLog(@"TFLoginVerification:%d", [TFVerification checkTelNumber:@"14510157697"]);
     
 }
 

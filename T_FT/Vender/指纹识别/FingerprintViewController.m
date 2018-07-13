@@ -70,7 +70,7 @@
     NSError *error = nil;
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         NSLog(@"支持指纹识别");
-        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"请按home键指纹解锁" reply:^(BOOL success, NSError * _Nullable error) {
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"通过Home键验证指纹解锁" reply:^(BOOL success, NSError * _Nullable error) {
             if (success) {
                 NSLog(@"验证成功 刷新主界面");
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -155,7 +155,7 @@
 
 - (void)authenticationSuccess{
     
-     self.doBefore();
+    if(self.doBefore) self.doBefore();
     
     if(self.navigationController){
        
