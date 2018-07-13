@@ -553,7 +553,6 @@
 			isa = PBXGroup;
 			children = (
 				1A66B8D120F2F2A700464F4E /* 购物车 */,
-				1A2BE00520C3C72A0023C55D /* Banner */,
 				1A2BDFFC20C3C5690023C55D /* HomeViewController.h */,
 				1A2BDFFD20C3C5690023C55D /* HomeViewController.m */,
 				1AE959AF20ECA56B00C5BDE4 /* FruitCollectionViewCell.h */,
@@ -602,13 +601,6 @@
 				1A2BE02920C519950023C55D /* GradualNavBarController.m */,
 			);
 			path = "我的";
-			sourceTree = "<group>";
-		};
-		1A2BE00520C3C72A0023C55D /* Banner */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Banner;
 			sourceTree = "<group>";
 		};
 		1A2BE01520C3CB670023C55D /* Category */ = {
