@@ -10,7 +10,8 @@
 
 
 typedef NS_ENUM(NSInteger,TFVerificationLogCode){
-    TFLoginLogCodeForUsernameIsBlank = 1001,
+    TFLoginLogCodeForCorrect = 1001,
+    TFLoginLogCodeForUsernameIsBlank ,
     TFLoginLogCodeForPasswordIsBlank,
     TFAPIRequestNameForHomeList1
     

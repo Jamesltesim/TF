@@ -18,7 +18,7 @@
 #import "FingerprintViewController.h"
 #import "TFVerification.h"
 
-@interface LoginViewController ()
+@interface LoginViewController ()<UITextFieldDelegate>
 
 @property (nonatomic,strong) NSMutableArray *list;
 
@@ -67,7 +67,74 @@
     
     [self verificationCodeLogin:self.loginOrRegisterBtn];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textfieldChanged:) name:UITextFieldTextDidChangeNotification object:nil];
+    
 }
+
+- (void)textfieldChanged:(NSNotification *)notification{
+    UITextField *textField=[notification object];
+    
+    if([self.titleLab.text isEqualToString:@"短信验证码登录/注册"] && [textField isEqual:self.pwdText]){
+        
+        if(textField.text.length == 3){
+            textField.text = [NSString stringWithFormat:@"%@ ",textField.text];
+        }
+        else if(textField.text.length > 4 && textField.text.length < 8){
+   
+                NSString *first = [textField.text componentsSeparatedByString:@" "][0];
+                NSString *second = [textField.text componentsSeparatedByString:@" "][1];
+          
+           
+            
+            textField.text = [NSString stringWithFormat:@"%@ %@",first,second];
+        }else if (textField.text.length == 8){
+            NSString *first = [textField.text componentsSeparatedByString:@" "][0];
+            NSString *second = [textField.text componentsSeparatedByString:@" "][1];
+          textField.text = [NSString stringWithFormat:@"%@ %@ ",first,second];
+        }else if (textField.text.length > 9 && textField.text.length <=12){
+            
+            NSString *first = [textField.text componentsSeparatedByString:@" "][0];
+            NSString *second = [textField.text componentsSeparatedByString:@" "][1];
+            NSString *third = [textField.text componentsSeparatedByString:@" "][2];
+            
+            
+            textField.text = [NSString stringWithFormat:@"%@ %@ %@",first,second,third];
+        }else if (textField.text.length > 13){
+            textField.text = [NSString stringWithFormat:@"%@",[textField.text substringToIndex:13]];
+        }
+        
+    }
+  
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+- (IBAction)login:(id)sender {
+    
+    if([self.titleLab.text isEqualToString:@"账号密码登录"]){
+       TFVerificationLog *log = [TFVerification verfication:self.userText.text passwd:self.pwdText.text];
+        
+        if(log.code == TFLoginLogCodeForCorrect){
+            //用户名和密码 验证通过
+            
+        }else{
+            //用户名和密码 验证失败
+        }
+        
+        
+    }else if ([self.titleLab.text isEqualToString:@"短信验证码登录/注册"]){
+        
+        //验证手机号是否正确
+        if( [TFVerification checkTelNumber:self.pwdText.text]){
+            //手机号格式 正确
+        }else{
+             //手机号格式 错误
+        }
+    }
+}
+
 - (IBAction)backAction:(id)sender {
     
     [self.navigationController dismissViewControllerAnimated:YES completion:^{
@@ -166,10 +233,7 @@
     [self.navigationController pushViewController:htmlController animated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 - (void)requestAuthorizationForAddressBook {
     

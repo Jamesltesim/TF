@@ -21,6 +21,9 @@
     } else if (password == nil || [password isEqualToString:@""] || password.length == 0){
         log.code = TFLoginLogCodeForPasswordIsBlank;
         log.msg = @"密码不能为空";
+    }else{
+        log.code = TFLoginLogCodeForCorrect;
+        log.msg = @"验证成功";
     }
     return log;
 }
