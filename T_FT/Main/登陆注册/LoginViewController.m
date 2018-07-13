@@ -24,7 +24,11 @@
 
 //判断是手机号登录/注册  还是账号密码登录
 @property (nonatomic) BOOL isPhoneNumberLogin;
+@property (nonatomic) BOOL dismissControllerAnimated;
+@property(nonatomic,strong)void(^doBefore)(void);
 
+
+//xib
 @property (weak, nonatomic) IBOutlet UITextField *userText;
 @property (weak, nonatomic) IBOutlet UITextField *pwdText;
 @property (weak, nonatomic) IBOutlet UIButton *eye;
@@ -37,6 +41,23 @@
 @end
 
 @implementation LoginViewController
+
+- (instancetype)initWithDismissViewControllerAnimated:(BOOL)animated before:(void (^)(void))before{
+    if(self = [super init]){
+        self.dismissControllerAnimated = animated;
+        self.doBefore = before();
+    }
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil dismissViewControllerAnimated:(BOOL)animated before:(void (^)(void))before{
+    if(self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]){
+        self.dismissControllerAnimated = animated;
+        self.doBefore = before();
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -129,6 +150,8 @@
         //验证手机号是否正确
         if( [TFVerification checkTelNumber:self.pwdText.text]){
             //手机号格式 正确
+            
+            
         }else{
              //手机号格式 错误
         }
