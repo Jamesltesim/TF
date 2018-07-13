@@ -45,7 +45,7 @@
 - (instancetype)initWithDismissViewControllerAnimated:(BOOL)animated before:(void (^)(void))before{
     if(self = [super init]){
         self.dismissControllerAnimated = animated;
-        self.doBefore = before();
+        self.doBefore = before;
     }
     return self;
 }
@@ -53,7 +53,7 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil dismissViewControllerAnimated:(BOOL)animated before:(void (^)(void))before{
     if(self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]){
         self.dismissControllerAnimated = animated;
-        self.doBefore = before();
+        self.doBefore = before;
         
     }
     return self;
