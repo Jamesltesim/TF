@@ -427,6 +427,7 @@
 		9027FEDF20F8EF25003F0A51 /* LYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyView.h; sourceTree = "<group>"; };
 		9027FEE020F8EF25003F0A51 /* LYEmptyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyBaseView.m; sourceTree = "<group>"; };
 		9027FEE620F8EF43003F0A51 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		907FD33420F8F09F00789067 /* Macros_size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros_size.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,7 +508,7 @@
 				1ABDDE4F20D3B6EB00E900A8 /* LaunchScreen.storyboard */,
 				1A2BDFEF20C3C4D00023C55D /* BaseClass */,
 				1A873A2820DBBFC500B1357E /* Resource */,
-				1A873A2720DBBFB300B1357E /* Macros */,
+				907FD33320F8F09F00789067 /* Macros */,
 				1A873A2620DBBF9E00B1357E /* Utils */,
 				1ABDDE1020D3A4B600E900A8 /* Vender */,
 				1ABDDE0F20D3A4A300E900A8 /* Main */,
@@ -879,13 +880,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		1A873A2720DBBFB300B1357E /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Macros;
-			sourceTree = "<group>";
-		};
 		1A873A2820DBBFC500B1357E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1164,6 +1158,14 @@
 				9027FEE620F8EF43003F0A51 /* ReadMe.txt */,
 			);
 			path = "空View处理";
+			sourceTree = "<group>";
+		};
+		907FD33320F8F09F00789067 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				907FD33420F8F09F00789067 /* Macros_size.h */,
+			);
+			path = Macros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
