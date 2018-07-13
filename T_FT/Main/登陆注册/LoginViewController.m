@@ -181,6 +181,7 @@
         self.userText.userInteractionEnabled = NO;
         
         self.pwdText.placeholder = @"请输入手机号";
+        self.pwdText.font = [UIFont boldSystemFontOfSize:17];
         self.pwdText.keyboardType = UIKeyboardTypeNumberPad;
     
         [self.forgetBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
@@ -199,6 +200,7 @@
         
          self.pwdText.placeholder = @"请输入密码";
          self.pwdText.keyboardType = UIKeyboardTypeDefault;
+         self.pwdText.font = [UIFont systemFontOfSize:15];
         
         [self.forgetBtn setTitle:@"忘记密码" forState:UIControlStateNormal];
         
