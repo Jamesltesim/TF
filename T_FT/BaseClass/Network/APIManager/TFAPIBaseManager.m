@@ -30,14 +30,32 @@
     return self;
 }
 
+- (NSMutableDictionary *)params{
+    if(!_params){
+        _params = [[NSMutableDictionary alloc]initWithCapacity:0];
+    }
+    return _params;
+}
 - (void)loadData{
     NSLog(@"%@",NSStringFromSelector(_cmd));
     
+
+    [self GET:test_url parameters:self.params success:^(id responseObject) {
+        
+    } requestFailure:^(NSError *error) {
+        
+    }];
     if([self.delegate respondsToSelector:@selector(TFAPICallBackDidSuccess:)]){
         [self.delegate TFAPICallBackDidSuccess:self];
     }
 }
 
+- (instancetype)initWithParams:(NSMutableDictionary *)params{
+    if(self = [super init]){
+        _params = params;
+    }
+    return self;
+}
 
 
 - (void)GET:(NSString *)url parameters:(NSDictionary *)paras success:(requestSuccessBlock)success requestFailure:(requestFailureBlock)failure{

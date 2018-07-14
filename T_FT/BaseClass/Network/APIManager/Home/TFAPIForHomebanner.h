@@ -8,6 +8,6 @@
 
 #import "TFAPIBaseManager.h"
 
-@interface TFAPIHomeBanner : TFAPIBaseManager
+@interface TFAPIForHomebanner : TFAPIBaseManager
 
 @end

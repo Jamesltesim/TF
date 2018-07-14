@@ -11,6 +11,7 @@
 #import "DrinksCollectionViewCell.h"
 #import "FruitCollectionViewCell.h"
 #import "BundlingCollectionViewCell_1.h"
+#import "HomeFooterReusableView.h"
 
 #import "UIScrollView+MJRefresh.h"
 #import "MJChiBaoZiHeader.h"
@@ -19,7 +20,7 @@
 #import "HomeNavigationController.h"
 #import "ShoppingListViewController.h"
 #import "TFAPICenter.h"
-#import "TFAPIHomeBanner.h"
+#import "TFAPIForHomebanner.h"
 
 
 
@@ -144,7 +145,7 @@
     };
 
 //    [TFAPICenter loadData:TFAPIRequestNameForHomeBannner delegate:weakSelf];
-    TFAPIHomeBanner *apiBanner = [[TFAPIHomeBanner alloc]init];
+    TFAPIForHomebanner *apiBanner = [[TFAPIForHomebanner alloc]init];
     apiBanner.delegate = self;
     [apiBanner loadData];
 }
@@ -380,22 +381,33 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     
-    UICollectionReusableView *headerView = nil;
-    if(indexPath.section == 0){
-        headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView" forIndexPath:indexPath];
-        [headerView addSubview:self.bannerView];
-        headerView.backgroundColor = [UIColor blueColor];
-        
-    }else{
-        headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
-        headerView.backgroundColor =[UIColor whiteColor];
-        //        UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
-        //        label.text = @"这是collectionView的头部";
-        //        label.font = [UIFont systemFontOfSize:20];
-        //        [headerView addSubview:label];
-    }
+
     
-    return headerView;
+    if([kind isEqualToString:UICollectionElementKindSectionHeader]){
+            UICollectionReusableView *headerView = nil;
+        if(indexPath.section == 0){
+            headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView" forIndexPath:indexPath];
+            [headerView addSubview:self.bannerView];
+            headerView.backgroundColor = [UIColor blueColor];
+            
+        }else{
+            headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
+            headerView.backgroundColor =[UIColor whiteColor];
+            //        UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
+            //        label.text = @"这是collectionView的头部";
+            //        label.font = [UIFont systemFontOfSize:20];
+            //        [headerView addSubview:label];
+        }
+        return headerView;
+    }else if ([kind isEqualToString:UICollectionElementKindSectionFooter]){
+        if(indexPath.section == self.dataArray.count-1){
+            HomeFooterReusableView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"HomeFooterReusableView" forIndexPath:indexPath];
+            return footer;
+        }
+    }
+   
+    
+    return nil;
 }
 
 
@@ -415,9 +427,12 @@
     return CGSizeMake(self.view.frame.size.width, 30);
 }
 
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
-//
-//}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
+    if(section == self.dataArray.count-1){
+        return CGSizeMake(self.view.frame.size.width, 30);
+    }
+    return CGSizeZero;
+}
 
 #pragma mark get set
 
@@ -450,7 +465,7 @@
     //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView
     [_collectionView registerNib:[UINib nibWithNibName:@"HomeheaderReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView"];
-    
+   [_collectionView registerNib:[UINib nibWithNibName:@"HomeFooterReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"HomeFooterReusableView"];
     
     //4.设置代理
     _collectionView.delegate = self;

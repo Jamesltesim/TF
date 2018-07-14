@@ -125,7 +125,7 @@
 //        self.window.rootViewController = [ShoppingListViewController new];
         self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil]];
         
-//        self.window.rootViewController = dcHomeVc;
+        self.window.rootViewController = dcHomeVc;
     }
 }
 

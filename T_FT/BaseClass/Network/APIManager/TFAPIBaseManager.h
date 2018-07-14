@@ -12,7 +12,7 @@
 
 
 
-
+#define test_url @""
 
 @interface TFAPIBaseManager : NSObject
 
@@ -23,7 +23,7 @@
 //@property (nonatomic , strong) EWResponse *response;
 //
 ////外部传入的参数
-//@property (strong,nonatomic) NSMutableDictionary *outerParams;
+@property (strong,nonatomic) NSMutableDictionary *params;
 //
 //
 ////是否需要缓存
@@ -32,6 +32,8 @@
 // * 加载数据
 // */
 - (void)loadData;
+
+- (instancetype)initWithParams:(NSMutableDictionary *)params;
 ///**
 // * 取消请求
 // */

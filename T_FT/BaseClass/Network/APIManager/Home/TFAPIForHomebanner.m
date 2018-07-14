@@ -6,15 +6,15 @@
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#import "TFAPIHomeBanner.h"
+#import "TFAPIForHomebanner.h"
 
 
-@interface TFAPIHomeBanner()<TFBaseManagerDelegate>
+@interface TFAPIForHomebanner()<TFBaseManagerDelegate>
 
 
 @end
 
-@implementation TFAPIHomeBanner
+@implementation TFAPIForHomebanner
 
 - (NSString *)apiMethodName{
     return @"homeBanner";
