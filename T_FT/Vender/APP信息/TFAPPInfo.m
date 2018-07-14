@@ -11,6 +11,7 @@
 @implementation TFAPPInfo
 
 - (NSString *)appVersion{
-    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];//获取项目版本
+    return @"1.0";
+//    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];//获取项目版本
 }
 @end

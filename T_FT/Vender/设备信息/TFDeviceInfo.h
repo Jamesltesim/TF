@@ -32,6 +32,9 @@
 //手机型号
 @property (nonatomic,strong,readonly) NSString *phoneModel;
 @property (nonatomic,strong,readonly) NSString *uuid;
+
+#warning ip未实现
+//未实现
 @property (nonatomic,strong,readonly) NSString *ip;
 @property (nonatomic,strong,readonly) NSString *systemLanguage;
 @property (nonatomic,strong,readonly) NSString *currentTime;
@@ -46,5 +49,7 @@
 //} NetworkStatus;
 //当前屏幕亮度
 @property (nonatomic,readonly)        CGFloat brightness;
+
++ (NSString *)getCurrentTime;
 
 @end

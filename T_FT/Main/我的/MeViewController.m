@@ -52,7 +52,7 @@ static NSString *iden = @"cell";
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    NSLog(@"internetConnectionStatus:%ld",(long)[TFDataManage manager].deviceInfo.internetConnectionStatus);
+    NSLog(@"%@",[TFDataManage manager].dataLog);
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -64,7 +64,7 @@ static NSString *iden = @"cell";
     [super viewDidLoad];
    
     
-    
+   
      [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.navView.title = @"个人中心";
     self.navigationController.navigationBar.hidden = YES;

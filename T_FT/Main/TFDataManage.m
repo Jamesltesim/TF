@@ -8,11 +8,138 @@
 
 #import "TFDataManage.h"
 
-@implementation TFDataManage
+
+#define LOG_RECORD  @"LOG_RECORD"
+
+/*
+ 日志类型
+ 
+ 1.网络状态
+ 2.app生命周期
+ */
+
+#define NETWORK_STATE @"network_state"
+#define APP_LIFE_CYCLE @"app_life_cycle"
+
+@interface TFDataManage()
+
+
+
+@end
+
+@implementation TFDataManage{
+    NSMutableDictionary *_dataLog;
+}
+
+#pragma mark - 公开方法
+
+//程序加载完毕
+- (void)didFinishLaunching{
+    NSMutableArray *marr = [self.dataLog objectForKey:LOG_RECORD];
+    NSMutableDictionary *mdict = [[NSMutableDictionary alloc]initWithCapacity:0];
+    [mdict setObject:[TFDeviceInfo getCurrentTime] forKey:@"time"];
+    [mdict setObject:[NSString stringWithFormat:@"%@",NSStringFromSelector(_cmd)] forKey:APP_LIFE_CYCLE];
+    [marr addObject:mdict];
+}
+
+//程序获取焦点
+- (void)applicationDidBecomeActive{
+    NSMutableArray *marr = [self.dataLog objectForKey:LOG_RECORD];
+    NSMutableDictionary *mdict = [[NSMutableDictionary alloc]initWithCapacity:0];
+    [mdict setObject:[TFDeviceInfo getCurrentTime] forKey:@"time"];
+    [mdict setObject:[NSString stringWithFormat:@"%@",NSStringFromSelector(_cmd)] forKey:APP_LIFE_CYCLE];
+    [marr addObject:mdict];
+}
+
+//程序进入后台
+- (void)applicationDidEnterBackground{
+    NSMutableArray *marr = [self.dataLog objectForKey:LOG_RECORD];
+    NSMutableDictionary *mdict = [[NSMutableDictionary alloc]initWithCapacity:0];
+    [mdict setObject:[TFDeviceInfo getCurrentTime] forKey:@"time"];
+    [mdict setObject:[NSString stringWithFormat:@"%@",NSStringFromSelector(_cmd)] forKey:APP_LIFE_CYCLE];
+    [marr addObject:mdict];
+}
+
+// 程序失去焦点
+- (void)applicationWillResignActive{
+    NSMutableArray *marr = [self.dataLog objectForKey:LOG_RECORD];
+    NSMutableDictionary *mdict = [[NSMutableDictionary alloc]initWithCapacity:0];
+    [mdict setObject:[TFDeviceInfo getCurrentTime] forKey:@"time"];
+    [mdict setObject:[NSString stringWithFormat:@"%@",NSStringFromSelector(_cmd)] forKey:APP_LIFE_CYCLE];
+    [marr addObject:mdict];
+}
+
+//程序从后台回到前台
+- (void)applicationWillEnterForeground{
+    NSMutableArray *marr = [self.dataLog objectForKey:LOG_RECORD];
+    NSMutableDictionary *mdict = [[NSMutableDictionary alloc]initWithCapacity:0];
+    [mdict setObject:[TFDeviceInfo getCurrentTime] forKey:@"time"];
+    [mdict setObject:[NSString stringWithFormat:@"%@",NSStringFromSelector(_cmd)] forKey:APP_LIFE_CYCLE];
+    [marr addObject:mdict];
+}
+
+//程序内存警告，可能要终止程序
+- (void)applicationDidReceiveMemoryWarning{
+    NSMutableArray *marr = [self.dataLog objectForKey:LOG_RECORD];
+    NSMutableDictionary *mdict = [[NSMutableDictionary alloc]initWithCapacity:0];
+    [mdict setObject:[TFDeviceInfo getCurrentTime] forKey:@"time"];
+    [mdict setObject:[NSString stringWithFormat:@"%@",NSStringFromSelector(_cmd)] forKey:APP_LIFE_CYCLE];
+    [marr addObject:mdict];
+}
+
+//程序即将退出
+- (void)applicationWillTerminate{
+    NSMutableArray *marr = [self.dataLog objectForKey:LOG_RECORD];
+    NSMutableDictionary *mdict = [[NSMutableDictionary alloc]initWithCapacity:0];
+    [mdict setObject:[TFDeviceInfo getCurrentTime] forKey:@"time"];
+    [mdict setObject:[NSString stringWithFormat:@"%@",NSStringFromSelector(_cmd)] forKey:APP_LIFE_CYCLE];
+    [marr addObject:mdict];
+}
 
 #pragma mark - get set
 
+/*
+ {
+ uuid  : XXXXX
+ 启动时间 : XX
+ 结束时间 : XX
+ app版本 :
+ 设备类型 :
+ ip地址  :
+ 网络状态 :
+ 
+ log记录:[
+ 
+ @{time   :XXX
+ 日志类型 :
+ action：xx
+ }
+ 
+ @{time   :XXX
+ 日志类型 :
+ action：xx
+ }
+ ]
+ }
+ 
+ */
 
+- (NSMutableDictionary *)dataLog{
+    if(!_dataLog){
+        _dataLog = [[NSMutableDictionary alloc]initWithCapacity:0];
+        [_dataLog setObject:self.deviceInfo.uuid forKey:@"uuid"];
+        [_dataLog setObject:self.deviceInfo.currentTime forKey:@"start_time"];
+        [_dataLog setObject:self.appInfo.appVersion forKey:@"app_version"];
+  
+        [_dataLog setObject:self.deviceInfo.phoneModel forKey:@"phone_model"];
+        [_dataLog setObject:self.deviceInfo.ip forKey:@"ip"];
+        [_dataLog setObject:@(self.deviceInfo.internetConnectionStatus) forKey:@"internet_status"];
+        
+        NSMutableArray *logRecord = [[NSMutableArray alloc]initWithCapacity:0];
+        [_dataLog setObject:logRecord forKey:LOG_RECORD];
+    }
+    return _dataLog;
+}
 
 - (TFAPPInfo *)appInfo{
     if(!_appInfo){
