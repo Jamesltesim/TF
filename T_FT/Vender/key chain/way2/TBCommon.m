@@ -63,7 +63,7 @@
 
 + (NSString *)getUUID
 {
-    NSString * strUUID = (NSString *)[TBKeyChain load:@"com.company.app.usernamepassword"];
+    NSString * strUUID = (NSString *)[TBKeyChain load:KEY_PASSWORD];
     
     //首次执行该方法时，uuid为空
     if ([strUUID isEqualToString:@""] || !strUUID)
@@ -73,8 +73,8 @@
         
         strUUID = (NSString *)CFBridgingRelease(CFUUIDCreateString (kCFAllocatorDefault,uuidRef));
         
-        //将该uuid保存到keychain
-        [TBKeyChain save:@"com.company.app.usernamepassword" data:strUUID];
+        //将该uuid保存到keychain  @"com.company.app.usernamepassword"
+        [TBKeyChain save:KEY_PASSWORD data:strUUID];
         
     }
     return strUUID;
