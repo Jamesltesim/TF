@@ -12,6 +12,7 @@
 @interface GradualNavBarController ()<UIScrollViewDelegate>
 
 @property (nonatomic,strong) UIScrollView *scrollView;
+@property (nonatomic) BOOL changeStatusBarColor;
 
 @end
 
@@ -32,6 +33,14 @@
 //    [self.gradualNavView setBackImage:[[UIImage alloc] init]];
   
 //    self.gradualNavView = [MeNavView creatNavView];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    
+    if(self.changeStatusBarColor){
+        return UIStatusBarStyleDefault;
+    }
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -56,11 +65,14 @@
     }
     
     if(alpha >0.3){
-         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-      
+       
+//         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+        self.changeStatusBarColor = YES;
     }else{
-          [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+//          [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        self.changeStatusBarColor = NO;
     }
+     [self preferredStatusBarStyle];
     NSLog(@"alpha:%lf  offset:%lf",alpha,offset);
     //拿到标题 标题文字的随着移动高度的变化而变化
 //    UILabel *titleL = (UILabel *)self.navigationItem.titleView;
