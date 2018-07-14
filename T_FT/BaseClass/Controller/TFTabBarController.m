@@ -9,7 +9,7 @@
 #import "TFTabBarController.h"
 #import "TFNavigationController.h"
 #import "HomeViewController.h"
-#import "HomeNavigationController.h"
+
 #import "ActivityViewController.h"
 #import "DiscoveryViewController.h"
 
@@ -40,7 +40,7 @@
     
     
     
-    UINavigationController *nav1 = [[HomeNavigationController alloc] initWithRootViewController:self.HomeController];
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:self.HomeController];
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:second];
     UINavigationController *discoveryNav = [[UINavigationController alloc] initWithRootViewController:discovery];
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:third];

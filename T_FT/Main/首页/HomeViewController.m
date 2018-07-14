@@ -17,7 +17,6 @@
 #import "MJChiBaoZiHeader.h"
 #import "HomeheaderReusableView.h"
 #import "FloatingView.h"
-#import "HomeNavigationController.h"
 #import "ShoppingListViewController.h"
 #import "TFAPICenter.h"
 #import "TFAPIForHomebanner.h"
@@ -43,7 +42,8 @@
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-    if([viewController isKindOfClass:[HomeNavigationController class]]){
+    UINavigationController *navController = (UINavigationController *)viewController;
+    if([navController.visibleViewController isKindOfClass:[HomeViewController class]]){
         self.floatView.hidden = NO;
     }else{
         self.floatView.hidden = YES;
@@ -52,10 +52,14 @@
 
 #pragma -mark life cycle
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
+}
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+//     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
   
 }
 

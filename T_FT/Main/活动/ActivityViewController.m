@@ -51,21 +51,16 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+//     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.navigationController.navigationBar.hidden = YES;
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-//    self.navView.seckillTimes = @[@"16:00\n即将开始",@"18:00",@"20:00",@"22:00",@"00:00"];
-    [self.view addSubview:self.navView];
-    self.navView.segmentTitleDelegate = self;
-    [self.navView.titleView loadTitles: @[@"10:00",@"12:00",@"14:00",@"16:00",@"18:00"]];
-    
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     
     SeckillViewController *controller1 = [[SeckillViewController alloc]init];
     SeckillViewController *controller2 = [[SeckillViewController alloc]init];
@@ -84,6 +79,21 @@
     self.pageContentView.contentViewCurrentIndex = 0;
     //    self.pageContentView.contentViewCanScroll = NO;//设置滑动属性
     [self.view addSubview:_pageContentView];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.navigationController.navigationBar.hidden = YES;
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+//    self.navView.seckillTimes = @[@"16:00\n即将开始",@"18:00",@"20:00",@"22:00",@"00:00"];
+    [self.view addSubview:self.navView];
+    self.navView.segmentTitleDelegate = self;
+    [self.navView.titleView loadTitles: @[@"10:00",@"12:00",@"14:00",@"16:00",@"18:00"]];
+    
+    
+   
     
    
 }

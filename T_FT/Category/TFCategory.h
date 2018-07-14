@@ -13,5 +13,6 @@
 #import "UIFont+Tool.h"
 #import "UILabel+TF.h"
 #import "UIView+Frame.h"
+#import "UINavigationController+StatusBar.h"
 
 #endif /* TFCategory_h */
