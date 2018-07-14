@@ -11,7 +11,140 @@
 #import "TFDeviceInfo.h"
 #import "TBKeyChain.h"
 
+
+@interface TFDeviceInfo()
+
+@property (nonatomic) Reachability *hostReachability;
+@property (nonatomic) Reachability *internetReachability;
+
+@end
+
 @implementation TFDeviceInfo
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        /*
+         Observe the kNetworkReachabilityChangedNotification. When that notification is posted, the method reachabilityChanged will be called.
+         */
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+        
+        //Change the host name here to change the server you want to monitor.
+        NSString *remoteHostName = @"www.fruitdj.com";
+//        NSString *remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");
+//        self.remoteHostLabel.text = [NSString stringWithFormat:remoteHostLabelFormatString, remoteHostName];
+        
+        self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
+        [self.hostReachability startNotifier];
+        [self updateInterfaceWithReachability:self.hostReachability];
+        
+        self.internetReachability = [Reachability reachabilityForInternetConnection];
+        [self.internetReachability startNotifier];
+        [self updateInterfaceWithReachability:self.internetReachability];
+    }
+    return self;
+}
+
+/*!
+ * Called by Reachability whenever status changes.
+ */
+- (void) reachabilityChanged:(NSNotification *)note
+{
+    Reachability* curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    [self updateInterfaceWithReachability:curReach];
+}
+
+
+- (void)updateInterfaceWithReachability:(Reachability *)reachability
+{
+    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    BOOL connectionRequired = [reachability connectionRequired];
+    NSString* statusString = @"";
+    
+    if (reachability == self.hostReachability)
+    {
+      
+        
+        switch (netStatus)
+        {
+            case NotReachable:        {
+                statusString = NSLocalizedString(@"Access Not Available", @"Text field text for access is not available");
+                //            imageView.image = [UIImage imageNamed:@"stop-32.png"] ;
+                /*
+                 Minor interface detail- connectionRequired may return YES even when the host is unreachable. We cover that up here...
+                 */
+                connectionRequired = NO;
+                break;
+            }
+                
+            case ReachableViaWWAN:        {
+                statusString = NSLocalizedString(@"Reachable WWAN", @"");
+                //            imageView.image = [UIImage imageNamed:@"WWAN5.png"];
+                break;
+            }
+            case ReachableViaWiFi:        {
+                statusString= NSLocalizedString(@"Reachable WiFi", @"");
+                //            imageView.image = [UIImage imageNamed:@"Airport.png"];
+                break;
+            }
+        }
+        
+        if (connectionRequired)
+        {
+            NSString *connectionRequiredFormatString = NSLocalizedString(@"%@, Connection Required", @"Concatenation of status string with connection requirement");
+            statusString= [NSString stringWithFormat:connectionRequiredFormatString, statusString];
+        }
+        //    textField.text= statusString;
+        _remoteHostNetworkStatus = netStatus;
+    }
+        
+    
+    if (reachability == self.internetReachability)
+    {
+        switch (netStatus)
+        {
+            case NotReachable:        {
+                statusString = NSLocalizedString(@"Access Not Available", @"Text field text for access is not available");
+                //            imageView.image = [UIImage imageNamed:@"stop-32.png"] ;
+                /*
+                 Minor interface detail- connectionRequired may return YES even when the host is unreachable. We cover that up here...
+                 */
+                connectionRequired = NO;
+                break;
+            }
+                
+            case ReachableViaWWAN:        {
+                statusString = NSLocalizedString(@"Reachable WWAN", @"");
+                //            imageView.image = [UIImage imageNamed:@"WWAN5.png"];
+                break;
+            }
+            case ReachableViaWiFi:        {
+                statusString= NSLocalizedString(@"Reachable WiFi", @"");
+                //            imageView.image = [UIImage imageNamed:@"Airport.png"];
+                break;
+            }
+        }
+        
+        if (connectionRequired)
+        {
+            NSString *connectionRequiredFormatString = NSLocalizedString(@"%@, Connection Required", @"Concatenation of status string with connection requirement");
+            statusString= [NSString stringWithFormat:connectionRequiredFormatString, statusString];
+        }
+        //    textField.text= statusString;
+        _internetConnectionStatus = netStatus;
+    }
+    
+    
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kReachabilityChangedNotification object:nil];
+}
+
+#pragma mark- get set
 
 - (CGSize)screenSize{
     return [UIScreen mainScreen].bounds.size;

@@ -17,7 +17,7 @@
 #import<CoreTelephony/CTCellularData.h>
 
 #import "algorithm.h"
-#import "TBCommon.h"
+#import "TFDataManage.h"
 //参考
 //天天果园 app
 
@@ -86,8 +86,7 @@
 //            break;
 //    }
     
-    NSLog(@"%@", [TBCommon getUUID]);
-     NSLog(@"%@", [TBCommon getDeviceModel]);
+    NSLog(@"internetConnectionStatus:%ld",(long)[TFDataManage manager].deviceInfo.internetConnectionStatus);
     return YES;
 }
 

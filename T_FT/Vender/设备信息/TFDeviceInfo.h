@@ -17,10 +17,14 @@
  系统语言
  当前时间
  当前屏幕亮度
+ 
+ 当前网络情况 （4g wifi 等）
  */
 
 
 #import <Foundation/Foundation.h>
+#import "Reachability.h"
+
 
 @interface TFDeviceInfo : NSObject
 
@@ -32,6 +36,14 @@
 @property (nonatomic,strong,readonly) NSString *systemLanguage;
 @property (nonatomic,strong,readonly) NSString *currentTime;
 
+@property (nonatomic,readonly) NetworkStatus remoteHostNetworkStatus;
+@property (nonatomic,readonly) NetworkStatus internetConnectionStatus;
+
+//typedef enum : NSInteger {
+//    NotReachable = 0,
+//    ReachableViaWiFi,
+//    ReachableViaWWAN
+//} NetworkStatus;
 //当前屏幕亮度
 @property (nonatomic,readonly)        CGFloat brightness;
 

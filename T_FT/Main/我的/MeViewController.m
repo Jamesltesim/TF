@@ -16,7 +16,7 @@
 //#import "MeNavView.h"
 #import "NoiseViewController.h"
 #import "iBeaconViewController.h"
-
+#import "TFDataManage.h"
 
 
 @interface MeViewController ()<UICollectionViewDataSource,
@@ -52,6 +52,7 @@ static NSString *iden = @"cell";
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    NSLog(@"internetConnectionStatus:%ld",(long)[TFDataManage manager].deviceInfo.internetConnectionStatus);
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -62,6 +63,8 @@ static NSString *iden = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    
+    
      [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.navView.title = @"个人中心";
     self.navigationController.navigationBar.hidden = YES;
