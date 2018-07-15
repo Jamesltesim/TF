@@ -15,6 +15,10 @@
 @property (nonatomic,strong) TFAPPInfo *appInfo;
 @property (nonatomic,strong) TFDeviceInfo *deviceInfo;
 
+@property (nonatomic,strong) NSString *userName;
+@property (nonatomic,strong) NSString *password;
+@property (nonatomic,strong) NSString *userID;
+
 /*
  {
  uuid  : XXXXX
@@ -48,9 +52,7 @@
 //程序加载完毕
 - (void)didFinishLaunching;
 
-//程序获取焦点
 - (void)applicationDidBecomeActive;
-
 //程序进入后台
 - (void)applicationDidEnterBackground;
 

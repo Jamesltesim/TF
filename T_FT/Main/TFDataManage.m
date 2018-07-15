@@ -42,6 +42,102 @@
     [marr addObject:mdict];
 }
 
+
+
+#pragma mark - get set
+
+/*
+ {
+ uuid  : XXXXX
+ 启动时间 : XX
+ 结束时间 : XX
+ app版本 :
+ 设备类型 :
+ ip地址  :
+ 网络状态 :
+ 
+ log记录:[
+ 
+ @{time   :XXX
+ 日志类型 :
+ action：xx
+ }
+ 
+ @{time   :XXX
+ 日志类型 :
+ action：xx
+ }
+ ]
+ }
+ 
+ */
+
+- (NSMutableDictionary *)dataLog{
+    if(!_dataLog){
+        _dataLog = [[NSMutableDictionary alloc]initWithCapacity:0];
+        [_dataLog setObject:self.deviceInfo.uuid forKey:@"uuid"];
+        [_dataLog setObject:self.deviceInfo.currentTime forKey:@"start_time"];
+        [_dataLog setObject:self.appInfo.appVersion forKey:@"app_version"];
+  
+        [_dataLog setObject:self.deviceInfo.phoneModel forKey:@"phone_model"];
+        [_dataLog setObject:self.deviceInfo.ip forKey:@"ip"];
+        [_dataLog setObject:@(self.deviceInfo.internetConnectionStatus) forKey:@"internet_status"];
+        
+        NSMutableArray *logRecord = [[NSMutableArray alloc]initWithCapacity:0];
+        [_dataLog setObject:logRecord forKey:LOG_RECORD];
+    }
+    return _dataLog;
+}
+
+//- (TFAPPInfo *)appInfo{
+//    if(!_appInfo){
+//        _appInfo = [[TFAPPInfo alloc] init];
+//    }
+//    return _appInfo;
+//}
+//
+//- (TFDeviceInfo *)deviceInfo{
+//    if(!_deviceInfo){
+//        _deviceInfo = [[TFDeviceInfo alloc] init];
+//    }
+//    return _deviceInfo;
+//}
+
+#pragma mark - life cycle
+
+- (void)dealloc{
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidFinishLaunchingNotification object:nil];
+//     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillResignActiveNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidEnterBackgroundNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillTerminateNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+}
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        self.deviceInfo = [[TFDeviceInfo alloc]init];
+        self.appInfo = [[TFAPPInfo alloc]init];
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidFinishLaunchingNotification object:nil];
+        
+//         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
+//
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+//
+//         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+//
+//          [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+//
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate:) name:UIApplicationWillTerminateNotification object:nil];
+//
+//         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidReceiveMemoryWarning:) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+        
+    }
+    return self;
+}
 //程序获取焦点
 - (void)applicationDidBecomeActive{
     NSMutableArray *marr = [self.dataLog objectForKey:LOG_RECORD];
@@ -94,76 +190,6 @@
     [mdict setObject:[TFDeviceInfo getCurrentTime] forKey:@"time"];
     [mdict setObject:[NSString stringWithFormat:@"%@",NSStringFromSelector(_cmd)] forKey:APP_LIFE_CYCLE];
     [marr addObject:mdict];
-}
-
-#pragma mark - get set
-
-/*
- {
- uuid  : XXXXX
- 启动时间 : XX
- 结束时间 : XX
- app版本 :
- 设备类型 :
- ip地址  :
- 网络状态 :
- 
- log记录:[
- 
- @{time   :XXX
- 日志类型 :
- action：xx
- }
- 
- @{time   :XXX
- 日志类型 :
- action：xx
- }
- ]
- }
- 
- */
-
-- (NSMutableDictionary *)dataLog{
-    if(!_dataLog){
-        _dataLog = [[NSMutableDictionary alloc]initWithCapacity:0];
-        [_dataLog setObject:self.deviceInfo.uuid forKey:@"uuid"];
-        [_dataLog setObject:self.deviceInfo.currentTime forKey:@"start_time"];
-        [_dataLog setObject:self.appInfo.appVersion forKey:@"app_version"];
-  
-        [_dataLog setObject:self.deviceInfo.phoneModel forKey:@"phone_model"];
-        [_dataLog setObject:self.deviceInfo.ip forKey:@"ip"];
-        [_dataLog setObject:@(self.deviceInfo.internetConnectionStatus) forKey:@"internet_status"];
-        
-        NSMutableArray *logRecord = [[NSMutableArray alloc]initWithCapacity:0];
-        [_dataLog setObject:logRecord forKey:LOG_RECORD];
-    }
-    return _dataLog;
-}
-
-- (TFAPPInfo *)appInfo{
-    if(!_appInfo){
-        _appInfo = [[TFAPPInfo alloc] init];
-    }
-    return _appInfo;
-}
-
-- (TFDeviceInfo *)deviceInfo{
-    if(!_deviceInfo){
-        _deviceInfo = [[TFDeviceInfo alloc] init];
-    }
-    return _deviceInfo;
-}
-
-#pragma mark - life cycle
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-  
-    }
-    return self;
 }
 // 创建静态对象 防止外部访问
 static TFDataManage *_instance;

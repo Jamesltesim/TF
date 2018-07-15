@@ -87,7 +87,8 @@ static NSString *iden = @"cell";
                         @{@"title":@"废品收购",@"img":@"-"},
                         @{@"title":@"打印/复印",@"img":@"-"}, //打印照片参考趣印 有福 口袋冲印 app
                         @{@"title":@"噪声检测",@"img":@"-"},
-                        @{@"title":@"iBeacon",@"img":@"-"}
+                        @{@"title":@"iBeacon",@"img":@"-"},
+                         @{@"title":@"任务游戏",@"img":@"-"}
                         ],
                       
                     @[@{@"title":@"我的地址",@"img":@"-"},
