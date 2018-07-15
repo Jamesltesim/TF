@@ -36,6 +36,8 @@
 {
     self = [super init];
     if (self) {
+        
+        _internetConnectionStatus = NotReachable;
         /*
          Observe the kNetworkReachabilityChangedNotification. When that notification is posted, the method reachabilityChanged will be called.
          */

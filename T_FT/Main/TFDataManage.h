@@ -15,6 +15,7 @@
 @property (nonatomic,strong) TFAPPInfo *appInfo;
 @property (nonatomic,strong) TFDeviceInfo *deviceInfo;
 
+@property (nonatomic) BOOL isLogin;
 @property (nonatomic,strong) NSString *userName;
 @property (nonatomic,strong) NSString *password;
 @property (nonatomic,strong) NSString *userID;

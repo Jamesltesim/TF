@@ -31,15 +31,26 @@
     NSMutableDictionary *_dataLog;
 }
 
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+//
+//    if([keyPath isEqualToString:@"internetConnectionStatus"]){
+//
+//    }
+//
+//}
 #pragma mark - 公开方法
 
 //程序加载完毕
 - (void)didFinishLaunching{
+//    [self.deviceInfo addObserver:self forKeyPath:@"internetConnectionStatus" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    
     NSMutableArray *marr = [self.dataLog objectForKey:LOG_RECORD];
     NSMutableDictionary *mdict = [[NSMutableDictionary alloc]initWithCapacity:0];
     [mdict setObject:[TFDeviceInfo getCurrentTime] forKey:@"time"];
     [mdict setObject:[NSString stringWithFormat:@"%@",NSStringFromSelector(_cmd)] forKey:APP_LIFE_CYCLE];
     [marr addObject:mdict];
+    
+    
 }
 
 
@@ -89,19 +100,20 @@
     return _dataLog;
 }
 
-//- (TFAPPInfo *)appInfo{
-//    if(!_appInfo){
-//        _appInfo = [[TFAPPInfo alloc] init];
-//    }
-//    return _appInfo;
-//}
-//
-//- (TFDeviceInfo *)deviceInfo{
-//    if(!_deviceInfo){
-//        _deviceInfo = [[TFDeviceInfo alloc] init];
-//    }
-//    return _deviceInfo;
-//}
+- (TFAPPInfo *)appInfo{
+    if(!_appInfo){
+        _appInfo = [[TFAPPInfo alloc] init];
+    }
+    return _appInfo;
+}
+
+- (TFDeviceInfo *)deviceInfo{
+    if(!_deviceInfo){
+        _deviceInfo = [[TFDeviceInfo alloc] init];
+        
+    }
+    return _deviceInfo;
+}
 
 #pragma mark - life cycle
 
@@ -119,8 +131,9 @@
     self = [super init];
     if (self) {
         
-        self.deviceInfo = [[TFDeviceInfo alloc]init];
-        self.appInfo = [[TFAPPInfo alloc]init];
+       
+        
+
 //        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidFinishLaunchingNotification object:nil];
         
 //         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
