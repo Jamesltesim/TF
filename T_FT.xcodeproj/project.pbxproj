@@ -159,6 +159,11 @@
 		90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBBDD320F8FCD500D71B62 /* TBKeyChain.m */; };
 		90BBBDD820F8FCD600D71B62 /* TBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBBDD420F8FCD500D71B62 /* TBCommon.m */; };
 		90CC884420FA39C700242C95 /* UINavigationController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CC884320FA39C700242C95 /* UINavigationController+StatusBar.m */; };
+		90F492CE20FCD1E100C56DD4 /* image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 90F492CB20FCD1E100C56DD4 /* image.bundle */; };
+		90F492CF20FCD1E100C56DD4 /* LHRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F492CD20FCD1E100C56DD4 /* LHRatingView.m */; };
+		90F492D120FCD21500C56DD4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 90F492D020FCD21500C56DD4 /* README.md */; };
+		90F492D520FCDD7D00C56DD4 /* UITabBar+CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F492D320FCDD7D00C56DD4 /* UITabBar+CustomBadge.m */; };
+		90F492D720FCDD9200C56DD4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 90F492D620FCDD9200C56DD4 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -474,6 +479,13 @@
 		90BBBDD620F8FCD500D71B62 /* TBKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBKeyChain.h; sourceTree = "<group>"; };
 		90CC884220FA39C600242C95 /* UINavigationController+StatusBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+StatusBar.h"; sourceTree = "<group>"; };
 		90CC884320FA39C700242C95 /* UINavigationController+StatusBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+StatusBar.m"; sourceTree = "<group>"; };
+		90F492CB20FCD1E100C56DD4 /* image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = image.bundle; sourceTree = "<group>"; };
+		90F492CC20FCD1E100C56DD4 /* LHRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHRatingView.h; sourceTree = "<group>"; };
+		90F492CD20FCD1E100C56DD4 /* LHRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHRatingView.m; sourceTree = "<group>"; };
+		90F492D020FCD21500C56DD4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		90F492D320FCDD7D00C56DD4 /* UITabBar+CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+CustomBadge.m"; sourceTree = "<group>"; };
+		90F492D420FCDD7D00C56DD4 /* UITabBar+CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+CustomBadge.h"; sourceTree = "<group>"; };
+		90F492D620FCDD9200C56DD4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1055,6 +1067,8 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				90F492D220FCDD6800C56DD4 /* 添加红点 */,
+				90F492CA20FCD1BB00C56DD4 /* 欢迎打分控件 */,
 				1A66B99920FC396E00464F4E /* 系统相册 */,
 				1A66B98C20F9D00B00464F4E /* APP信息 */,
 				90BBBDD220F8FCC400D71B62 /* 设备信息 */,
@@ -1300,6 +1314,27 @@
 			path = "设备信息";
 			sourceTree = "<group>";
 		};
+		90F492CA20FCD1BB00C56DD4 /* 欢迎打分控件 */ = {
+			isa = PBXGroup;
+			children = (
+				90F492D020FCD21500C56DD4 /* README.md */,
+				90F492CB20FCD1E100C56DD4 /* image.bundle */,
+				90F492CC20FCD1E100C56DD4 /* LHRatingView.h */,
+				90F492CD20FCD1E100C56DD4 /* LHRatingView.m */,
+			);
+			path = "欢迎打分控件";
+			sourceTree = "<group>";
+		};
+		90F492D220FCDD6800C56DD4 /* 添加红点 */ = {
+			isa = PBXGroup;
+			children = (
+				90F492D620FCDD9200C56DD4 /* README.md */,
+				90F492D420FCDD7D00C56DD4 /* UITabBar+CustomBadge.h */,
+				90F492D320FCDD7D00C56DD4 /* UITabBar+CustomBadge.m */,
+			);
+			path = "添加红点";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1411,10 +1446,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A873A1E20DB987400B1357E /* ShowImageCollectionViewCell.xib in Resources */,
+				90F492CE20FCD1E100C56DD4 /* image.bundle in Resources */,
 				1A66B92820F5FCD000464F4E /* BundlingCollectionViewCell_1.xib in Resources */,
 				1A66B93520F7213100464F4E /* policy.html in Resources */,
 				1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */,
 				1A66B93D20F751D700464F4E /* fingerprint@2x.png in Resources */,
+				90F492D720FCDD9200C56DD4 /* README.md in Resources */,
 				1A66B90520F44BDA00464F4E /* timg1.png in Resources */,
 				1ABDDE5520D3BE0800E900A8 /* ActivityCollectionViewCell.xib in Resources */,
 				1A03A70620DC836200576A03 /* SeckillTableViewCell.xib in Resources */,
@@ -1426,6 +1463,7 @@
 				1AE959C120EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib in Resources */,
 				1A66B99720F9D80E00464F4E /* ReadMe.md in Resources */,
 				1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */,
+				90F492D120FCD21500C56DD4 /* README.md in Resources */,
 				1A66B8DF20F2F4B400464F4E /* ShoppingListImageCell.xib in Resources */,
 				1A66B8C620EF41D200464F4E /* timg1.jpeg in Resources */,
 				1ABDDE5020D3B6EB00E900A8 /* LaunchScreen.storyboard in Resources */,
@@ -1564,6 +1602,7 @@
 				1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */,
 				1ABDDE4720D3B62200E900A8 /* MASConstraintMaker.m in Sources */,
 				1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */,
+				90F492D520FCDD7D00C56DD4 /* UITabBar+CustomBadge.m in Sources */,
 				1A66B97820F8949D00464F4E /* ReadMe.txt in Sources */,
 				9027FED020F8E6FE003F0A51 /* TFQRCodeImageView.m in Sources */,
 				1AE959B220ECA56B00C5BDE4 /* FruitCollectionViewCell.m in Sources */,
@@ -1606,6 +1645,7 @@
 				1A66B94B20F8825900464F4E /* PermissionTool.m in Sources */,
 				9027FEE320F8EF25003F0A51 /* LYEmptyView.m in Sources */,
 				1A66B8CD20EF429B00464F4E /* LoginView.m in Sources */,
+				90F492CF20FCD1E100C56DD4 /* LHRatingView.m in Sources */,
 				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,
 				9027FEBC20F1B778003F0A51 /* TFUtils+UIColor.m in Sources */,

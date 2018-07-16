@@ -37,19 +37,24 @@
 }
 
 - (instancetype) initWithFrame:(CGRect)frame login:(BOOL)isLogin{
-    MeHeaderView *headerView = [[MeHeaderView alloc]initWithFrame:frame];
     
-    if(isLogin){
-        [headerView addSubview:headerView.loginView];
-    }else{
-        [headerView addSubview:headerView.logoutView];
+    if(self = [super initWithFrame:frame]){
+        self.backgroundColor = [UIColor whiteColor];
+        
+        UIImage *image = [UIImage imageNamed:@"timg1.jpeg"];
+        UIImageView *imgView = [[UIImageView alloc]initWithFrame:self.bounds];
+        imgView.image = [UIImage blurryImage:image withBlurLevel:0.5];
+        [self addSubview:imgView];
+        
+        if(isLogin){
+            [self addSubview:self.loginView];
+        }else{
+            [self addSubview:self.logoutView];
+        }
+        
+        [self.logoutView addTapGestureRecognizerWithTarget:self action:@selector(logoutViewClick:)];
     }
-    
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(logoutViewClick:)];
-    [headerView.logoutView addGestureRecognizer:tap];
-    
-    return headerView;
+    return self;
 }
 
 - (void)logoutViewClick:(UITapGestureRecognizer *)tap {

@@ -21,6 +21,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor = [UIColor clearColor];
         [self addSubview:self.headerView];
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(self.headerView.right+10, self.headerView.top, 100, 30)];
         label.text = @"登陆/注册";

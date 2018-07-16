@@ -39,8 +39,7 @@
     [self setUpRootViewController]; //设置根控制器
     
     [self.window makeKeyAndVisible];
-    
-    
+
       [IQKeyboardManager sharedManager].enable = NO;
 //    NSLog(@"是否展示新特性页面：%@",[DCFeaturesTool dc_isShowNewFeatures] ? @"true" : @"false");
     
@@ -51,7 +50,7 @@
         
     }
 
-    NSLog(@"%s",getSerialWithUid(123456789));
+//    NSLog(@"%s",getSerialWithUid(123456789));
 //    检测应用中是否有联网权限
 //    CTCellularData *cellularData = [[CTCellularData alloc]init];
 //    cellularData.cellularDataRestrictionDidUpdateNotifier =  ^(CTCellularDataRestrictedState state){

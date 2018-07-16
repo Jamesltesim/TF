@@ -9,10 +9,13 @@
 #import "MeViewController.h"
 #import "MeHeaderView.h"
 #import "MeFooterReusableView.h"
-
 #import "ScrollImage.h"
 #import "MeCollectionViewCell.h"
 #import "ImgAndTextCollectionViewCell.h"
+#import "TFDataManage.h"
+
+
+
 #import "LostViewController.h"
 #import "PrintPhotoViewController.h"
 //#import "MeNavView.h"
@@ -21,7 +24,7 @@
 #import "FeedbackViewController.h"
 #import "AdressManageController.h"
 
-#import "TFDataManage.h"
+#import "LoginViewController.h"
 
 
 @interface MeViewController ()<UICollectionViewDataSource,
@@ -207,7 +210,13 @@ static NSString *iden = @"cell";
 #pragma mark MeHeaderViewDelegate
 //需要处理登陆
 - (void)logoutViewClick{
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil dismissViewControllerAnimated:YES before:^{
+        
+    }]];
     
+    [self presentViewController:nav animated:YES completion:^{
+        
+    }];
 }
 
 #pragma mark MeFooterViewDelegate
@@ -333,7 +342,10 @@ static NSString *iden = @"cell";
         
         if(indexPath.section == 0){
             headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
-            [headerView addSubview:[[MeHeaderView alloc]initWithFrame:CGRectMake(0, 0, collectionView.width, headerViewHeight) login:NO]];
+            
+            MeHeaderView *meHeader =[[MeHeaderView alloc]initWithFrame:CGRectMake(0, 0, collectionView.width, headerViewHeight) login:NO];
+            meHeader.delegate = self;
+            [headerView addSubview:meHeader];
         }else{
             headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView" forIndexPath:indexPath];
             headerView.backgroundColor =[UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1];

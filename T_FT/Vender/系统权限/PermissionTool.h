@@ -112,4 +112,23 @@
  */
 +(void)getCellularDataPermission:(void (^)(NSInteger authStatus))block;
 
+
+/**
+ 判断推送通知是否开启
+
+ //跳转到 设置界面 
+ UIApplication *application = [UIApplication sharedApplication];
+ NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+ if ([application canOpenURL:url]) {
+ if(@available(iOS 10.0,*)){
+ [application openURL:url options:@{} completionHandler:nil];
+ }else{
+ [application openURL:url];
+ }
+ 
+ 
+ @return return value description
+ */
++ (BOOL)isUserNotificationEnable;
+
 @end
