@@ -18,6 +18,7 @@
 
 #import "algorithm.h"
 #import "TFDataManage.h"
+#import "IQKeyboardManager.h"
 //参考
 //天天果园 app
 
@@ -39,6 +40,8 @@
     
     [self.window makeKeyAndVisible];
     
+    
+      [IQKeyboardManager sharedManager].enable = NO;
 //    NSLog(@"是否展示新特性页面：%@",[DCFeaturesTool dc_isShowNewFeatures] ? @"true" : @"false");
     
     

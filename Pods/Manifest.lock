@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - IQKeyboardManager (6.0.3)
   - MJRefresh (3.1.15.3)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
@@ -23,6 +24,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - IQKeyboardManager
   - MJRefresh
   - SDCycleScrollView (~> 1.75)
   - SDWebImage (>= 4.0.0)
@@ -30,16 +32,18 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - IQKeyboardManager
     - MJRefresh
     - SDCycleScrollView
     - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  IQKeyboardManager: c390e612f4b98c8fd748016470138537dc163ead
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: ef6b53c3c2f549cfba682a37c882c10a6b4fdbb4
+PODFILE CHECKSUM: dde76dd5d625ea886841952b70bebfe6db60bba1
 
 COCOAPODS: 1.5.3

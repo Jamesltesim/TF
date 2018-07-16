@@ -11,3 +11,5 @@ pod 'AFNetworking'
 
 pod 'MJRefresh'
 
+pod 'IQKeyboardManager'
+

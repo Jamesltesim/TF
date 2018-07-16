@@ -8,6 +8,8 @@
 
 #import "MeViewController.h"
 #import "MeHeaderView.h"
+#import "MeFooterReusableView.h"
+
 #import "ScrollImage.h"
 #import "MeCollectionViewCell.h"
 #import "ImgAndTextCollectionViewCell.h"
@@ -16,13 +18,17 @@
 //#import "MeNavView.h"
 #import "NoiseViewController.h"
 #import "iBeaconViewController.h"
+#import "FeedbackViewController.h"
+#import "AdressManageController.h"
+
 #import "TFDataManage.h"
 
 
 @interface MeViewController ()<UICollectionViewDataSource,
                                 UICollectionViewDelegate,
                                 UICollectionViewDelegateFlowLayout,
-                                MeHeaderViewDelegate>{
+                                MeHeaderViewDelegate,
+                                MeFooterReusableViewDelegate>{
     
     CGFloat headerViewHeight;
 }
@@ -99,8 +105,6 @@ static NSString *iden = @"cell";
                       @{@"title":@"客户服务",@"img":@"-"},
                       @{@"title":@"我的收藏",@"img":@"-"},
                       @{@"title":@"欢迎评分",@"img":@"-"},
-                      @{@"title":@"意见反馈",@"img":@"-"},
-                      
                       @{@"title":@"每月账本",@"img":@"-"}, //详情见 柠檬记账 小程序
                                                          // 拓展项目，校园记账 自动生成
                                                          // 账单地图
@@ -164,6 +168,9 @@ static NSString *iden = @"cell";
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView"];
         
+        [_collectionView registerNib:[UINib nibWithNibName:@"MeFooterReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"MeFooterReusableView"];
+        
+//        :[MeFooterReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@""];
         
         //4.设置代理
         _collectionView.delegate = self;
@@ -201,6 +208,14 @@ static NSString *iden = @"cell";
 //需要处理登陆
 - (void)logoutViewClick{
     
+}
+
+#pragma mark MeFooterViewDelegate
+
+- (void)footerViewClick{
+    
+    FeedbackViewController *controller = [[FeedbackViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 
@@ -268,10 +283,13 @@ static NSString *iden = @"cell";
 }
 
 //footer的size
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
-//{
-//    return CGSizeMake(10, 10);
-//}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
+{
+    if(section == self.labArray.count-1){
+        return CGSizeMake(collectionView.width, 110);
+    }
+    return CGSizeZero;
+}
 
 //header的size
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
@@ -310,21 +328,31 @@ static NSString *iden = @"cell";
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     
-    UICollectionReusableView *headerView = [UICollectionReusableView new];
-    
-    if(indexPath.section == 0){
-        headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
-        [headerView addSubview:[[MeHeaderView alloc]initWithFrame:CGRectMake(0, 0, collectionView.width, headerViewHeight) login:NO]];
-    }else{
-        headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView" forIndexPath:indexPath];
-        headerView.backgroundColor =[UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1];
-        UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
-//        label.text = @"这是collectionView的头部";
-        label.font = [UIFont systemFontOfSize:20];
-        [headerView addSubview:label];
+    if([kind isEqualToString:UICollectionElementKindSectionHeader]){
+        UICollectionReusableView *headerView = [UICollectionReusableView new];
+        
+        if(indexPath.section == 0){
+            headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
+            [headerView addSubview:[[MeHeaderView alloc]initWithFrame:CGRectMake(0, 0, collectionView.width, headerViewHeight) login:NO]];
+        }else{
+            headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView" forIndexPath:indexPath];
+            headerView.backgroundColor =[UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1];
+            UILabel *label = [[UILabel alloc] initWithFrame:headerView.bounds];
+            //        label.text = @"这是collectionView的头部";
+            label.font = [UIFont systemFontOfSize:20];
+            [headerView addSubview:label];
+        }
+        
+        return headerView;
+    }else {
+        if( indexPath.section== self.labArray.count - 1){
+             MeFooterReusableView *footerView = (MeFooterReusableView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"MeFooterReusableView" forIndexPath:indexPath];
+            footerView.delegate = self;
+            
+            return footerView;
+        }
     }
-    
-    return headerView;
+    return nil;
 }
 
 
@@ -352,6 +380,11 @@ static NSString *iden = @"cell";
     else if ([indexPath isEqual:[NSIndexPath indexPathForRow:4 inSection:1]]){
         iBeaconViewController *iBeacon = [[iBeaconViewController alloc]initWithNibName:@"iBeaconViewController" bundle:nil];
         [self.navigationController pushViewController:iBeacon animated:YES];
+    }
+    
+    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:0 inSection:2]]){
+        AdressManageController *adress = [[AdressManageController alloc]init];
+        [self.navigationController pushViewController:adress animated:YES];
     }
     
     else{

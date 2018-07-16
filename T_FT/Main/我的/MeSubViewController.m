@@ -14,6 +14,12 @@
 
 @implementation MeSubViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    if(self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]){
+         self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     if(self = [super initWithCoder:aDecoder]){
         self.hidesBottomBarWhenPushed = YES;

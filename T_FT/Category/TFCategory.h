@@ -14,5 +14,6 @@
 #import "UILabel+TF.h"
 #import "UIView+Frame.h"
 #import "UINavigationController+StatusBar.h"
+#import "UIView+UITapGestureRecognizer.h"
 
 #endif /* TFCategory_h */
