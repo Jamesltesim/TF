@@ -454,7 +454,7 @@
     //该方法也可以设置itemSize
     
     //2.初始化collectionView
-    _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:RECT_NAVBAR_AND_TABBAR collectionViewLayout:layout];
     [self.view addSubview:_collectionView];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.showsVerticalScrollIndicator = NO;

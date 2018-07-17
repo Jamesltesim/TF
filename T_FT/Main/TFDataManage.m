@@ -40,9 +40,19 @@
 //}
 #pragma mark - 公开方法
 
+
++ (BOOL)isLogin{
+    TFDataManage *manager = [TFDataManage manager];
+    return manager.userInfo.isLogin;
+}
+
+/**
+ */
 //程序加载完毕
 - (void)didFinishLaunching{
 //    [self.deviceInfo addObserver:self forKeyPath:@"internetConnectionStatus" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+    
+    self.userInfo = [[TFUserInfo alloc]init];
     
     NSMutableArray *marr = [self.dataLog objectForKey:LOG_RECORD];
     NSMutableDictionary *mdict = [[NSMutableDictionary alloc]initWithCapacity:0];

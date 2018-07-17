@@ -9,16 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "TFDeviceInfo.h"
 #import "TFAPPInfo.h"
+#import "TFUserInfo.h"
 
 @interface TFDataManage : NSObject
 
 @property (nonatomic,strong) TFAPPInfo *appInfo;
 @property (nonatomic,strong) TFDeviceInfo *deviceInfo;
+@property (nonatomic,strong) TFUserInfo *userInfo;
 
-@property (nonatomic) BOOL isLogin;
-@property (nonatomic,strong) NSString *userName;
-@property (nonatomic,strong) NSString *password;
-@property (nonatomic,strong) NSString *userID;
 
 /*
  {
@@ -48,8 +46,20 @@
  */
 @property (nonatomic,strong,readonly) NSMutableDictionary *dataLog;
 
+
+
++ (BOOL)isLogin;
+
+
 + (TFDataManage *)manager;
 
+
+
+
+/**
+ 生命周期 方法
+ 
+ */
 //程序加载完毕
 - (void)didFinishLaunching;
 

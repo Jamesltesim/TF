@@ -18,8 +18,13 @@
 #define CONTENT_HEIGHT_NO_BAR_HERGHT     (iPhoneX ? [[UIScreen mainScreen] bounds].size.height - NAV_HEIGHT - HOME_INDICATOR_HEIGHT : [[UIScreen mainScreen] bounds].size.height - NAV_HEIGHT)
 #define CONTENT_HEIGHT_WITH_BAR_HERGHT     (iPhoneX ? [[UIScreen mainScreen] bounds].size.height - NAV_HEIGHT - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT: [[UIScreen mainScreen] bounds].size.height - NAV_HEIGHT - TABNAR_HEIGHT)
 
-#define CONTENT_FRAME_NO_BAR_HERGHT      CGRectMake(0, NAV_HEIGHT, [[UIScreen mainScreen] bounds].size.width, CONTENT_HEIGHT_NO_BAR_HERGHT)
-#define CONTENT_FRAME_WITH_BAR_HERGHT      CGRectMake(0, NAV_HEIGHT, [[UIScreen mainScreen] bounds].size.width, CONTENT_HEIGHT_WITH_BAR_HERGHT)
+
+#define RECT_NAVBAR_AND_TABBAR          CGRectMake(0, NAV_HEIGHT, [[UIScreen mainScreen] bounds].size.width, CONTENT_HEIGHT_WITH_BAR_HERGHT)
+#define RECT_NAVBAR_AND_NOTABBAR        CGRectMake(0, NAV_HEIGHT, [[UIScreen mainScreen] bounds].size.width, CONTENT_HEIGHT_NO_BAR_HERGHT)
+#define RECT_NAVBAR_AND_NOTABBAR_REMOVEHEIGHT(height)       CGRectMake(0, NAV_HEIGHT, [[UIScreen mainScreen] bounds].size.width, CONTENT_HEIGHT_NO_BAR_HERGHT - height)
+
+#define RECT_NONAVBAR_AND_TABBAR        CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, CONTENT_HEIGHT_WITH_BAR_HERGHT + NAV_HEIGHT)
+
 
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width

@@ -11,5 +11,6 @@
 
 #import "Macros_init.h"
 #import "Macros_size.h"
+#import "macros_color.h"
 
 #endif /* TFMacros_h */

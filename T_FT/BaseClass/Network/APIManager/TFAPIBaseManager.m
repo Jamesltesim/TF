@@ -37,7 +37,7 @@
     return _params;
 }
 - (void)loadData{
-    NSLog(@"%@",NSStringFromSelector(_cmd));
+//    NSLog(@"%@",NSStringFromSelector(_cmd));
     
 
     [self GET:test_url parameters:self.params success:^(id responseObject) {

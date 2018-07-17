@@ -157,7 +157,7 @@ static NSString *iden = @"cell";
         
         
         //2.初始化collectionView
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, CONTENT_HEIGHT_WITH_BAR_HERGHT + NAV_HEIGHT) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:RECT_NONAVBAR_AND_TABBAR collectionViewLayout:layout];
         [self.view addSubview:_collectionView];
         _collectionView.backgroundColor = [UIColor whiteColor];
         
@@ -172,8 +172,6 @@ static NSString *iden = @"cell";
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView"];
         
         [_collectionView registerNib:[UINib nibWithNibName:@"MeFooterReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"MeFooterReusableView"];
-        
-//        :[MeFooterReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@""];
         
         //4.设置代理
         _collectionView.delegate = self;
@@ -343,7 +341,7 @@ static NSString *iden = @"cell";
         if(indexPath.section == 0){
             headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
             
-            MeHeaderView *meHeader =[[MeHeaderView alloc]initWithFrame:CGRectMake(0, 0, collectionView.width, headerViewHeight) login:NO];
+            MeHeaderView *meHeader =[[MeHeaderView alloc]initWithFrame:CGRectMake(0, 0, collectionView.width, headerViewHeight) login:[TFDataManage isLogin]];
             meHeader.delegate = self;
             [headerView addSubview:meHeader];
         }else{

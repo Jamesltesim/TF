@@ -34,4 +34,10 @@
 - (void)setOrigin:(CGPoint)point;
 - (void)setAddTop:(CGFloat)top;
 - (void)setAddLeft:(CGFloat)left;
+
+
+- (void)add_cornerRadius:(CGFloat)radius;
+- (void)add_small_cornerRadius;
+- (void)add_middle_cornerRadius;
+
 @end

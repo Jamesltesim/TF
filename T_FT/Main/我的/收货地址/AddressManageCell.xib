@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="172" id="KGk-i7-Jjw" customClass="AdressManageCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="172" id="KGk-i7-Jjw" userLabel="AddressManageCell" customClass="AddressManageCell">
             <rect key="frame" x="0.0" y="0.0" width="598" height="172"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -22,22 +22,22 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2U-VM-SlS" userLabel="topView">
                         <rect key="frame" x="8" y="0.0" width="582" height="110.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFZ-AQ-m1Z" userLabel="name">
-                                <rect key="frame" x="5" y="5" width="42" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFZ-AQ-m1Z" userLabel="name">
+                                <rect key="frame" x="5" y="5" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8j-tB-7Rr" userLabel="number">
-                                <rect key="frame" x="67" y="5" width="60" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8j-tB-7Rr" userLabel="number">
+                                <rect key="frame" x="68" y="5" width="60" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="M3c-mq-xyz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-WY-eRJ" userLabel="address">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-WY-eRJ" userLabel="address">
                                 <rect key="frame" x="5" y="30.5" width="567" height="75"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -61,33 +61,43 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXh-nD-jma" userLabel="bottomView">
                         <rect key="frame" x="8" y="111.5" width="582" height="60"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6E-qg-gkF" userLabel="imgBtn">
-                                <rect key="frame" x="5" y="14.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6E-qg-gkF" userLabel="imgBtn">
+                                <rect key="frame" x="5" y="17.5" width="90" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="设为默认" image="address_circle.png">
+                                    <color key="titleColor" red="0.6705882353" green="0.6705882353" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="defaultAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7Qo-oX-zer"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设为默认" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7j-DK-03X" userLabel="moren">
-                                <rect key="frame" x="56" y="19" width="70" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPD-Do-U4O" userLabel="edit">
-                                <rect key="frame" x="495" y="15" width="31" height="30"/>
-                                <state key="normal" title="编辑"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPD-Do-U4O" userLabel="edit">
+                                <rect key="frame" x="443" y="18" width="57" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="编辑" image="address_edit.png">
+                                    <color key="titleColor" red="0.6705882353" green="0.6705882353" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="editAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="597-ZB-npi"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0e-5Q-Kv7" userLabel="cancel">
-                                <rect key="frame" x="541" y="14.5" width="31" height="30"/>
-                                <state key="normal" title="删除"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0e-5Q-Kv7" userLabel="cancel">
+                                <rect key="frame" x="515" y="17.5" width="57" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="删除" image="address_cancel.png">
+                                    <color key="titleColor" red="0.6705882353" green="0.6705882353" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cannelAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Fh7-8r-Z6F"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="N0e-5Q-Kv7" firstAttribute="centerY" secondItem="g6E-qg-gkF" secondAttribute="centerY" id="0cb-um-BSX"/>
-                            <constraint firstItem="B7j-DK-03X" firstAttribute="centerY" secondItem="g6E-qg-gkF" secondAttribute="centerY" id="73a-d1-Xfl"/>
                             <constraint firstAttribute="height" constant="60" id="AN8-ml-Q0M"/>
                             <constraint firstItem="g6E-qg-gkF" firstAttribute="centerY" secondItem="NXh-nD-jma" secondAttribute="centerY" id="DFY-aT-E7B"/>
                             <constraint firstItem="vPD-Do-U4O" firstAttribute="centerY" secondItem="g6E-qg-gkF" secondAttribute="centerY" id="VOq-Tn-u33"/>
-                            <constraint firstItem="B7j-DK-03X" firstAttribute="leading" secondItem="g6E-qg-gkF" secondAttribute="trailing" constant="5" id="fjk-Gx-DRj"/>
                             <constraint firstItem="N0e-5Q-Kv7" firstAttribute="leading" secondItem="vPD-Do-U4O" secondAttribute="trailing" constant="15" id="lVm-zo-Brk"/>
                             <constraint firstAttribute="trailing" secondItem="N0e-5Q-Kv7" secondAttribute="trailing" constant="10" id="vT4-1z-Wbx"/>
                         </constraints>
@@ -109,6 +119,9 @@
             <connections>
                 <outlet property="address" destination="m7g-WY-eRJ" id="9Tw-Fq-qtn"/>
                 <outlet property="bottomView" destination="NXh-nD-jma" id="EIK-E2-ZGw"/>
+                <outlet property="cancelBtn" destination="N0e-5Q-Kv7" id="mTa-dj-P7W"/>
+                <outlet property="defaultBtn" destination="g6E-qg-gkF" id="xas-P2-8Tb"/>
+                <outlet property="eidtBtn" destination="vPD-Do-U4O" id="kDC-62-vEt"/>
                 <outlet property="name" destination="rFZ-AQ-m1Z" id="FOI-xc-OSV"/>
                 <outlet property="phoneNumber" destination="P8j-tB-7Rr" id="AtH-bP-Nud"/>
                 <outlet property="topView" destination="U2U-VM-SlS" id="vJc-tF-01l"/>
@@ -116,4 +129,9 @@
             <point key="canvasLocation" x="173" y="118"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="address_cancel.png" width="24" height="24"/>
+        <image name="address_circle.png" width="24" height="24"/>
+        <image name="address_edit.png" width="24" height="24"/>
+    </resources>
 </document>

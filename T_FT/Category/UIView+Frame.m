@@ -143,4 +143,17 @@
     self.frame = frame;
 }
 
+
+- (void)add_cornerRadius:(CGFloat)radius{
+    self.layer.cornerRadius = radius;
+}
+- (void)add_small_cornerRadius{
+    self.layer.cornerRadius = 4;
+}
+
+- (void)add_middle_cornerRadius{
+    self.layer.cornerRadius = self.height/2;
+}
+
+
 @end

@@ -21,7 +21,7 @@
 
 - (UITableView *)tableView{
     if(!_tableView){
-        _tableView = [[UITableView alloc]initWithFrame:CONTENT_FRAME_NO_BAR_HERGHT style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc]initWithFrame:RECT_NAVBAR_AND_NOTABBAR style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
     
