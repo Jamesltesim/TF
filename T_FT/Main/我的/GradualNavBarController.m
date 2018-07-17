@@ -54,7 +54,7 @@
     
     //根据透明度来生成图片
     //找最大值/
-    CGFloat alpha = (offset-64 ) * 0.4/ 44.0;   // (200 - 64) / 136.0f
+    CGFloat alpha = (offset-NAV_HEIGHT) * 0.4/ 44.0;   // (200 - 64) / 136.0f
     if (alpha >= 1) {
         alpha = 0.99;
     }else if (alpha < 0){
