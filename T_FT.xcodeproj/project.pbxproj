@@ -188,6 +188,7 @@
 		90F492D120FCD21500C56DD4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 90F492D020FCD21500C56DD4 /* README.md */; };
 		90F492D520FCDD7D00C56DD4 /* UITabBar+CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F492D320FCDD7D00C56DD4 /* UITabBar+CustomBadge.m */; };
 		90F492D720FCDD9200C56DD4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 90F492D620FCDD9200C56DD4 /* README.md */; };
+		90F492DF20FE412F00C56DD4 /* XXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F492DD20FE412F00C56DD4 /* XXTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -550,6 +551,8 @@
 		90F492D320FCDD7D00C56DD4 /* UITabBar+CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+CustomBadge.m"; sourceTree = "<group>"; };
 		90F492D420FCDD7D00C56DD4 /* UITabBar+CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+CustomBadge.h"; sourceTree = "<group>"; };
 		90F492D620FCDD9200C56DD4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		90F492DD20FE412F00C56DD4 /* XXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTextView.m; sourceTree = "<group>"; };
+		90F492DE20FE412F00C56DD4 /* XXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTextView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1131,6 +1134,7 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				90F492DC20FE410700C56DD4 /* TextView */,
 				1AE423F520FDB84B009E8D13 /* 地址选择 */,
 				1AE4240A20FDD8DA009E8D13 /* 自定义AlertAndSheet */,
 				1AE423D420FD7D76009E8D13 /* app数据管理 */,
@@ -1479,6 +1483,15 @@
 			path = "添加红点";
 			sourceTree = "<group>";
 		};
+		90F492DC20FE410700C56DD4 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				90F492DE20FE412F00C56DD4 /* XXTextView.h */,
+				90F492DD20FE412F00C56DD4 /* XXTextView.m */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1770,6 +1783,7 @@
 				9027FEE220F8EF25003F0A51 /* UIScrollView+Empty.m in Sources */,
 				1AE423C520FC641C009E8D13 /* FeedbackViewController.m in Sources */,
 				1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */,
+				90F492DF20FE412F00C56DD4 /* XXTextView.m in Sources */,
 				1AC816FB20E2238100B1EE89 /* PrintPhotoTableViewCell.m in Sources */,
 				1AE959C020EE0D2900C5BDE4 /* DrinksCollectionViewCell.m in Sources */,
 				1ABDDE4520D3B62200E900A8 /* MASCompositeConstraint.m in Sources */,
