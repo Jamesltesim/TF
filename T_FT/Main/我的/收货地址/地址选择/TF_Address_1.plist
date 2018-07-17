@@ -1,0 +1,36 @@
+{
+	data = {
+		"sh_items" = (
+			{
+				"sh_id" = 1;
+				"sh_name" = "\U5317\U4eac";
+				"sh_parentid" = 0;
+			},
+			{
+				"sh_id" = 2;
+				"sh_name" = "\U5929\U6d25";
+				"sh_parentid" = 0;
+			},
+			{
+				"sh_id" = 3;
+				"sh_name" = "\U6cb3\U5317\U7701";
+				"sh_parentid" = 0;
+			},
+			{
+				"sh_id" = 4;
+				"sh_name" = "\U5c71\U897f\U7701";
+				"sh_parentid" = 0;
+			},
+			{
+				"sh_id" = 5;
+				"sh_name" = "\U5185\U8499\U53e4\U81ea\U6cbb\U533a";
+				"sh_parentid" = 0;
+			},
+			{
+				"sh_id" = 6;
+				"sh_name" = "\U9ed1\U9f99\U6c5f\U5927\U5b66";
+				"sh_parentid" = 0;
+			},
+		);
+	};
+}

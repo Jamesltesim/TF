@@ -6,7 +6,7 @@
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#define RGBA (r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 
 
 // 十六进制颜色
@@ -22,5 +22,8 @@
 
 #define THEME_BACKGROUND_VIEW_GRAY [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1]
 #define THEME_COLOR_RED [UIColor colorWithRed:234/255.0 green:52/255.0 blue:107/255.0 alpha:1]
+
+#define FONT_COLOR_GRAY RGBA(191,191,191,1)
+#define FONT_COLOR_BLACK RGBA(51,51,51,1)
 
 

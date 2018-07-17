@@ -7,6 +7,9 @@
 //
 
 #import "AdressManageController.h"
+#import "NewAddressViewController.h"
+#import "EditAddressViewController.h"
+
 #import "AddressManageCell.h"
 
 @interface AdressManageController ()<UITableViewDelegate,UITableViewDataSource,AddressManageCellDelegate>
@@ -27,7 +30,13 @@
 }
 
 - (void)editAction:(AddressManageCell *)cell index:(NSInteger)index{
+    NSDictionary *dict = self.dataArray[index];
     
+    EditAddressViewController *controller = [[EditAddressViewController alloc]init];
+    controller.name = dict[@"name"];
+    controller.phone = dict[@"number"];
+    controller.address = dict[@"address"];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)cancelAction:(AddressManageCell *)cell index:(NSInteger)index{
@@ -55,9 +64,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.navView.title = @"地址管理";
     self.view.backgroundColor = THEME_BACKGROUND_VIEW_GRAY;
-    UITableView *tabView = [[UITableView alloc]initWithFrame:RECT_NAVBAR_AND_NOTABBAR_REMOVEHEIGHT(50) style:UITableViewStylePlain];
+    UITableView *tabView = [[UITableView alloc]initWithFrame:RECT_NAVBAR_AND_NOTABBAR_REMOVEHEIGHT(60) style:UITableViewStylePlain];
     tabView.delegate = self;
     tabView.dataSource = self;
 //    tabView
@@ -87,14 +96,16 @@
     [newAddress setTitle:@"新建地址" forState:UIControlStateNormal];
     newAddress.titleLabel.font = [UIFont systemFontOfSize:15];
     [newAddress setBackgroundColor:THEME_COLOR_RED];
-    newAddress.frame = CGRectMake(20, tabView.bottom+5, SCREEN_WIDTH-40, 45);
+    newAddress.frame = CGRectMake(20, tabView.bottom+10, SCREEN_WIDTH-40, 45);
     [newAddress addTarget:self action:@selector(addNewAddress:) forControlEvents:UIControlEventTouchUpInside];
     [newAddress add_middle_cornerRadius];
     [self.view addSubview:newAddress];
 }
 
 - (void)addNewAddress:(UIButton *)dender {
+    NewAddressViewController *controller = [[NewAddressViewController alloc]init];
     
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

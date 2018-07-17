@@ -14,4 +14,5 @@
 
 - (void)addTapGestureRecognizerWithTarget:(id)target action:(SEL)action;
 
+//- (void)cancelAllResponder;
 @end

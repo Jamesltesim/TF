@@ -19,4 +19,23 @@
     
     [self addGestureRecognizer:tap];
 }
+
+
+/***/
+- (void)cancelAllResponder{
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cancelAll:)];
+    
+    [self addGestureRecognizer:tap];
+    
+}
+
+- (void)cancelAll:(UITapGestureRecognizer *)tap {
+    for(UIView *tmp in self.subviews){
+        if([tmp isKindOfClass:[UITextField class]]){
+            UITextField *field = (UITextField *)tmp;
+            [field  resignFirstResponder];
+        }
+    }
+}
+/***/
 @end

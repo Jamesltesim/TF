@@ -30,11 +30,11 @@
     [path moveToPoint:CGPointMake(-5, -5)];
     //添加直线
 //    [path addLineToPoint:CGPointMake(self.displayView.width /2, -5)];
-    [path addLineToPoint:CGPointMake(self.displayView.width -10, -5)];
+    [path addLineToPoint:CGPointMake(self.displayView.width + 10, -5)];
 //    [path addLineToPoint:CGPointMake(self.displayView.width-5 , self.displayView.height /2)];
-    [path addLineToPoint:CGPointMake(self.displayView.width -10, self.displayView.height-10)];
+    [path addLineToPoint:CGPointMake(self.displayView.width +10, self.displayView.height+10)];
 //    [path addLineToPoint:CGPointMake(self.displayView.width /2, self.displayView.height +5)];
-    [path addLineToPoint:CGPointMake(-5, self.displayView.height-10 )];
+    [path addLineToPoint:CGPointMake(-5, self.displayView.height+10 )];
 //    [path addLineToPoint:CGPointMake(-5, self.displayView.height /2)];
     [path addLineToPoint:CGPointMake(-5, -5)];
     //设置阴影路径
