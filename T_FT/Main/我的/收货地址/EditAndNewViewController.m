@@ -29,7 +29,7 @@
     UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(10, top, 80, 50)];
     lab.text = text;
     lab.font = [UIFont fontWithName:@"Heiti TC" size:15];
-    lab.textColor = FONT_COLOR_BLACK;
+    lab.textColor = THEME_FONT_COLOR_BLACK;
     [self.view addSubview:lab];
     
     UITextField *field = [[UITextField alloc]initWithFrame:CGRectMake(lab.right, top, self.view.width-lab.right-5, lab.height)];
@@ -51,7 +51,7 @@
     UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(10, top, 80, 34)];
     lab.text = text;
     lab.font = [UIFont fontWithName:@"Heiti TC" size:15];
-    lab.textColor = FONT_COLOR_BLACK;
+    lab.textColor = THEME_FONT_COLOR_BLACK;
     [self.view addSubview:lab];
     
     UITextView *textView = [[UITextView alloc]initWithFrame:CGRectMake(lab.right, top+1, self.view.width-lab.right, 100)];

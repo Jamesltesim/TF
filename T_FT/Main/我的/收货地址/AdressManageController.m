@@ -9,6 +9,7 @@
 #import "AdressManageController.h"
 #import "NewAddressViewController.h"
 #import "EditAddressViewController.h"
+#import "YXAlertController.h"
 
 #import "AddressManageCell.h"
 
@@ -40,26 +41,66 @@
 }
 
 - (void)cancelAction:(AddressManageCell *)cell index:(NSInteger)index{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确定要删除吗?" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    YXAlertController *alertController = [YXAlertController alertControllerWithTitle:@"是否确认删除该地址?" message:@"" style:YXAlertControllerStyleAlert];
+    YXAlertAction *cancel = [YXAlertAction actionWithTitle:@"取消" style:1 handler:^(YXAlertAction * _Nonnull action) {
+        NSLog(@"custom:点击了取消");
+    }];
     
-    //    //可以给alertview中添加一个输入框
-    //    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-    //        textField.placeholder = @"alert中的文本";
+    
+    YXAlertAction *done = [YXAlertAction actionWithTitle:@"确定" style:2 handler:^(YXAlertAction * _Nonnull action) {
+        NSLog(@"custom:点击了确定");
+    }];
+    
+    //    YXAlertAction *done1 = [YXAlertAction actionWithTitle:@"确认" style:0 handler:^(YXAlertAction * _Nonnull action) {
+    //
     //    }];
     //
-    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"点击了按钮1，进入按钮1的事件");
-//        //textFields是一个数组，获取所输入的字符串
-//        NSLog(@"%@",alert.textFields.lastObject.text);
-    }];
-    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"点击了取消");
-    }];
+    //    YXAlertAction *done2 = [YXAlertAction actionWithTitle:@"确认" style:0 handler:^(YXAlertAction * _Nonnull action) {
+    //
+    //    }];
+    //    YXAlertAction *done3 = [YXAlertAction actionWithTitle:@"确认" style:0 handler:^(YXAlertAction * _Nonnull action) {
+    //
+    //    }];YXAlertAction *done4 = [YXAlertAction actionWithTitle:@"确认" style:0 handler:^(YXAlertAction * _Nonnull action) {
+    //
+    //    }];
+    //    YXAlertAction *done5 = [YXAlertAction actionWithTitle:@"确认" style:0 handler:^(YXAlertAction * _Nonnull action) {
+    //
+    //    }];
+    //    YXAlertAction *done6 = [YXAlertAction actionWithTitle:@"确认" style:0 handler:^(YXAlertAction * _Nonnull action) {
+    //
+    //    }];
+    //    YXAlertAction *done7 = [YXAlertAction actionWithTitle:@"确认" style:0 handler:^(YXAlertAction * _Nonnull action) {
+    //
+    //    }];
+    //    YXAlertAction *done8 = [YXAlertAction actionWithTitle:@"确认" style:0 handler:^(YXAlertAction * _Nonnull action) {
+    //
+    //    }];
+    //    YXAlertAction *done9 = [YXAlertAction actionWithTitle:@"确认" style:0 handler:^(YXAlertAction * _Nonnull action) {
+    //
+    //    }];
+    //自定义颜色设置
+    alertController.layout.doneActionTitleColor = [UIColor whiteColor];
+    alertController.layout.cancelActionBackgroundColor = [UIColor whiteColor];
+    alertController.layout.cancelActionTitleColor =THEME_FONT_COLOR_BLACK;
+    alertController.layout.doneActionBackgroundColor = THEME_COLOR_RED;
+    alertController.layout.lineColor = THEME_BACKGROUND_VIEW_GRAY;
+    alertController.layout.topViewBackgroundColor = [UIColor whiteColor];
+    alertController.layout.titleColor = THEME_FONT_COLOR_BLACK;
+    [alertController layoutSettings];
     
-    [alert addAction:action1];
-    [alert addAction:action2];
+    [alertController addAction:cancel];
+    [alertController addAction:done];
+    //    [alertController addAction:done1];
+    //    [alertController addAction:done2];
+    //    [alertController addAction:done3];
+    //    [alertController addAction:done4];
+    //    [alertController addAction:done5];
+    //    [alertController addAction:done6];
+    //    [alertController addAction:done7];
+    //    [alertController addAction:done8];
+    //    [alertController addAction:done9];
     
-    [self presentViewController:alert animated:YES completion:nil];
+    [alertController presentFromViewController:self animated:YES completion:nil];
 }
 
 - (void)viewDidLoad {

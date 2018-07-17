@@ -1131,6 +1131,7 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				1AE423F520FDB84B009E8D13 /* 地址选择 */,
 				1AE4240A20FDD8DA009E8D13 /* 自定义AlertAndSheet */,
 				1AE423D420FD7D76009E8D13 /* app数据管理 */,
 				90F492D220FCDD6800C56DD4 /* 添加红点 */,
@@ -1275,7 +1276,6 @@
 		1AE423CB20FC8E8B009E8D13 /* 收货地址 */ = {
 			isa = PBXGroup;
 			children = (
-				1AE423F520FDB84B009E8D13 /* 地址选择 */,
 				1AE423E920FD8C44009E8D13 /* address_edit@2x.png */,
 				1AE423E720FD8BFC009E8D13 /* address_cancel@2x.png */,
 				1AE423DE20FD882F009E8D13 /* address_circle@2x.png */,

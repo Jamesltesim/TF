@@ -72,7 +72,7 @@ static UIWindow *alertWindow;
     if (_blackCoverView == nil) {
         self.blackCoverView = ({
             UIView *coverView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H)];
-            coverView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.4];
+            coverView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
             coverView.alpha = 0;
             coverView;
         });
