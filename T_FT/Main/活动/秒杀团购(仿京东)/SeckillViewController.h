@@ -10,6 +10,7 @@
 
 @interface SeckillViewController : UIViewController
 
+
 @property (nonatomic) CGRect adjustmentRect;
 
 @end

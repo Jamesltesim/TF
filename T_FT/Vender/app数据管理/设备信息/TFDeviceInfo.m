@@ -11,6 +11,9 @@
 #import "TFDeviceInfo.h"
 #import "TBKeyChain.h"
 
+//获得网络运营商
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
 
 @interface TFDeviceInfo()
 
@@ -197,5 +200,13 @@
 
 - (NSString *)phoneModel{
     return @"";
+}
+
+//网络运营商
+- (NSString *)carrierName{
+        CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
+        CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
+        NSString *carrierName=[carrier carrierName];
+        return carrierName;
 }
 @end

@@ -23,7 +23,7 @@
     self.number.text = [NSString stringWithFormat:@"%ld",count];
     self.price.text = [NSString stringWithFormat:@"¥ %.2f",price];
     
-    if(count > 1){
+    if(count > 99){
         self.number.text = @"99+";
     }
 }

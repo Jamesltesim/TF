@@ -14,9 +14,9 @@
                                     UITableViewDelegate,
                                     UITableViewDataSource>
 
-@property (nonatomic,strong) UITableView *tabView;
-@property (nonatomic,strong) NSArray *dataArray;
 
+@property (nonatomic,strong) NSArray *dataArray;
+@property (nonatomic,strong) UITableView *tabView;
 @property (nonatomic,strong) ScrollImage *headerView;
 
 @end

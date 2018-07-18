@@ -17,9 +17,12 @@
 #import "MJChiBaoZiHeader.h"
 #import "HomeheaderReusableView.h"
 #import "FloatingView.h"
-#import "ShoppingListViewController.h"
+
 #import "TFAPICenter.h"
 #import "TFAPIForHomebanner.h"
+
+#import "ShoppingListViewController.h"
+#import "LTPersonMainPageDemo.h"
 
 
 
@@ -144,8 +147,8 @@
 //        [alert addAction:cancleAction];
 //        [alert addAction:defintAction];
 //        [strongSelf presentViewController:alert animated:YES completion:nil];
-        [strongSelf.navigationController pushViewController:[[ShoppingListViewController alloc]init] animated:YES];
-        
+//        [strongSelf.navigationController pushViewController:[[ShoppingListViewController alloc]init] animated:YES];
+        [strongSelf.navigationController pushViewController:[[LTPersonMainPageDemo alloc]init] animated:YES];
     };
 
 //    [TFAPICenter loadData:TFAPIRequestNameForHomeBannner delegate:weakSelf];

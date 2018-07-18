@@ -68,6 +68,7 @@
  */
 @property (nonatomic, assign) NSInteger contentViewCurrentIndex;
 
+
 /**
  设置contentView能否左右滑动，默认YES
  */

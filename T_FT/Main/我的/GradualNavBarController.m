@@ -29,10 +29,6 @@
     // 取消掉底部的那根线
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
-    
-//    [self.gradualNavView setBackImage:[[UIImage alloc] init]];
-  
-//    self.gradualNavView = [MeNavView creatNavView];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -46,12 +42,6 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat offset = scrollView.contentOffset.y + NAV_HEIGHT;
     
-    //    CGFloat imgH = oriHeight - offset;
-    //    if (imgH < 64) {
-    //        imgH = 64;
-    //    }
-    //        self.imageHeight.constant = imgH;
-    
     //根据透明度来生成图片
     //找最大值/
     CGFloat alpha = (offset-NAV_HEIGHT) * 0.4/ 44.0;   // (200 - 64) / 136.0f
@@ -59,17 +49,11 @@
         alpha = 0.99;
     }else if (alpha < 0){
         alpha = 0;
-        
-        
-        
     }
     
     if(alpha >0.3){
-       
-//         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
         self.changeStatusBarColor = YES;
     }else{
-//          [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
         self.changeStatusBarColor = NO;
     }
      [self preferredStatusBarStyle];

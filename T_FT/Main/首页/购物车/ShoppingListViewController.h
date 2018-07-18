@@ -6,8 +6,8 @@
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#import "MeSubViewController.h"
+#import "LTPersonMainPageDemo.h"
 
-@interface ShoppingListViewController : MeSubViewController
+@interface ShoppingListViewController : LTPersonMainPageDemo
 
 @end

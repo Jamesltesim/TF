@@ -32,6 +32,8 @@ static NSString *collectionCellIdentifier = @"collectionCellIdentifier";
         self.delegate = delegate;
         
         [self setupSubViews];
+        
+       
     }
     return self;
 }
@@ -39,6 +41,7 @@ static NSString *collectionCellIdentifier = @"collectionCellIdentifier";
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+
 }
 
 #pragma mark --LazyLoad

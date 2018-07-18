@@ -39,6 +39,9 @@
 @property (nonatomic,strong,readonly) NSString *systemLanguage;
 @property (nonatomic,strong,readonly) NSString *currentTime;
 
+//运营商
+@property (nonatomic,strong,readonly) NSString *carrierName;
+//网络相关
 @property (nonatomic,readonly) NetworkStatus remoteHostNetworkStatus;
 @property (nonatomic,readonly) NetworkStatus internetConnectionStatus;
 

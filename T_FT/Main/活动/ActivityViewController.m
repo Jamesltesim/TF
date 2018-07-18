@@ -68,7 +68,7 @@
     SeckillViewController *controller4 = [[SeckillViewController alloc]init];
     SeckillViewController *controller5 = [[SeckillViewController alloc]init];
     
-    
+
     controller1.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
     controller2.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
     controller3.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
@@ -81,6 +81,8 @@
     [self.view addSubview:_pageContentView];
 }
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -91,11 +93,6 @@
     [self.view addSubview:self.navView];
     self.navView.segmentTitleDelegate = self;
     [self.navView.titleView loadTitles: @[@"10:00",@"12:00",@"14:00",@"16:00",@"18:00"]];
-    
-    
-   
-    
-   
 }
 
 
