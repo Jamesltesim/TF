@@ -19,14 +19,13 @@
 
 #import "LTPersonalMainPageTestVC.h"
 #import "LTScrollView-Swift.h"
-#import "TestTableViewCell.h"
-#import "MJRefresh.h"
 
 #define kIPhoneX ([UIScreen mainScreen].bounds.size.height == 812.0)
 
 @interface LTPersonalMainPageTestVC () <UITableViewDelegate, UITableViewDataSource>
 
 @property(strong, nonatomic) UITableView *tableView;
+@property(assign, nonatomic) NSInteger totalCount;
 
 @end
 
@@ -49,41 +48,14 @@
     
 #warning 重要 必须赋值
     self.glt_scrollView = self.tableView;
-    
-
-    [self setupRefreshData];
 }
-
-- (void)setupRefreshData {
-    
-    
-    __weak typeof(self) weakSelf = self;
-//    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            weakSelf.totalCount += 10;
-//            [weakSelf.tableView reloadData];
-//            [weakSelf.tableView.mj_footer endRefreshing];
-//        });
-//    }];
-    
-    
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            weakSelf.totalCount = 20;
-            [weakSelf.tableView reloadData];
-            [weakSelf.tableView.mj_header endRefreshing];
-        });
-    }];
-    
-}
-
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.totalCount;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TestTableViewCell *cell = [TestTableViewCell cellWithTableView:tableView];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""];
     cell.textLabel.text = [NSString stringWithFormat:@"第 %ld 行", indexPath.row + 1];
     return cell;
 }
@@ -103,7 +75,7 @@
         //这个44为导航高度
         CGFloat Y = statusBarH + 44;
         //这个44为切换条的高度
-        CGFloat H = kIPhoneX ? (self.view.bounds.size.height - Y - 34) : self.view.bounds.size.height - Y - 44;
+        CGFloat H = kIPhoneX ? (self.view.bounds.size.height - Y - 34 -44) : self.view.bounds.size.height - Y - 44;
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, [UIScreen mainScreen].bounds.size.width, H) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;

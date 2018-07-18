@@ -126,7 +126,6 @@
 		1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD2F0620E35F8F00301950 /* SeckillViewController.m */; };
 		1ADA5F7A20FF280B0070D069 /* LTPersonalMainPageTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F7620FF280B0070D069 /* LTPersonalMainPageTestVC.m */; };
 		1ADA5F7B20FF280B0070D069 /* LTPersonMainPageDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F7920FF280B0070D069 /* LTPersonMainPageDemo.m */; };
-		1ADA5F7E20FF28930070D069 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F7C20FF28920070D069 /* TestTableViewCell.m */; };
 		1AE423C020FC4998009E8D13 /* MeFooterReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE423BE20FC4998009E8D13 /* MeFooterReusableView.m */; };
 		1AE423C120FC4998009E8D13 /* MeFooterReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE423BF20FC4998009E8D13 /* MeFooterReusableView.xib */; };
 		1AE423C520FC641C009E8D13 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE423C320FC641C009E8D13 /* FeedbackViewController.m */; };
@@ -445,8 +444,6 @@
 		1ADA5F7720FF280B0070D069 /* LTPersonalMainPageTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPersonalMainPageTestVC.h; sourceTree = "<group>"; };
 		1ADA5F7820FF280B0070D069 /* LTPersonMainPageDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPersonMainPageDemo.h; sourceTree = "<group>"; };
 		1ADA5F7920FF280B0070D069 /* LTPersonMainPageDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPersonMainPageDemo.m; sourceTree = "<group>"; };
-		1ADA5F7C20FF28920070D069 /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
-		1ADA5F7D20FF28930070D069 /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
 		1AE423BD20FC4998009E8D13 /* MeFooterReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeFooterReusableView.h; sourceTree = "<group>"; };
 		1AE423BE20FC4998009E8D13 /* MeFooterReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeFooterReusableView.m; sourceTree = "<group>"; };
 		1AE423BF20FC4998009E8D13 /* MeFooterReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeFooterReusableView.xib; sourceTree = "<group>"; };
@@ -784,8 +781,6 @@
 			children = (
 				1ADA5F7720FF280B0070D069 /* LTPersonalMainPageTestVC.h */,
 				1ADA5F7620FF280B0070D069 /* LTPersonalMainPageTestVC.m */,
-				1ADA5F7D20FF28930070D069 /* TestTableViewCell.h */,
-				1ADA5F7C20FF28920070D069 /* TestTableViewCell.m */,
 				1ADA5F7820FF280B0070D069 /* LTPersonMainPageDemo.h */,
 				1ADA5F7920FF280B0070D069 /* LTPersonMainPageDemo.m */,
 				1A66B8F220F35F3E00464F4E /* View */,
@@ -1782,7 +1777,6 @@
 				1A9ABF8220D4E36700DC1F1B /* ADView.m in Sources */,
 				1AE423D720FD7DEB009E8D13 /* TFUserInfo.m in Sources */,
 				1AE4240220FDB867009E8D13 /* AddressAreaModel.m in Sources */,
-				1ADA5F7E20FF28930070D069 /* TestTableViewCell.m in Sources */,
 				1A66B8D720F2F31300464F4E /* ShoppingListViewController.m in Sources */,
 				1A873A1D20DB987400B1357E /* ShowImageCollectionViewCell.m in Sources */,
 				1A2BE01820C3CB670023C55D /* UIView+Frame.m in Sources */,

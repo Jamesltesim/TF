@@ -10,6 +10,6 @@
 
 @interface LTPersonalMainPageTestVC : UIViewController
 
-@property(assign, nonatomic) NSInteger totalCount;
+
 
 @end

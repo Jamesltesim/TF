@@ -29,6 +29,14 @@
 
 #pragma mark---  lefe cycle  ---
 
+- (instancetype)initWithTitles:(NSArray<NSString *>*)titles{
+    if(self = [super init]){
+        self.titles = titles;
+         self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+    
 - (instancetype)init
     {
         self = [super init];
@@ -39,8 +47,9 @@
     }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = YES;
 }
+
+
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];

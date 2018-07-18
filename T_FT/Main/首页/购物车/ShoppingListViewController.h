@@ -10,4 +10,5 @@
 
 @interface ShoppingListViewController : LTPersonMainPageDemo
 
+- (instancetype)initWithTitles:(NSArray<NSString *>*)titles;
 @end

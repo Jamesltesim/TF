@@ -27,7 +27,7 @@
 @interface LTPersonMainPageDemo () <LTSimpleScrollViewDelegate>
 
 @property(copy, nonatomic) NSArray <UIViewController *> *viewControllers;
-@property(copy, nonatomic) NSArray <NSString *> *titles;
+
 @property(strong, nonatomic) LTLayout *layout;
 
 @property(strong, nonatomic) UIView *headerView;
@@ -153,17 +153,25 @@
 -(LTLayout *)layout {
     if (!_layout) {
         _layout = [[LTLayout alloc] init];
+        _layout.titleViewBgColor = [UIColor whiteColor];
+        _layout.titleColor = THEME_FONT_COLOR_GRAY;
+        _layout.titleSelectColor = THEME_FONT_COLOR_BLACK;
+        _layout.bottomLineColor = THEME_COLOR_RED;
+        _layout.isNeedScale = NO;
+//        _layout.pageBottomLineHeight = 15;
+        _layout.pageBottomLineColor = RGBA(231, 231, 231, 0.7);
+//        _layout.sliderHeight = 60;
     }
     return _layout;
 }
 
 
-- (NSArray <NSString *> *)titles {
-    if (!_titles) {
-        _titles = @[@"热门", @"精彩推荐", @"科技控", @"游戏", @"汽车", @"财经", @"搞笑", @"图片"];
-    }
-    return _titles;
-}
+//- (NSArray <NSString *> *)titles {
+//    if (!_titles) {
+//        _titles = @[@"热门", @"精彩推荐", @"科技控", @"游戏", @"汽车", @"财经", @"搞笑", @"图片"];
+//    }
+//    return _titles;
+//}
 
 
 -(NSArray <UIViewController *> *)viewControllers {

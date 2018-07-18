@@ -11,6 +11,8 @@
 
 @interface LTPersonMainPageDemo : UIViewController
 
-    @property(strong, nonatomic) LTSimpleManager *managerView;
+@property(copy, nonatomic) NSArray <NSString *> *titles;
+    
+@property(strong, nonatomic) LTSimpleManager *managerView;
     
 @end
