@@ -119,9 +119,8 @@
 
 -(LTSimpleManager *)managerView {
     if (!_managerView) {
-        CGFloat Y = 0.0;
-        CGFloat H = kIPhoneX ? (self.view.bounds.size.height - Y - 34) : self.view.bounds.size.height - Y;
-        _managerView = [[LTSimpleManager alloc] initWithFrame:CGRectMake(0, Y, self.view.bounds.size.width, H) viewControllers:self.viewControllers titles:self.titles currentViewController:self layout:self.layout];
+    
+        _managerView = [[LTSimpleManager alloc] initWithFrame:RECT_NONAVBAR_AND_NOTABBAR viewControllers:self.viewControllers titles:self.titles currentViewController:self layout:self.layout];
         
         /* 设置代理 监听滚动 */
         _managerView.delegate = self;

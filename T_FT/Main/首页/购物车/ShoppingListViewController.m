@@ -29,6 +29,14 @@
 
 #pragma mark---  lefe cycle  ---
 
+- (instancetype)init
+    {
+        self = [super init];
+        if (self) {
+            self.hidesBottomBarWhenPushed = YES;
+        }
+        return self;
+    }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.navigationController.navigationBar.hidden = YES;
