@@ -169,7 +169,7 @@
 		1AF8247E20CA76D700587A6F /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8247D20CA76D600587A6F /* 19.jpg */; };
 		1AF8248020CA76DC00587A6F /* 25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8247F20CA76DC00587A6F /* 25.jpg */; };
 		1AF8248220CA76E400587A6F /* 29.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8248120CA76E300587A6F /* 29.jpg */; };
-		6EEF6CBA9CF5EB966E1DC692 /* libPods-T_FT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39451EEDC3CD637294838251 /* libPods-T_FT.a */; };
+		428ACC7C213C7C0AA75C4184 /* Pods_T_FT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E09A5AD0E72E7D922410D79A /* Pods_T_FT.framework */; };
 		9027FEB920F1B193003F0A51 /* TFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEB820F1B192003F0A51 /* TFWebViewController.m */; };
 		9027FEBC20F1B778003F0A51 /* TFUtils+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEBB20F1B778003F0A51 /* TFUtils+UIColor.m */; };
 		9027FEC820F8E276003F0A51 /* algorithm.c in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEC620F8E276003F0A51 /* algorithm.c */; };
@@ -180,6 +180,9 @@
 		9027FEE320F8EF25003F0A51 /* LYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEDB20F8EF25003F0A51 /* LYEmptyView.m */; };
 		9027FEE420F8EF25003F0A51 /* noNetwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9027FEDD20F8EF25003F0A51 /* noNetwork@2x.png */; };
 		9027FEE520F8EF25003F0A51 /* LYEmptyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9027FEE020F8EF25003F0A51 /* LYEmptyBaseView.m */; };
+		90996ACD20FF5AB3007CFFBE /* LTPersonMainPageDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 90996ACA20FF5AB3007CFFBE /* LTPersonMainPageDemo.m */; };
+		90996ACE20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 90996ACC20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.m */; };
+		90996AD220FF6286007CFFBE /* XXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90996AD120FF6286007CFFBE /* XXTextView.m */; };
 		90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBBDD320F8FCD500D71B62 /* TBKeyChain.m */; };
 		90BBBDD820F8FCD600D71B62 /* TBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBBDD420F8FCD500D71B62 /* TBCommon.m */; };
 		90CC884420FA39C700242C95 /* UINavigationController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CC884320FA39C700242C95 /* UINavigationController+StatusBar.m */; };
@@ -512,7 +515,6 @@
 		1AF8247F20CA76DC00587A6F /* 25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 25.jpg; sourceTree = "<group>"; };
 		1AF8248120CA76E300587A6F /* 29.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 29.jpg; sourceTree = "<group>"; };
 		31E9D9DE69F81798A6B6BA82 /* Pods-T_FT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T_FT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-T_FT/Pods-T_FT.debug.xcconfig"; sourceTree = "<group>"; };
-		39451EEDC3CD637294838251 /* libPods-T_FT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-T_FT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B979648983910F66FE81A7A /* Pods-T_FT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T_FT.release.xcconfig"; path = "Pods/Target Support Files/Pods-T_FT/Pods-T_FT.release.xcconfig"; sourceTree = "<group>"; };
 		9027FEB720F1B192003F0A51 /* TFWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFWebViewController.h; sourceTree = "<group>"; };
 		9027FEB820F1B192003F0A51 /* TFWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFWebViewController.m; sourceTree = "<group>"; };
@@ -537,6 +539,12 @@
 		9027FEE020F8EF25003F0A51 /* LYEmptyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyBaseView.m; sourceTree = "<group>"; };
 		9027FEE620F8EF43003F0A51 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		907FD33420F8F09F00789067 /* Macros_size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros_size.h; sourceTree = "<group>"; };
+		90996AC920FF5AB3007CFFBE /* LTPersonMainPageDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPersonMainPageDemo.h; sourceTree = "<group>"; };
+		90996ACA20FF5AB3007CFFBE /* LTPersonMainPageDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPersonMainPageDemo.m; sourceTree = "<group>"; };
+		90996ACB20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPersonalMainPageTestVC.h; sourceTree = "<group>"; };
+		90996ACC20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPersonalMainPageTestVC.m; sourceTree = "<group>"; };
+		90996AD020FF6286007CFFBE /* XXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTextView.h; sourceTree = "<group>"; };
+		90996AD120FF6286007CFFBE /* XXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTextView.m; sourceTree = "<group>"; };
 		90BBBDD320F8FCD500D71B62 /* TBKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKeyChain.m; sourceTree = "<group>"; };
 		90BBBDD420F8FCD500D71B62 /* TBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCommon.m; sourceTree = "<group>"; };
 		90BBBDD520F8FCD500D71B62 /* TBCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCommon.h; sourceTree = "<group>"; };
@@ -550,6 +558,7 @@
 		90F492D320FCDD7D00C56DD4 /* UITabBar+CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+CustomBadge.m"; sourceTree = "<group>"; };
 		90F492D420FCDD7D00C56DD4 /* UITabBar+CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+CustomBadge.h"; sourceTree = "<group>"; };
 		90F492D620FCDD9200C56DD4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E09A5AD0E72E7D922410D79A /* Pods_T_FT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_FT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -557,7 +566,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EEF6CBA9CF5EB966E1DC692 /* libPods-T_FT.a in Frameworks */,
+				428ACC7C213C7C0AA75C4184 /* Pods_T_FT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,6 +778,10 @@
 		1A66B8D120F2F2A700464F4E /* 购物车 */ = {
 			isa = PBXGroup;
 			children = (
+				90996ACB20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.h */,
+				90996ACC20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.m */,
+				90996AC920FF5AB3007CFFBE /* LTPersonMainPageDemo.h */,
+				90996ACA20FF5AB3007CFFBE /* LTPersonMainPageDemo.m */,
 				1A66B8F220F35F3E00464F4E /* View */,
 				1A66B8F120F35F2E00464F4E /* Model */,
 				1A66B8D520F2F31300464F4E /* ShoppingListViewController.h */,
@@ -1131,6 +1144,7 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				90996ACF20FF6286007CFFBE /* 自定义TextView */,
 				1AE423F520FDB84B009E8D13 /* 地址选择 */,
 				1AE4240A20FDD8DA009E8D13 /* 自定义AlertAndSheet */,
 				1AE423D420FD7D76009E8D13 /* app数据管理 */,
@@ -1393,7 +1407,7 @@
 		60630A4EE00C41CD7C1B9D85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39451EEDC3CD637294838251 /* libPods-T_FT.a */,
+				E09A5AD0E72E7D922410D79A /* Pods_T_FT.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1448,6 +1462,15 @@
 			path = Macros;
 			sourceTree = "<group>";
 		};
+		90996ACF20FF6286007CFFBE /* 自定义TextView */ = {
+			isa = PBXGroup;
+			children = (
+				90996AD020FF6286007CFFBE /* XXTextView.h */,
+				90996AD120FF6286007CFFBE /* XXTextView.m */,
+			);
+			path = "自定义TextView";
+			sourceTree = "<group>";
+		};
 		90BBBDD220F8FCC400D71B62 /* 设备信息 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1490,7 +1513,7 @@
 				1A2BDFB620C3C4370023C55D /* Sources */,
 				1A2BDFB720C3C4370023C55D /* Frameworks */,
 				1A2BDFB820C3C4370023C55D /* Resources */,
-				7AA3F2FAA002E37E580F3F74 /* [CP] Copy Pods Resources */,
+				5053BE6916E0F6A98A76F234 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1654,24 +1677,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7AA3F2FAA002E37E580F3F74 /* [CP] Copy Pods Resources */ = {
+		5053BE6916E0F6A98A76F234 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-T_FT/Pods-T_FT-resources.sh",
-				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${SRCROOT}/Pods/Target Support Files/Pods-T_FT/Pods-T_FT-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/LTScrollView/LTScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-T_FT/Pods-T_FT-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-T_FT/Pods-T_FT-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E2FBFE2C9F332359FB7FC1B9 /* [CP] Check Pods Manifest.lock */ = {
@@ -1750,6 +1781,7 @@
 				1A66B98F20F9D02700464F4E /* TFAPPInfo.m in Sources */,
 				1ABDDE4620D3B62200E900A8 /* MASConstraint.m in Sources */,
 				1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */,
+				90996ACD20FF5AB3007CFFBE /* LTPersonMainPageDemo.m in Sources */,
 				1A66B99520F9D7AF00464F4E /* Reachability.m in Sources */,
 				1AE423F220FD96C1009E8D13 /* NewAddressViewController.m in Sources */,
 				1AABE74B20D8B91F001BA4C9 /* MeSubViewController.m in Sources */,
@@ -1761,6 +1793,7 @@
 				1ABDDE4D20D3B62200E900A8 /* View+MASAdditions.m in Sources */,
 				1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */,
 				1ABDDE4720D3B62200E900A8 /* MASConstraintMaker.m in Sources */,
+				90996AD220FF6286007CFFBE /* XXTextView.m in Sources */,
 				1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */,
 				90F492D520FCDD7D00C56DD4 /* UITabBar+CustomBadge.m in Sources */,
 				1AE4240320FDB867009E8D13 /* AreaView.m in Sources */,
@@ -1789,6 +1822,7 @@
 				1A2BDFFE20C3C5690023C55D /* HomeViewController.m in Sources */,
 				1ABDDE4C20D3B62200E900A8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				1A03A70520DC836200576A03 /* SeckillTableViewCell.m in Sources */,
+				90996ACE20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.m in Sources */,
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,
 				1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */,
@@ -2004,7 +2038,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abc.TFT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abc.TFT2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a31062b5-5169-41a2-9783-6ea2ccea247d";
 				PROVISIONING_PROFILE_SPECIFIER = common;
@@ -2028,7 +2062,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abc.TFT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abc.TFT2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a31062b5-5169-41a2-9783-6ea2ccea247d";
 				PROVISIONING_PROFILE_SPECIFIER = common;

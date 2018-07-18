@@ -295,9 +295,7 @@ extension LTPageView {
         }
         
         if layout.isNeedScale {
-            
-            //去掉第一个 button title上字体的放大效果
-            //            glt_buttons[0].transform = CGAffineTransform(scaleX: layout.scale , y: layout.scale)
+            glt_buttons[0].transform = CGAffineTransform(scaleX: layout.scale , y: layout.scale)
         }
         
         // lineView的宽度为第一个的宽度
@@ -445,10 +443,10 @@ extension LTPageView {
                 let currentButton = glt_buttons[index]
                 
                 if layout.isNeedScale {
-                    //                    UIView.animate(withDuration: 0.2, animations: {
-                    //                        currentButton.transform = CGAffineTransform(scaleX: self.layout.scale , y: self.layout.scale)
-                    //                        upButton.transform = CGAffineTransform(scaleX: 1.0 , y: 1.0 )
-                    //                    })
+                    UIView.animate(withDuration: 0.2, animations: {
+                        currentButton.transform = CGAffineTransform(scaleX: self.layout.scale , y: self.layout.scale)
+                        upButton.transform = CGAffineTransform(scaleX: 1.0 , y: 1.0 )
+                    })
                 }
                 
                 setupButtonStatusAnimation(upButton: upButton, currentButton: currentButton)
@@ -606,8 +604,8 @@ extension LTPageView {
         
         if layout.isNeedScale {
             let scaleDelta = (layout.scale - 1.0) * progress
-            //            currentButton.transform = CGAffineTransform(scaleX: layout.scale - scaleDelta, y: layout.scale - scaleDelta)
-            //            nextButton.transform = CGAffineTransform(scaleX: 1.0 + scaleDelta, y: 1.0 + scaleDelta)
+            currentButton.transform = CGAffineTransform(scaleX: layout.scale - scaleDelta, y: layout.scale - scaleDelta)
+            nextButton.transform = CGAffineTransform(scaleX: 1.0 + scaleDelta, y: 1.0 + scaleDelta)
         }
         
         // 判断是否是自定义Slider的宽度（这里指没有自定义）

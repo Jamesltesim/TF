@@ -42,7 +42,9 @@
     [self setUpRootViewController]; //设置根控制器
     
     [self.window makeKeyAndVisible];
-    
+    [PermissionTool getCellularDataPermission:^(NSInteger authStatus) {
+        NSLog(@"authStatus:%ld",authStatus);
+    }];
       [IQKeyboardManager sharedManager].enable = NO;
 //    NSLog(@"是否展示新特性页面：%@",[DCFeaturesTool dc_isShowNewFeatures] ? @"true" : @"false");
     
@@ -93,6 +95,7 @@
 
     [[TFDataManage manager] didFinishLaunching];
 
+    NSLog(@"网络：%ld",[TFDataManage manager].deviceInfo.internetConnectionStatus);
         NSLog(@"%@",[TFDataManage manager].dataLog);
 //    NSLog(@"aaa--- %@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]);
     return YES;

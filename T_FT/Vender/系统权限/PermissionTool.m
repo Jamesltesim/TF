@@ -447,14 +447,12 @@ static PermissionTool *tools;
             switch (state) {
                 case kCTCellularDataRestricted:
                     
-                    NSLog(@"Restricted");
-                    //2.1权限关闭的情况下 再次请求网络数据会弹出设置网络提示
+                    // 仅允许wifi情况 或者 关闭网络的情况 都会调用这里，所以没办法判断是那种情况
                     block(1);
                     break;
                 case kCTCellularDataNotRestricted:
                     
-                    NSLog(@"NotRestricted");
-                    //2.2已经开启网络权限 监听网络状态
+//                    wifi 和 4g都允许的情况下
                     block(2);
                     break;
                 case kCTCellularDataRestrictedStateUnknown:
