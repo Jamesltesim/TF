@@ -21,7 +21,7 @@
 
 //#define RGBA(r,g,b,a) [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a]
 #define kIPhoneX ([UIScreen mainScreen].bounds.size.height == 812.0)
-#define HeaderHeight 200.0f
+#define HeaderHeight 258.0f
 #define NavHeight ([UIApplication sharedApplication].statusBarFrame.size.height + 44)
 
 @interface LTPersonMainPageDemo () <LTSimpleScrollViewDelegate>
@@ -31,7 +31,7 @@
 @property(strong, nonatomic) LTLayout *layout;
 
 @property(strong, nonatomic) UIView *headerView;
-@property(strong, nonatomic) UIImageView *headerImageView;
+
 @property(assign, nonatomic) CGFloat currentProgress;
 @end
 
@@ -86,9 +86,7 @@
 }
 
 
--(void)tapGesture:(UITapGestureRecognizer *)gesture {
-    NSLog(@"tapGesture");
-}
+
 
 -(void)glt_scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"---> %lf", scrollView.contentOffset.y);
@@ -136,9 +134,7 @@
     if (!_headerImageView) {
         _headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.headerView.frame.size.width, HeaderHeight)];
         _headerImageView.image = [UIImage imageNamed:@"timg-2.jpeg"];
-        UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
-        _headerImageView.userInteractionEnabled = YES;
-        [_headerImageView addGestureRecognizer:gesture];
+      
     }
     return _headerImageView;
 }

@@ -60,4 +60,28 @@
 + (NSString *)getCurrentYearAndMonthAndDay;
 
 + (NSDate *)dateFromString:(NSString *)dateString;
+
+
+/**************************************************************************************/
+
+/**
+ 得到从今天开始 三天的 星期、月、日
+
+ @[@{@"week":@"星期二",@"month":@"12",@"day":@"30"},@{},@{}]
+ @return return value description
+ */
++ (NSArray <NSDictionary *>*)getThreeDaysFromToday;
+
+
+
+/**
+ 得到从当前时间开始到 今天关业之前 时间段的集合
+ 时间段为 每隔15分钟
+
+ @param openTime 开业时间 （9:00）
+ @param closeTime 关业时间 （20:00）
+ @param time      送餐需要花费的时间 (默认一小时)
+ @return return value description
+ */
++ (NSArray<NSArray<NSString *> *> *)get_today_Interval_withOpenTime:(NSString *)openTime closeTime:(NSString *)closeTime deliveryTime:(NSInteger)deliveryTime;
 @end

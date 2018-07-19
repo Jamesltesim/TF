@@ -14,5 +14,6 @@
 @property(copy, nonatomic) NSArray <NSString *> *titles;
     
 @property(strong, nonatomic) LTSimpleManager *managerView;
-    
+
+@property(strong, nonatomic) UIImageView *headerImageView;
 @end

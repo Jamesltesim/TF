@@ -91,6 +91,9 @@
 		1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8920D4EA9500DC1F1B /* LostCollectionViewCell.xib */; };
 		1AABE74720D7AD0F001BA4C9 /* TFNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABE74620D7AD0F001BA4C9 /* TFNavView.m */; };
 		1AABE74B20D8B91F001BA4C9 /* MeSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AABE74A20D8B91F001BA4C9 /* MeSubViewController.m */; };
+		1AB649F2210037C5004342C5 /* TFBasePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB649F0210037C4004342C5 /* TFBasePickView.m */; };
+		1AB649FB21003C7D004342C5 /* DeliveryPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB649FA21003C7D004342C5 /* DeliveryPickView.m */; };
+		1AB649FE210046B7004342C5 /* TFTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB649FD210046B7004342C5 /* TFTableView.m */; };
 		1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */; };
 		1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */; };
 		1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDE0720D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m */; };
@@ -373,6 +376,12 @@
 		1AABE74620D7AD0F001BA4C9 /* TFNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNavView.m; sourceTree = "<group>"; };
 		1AABE74920D8B91F001BA4C9 /* MeSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeSubViewController.h; sourceTree = "<group>"; };
 		1AABE74A20D8B91F001BA4C9 /* MeSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeSubViewController.m; sourceTree = "<group>"; };
+		1AB649F0210037C4004342C5 /* TFBasePickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFBasePickView.m; sourceTree = "<group>"; };
+		1AB649F1210037C5004342C5 /* TFBasePickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFBasePickView.h; sourceTree = "<group>"; };
+		1AB649F921003C7D004342C5 /* DeliveryPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryPickView.h; sourceTree = "<group>"; };
+		1AB649FA21003C7D004342C5 /* DeliveryPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryPickView.m; sourceTree = "<group>"; };
+		1AB649FC210046B7004342C5 /* TFTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFTableView.h; sourceTree = "<group>"; };
+		1AB649FD210046B7004342C5 /* TFTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFTableView.m; sourceTree = "<group>"; };
 		1ABDDDF520D0F09200E900A8 /* MeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionViewCell.h; sourceTree = "<group>"; };
 		1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectionViewCell.m; sourceTree = "<group>"; };
 		1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -1127,6 +1136,26 @@
 			path = "失物招领";
 			sourceTree = "<group>";
 		};
+		1AB649EF210037B5004342C5 /* 选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				1AB649F1210037C5004342C5 /* TFBasePickView.h */,
+				1AB649F0210037C4004342C5 /* TFBasePickView.m */,
+				1AB649F921003C7D004342C5 /* DeliveryPickView.h */,
+				1AB649FA21003C7D004342C5 /* DeliveryPickView.m */,
+			);
+			path = "选择器";
+			sourceTree = "<group>";
+		};
+		1AB649FF2100474A004342C5 /* TFTableView */ = {
+			isa = PBXGroup;
+			children = (
+				1AB649FC210046B7004342C5 /* TFTableView.h */,
+				1AB649FD210046B7004342C5 /* TFTableView.m */,
+			);
+			path = TFTableView;
+			sourceTree = "<group>";
+		};
 		1ABDDE0F20D3A4A300E900A8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -1144,6 +1173,8 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				1AB649FF2100474A004342C5 /* TFTableView */,
+				1AB649EF210037B5004342C5 /* 选择器 */,
 				90996ACF20FF6286007CFFBE /* 自定义TextView */,
 				1AE423F520FDB84B009E8D13 /* 地址选择 */,
 				1AE4240A20FDD8DA009E8D13 /* 自定义AlertAndSheet */,
@@ -1733,6 +1764,7 @@
 				90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */,
 				1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */,
 				1AE4241C20FDE44A009E8D13 /* NSString+lineSpace.m in Sources */,
+				1AB649FE210046B7004342C5 /* TFTableView.m in Sources */,
 				1AE4240920FDD618009E8D13 /* EditAndNewViewController.m in Sources */,
 				1AE4242220FDE44A009E8D13 /* YXAlertView.m in Sources */,
 				1A873A2E20DBC78800B1357E /* TFUtils+Date.m in Sources */,
@@ -1745,6 +1777,7 @@
 				1A66B91C20F5DA7800464F4E /* TFAPIForHomebanner.m in Sources */,
 				1ABDDE4B20D3B62200E900A8 /* NSArray+MASAdditions.m in Sources */,
 				1A66B99220F9D26100464F4E /* TFDataManage.m in Sources */,
+				1AB649FB21003C7D004342C5 /* DeliveryPickView.m in Sources */,
 				1AE423D220FC9021009E8D13 /* AddressManageCell.m in Sources */,
 				1A66B98B20F9CD4A00464F4E /* TFDeviceInfo.m in Sources */,
 				1ABDDE2320D3B5BB00E900A8 /* MoreViewController.m in Sources */,
@@ -1812,6 +1845,7 @@
 				1AE4241F20FDE44A009E8D13 /* YXAlertAction.m in Sources */,
 				1AE4242120FDE44A009E8D13 /* YXAlertLayout.m in Sources */,
 				1A66B8E620F3397F00464F4E /* ShoppingListTextCell.m in Sources */,
+				1AB649F2210037C5004342C5 /* TFBasePickView.m in Sources */,
 				1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */,
 				1A66B97F20F98A6600464F4E /* HomeFooterReusableView.m in Sources */,
 				1AE4241D20FDE44A009E8D13 /* UIView+Edge.m in Sources */,
@@ -2038,7 +2072,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abc.TFT2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nb01.b2c;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a31062b5-5169-41a2-9783-6ea2ccea247d";
 				PROVISIONING_PROFILE_SPECIFIER = common;
@@ -2051,7 +2085,7 @@
 			baseConfigurationReference = 8B979648983910F66FE81A7A /* Pods-T_FT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = JB6RNYDXWS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2062,10 +2096,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abc.TFT2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nb01.b2c;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a31062b5-5169-41a2-9783-6ea2ccea247d";
-				PROVISIONING_PROFILE_SPECIFIER = common;
+				PROVISIONING_PROFILE = "65441631-da67-4e05-b1e7-7d650c9a4e08";
+				PROVISIONING_PROFILE_SPECIFIER = cashProduction;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

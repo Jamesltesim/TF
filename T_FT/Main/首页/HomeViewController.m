@@ -147,7 +147,7 @@
 //        [alert addAction:cancleAction];
 //        [alert addAction:defintAction];
 //        [strongSelf presentViewController:alert animated:YES completion:nil];
-        [strongSelf.navigationController pushViewController:[[ShoppingListViewController alloc]initWithTitles:@[@"fdsafda",@"fdafdas",@"海鲜大虾"]] animated:YES];
+        [strongSelf.navigationController pushViewController:[[ShoppingListViewController alloc]initWithTitles:@[@"fdsafda",@"fdafdas",@"海鲜大虾",@"海鲜大虾",@"海鲜大虾",@"海鲜大虾",@"海鲜大虾",@"海鲜大虾"]] animated:YES];
 //        [strongSelf.navigationController pushViewController:[[LTPersonMainPageDemo alloc]init] animated:YES];
     };
 
