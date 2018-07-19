@@ -171,6 +171,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
 
+    if([self.delegate respondsToSelector:@selector(TFShoppingListWithTableView:didSelectRowAtIndexPath:)]){
+        [self.delegate TFShoppingListWithTableView:tableView didSelectRowAtIndexPath:indexPath];
+    }
       GoodModel *model = self.dataArray[indexPath.row];
 
     ShoppingTableViewCell *shoppingCell = [tableView cellForRowAtIndexPath:indexPath];

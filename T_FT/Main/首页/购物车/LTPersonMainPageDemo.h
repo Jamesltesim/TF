@@ -15,5 +15,6 @@
     
 @property(strong, nonatomic) LTSimpleManager *managerView;
 
+@property(strong, nonatomic) UIView *headerView;
 @property(strong, nonatomic) UIImageView *headerImageView;
 @end

@@ -14,16 +14,55 @@
 #import "UIView+LXShadowPath.h"
 #import "DeliveryPickView.h"
 
+#import "LTPersonalMainPageTestVC.h"
 
-@interface ShoppingListViewController ()<ShoppingCarDelegate>
+@interface ShoppingListViewController ()<ShoppingCarDelegate,TFShoppingListDelegate>
 
 @property (nonatomic,strong)ShowShoppingCarView *carView;
+@property(copy, nonatomic) NSArray <UIViewController *> *viewControllers;
 
 @end
 
 @implementation ShoppingListViewController
 
+-(NSArray <UIViewController *> *)viewControllers {
+    if (!_viewControllers) {
+        _viewControllers = [self setupViewControllers];
+    }
+    return _viewControllers;
+}
 
+
+-(NSArray <UIViewController *> *)setupViewControllers {
+    NSMutableArray <UIViewController *> *testVCS = [NSMutableArray arrayWithCapacity:0];
+    [self.titles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        LTPersonalMainPageTestVC *testVC = [[LTPersonalMainPageTestVC alloc] init];
+        testVC.delegate = self;
+        [testVCS addObject:testVC];
+    }];
+    return testVCS.copy;
+}
+
+-(void)setupSubViews {
+    
+    [self.view addSubview:self.managerView];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    //配置headerView
+    [self.managerView configHeaderView:^UIView * _Nullable{
+        [weakSelf.headerView addSubview:weakSelf.headerImageView];
+        return weakSelf.headerView;
+    }];
+    
+    //pageView点击事件
+    [self.managerView didSelectIndexHandle:^(NSInteger index) {
+        NSLog(@"点击了 -> %ld", index);
+    }];
+    
+    
+    
+}
 #pragma mark---  lefe cycle  ---
 
 - (instancetype)initWithTitles:(NSArray<NSString *>*)titles{
@@ -63,6 +102,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupSubViews];
+    
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
     self.headerImageView.userInteractionEnabled = YES;
     [self.headerImageView addGestureRecognizer:gesture];
@@ -103,6 +144,11 @@
 //        self.tableView.frame =CGRectMake(0, self.scrollTitle.bottom, self.view.width, self.view.height - self.scrollTitle.height-HOME_INDICATOR_HEIGHT);
     }
     
+}
+#pragma mark ---  TFShoppingListDelegate  ---
+
+- (void)TFShoppingListWithTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%@ : %ld",NSStringFromSelector(_cmd),indexPath.row);
 }
 #pragma mark ---  ShoppingCarDelegate  ---
 

@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TFShoppingListDelegate<NSObject>
+
+- (void)TFShoppingListWithTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface LTPersonalMainPageTestVC : UIViewController
 
-
+@property (nonatomic,strong) id<TFShoppingListDelegate> delegate;
 
 @end
