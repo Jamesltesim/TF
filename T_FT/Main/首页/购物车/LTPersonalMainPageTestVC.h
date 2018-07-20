@@ -34,5 +34,7 @@
 @property (nonatomic,strong) NSArray *dataArray;
 @property (nonatomic,strong) id<TFShoppingListDelegate> delegate;
 
+- (void)showCashierDeskWithHeight:(CGFloat)height;
+- (void)hienCashierDesk;
 - (void)reloadData;
 @end

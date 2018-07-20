@@ -75,7 +75,7 @@
     
     CGContextClosePath(context);//路径结束标志，不写默认封闭
     
-    [[UIColor redColor] setFill]; //设置填充色
+    [THEME_COLOR_RED setFill]; //设置填充色
     
     [[UIColor clearColor] setStroke]; //设置边框颜色
     

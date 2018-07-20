@@ -99,9 +99,6 @@
         pageView = createPageViewConfig(currentViewController: currentViewController, layout: layout)
         createSubViews()
     }
-//    public override var frame: CGRect{
-//        
-//    }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -106,9 +106,12 @@
 - (void)showCashierDesk{
     if(!self.carView.superview){
         [self.view addSubview:self.carView];
-        CGRect rect = self.managerView.frame;
-        self.managerView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, SCREEN_HEIGHT-self.carView.height - HOME_INDICATOR_HEIGHT);
-        
+//        CGRect rect = self.managerView.frame;
+//        self.managerView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, SCREEN_HEIGHT-self.carView.height - HOME_INDICATOR_HEIGHT);
+//
+        for (LTPersonalMainPageTestVC *controller in self.viewControllers){
+            [controller showCashierDeskWithHeight:self.carView.height];
+        }
         [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
         
     }
@@ -118,6 +121,9 @@
     if(self.carView.superview){
         [self.carView removeFromSuperview];
         self.managerView.frame = RECT_NONAVBAR_AND_NOTABBAR;
+        for (LTPersonalMainPageTestVC *controller in self.viewControllers){
+            [controller hienCashierDesk];
+        }
 //        self.tableView.frame =CGRectMake(0, self.scrollTitle.bottom, self.view.width, self.view.height - self.scrollTitle.height-HOME_INDICATOR_HEIGHT);
     }
     

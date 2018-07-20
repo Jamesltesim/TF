@@ -33,6 +33,7 @@
 
 @property (nonatomic,strong) TFShoppingIndexPath *selectIndexPath;
 
+@property (nonatomic) CGFloat cashierDeskHeight;
 
 @end
 
@@ -50,7 +51,7 @@
     [self.view addSubview:self.tableView];
     self.tableView.tableFooterView = [[UIView alloc]init];
     self.selectIndexPath.titleIndex = self.titleIndex;
-
+    
 #warning 重要 必须赋值
     self.glt_scrollView = self.tableView;
 }
@@ -153,7 +154,7 @@
         CGFloat Y = statusBarH + 44;
         //这个44为切换条的高度
         CGFloat H = kIPhoneX ? (self.view.bounds.size.height - Y - 34 -44) : self.view.bounds.size.height - Y - 44;
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, [UIScreen mainScreen].bounds.size.width, H) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, [UIScreen mainScreen].bounds.size.width, H-self.cashierDeskHeight) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerNib:[UINib nibWithNibName:@"ShoppingListImageCell" bundle:nil] forCellReuseIdentifier:@"ShoppingListImageCell"];
@@ -162,6 +163,20 @@
     return _tableView;
 }
 
+- (void)showCashierDeskWithHeight:(CGFloat)height{
+    self.cashierDeskHeight = height;
+    CGRect frame = self.tableView.frame;
+    _tableView.frame = CGRectMake(frame.origin.x,frame.origin.y,frame.size.width,frame.size.height-height);
+}
+
+- (void)hienCashierDesk{
+    CGFloat statusBarH = [UIApplication sharedApplication].statusBarFrame.size.height;
+    //这个44为导航高度
+    CGFloat Y = statusBarH + 44;
+    //这个44为切换条的高度
+    CGFloat H = kIPhoneX ? (self.view.bounds.size.height - Y - 34 -44) : self.view.bounds.size.height - Y - 44;
+    _tableView.frame = CGRectMake(0, 44, [UIScreen mainScreen].bounds.size.width, H);
+}
 @end
 
 @implementation TFShoppingIndexPath

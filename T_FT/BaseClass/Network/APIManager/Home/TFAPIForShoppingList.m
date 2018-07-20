@@ -38,7 +38,7 @@
 - (NSArray *)ramdomArray{
     NSMutableArray *marr = [[NSMutableArray alloc]initWithCapacity:0];
     
-    for(int i=0;i<(arc4random() % 30);i++){
+    for(int i=0;i<(arc4random() % 30+10);i++){
         [marr addObject:[self ramdomModelWithIndex:i]];
     }
     return marr.copy;
