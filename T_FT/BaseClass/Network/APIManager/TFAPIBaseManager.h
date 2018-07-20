@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TFAPIRandom.h"
+
 #import "TFAPICallBackProtocol.h"
 #import "TFBaseManagerDelegate.h"
 

@@ -96,6 +96,7 @@
 		1AB649FE210046B7004342C5 /* TFTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB649FD210046B7004342C5 /* TFTableView.m */; };
 		1AB64A032101797D004342C5 /* TFAPIForShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A022101797D004342C5 /* TFAPIForShoppingList.m */; };
 		1AB64A0621017BE0004342C5 /* TFAPIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A0521017BE0004342C5 /* TFAPIConfig.m */; };
+		1AB64A0921018FE5004342C5 /* TFAPIRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A0821018FE5004342C5 /* TFAPIRandom.m */; };
 		1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */; };
 		1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */; };
 		1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDE0720D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m */; };
@@ -388,6 +389,8 @@
 		1AB64A022101797D004342C5 /* TFAPIForShoppingList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAPIForShoppingList.m; sourceTree = "<group>"; };
 		1AB64A0421017BE0004342C5 /* TFAPIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFAPIConfig.h; sourceTree = "<group>"; };
 		1AB64A0521017BE0004342C5 /* TFAPIConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAPIConfig.m; sourceTree = "<group>"; };
+		1AB64A0721018FE5004342C5 /* TFAPIRandom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFAPIRandom.h; sourceTree = "<group>"; };
+		1AB64A0821018FE5004342C5 /* TFAPIRandom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAPIRandom.m; sourceTree = "<group>"; };
 		1ABDDDF520D0F09200E900A8 /* MeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionViewCell.h; sourceTree = "<group>"; };
 		1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectionViewCell.m; sourceTree = "<group>"; };
 		1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -857,6 +860,8 @@
 		1A66B91720F5DA3900464F4E /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
+				1AB64A0721018FE5004342C5 /* TFAPIRandom.h */,
+				1AB64A0821018FE5004342C5 /* TFAPIRandom.m */,
 				1A66B91020F5BCE500464F4E /* TFAPIBaseManager.h */,
 				1A66B91120F5BCE500464F4E /* TFAPIBaseManager.m */,
 				1A66B91920F5DA5600464F4E /* Home */,
@@ -1822,6 +1827,7 @@
 				1A2BDFCD20C3C4390023C55D /* main.m in Sources */,
 				1A66B8F020F35F0000464F4E /* GoodModel.m in Sources */,
 				1A66B98F20F9D02700464F4E /* TFAPPInfo.m in Sources */,
+				1AB64A0921018FE5004342C5 /* TFAPIRandom.m in Sources */,
 				1ABDDE4620D3B62200E900A8 /* MASConstraint.m in Sources */,
 				1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */,
 				90996ACD20FF5AB3007CFFBE /* LTPersonMainPageDemo.m in Sources */,
