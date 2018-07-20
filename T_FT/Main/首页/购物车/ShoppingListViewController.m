@@ -40,34 +40,15 @@
     [self.controllerDataArray enumerateObjectsUsingBlock:^(NSArray * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         LTPersonalMainPageTestVC *testVC = [[LTPersonalMainPageTestVC alloc] init];
         testVC.dataArray = obj;
+        testVC.titleIndex = idx;
         testVC.delegate = self;
         [testVCS addObject:testVC];
     }];
     return testVCS.copy;
 }
 
--(void)setupSubViews {
-    
-    [self.view addSubview:self.managerView];
-    
-    __weak typeof(self) weakSelf = self;
-    
-    //配置headerView
-    [self.managerView configHeaderView:^UIView * _Nullable{
-        [weakSelf.headerView addSubview:weakSelf.headerImageView];
-        return weakSelf.headerView;
-    }];
-    
-    //pageView点击事件
-    [self.managerView didSelectIndexHandle:^(NSInteger index) {
-        NSLog(@"点击了 -> %ld", index);
-    }];
-    
-    
-    
-}
 #pragma mark---  lefe cycle  ---
-    
+
 - (instancetype)init
     {
         self = [super init];
@@ -79,7 +60,6 @@
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
 }
-
 
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -102,6 +82,14 @@
     apiBanner.delegate = self;
     [apiBanner loadData];
     
+    //
+    _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-50-HOME_INDICATOR_HEIGHT, SCREEN_WIDTH, 50)];
+    _carView.delegate = self;
+    [_carView LX_SetShadowPathWith:[UIColor blackColor] shadowOpacity:0.01 shadowRadius:2 shadowSide:LXShadowPathTop shadowPathWidth:30];
+    
+    if([ShoppingCarData getCount]){
+        [self showCashierDesk];
+    }
 }
 
 
@@ -118,8 +106,8 @@
 - (void)showCashierDesk{
     if(!self.carView.superview){
         [self.view addSubview:self.carView];
-//        CGRect rect = self.tableView.frame;
-//        self.tableView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, SCREEN_HEIGHT-self.carView.height-self.scrollTitle.bottom - HOME_INDICATOR_HEIGHT);
+        CGRect rect = self.managerView.frame;
+        self.managerView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, SCREEN_HEIGHT-self.carView.height - HOME_INDICATOR_HEIGHT);
         
         [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
         
@@ -129,6 +117,7 @@
 - (void)hidenCashierDesk{
     if(self.carView.superview){
         [self.carView removeFromSuperview];
+        self.managerView.frame = RECT_NONAVBAR_AND_NOTABBAR;
 //        self.tableView.frame =CGRectMake(0, self.scrollTitle.bottom, self.view.width, self.view.height - self.scrollTitle.height-HOME_INDICATOR_HEIGHT);
     }
     
@@ -146,27 +135,51 @@
     
     self.titles = titleArray;
     
-    [self setupSubViews];
+    [self.view addSubview:self.managerView];
+    
+      __weak typeof(self) weakSelf = self;
+    //配置headerView
+    [self.managerView configHeaderView:^UIView * _Nullable{
+        [weakSelf.headerView addSubview:weakSelf.headerImageView];
+        return weakSelf.headerView;
+    }];
+   
+    //pageView点击事件
+    [self.managerView didSelectIndexHandle:^(NSInteger index) {
+        NSLog(@"点击了 -> %ld", index);
+    }];
     
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
     self.headerImageView.userInteractionEnabled = YES;
     [self.headerImageView addGestureRecognizer:gesture];
-    
-    
-    //
-    _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-50-HOME_INDICATOR_HEIGHT, SCREEN_WIDTH, 50)];
-    _carView.delegate = self;
-    [_carView LX_SetShadowPathWith:[UIColor blackColor] shadowOpacity:0.01 shadowRadius:2 shadowSide:LXShadowPathTop shadowPathWidth:30];
-    
-    if([ShoppingCarData getCount]){
-        [self showCashierDesk];
-    }
+
 }
 
 #pragma mark ---  TFShoppingListDelegate  ---
 
-- (void)TFShoppingListWithTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%@ : %ld",NSStringFromSelector(_cmd),indexPath.row);
+- (void)TFShoppingListWithTableView:(UITableView *)tableView cell:(ShoppingTableViewCell *)cell cellForRowAtIndexPath:(NSIndexPath *)indexPath data:(GoodModel *)data{
+     [cell setGoodsCount:[ShoppingCarData countOfGood:data]];
+    
+}
+
+- (void)TFShoppingListWithTableView:(UITableView *)tableView cell:(ShoppingTableViewCell *)cell didSelectRowAtIndexPath:(TFShoppingIndexPath *)indexPath data:(GoodModel *)data{
+    NSLog(@"%@ : titleIndex:%ld rowIndex:%ld",NSStringFromSelector(_cmd),indexPath.titleIndex,indexPath.rowIndex);
+    
+        //如果需要选择辅食 就弹出新界面
+        if(data.isHaveSlideFood){
+    
+        }else{
+    //        否则 就更新购物篮
+    
+            [self showCashierDesk];
+    
+            [ShoppingCarData addGood:data];
+            [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
+        }
+    
+        [cell setGoodsCount:[ShoppingCarData countOfGood:data]];
+        [ShoppingCarData showOrder];
+    
 }
 #pragma mark ---  ShoppingCarDelegate  ---
 

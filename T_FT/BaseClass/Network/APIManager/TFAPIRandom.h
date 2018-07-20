@@ -19,4 +19,7 @@
 //生成指定长度的英文字符串
 +(NSString *)randomStringWithLength:(NSInteger)len;
 
+//自增的ID
++ (NSInteger)autoIncrementID;
+
 @end

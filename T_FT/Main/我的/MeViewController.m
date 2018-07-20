@@ -76,9 +76,6 @@ static NSString *iden = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    
-   
     
     self.navView.title = @"个人中心";
     self.navigationController.navigationBar.hidden = YES;
@@ -258,15 +255,11 @@ static NSString *iden = @"cell";
     }else{
         ImgAndTextCollectionViewCell *cell = (ImgAndTextCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell1" forIndexPath:indexPath];
         
-        //    cell.botlabel.text = [NSString stringWithFormat:@"{%ld,%ld}",(long)indexPath.section,(long)indexPath.row];
-        
         NSArray *array = self.labArray[indexPath.section];
         NSDictionary *dict = [array objectAtIndex:indexPath.row];
         
         cell.title.text = dict[@"title"];
         cell.imgView.image = [UIImage imageNamed:dict[@"img"]];
-        
-//        cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
         cell.backgroundColor = [UIColor whiteColor];
         
         return cell;

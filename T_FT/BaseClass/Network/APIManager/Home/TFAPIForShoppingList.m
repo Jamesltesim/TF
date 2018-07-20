@@ -46,7 +46,7 @@
 
 - (GoodModel *)ramdomModelWithIndex:(int)index{
     GoodModel *model9 = [[GoodModel alloc] init];
-    model9.goodId = @(1000+index);
+    model9.goodId = @([TFAPIRandom autoIncrementID]);
     model9.title = [TFAPIRandom randomCreatChinese:arc4random() % 20+2];
     model9.content = [TFAPIRandom randomCreatChinese:arc4random() % 50+20];
     model9.imgUrl = (arc4random()%2 == 0? @"www":@"");

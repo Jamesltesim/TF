@@ -11,7 +11,7 @@
 @implementation UINavigationController (StatusBar)
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return [[self topViewController] preferredStatusBarStyle];
+    return [[self visibleViewController] preferredStatusBarStyle];
 }
 
 @end

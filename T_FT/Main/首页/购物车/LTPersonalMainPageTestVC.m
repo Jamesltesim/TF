@@ -20,7 +20,7 @@
 #import "LTPersonalMainPageTestVC.h"
 #import "LTScrollView-Swift.h"
 
-#import "ShoppingCarData.h"
+//#import "ShoppingCarData.h"
 #import "ShoppingListTextCell.h"
 #import "ShoppingListImageCell.h"
 
@@ -30,6 +30,8 @@
 @interface LTPersonalMainPageTestVC () <UITableViewDelegate, UITableViewDataSource>
 
 @property(strong, nonatomic) UITableView *tableView;
+
+@property (nonatomic,strong) TFShoppingIndexPath *selectIndexPath;
 
 
 @end
@@ -47,7 +49,7 @@
     }
     [self.view addSubview:self.tableView];
     self.tableView.tableFooterView = [[UIView alloc]init];
-    
+    self.selectIndexPath.titleIndex = self.titleIndex;
 
 #warning 重要 必须赋值
     self.glt_scrollView = self.tableView;
@@ -100,8 +102,11 @@
         shoppingCell = cell;
     }
 
+    if([self.delegate respondsToSelector:@selector(TFShoppingListWithTableView:cell:cellForRowAtIndexPath:data:)]){
+        [self.delegate TFShoppingListWithTableView:tableView cell:shoppingCell cellForRowAtIndexPath:indexPath data:model];
+    }
 
-         [shoppingCell setGoodsCount:[ShoppingCarData countOfGood:model]];
+//         [shoppingCell setGoodsCount:[ShoppingCarData countOfGood:model]];
 
 
 
@@ -110,33 +115,37 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
-
-    if([self.delegate respondsToSelector:@selector(TFShoppingListWithTableView:didSelectRowAtIndexPath:)]){
-        [self.delegate TFShoppingListWithTableView:tableView didSelectRowAtIndexPath:indexPath];
+          GoodModel *model = self.dataArray[indexPath.row];
+    
+        ShoppingTableViewCell *shoppingCell = [tableView cellForRowAtIndexPath:indexPath];
+    self.selectIndexPath.rowIndex = indexPath.row;
+    if([self.delegate respondsToSelector:@selector(TFShoppingListWithTableView:cell:didSelectRowAtIndexPath:data:)]){
+        [self.delegate TFShoppingListWithTableView:tableView cell:shoppingCell didSelectRowAtIndexPath:self.selectIndexPath data:model];
     }
-      GoodModel *model = self.dataArray[indexPath.row];
-
-    ShoppingTableViewCell *shoppingCell = [tableView cellForRowAtIndexPath:indexPath];
-
-    //如果需要选择辅食 就弹出新界面
-    if(model.isHaveSlideFood){
-
-    }else{
-//        否则 就更新购物篮
-
-//        [self showCashierDesk];
 //
-//        [ShoppingCarData addGood:model];
-//        [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
-    }
-
-
-
-    [shoppingCell setGoodsCount:[ShoppingCarData countOfGood:model]];
-    [ShoppingCarData showOrder];
+//    //如果需要选择辅食 就弹出新界面
+//    if(model.isHaveSlideFood){
+//
+//    }else{
+////        否则 就更新购物篮
+//
+////        [self showCashierDesk];
+////
+////        [ShoppingCarData addGood:model];
+////        [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
+//    }
+//
+//
+//
+//    [shoppingCell setGoodsCount:[ShoppingCarData countOfGood:model]];
+//    [ShoppingCarData showOrder];
 }
-
+- (TFShoppingIndexPath *)selectIndexPath{
+    if(!_selectIndexPath){
+        _selectIndexPath = [[TFShoppingIndexPath alloc]init];
+    }
+    return _selectIndexPath;
+}
 - (UITableView *)tableView {
     if (!_tableView) {
         CGFloat statusBarH = [UIApplication sharedApplication].statusBarFrame.size.height;
@@ -152,5 +161,9 @@
     }
     return _tableView;
 }
+
+@end
+
+@implementation TFShoppingIndexPath
 
 @end

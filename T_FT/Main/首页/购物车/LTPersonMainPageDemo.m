@@ -48,16 +48,18 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
-  
-//    [self setupSubViews];
+}
+- (UIStatusBarStyle)preferredStatusBarStyle {
+//    NSLog(@"%lf",self.currentProgress);
+//    if(self.currentProgress!= 0 && self.currentProgress > 0.5){
+//        return UIStatusBarStyleDefault;
+//    }
+//    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 
-
-
-
-
 -(void)glt_scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"---> %lf", scrollView.contentOffset.y);
+//    NSLog(@"---> %lf", scrollView.contentOffset.y);
     CGFloat offsetY = scrollView.contentOffset.y;
     CGFloat headerImageY = offsetY;
     CGFloat headerImageH = HeaderHeight - offsetY;
@@ -72,9 +74,10 @@
         
         CGFloat progress = 1 - (offsetY / adjustHeight);
         self.navigationController.navigationBar.barStyle = progress > 0.5 ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
-        
+       
         self.navigationController.navigationBar.alpha = 1 - progress;
         self.currentProgress = 1 - progress;
+//         [self preferredStatusBarStyle];
     }
     CGRect headerImageFrame = self.headerImageView.frame;
     headerImageFrame.origin.y = headerImageY;

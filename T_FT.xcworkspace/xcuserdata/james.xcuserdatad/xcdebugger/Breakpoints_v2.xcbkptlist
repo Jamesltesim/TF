@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/LTScrollView/Example/LTScrollView/Lib/LTPageView.swift"
-            timestampString = "553598496.797472"
+            filePath = "T_FT/BaseClass/UINavigationController+StatusBar.m"
+            timestampString = "553756443.142881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "init(frame:currentViewController:viewControllers:titles:layout:)"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "-preferredStatusBarStyle"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
