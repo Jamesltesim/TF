@@ -20,32 +20,13 @@
 @interface ShoppingListViewController ()<ShoppingCarDelegate,TFShoppingListDelegate,TFAPICallBackProtocol>
 
 @property (nonatomic,strong)ShowShoppingCarView *carView;
-@property(copy, nonatomic) NSArray <UIViewController *> *viewControllers;
+
 @property(nonatomic,strong) NSMutableArray *controllerDataArray;
 
 @end
 
 @implementation ShoppingListViewController
 
--(NSArray <UIViewController *> *)viewControllers {
-    if (!_viewControllers) {
-        _viewControllers = [self setupViewControllers];
-    }
-    return _viewControllers;
-}
-
-
--(NSArray <UIViewController *> *)setupViewControllers {
-    NSMutableArray <UIViewController *> *testVCS = [NSMutableArray arrayWithCapacity:0];
-    [self.controllerDataArray enumerateObjectsUsingBlock:^(NSArray * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        LTPersonalMainPageTestVC *testVC = [[LTPersonalMainPageTestVC alloc] init];
-        testVC.dataArray = obj;
-        testVC.titleIndex = idx;
-        testVC.delegate = self;
-        [testVCS addObject:testVC];
-    }];
-    return testVCS.copy;
-}
 
 #pragma mark---  lefe cycle  ---
 
@@ -67,31 +48,35 @@
     
 }
 
--(void)tapGesture:(UITapGestureRecognizer *)gesture {
-    DeliveryPickView *pickerView = [[DeliveryPickView alloc]init];
-    pickerView.titleLable.text = @"送餐时间";
-    [pickerView.confirmButton setTitleColor:THEME_COLOR_RED forState:UIControlStateNormal];
-     [pickerView.cancelButton setTitleColor:THEME_COLOR_RED forState:UIControlStateNormal];
-    [pickerView showOn:self.view];
-}
+//-(void)tapGesture:(UITapGestureRecognizer *)gesture {
+//    DeliveryPickView *pickerView = [[DeliveryPickView alloc]init];
+//    pickerView.titleLable.text = @"送餐时间";
+//    [pickerView.confirmButton setTitleColor:THEME_COLOR_RED forState:UIControlStateNormal];
+//     [pickerView.cancelButton setTitleColor:THEME_COLOR_RED forState:UIControlStateNormal];
+//    [pickerView showOn:self.view];
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
   
+    [self.navView addTapGestureOnTitleWithTarget:self action:@selector(navViewTap:)];
+    
     TFAPIForShoppingList *apiBanner = [[TFAPIForShoppingList alloc]init];
     apiBanner.delegate = self;
     [apiBanner loadData];
-    
-    //
-    _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-50-HOME_INDICATOR_HEIGHT, SCREEN_WIDTH, 50)];
-    _carView.delegate = self;
-    [_carView LX_SetShadowPathWith:[UIColor blackColor] shadowOpacity:0.01 shadowRadius:2 shadowSide:LXShadowPathTop shadowPathWidth:30];
-    
+
     if([ShoppingCarData getCount]){
         [self showCashierDesk];
     }
 }
 
+- (void)navViewTap:(UITapGestureRecognizer *)tap {
+        DeliveryPickView *pickerView = [[DeliveryPickView alloc]init];
+        pickerView.titleLable.text = @"送餐时间";
+        [pickerView.confirmButton setTitleColor:THEME_COLOR_RED forState:UIControlStateNormal];
+         [pickerView.cancelButton setTitleColor:THEME_COLOR_RED forState:UIControlStateNormal];
+        [pickerView showOn:self.view];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -100,14 +85,42 @@
 
 #pragma mark---  get set  ---
 
+- (ShowShoppingCarView *)carView{
+    if(!_carView){
+        _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-50-HOME_INDICATOR_HEIGHT, SCREEN_WIDTH, 70)];
+        _carView.delegate = self;
+        [_carView LX_SetShadowPathWith:[UIColor blackColor] shadowOpacity:0.03 shadowRadius:2 shadowSide:LXShadowPathTop shadowPathWidth:30];
+    }
+    return _carView;
+}
+
+-(NSArray <UIViewController *> *)viewControllers {
+    if (!_viewControllers) {
+        _viewControllers = [self setupViewControllers];
+    }
+    return _viewControllers;
+}
+
+
+-(NSArray <UIViewController *> *)setupViewControllers {
+    NSMutableArray <UIViewController *> *testVCS = [NSMutableArray arrayWithCapacity:0];
+    [self.controllerDataArray enumerateObjectsUsingBlock:^(NSArray * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        LTPersonalMainPageTestVC *testVC = [[LTPersonalMainPageTestVC alloc] init];
+        testVC.dataArray = obj;
+        testVC.titleIndex = idx;
+        testVC.delegate = self;
+        [testVCS addObject:testVC];
+    }];
+    return testVCS.copy;
+}
+
 
 
 #pragma mark ---  内部方法  ---
 - (void)showCashierDesk{
     if(!self.carView.superview){
         [self.view addSubview:self.carView];
-//        CGRect rect = self.managerView.frame;
-//        self.managerView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, SCREEN_HEIGHT-self.carView.height - HOME_INDICATOR_HEIGHT);
+
 //
         for (LTPersonalMainPageTestVC *controller in self.viewControllers){
             [controller showCashierDeskWithHeight:self.carView.height];
@@ -121,13 +134,25 @@
     if(self.carView.superview){
         [self.carView removeFromSuperview];
         self.managerView.frame = RECT_NONAVBAR_AND_NOTABBAR;
+        
+        
         for (LTPersonalMainPageTestVC *controller in self.viewControllers){
             [controller hienCashierDesk];
         }
-//        self.tableView.frame =CGRectMake(0, self.scrollTitle.bottom, self.view.width, self.view.height - self.scrollTitle.height-HOME_INDICATOR_HEIGHT);
+
     }
     
 }
+
+- (void)glt_scrollViewDidScroll:(UIScrollView *)scrollView{
+    [super glt_scrollViewDidScroll:scrollView];
+    
+    if(self.currentProgress > 0.5){
+        self.navView.title = @"外送 45分钟";
+    }
+    //    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
+
 #pragma mark ---  TFAPICallBackProtocol  ---
 - (void)TFAPICallBackDidSuccess:(TFAPIBaseManager *)manager{
     NSDictionary *dataDict = manager.responseObject;
@@ -158,7 +183,11 @@
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
     self.headerImageView.userInteractionEnabled = YES;
     [self.headerImageView addGestureRecognizer:gesture];
+     [self.view bringSubviewToFront:self.navView];
+}
 
+- (void)TFAPICallBackDidFailed:(TFAPIBaseManager *)manager{
+    
 }
 
 #pragma mark ---  TFShoppingListDelegate  ---
@@ -197,81 +226,7 @@
     NSLog(@"title:%@",title);
 }
 
-//#pragma mark ---  UItableViewDelegate  ---
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//     GoodModel *model = self.dataArray[indexPath.row];
-//    NSString *imgUrl = model.imgUrl;
-//    if([imgUrl isEqualToString:@""]){
-//        return 120.f;
-//    }else{
-//        return 140.f;
-//    }
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//
-//    return self.dataArray.count;
-//
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//      GoodModel *model = self.dataArray[indexPath.row];
-//    NSString *imgUrl = model.imgUrl;
-//
-//    ShoppingTableViewCell *shoppingCell = nil;
-//
-//    if([imgUrl isEqualToString:@""]){
-//        ShoppingListTextCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ShoppingListTextCell"];
-//
-//
-//        cell.title.text = model.title;
-//        cell.content.text = model.content;
-//
-//        cell.price.text = [NSString stringWithFormat:@"%.2f",model.price];
-//        shoppingCell = cell;
-//    }else{
-//        ShoppingListImageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ShoppingListImageCell"];
-//
-//
-//        cell.title.text = model.title;
-//        cell.content.text = model.content;
-//        cell.price.text = [NSString stringWithFormat:@"%.2f",model.price];
-//        shoppingCell = cell;
-//    }
-//
-//
-//         [shoppingCell setGoodsCount:[ShoppingCarData countOfGood:model]];
-//
-//
-//
-//    return shoppingCell;
-//
-//}
-//
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//
-//
-//      GoodModel *model = self.dataArray[indexPath.row];
-//
-//    ShoppingTableViewCell *shoppingCell = [tableView cellForRowAtIndexPath:indexPath];
-//
-//    //如果需要选择辅食 就弹出新界面
-//    if(model.isHaveSlideFood){
-//
-//    }else{
-////        否则 就更新购物篮
-//
-//        [self showCashierDesk];
-//
-//        [ShoppingCarData addGood:model];
-//        [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
-//    }
-//
-//
-//
-//    [shoppingCell setGoodsCount:[ShoppingCarData countOfGood:model]];
-//    [ShoppingCarData showOrder];
-//}
+
 
 
 

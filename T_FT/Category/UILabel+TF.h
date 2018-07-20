@@ -15,4 +15,5 @@
  */
 - (void)changeLineSpaceWithSpace:(float)space;
 
+- (void)widthFellowString;
 @end

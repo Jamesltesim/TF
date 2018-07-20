@@ -78,7 +78,7 @@
     [super viewDidLoad];
     [self createCollectionView];
     
-
+     self.navigationController.navigationBar.hidden = YES;
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.tabBarController.delegate = self;

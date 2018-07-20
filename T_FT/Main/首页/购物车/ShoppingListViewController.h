@@ -9,6 +9,6 @@
 #import "LTPersonMainPageDemo.h"
 
 @interface ShoppingListViewController : LTPersonMainPageDemo
-
+@property(copy, nonatomic) NSArray <UIViewController *> *viewControllers;
 
 @end

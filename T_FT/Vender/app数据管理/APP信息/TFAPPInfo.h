@@ -26,4 +26,6 @@
 @property (nonatomic,strong,readonly) NSString *buildCode;
 @property (nonatomic,strong,readonly) NSString *bundleIdentifier;
 
+
+
 @end

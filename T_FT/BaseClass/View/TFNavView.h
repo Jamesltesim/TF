@@ -27,6 +27,7 @@
 - (void)addLeftButtonWithAction:(SEL)action;
 - (void)addLeftButtonWithTarget:(id)target action:(SEL)action;
 
+- (void)addTapGestureOnTitleWithTarget:(id)target action:(SEL)action;
 + (instancetype)creatNavView;
 
 

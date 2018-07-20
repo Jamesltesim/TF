@@ -18,6 +18,9 @@
 
 @implementation TFNavView
 
+- (void)layoutSubviews{
+    
+}
 
 + (instancetype)creatNavView{
     TFNavView *nav = [[TFNavView alloc]init];
@@ -41,9 +44,12 @@
     }
     return self;
 }
+
+#pragma mark-- set get
 - (void)setTitle:(NSString *)title{
     if(title)
     self.titleLab.text = title;
+    [self.titleLab widthFellowString];
 }
 
 - (void)setTitleColor:(UIColor *)titleColor{
@@ -86,6 +92,7 @@
 - (UILabel *)titleLab{
     if(!_titleLab){
         _titleLab = [[UILabel alloc]initWithFrame:CGRectMake(0, STATUSVIEW_HEIGHT, self.width, self.height-STATUSVIEW_HEIGHT)];
+        _titleLab.center = CGPointMake(self.width/2,  STATUSVIEW_HEIGHT+(self.height-STATUSVIEW_HEIGHT)/2);
         _titleLab.textAlignment = NSTextAlignmentCenter;
     }
     return _titleLab;
@@ -97,6 +104,7 @@
     [self.backImgView setImage:backImage];
 }
 
+#pragma mark-- 公开方法
 - (void)addLeftButtonWithAction:(SEL)action{
     
 }
@@ -112,6 +120,11 @@
     [self addSubview:back];
 }
 
+- (void)addTapGestureOnTitleWithTarget:(id)target action:(SEL)action{
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:target action:action];
+    self.titleLab.userInteractionEnabled = YES;
+    [self.titleLab addGestureRecognizer:tap];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

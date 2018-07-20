@@ -16,7 +16,7 @@
 
 #import "LTPersonMainPageDemo.h"
 #import "LTPersonalMainPageTestVC.h"
-#import "MJRefresh.h"
+
 
 
 //#define RGBA(r,g,b,a) [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a]
@@ -24,39 +24,19 @@
 #define HeaderHeight 258.0f
 #define NavHeight ([UIApplication sharedApplication].statusBarFrame.size.height + 44)
 
-@interface LTPersonMainPageDemo () <LTSimpleScrollViewDelegate>
+@interface LTPersonMainPageDemo () 
 
 @property(copy, nonatomic) NSArray <UIViewController *> *viewControllers;
 
 @property(strong, nonatomic) LTLayout *layout;
 
 
-@property(assign, nonatomic) CGFloat currentProgress;
+
 @end
 
 @implementation LTPersonMainPageDemo
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBar.alpha = self.currentProgress;
-    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:18.0f]};
-}
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.automaticallyAdjustsScrollViewInsets = NO;
-}
-- (UIStatusBarStyle)preferredStatusBarStyle {
-//    NSLog(@"%lf",self.currentProgress);
-//    if(self.currentProgress!= 0 && self.currentProgress > 0.5){
-//        return UIStatusBarStyleDefault;
-//    }
-//    return UIStatusBarStyleLightContent;
-    return UIStatusBarStyleDefault;
-}
 
 -(void)glt_scrollViewDidScroll:(UIScrollView *)scrollView {
 //    NSLog(@"---> %lf", scrollView.contentOffset.y);
@@ -73,10 +53,13 @@
         CGFloat adjustHeight = HeaderHeight - NavHeight;
         
         CGFloat progress = 1 - (offsetY / adjustHeight);
-        self.navigationController.navigationBar.barStyle = progress > 0.5 ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
-       
-        self.navigationController.navigationBar.alpha = 1 - progress;
+//        self.navigationController.navigationBar.barStyle = progress > 0.5 ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
+    
+//        self.navigationController.navigationBar.alpha = 1 - progress;
+
+//        NSLog(@"self.navView.alpha:%lf",1 - progress);
         self.currentProgress = 1 - progress;
+        self.navView.alpha = self.currentProgress;
 //         [self preferredStatusBarStyle];
     }
     CGRect headerImageFrame = self.headerImageView.frame;
@@ -84,6 +67,19 @@
     headerImageFrame.size.height = headerImageH;
 //    headerImageFrame.size.width = scrollView.frame.size.width -offsetY;
     self.headerImageView.frame = headerImageFrame;
+}
+- (void)glt_scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+    if(scrollView.contentOffset.y <= 0.1){
+        self.navView.alpha = 0;
+    }
+}
+- (void)glt_scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+  
+//    CGFloat adjustHeight = HeaderHeight - NavHeight;
+//     CGFloat offsetY = scrollView.contentOffset.y;
+//    CGFloat progress = 1 - (offsetY / adjustHeight);
+//      NSLog(@"%@  %@",NSStringFromSelector(_cmd),NSStringFromCGPoint(scrollView.contentOffset));
+    
 }
 
 -(LTSimpleManager *)managerView {
@@ -132,46 +128,56 @@
     return _layout;
 }
 
-
-//- (NSArray <NSString *> *)titles {
-//    if (!_titles) {
-//        _titles = @[@"热门", @"精彩推荐", @"科技控", @"游戏", @"汽车", @"财经", @"搞笑", @"图片"];
-//    }
-//    return _titles;
-//}
-
-
-//-(NSArray <UIViewController *> *)viewControllers {
-//    if (!_viewControllers) {
-//        _viewControllers = [self setupViewControllers];
-//    }
-//    return _viewControllers;
-//}
-//
-//
-//-(NSArray <UIViewController *> *)setupViewControllers {
-//    NSMutableArray <UIViewController *> *testVCS = [NSMutableArray arrayWithCapacity:0];
-//    [self.titles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        LTPersonalMainPageTestVC *testVC = [[LTPersonalMainPageTestVC alloc] init];
-//        [testVCS addObject:testVC];
-//    }];
-//    return testVCS.copy;
-//}
-
 -(void)dealloc {
     NSLog(@"%s",__func__);
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+//    self.navigationController.navigationBar.alpha = self.currentProgress;
+//    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+//    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:18.0f]};
+    
+   
+    self.navView.alpha = self.currentProgress;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    self.navView = [TFNavView creatNavView];
+    self.navView.backgroundColor = [UIColor whiteColor];
+    [self.navView addLeftButtonWithTarget:self action:@selector(back:)];
+    [self.view addSubview:self.navView];
+    
+}
+
+- (void)back:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    //    NSLog(@"%lf",self.currentProgress);
+    //    if(self.currentProgress!= 0 && self.currentProgress > 0.5){
+    //        return UIStatusBarStyleDefault;
+    //    }
+    //    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     //侧滑出现的透明细节调整
-    self.navigationController.navigationBar.alpha = self.currentProgress;
-    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+//    self.navigationController.navigationBar.alpha = self.currentProgress;
+//    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    self.navigationController.navigationBar.alpha = 0;
+//    self.navigationController.navigationBar.alpha = 0;
 }
 
 - (void)didReceiveMemoryWarning {
