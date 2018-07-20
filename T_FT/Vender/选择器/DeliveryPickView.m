@@ -92,7 +92,7 @@
     
     
     UILabel *label = [[UILabel alloc]init];
-     label.textAlignment = 1;
+     label.textAlignment = NSTextAlignmentCenter;
      label.font = [UIFont boldSystemFontOfSize:15];
      label.textColor = THEME_COLOR_RED;
     if(component == 0){

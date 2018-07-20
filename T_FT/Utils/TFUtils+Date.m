@@ -140,8 +140,8 @@
     
     
     array = @[@{@"week":week_today,@"month":[self capitalFromLower:today_month],@"day":today_day},
-              @{@"week":week_tomorrow,@"month":[self capitalFromLower:tomorrow_month],@"day":tomorrow_day},
-              @{@"week":week_theDayAfterTomorrow,@"month":[self capitalFromLower:theDayAfterTomorrow_month],@"day":theDayAfterTomorrow_day}];
+              @{@"week":[NSString stringWithFormat:@"%@(明天)",week_tomorrow],@"month":[self capitalFromLower:tomorrow_month],@"day":tomorrow_day},
+              @{@"week":[NSString stringWithFormat:@"%@(后天)",week_theDayAfterTomorrow],@"month":[self capitalFromLower:theDayAfterTomorrow_month],@"day":theDayAfterTomorrow_day}];
     return array;
 }
 

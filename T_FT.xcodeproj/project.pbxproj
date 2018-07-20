@@ -94,6 +94,7 @@
 		1AB649F2210037C5004342C5 /* TFBasePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB649F0210037C4004342C5 /* TFBasePickView.m */; };
 		1AB649FB21003C7D004342C5 /* DeliveryPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB649FA21003C7D004342C5 /* DeliveryPickView.m */; };
 		1AB649FE210046B7004342C5 /* TFTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB649FD210046B7004342C5 /* TFTableView.m */; };
+		1AB64A032101797D004342C5 /* TFAPIForShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A022101797D004342C5 /* TFAPIForShoppingList.m */; };
 		1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */; };
 		1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */; };
 		1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDE0720D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m */; };
@@ -382,6 +383,8 @@
 		1AB649FA21003C7D004342C5 /* DeliveryPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryPickView.m; sourceTree = "<group>"; };
 		1AB649FC210046B7004342C5 /* TFTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFTableView.h; sourceTree = "<group>"; };
 		1AB649FD210046B7004342C5 /* TFTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFTableView.m; sourceTree = "<group>"; };
+		1AB64A012101797D004342C5 /* TFAPIForShoppingList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFAPIForShoppingList.h; sourceTree = "<group>"; };
+		1AB64A022101797D004342C5 /* TFAPIForShoppingList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAPIForShoppingList.m; sourceTree = "<group>"; };
 		1ABDDDF520D0F09200E900A8 /* MeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionViewCell.h; sourceTree = "<group>"; };
 		1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectionViewCell.m; sourceTree = "<group>"; };
 		1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -861,6 +864,8 @@
 			children = (
 				1A66B91A20F5DA7800464F4E /* TFAPIForHomebanner.h */,
 				1A66B91B20F5DA7800464F4E /* TFAPIForHomebanner.m */,
+				1AB64A012101797D004342C5 /* TFAPIForShoppingList.h */,
+				1AB64A022101797D004342C5 /* TFAPIForShoppingList.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1825,6 +1830,7 @@
 				9027FED320F8E86D003F0A51 /* TFQRCodeImage.m in Sources */,
 				1ABDDE4D20D3B62200E900A8 /* View+MASAdditions.m in Sources */,
 				1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */,
+				1AB64A032101797D004342C5 /* TFAPIForShoppingList.m in Sources */,
 				1ABDDE4720D3B62200E900A8 /* MASConstraintMaker.m in Sources */,
 				90996AD220FF6286007CFFBE /* XXTextView.m in Sources */,
 				1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */,

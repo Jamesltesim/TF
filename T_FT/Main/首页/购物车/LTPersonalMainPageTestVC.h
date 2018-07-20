@@ -16,6 +16,8 @@
 
 @interface LTPersonalMainPageTestVC : UIViewController
 
+@property (nonatomic,strong) NSArray *dataArray;
 @property (nonatomic,strong) id<TFShoppingListDelegate> delegate;
 
+- (void)reloadData;
 @end
