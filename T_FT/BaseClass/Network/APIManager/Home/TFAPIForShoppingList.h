@@ -7,6 +7,7 @@
 //
 
 #import "TFAPIBaseManager.h"
+#import "GoodModel.h"
 
 @interface TFAPIForShoppingList : TFAPIBaseManager
 

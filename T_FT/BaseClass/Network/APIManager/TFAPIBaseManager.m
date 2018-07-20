@@ -9,6 +9,7 @@
 #import "TFAPIBaseManager.h"
 #import "TFBaseManagerDelegate.h"
 #import "AFNetworking.h"
+#import "TFAPIConfig.h"
 
 
 @interface TFAPIBaseManager()
@@ -38,16 +39,33 @@
 }
 - (void)loadData{
 //    NSLog(@"%@",NSStringFromSelector(_cmd));
+    TFAPIConfig *config = [TFAPIConfig shareInstance];
     
+    
+    //***************************************************************************/
+    //如果配置网络类型为 TFAPIConfigNetworkTypeLocal
+    // 返回假数据
+    //***************************************************************************/
+    if(config.networkType == TFAPIConfigNetworkTypeLocal){
+        
+        if([self.child respondsToSelector:@selector(getLocalData)]){
+          _responseObject =  [self.child getLocalData];
+        }
+        
+        if([self.delegate respondsToSelector:@selector(TFAPICallBackDidSuccess:)]){
+            [self.delegate TFAPICallBackDidSuccess:self];
+        }
+        
+        return;
+    }
 
+    /***************************************************************************/
     [self GET:test_url parameters:self.params success:^(id responseObject) {
         
     } requestFailure:^(NSError *error) {
         
     }];
-    if([self.delegate respondsToSelector:@selector(TFAPICallBackDidSuccess:)]){
-        [self.delegate TFAPICallBackDidSuccess:self];
-    }
+   
 }
 
 - (instancetype)initWithParams:(NSMutableDictionary *)params{

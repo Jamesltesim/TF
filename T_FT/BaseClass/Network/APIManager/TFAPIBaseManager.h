@@ -24,6 +24,8 @@
 //
 ////外部传入的参数
 @property (strong,nonatomic) NSMutableDictionary *params;
+
+@property (nonatomic,strong,readonly)  id  _Nullable responseObject;
 //
 //
 ////是否需要缓存
@@ -38,8 +40,6 @@
 // * 取消请求
 // */
 //- (void)cancelAllRequest;
-
-
 
 
 @end

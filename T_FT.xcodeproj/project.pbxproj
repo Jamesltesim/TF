@@ -95,6 +95,7 @@
 		1AB649FB21003C7D004342C5 /* DeliveryPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB649FA21003C7D004342C5 /* DeliveryPickView.m */; };
 		1AB649FE210046B7004342C5 /* TFTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB649FD210046B7004342C5 /* TFTableView.m */; };
 		1AB64A032101797D004342C5 /* TFAPIForShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A022101797D004342C5 /* TFAPIForShoppingList.m */; };
+		1AB64A0621017BE0004342C5 /* TFAPIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A0521017BE0004342C5 /* TFAPIConfig.m */; };
 		1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */; };
 		1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */; };
 		1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDE0720D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m */; };
@@ -385,6 +386,8 @@
 		1AB649FD210046B7004342C5 /* TFTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFTableView.m; sourceTree = "<group>"; };
 		1AB64A012101797D004342C5 /* TFAPIForShoppingList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFAPIForShoppingList.h; sourceTree = "<group>"; };
 		1AB64A022101797D004342C5 /* TFAPIForShoppingList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAPIForShoppingList.m; sourceTree = "<group>"; };
+		1AB64A0421017BE0004342C5 /* TFAPIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFAPIConfig.h; sourceTree = "<group>"; };
+		1AB64A0521017BE0004342C5 /* TFAPIConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAPIConfig.m; sourceTree = "<group>"; };
 		1ABDDDF520D0F09200E900A8 /* MeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionViewCell.h; sourceTree = "<group>"; };
 		1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectionViewCell.m; sourceTree = "<group>"; };
 		1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -723,6 +726,12 @@
 		1A2BDFFB20C3C5500023C55D /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				1A2BE00220C3C58E0023C55D /* MeViewController.h */,
+				1A2BE00320C3C58E0023C55D /* MeViewController.m */,
+				1A2BE02820C519950023C55D /* GradualNavBarController.h */,
+				1A2BE02920C519950023C55D /* GradualNavBarController.m */,
+				1AABE74920D8B91F001BA4C9 /* MeSubViewController.h */,
+				1AABE74A20D8B91F001BA4C9 /* MeSubViewController.m */,
 				1AE423CB20FC8E8B009E8D13 /* 收货地址 */,
 				1AE423C720FC6436009E8D13 /* 意见反馈 */,
 				1AC711F120E0FA1B0099D2A9 /* iBeacon */,
@@ -732,15 +741,9 @@
 				1A9ABF8320D4E59400DC1F1B /* View */,
 				1A2BE02320C4DA390023C55D /* UIImage+imgaeWithColor.h */,
 				1A2BE02220C4DA390023C55D /* UIImage+imgaeWithColor.m */,
-				1A2BE00220C3C58E0023C55D /* MeViewController.h */,
-				1A2BE00320C3C58E0023C55D /* MeViewController.m */,
-				1A2BE02820C519950023C55D /* GradualNavBarController.h */,
-				1A2BE02920C519950023C55D /* GradualNavBarController.m */,
 				1AE423BD20FC4998009E8D13 /* MeFooterReusableView.h */,
 				1AE423BE20FC4998009E8D13 /* MeFooterReusableView.m */,
 				1AE423BF20FC4998009E8D13 /* MeFooterReusableView.xib */,
-				1AABE74920D8B91F001BA4C9 /* MeSubViewController.h */,
-				1AABE74A20D8B91F001BA4C9 /* MeSubViewController.m */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -766,6 +769,8 @@
 		1A66B8B820EF194000464F4E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1AB64A0421017BE0004342C5 /* TFAPIConfig.h */,
+				1AB64A0521017BE0004342C5 /* TFAPIConfig.m */,
 				1A66B91420F5D9CC00464F4E /* TFAPICenter.h */,
 				1A66B91520F5D9CC00464F4E /* TFAPICenter.m */,
 				1A66B91720F5DA3900464F4E /* APIManager */,
@@ -1866,6 +1871,7 @@
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,
 				1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */,
+				1AB64A0621017BE0004342C5 /* TFAPIConfig.m in Sources */,
 				1A66B94020F844CB00464F4E /* TFVerification.m in Sources */,
 				1AC8170820E237D700B1EE89 /* EventCalendar.m in Sources */,
 				1A66B91220F5BCE500464F4E /* TFAPIBaseManager.m in Sources */,

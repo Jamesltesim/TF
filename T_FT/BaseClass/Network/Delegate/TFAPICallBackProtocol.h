@@ -32,6 +32,8 @@ typedef void (^requestFailureBlock)(NSError *error);
 //请求失败
 - (void)TFAPICallBackDidFailed:(TFAPIBaseManager *)manager;
 
-- (void)TFAPIWithHomeBanner:(TFAPIBaseManager *)manager success:(requestSuccessBlock)success failurere:(requestFailureBlock)failurere;
+
+
+//- (void)TFAPIWithHomeBanner:(TFAPIBaseManager *)manager success:(requestSuccessBlock)success failurere:(requestFailureBlock)failurere;
 
 @end

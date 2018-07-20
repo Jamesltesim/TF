@@ -12,5 +12,5 @@
 
 @required
 - (NSString *)apiMethodName;
-
+- (id)getLocalData;
 @end

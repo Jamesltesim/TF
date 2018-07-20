@@ -19,7 +19,7 @@
 #import "algorithm.h"
 #import "TFDataManage.h"
 #import "IQKeyboardManager.h"
-
+#import "TFAPIConfig.h"
 
 //参考
 //天天果园 app
@@ -94,6 +94,7 @@
 //    }
 
     [[TFDataManage manager] didFinishLaunching];
+    [[TFAPIConfig shareInstance] networkType:TFAPIConfigNetworkTypeLocal];
 
     NSLog(@"网络：%ld",[TFDataManage manager].deviceInfo.internetConnectionStatus);
         NSLog(@"%@",[TFDataManage manager].dataLog);
