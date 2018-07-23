@@ -103,6 +103,12 @@
 		1AB64A172101D98F004342C5 /* SlideFoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB64A152101D98F004342C5 /* SlideFoodTableViewCell.xib */; };
 		1AB64A1A2101E2F6004342C5 /* SlideFoodHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A192101E2F6004342C5 /* SlideFoodHeaderView.m */; };
 		1AB64A1C2101E303004342C5 /* SlideFoodHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB64A1B2101E303004342C5 /* SlideFoodHeaderView.xib */; };
+		1AB64A2821056EBA004342C5 /* ZYBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AB64A1F21056EB8004342C5 /* ZYBundle.bundle */; };
+		1AB64A2921056EBA004342C5 /* ZYFormData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A2021056EB8004342C5 /* ZYFormData.m */; };
+		1AB64A2A21056EBA004342C5 /* ZYLocalizableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A2221056EB9004342C5 /* ZYLocalizableManager.m */; };
+		1AB64A2B21056EBA004342C5 /* ZYCropImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A2421056EB9004342C5 /* ZYCropImageController.m */; };
+		1AB64A2C21056EBA004342C5 /* UIImagePickerController+ZY.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A2521056EB9004342C5 /* UIImagePickerController+ZY.m */; };
+		1AB64A2D21056EBA004342C5 /* ZYImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB64A2621056EB9004342C5 /* ZYImagePicker.m */; };
 		1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */; };
 		1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */; };
 		1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDE0720D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m */; };
@@ -407,6 +413,17 @@
 		1AB64A182101E2F6004342C5 /* SlideFoodHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideFoodHeaderView.h; sourceTree = "<group>"; };
 		1AB64A192101E2F6004342C5 /* SlideFoodHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideFoodHeaderView.m; sourceTree = "<group>"; };
 		1AB64A1B2101E303004342C5 /* SlideFoodHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideFoodHeaderView.xib; sourceTree = "<group>"; };
+		1AB64A1D21056EB8004342C5 /* ZYLocalizableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYLocalizableManager.h; sourceTree = "<group>"; };
+		1AB64A1E21056EB8004342C5 /* ZYImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYImagePicker.h; sourceTree = "<group>"; };
+		1AB64A1F21056EB8004342C5 /* ZYBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYBundle.bundle; sourceTree = "<group>"; };
+		1AB64A2021056EB8004342C5 /* ZYFormData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYFormData.m; sourceTree = "<group>"; };
+		1AB64A2121056EB9004342C5 /* UIImagePickerController+ZY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+ZY.h"; sourceTree = "<group>"; };
+		1AB64A2221056EB9004342C5 /* ZYLocalizableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYLocalizableManager.m; sourceTree = "<group>"; };
+		1AB64A2321056EB9004342C5 /* ZYFormData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYFormData.h; sourceTree = "<group>"; };
+		1AB64A2421056EB9004342C5 /* ZYCropImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYCropImageController.m; sourceTree = "<group>"; };
+		1AB64A2521056EB9004342C5 /* UIImagePickerController+ZY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+ZY.m"; sourceTree = "<group>"; };
+		1AB64A2621056EB9004342C5 /* ZYImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYImagePicker.m; sourceTree = "<group>"; };
+		1AB64A2721056EBA004342C5 /* ZYCropImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYCropImageController.h; sourceTree = "<group>"; };
 		1ABDDDF520D0F09200E900A8 /* MeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCollectionViewCell.h; sourceTree = "<group>"; };
 		1ABDDDF620D0F09200E900A8 /* MeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCollectionViewCell.m; sourceTree = "<group>"; };
 		1ABDDDF720D0F09200E900A8 /* MeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -1061,6 +1078,17 @@
 		1A66B99920FC396E00464F4E /* 系统相册 */ = {
 			isa = PBXGroup;
 			children = (
+				1AB64A2121056EB9004342C5 /* UIImagePickerController+ZY.h */,
+				1AB64A2521056EB9004342C5 /* UIImagePickerController+ZY.m */,
+				1AB64A1F21056EB8004342C5 /* ZYBundle.bundle */,
+				1AB64A2721056EBA004342C5 /* ZYCropImageController.h */,
+				1AB64A2421056EB9004342C5 /* ZYCropImageController.m */,
+				1AB64A2321056EB9004342C5 /* ZYFormData.h */,
+				1AB64A2021056EB8004342C5 /* ZYFormData.m */,
+				1AB64A1E21056EB8004342C5 /* ZYImagePicker.h */,
+				1AB64A2621056EB9004342C5 /* ZYImagePicker.m */,
+				1AB64A1D21056EB8004342C5 /* ZYLocalizableManager.h */,
+				1AB64A2221056EB9004342C5 /* ZYLocalizableManager.m */,
 			);
 			path = "系统相册";
 			sourceTree = "<group>";
@@ -1704,6 +1732,7 @@
 				1AE959B320ECA56B00C5BDE4 /* FruitCollectionViewCell.xib in Resources */,
 				1AE959C120EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib in Resources */,
 				1A66B99720F9D80E00464F4E /* ReadMe.md in Resources */,
+				1AB64A2821056EBA004342C5 /* ZYBundle.bundle in Resources */,
 				1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */,
 				90F492D120FCD21500C56DD4 /* README.md in Resources */,
 				1AE423EC20FD8D9D009E8D13 /* address_check@2x.png in Resources */,
@@ -1805,6 +1834,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */,
+				1AB64A2A21056EBA004342C5 /* ZYLocalizableManager.m in Sources */,
 				1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */,
 				1AE4241C20FDE44A009E8D13 /* NSString+lineSpace.m in Sources */,
 				1AB649FE210046B7004342C5 /* TFTableView.m in Sources */,
@@ -1824,6 +1854,7 @@
 				1AB649FB21003C7D004342C5 /* DeliveryPickView.m in Sources */,
 				1AE423D220FC9021009E8D13 /* AddressManageCell.m in Sources */,
 				1A66B98B20F9CD4A00464F4E /* TFDeviceInfo.m in Sources */,
+				1AB64A2D21056EBA004342C5 /* ZYImagePicker.m in Sources */,
 				1ABDDE2320D3B5BB00E900A8 /* MoreViewController.m in Sources */,
 				9027FEB920F1B193003F0A51 /* TFWebViewController.m in Sources */,
 				1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */,
@@ -1846,8 +1877,10 @@
 				1A66B8D720F2F31300464F4E /* ShoppingListViewController.m in Sources */,
 				1A873A1D20DB987400B1357E /* ShowImageCollectionViewCell.m in Sources */,
 				1A2BE01820C3CB670023C55D /* UIView+Frame.m in Sources */,
+				1AB64A2921056EBA004342C5 /* ZYFormData.m in Sources */,
 				1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */,
 				1AE423C020FC4998009E8D13 /* MeFooterReusableView.m in Sources */,
+				1AB64A2C21056EBA004342C5 /* UIImagePickerController+ZY.m in Sources */,
 				1A2BDFF220C3C4F50023C55D /* TFTabBarController.m in Sources */,
 				1A66B92720F5FCD000464F4E /* BundlingCollectionViewCell_1.m in Sources */,
 				90BBBDD820F8FCD600D71B62 /* TBCommon.m in Sources */,
@@ -1915,6 +1948,7 @@
 				1A66B91220F5BCE500464F4E /* TFAPIBaseManager.m in Sources */,
 				1A66B92C20F6F75800464F4E /* LoginViewController.m in Sources */,
 				1A66B8F820F376A000464F4E /* UIView+LXShadowPath.m in Sources */,
+				1AB64A2B21056EBA004342C5 /* ZYCropImageController.m in Sources */,
 				9027FEC820F8E276003F0A51 /* algorithm.c in Sources */,
 				1A873A2520DBAB6500B1357E /* UIView+Gradient.m in Sources */,
 				1AE423CA20FC660F009E8D13 /* UIView+UITapGestureRecognizer.m in Sources */,
