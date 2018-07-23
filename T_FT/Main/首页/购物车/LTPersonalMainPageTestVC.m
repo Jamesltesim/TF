@@ -41,6 +41,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    self.view.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
     if (@available(iOS 11.0, *)) {
@@ -51,11 +53,29 @@
     [self.view addSubview:self.tableView];
     self.tableView.tableFooterView = [[UIView alloc]init];
     self.selectIndexPath.titleIndex = self.titleIndex;
-    
+
 #warning 重要 必须赋值
     self.glt_scrollView = self.tableView;
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+//    self.view.backgroundColor = [UIColor whiteColor];
+//    if (@available(iOS 11.0, *)) {
+//        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//    } else {
+//        self.automaticallyAdjustsScrollViewInsets = NO;
+//    }
+//    [self.view addSubview:self.tableView];
+//    self.tableView.tableFooterView = [[UIView alloc]init];
+//    self.selectIndexPath.titleIndex = self.titleIndex;
+//
+//#warning 重要 必须赋值
+//    self.glt_scrollView = self.tableView;
+    
+    
+}
 - (void)reloadData{
     [self.tableView reloadData];
 }
@@ -120,26 +140,11 @@
     
         ShoppingTableViewCell *shoppingCell = [tableView cellForRowAtIndexPath:indexPath];
     self.selectIndexPath.rowIndex = indexPath.row;
+    
     if([self.delegate respondsToSelector:@selector(TFShoppingListWithTableView:cell:didSelectRowAtIndexPath:data:)]){
         [self.delegate TFShoppingListWithTableView:tableView cell:shoppingCell didSelectRowAtIndexPath:self.selectIndexPath data:model];
     }
-//
-//    //如果需要选择辅食 就弹出新界面
-//    if(model.isHaveSlideFood){
-//
-//    }else{
-////        否则 就更新购物篮
-//
-////        [self showCashierDesk];
-////
-////        [ShoppingCarData addGood:model];
-////        [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
-//    }
-//
-//
-//
-//    [shoppingCell setGoodsCount:[ShoppingCarData countOfGood:model]];
-//    [ShoppingCarData showOrder];
+
 }
 - (TFShoppingIndexPath *)selectIndexPath{
     if(!_selectIndexPath){

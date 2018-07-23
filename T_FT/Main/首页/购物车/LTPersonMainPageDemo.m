@@ -39,11 +39,11 @@
 
 
 -(void)glt_scrollViewDidScroll:(UIScrollView *)scrollView {
-//    NSLog(@"---> %lf", scrollView.contentOffset.y);
+    NSLog(@"---> %lf", scrollView.contentOffset.y);
     CGFloat offsetY = scrollView.contentOffset.y;
     CGFloat headerImageY = offsetY;
     CGFloat headerImageH = HeaderHeight - offsetY;
-    if (offsetY <= 0.0) {
+    if (offsetY <= 6) {
         self.navigationController.navigationBar.alpha = 0.0;
         self.currentProgress = 0.0;
     }else {
@@ -59,9 +59,10 @@
 
 //        NSLog(@"self.navView.alpha:%lf",1 - progress);
         self.currentProgress = 1 - progress;
-        self.navView.alpha = self.currentProgress;
+     
 //         [self preferredStatusBarStyle];
     }
+       self.navView.alpha = self.currentProgress;
     CGRect headerImageFrame = self.headerImageView.frame;
     headerImageFrame.origin.y = headerImageY;
     headerImageFrame.size.height = headerImageH;
@@ -69,12 +70,17 @@
     self.headerImageView.frame = headerImageFrame;
 }
 - (void)glt_scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+   
     if(scrollView.contentOffset.y <= 0.1){
         self.navView.alpha = 0;
     }
 }
 - (void)glt_scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
   
+    if(scrollView.contentOffset.y <= 0.1){
+         NSLog(@"%@  %@",NSStringFromSelector(_cmd),NSStringFromCGPoint(scrollView.contentOffset));
+        self.navView.alpha = 0;
+    }
 //    CGFloat adjustHeight = HeaderHeight - NavHeight;
 //     CGFloat offsetY = scrollView.contentOffset.y;
 //    CGFloat progress = 1 - (offsetY / adjustHeight);

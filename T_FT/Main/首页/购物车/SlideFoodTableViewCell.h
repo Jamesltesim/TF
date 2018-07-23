@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SlideFoodTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *price;
 
 @end

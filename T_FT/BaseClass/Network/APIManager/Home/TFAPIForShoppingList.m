@@ -51,6 +51,15 @@
     model9.content = [TFAPIRandom randomCreatChinese:arc4random() % 50+20];
     model9.imgUrl = (arc4random()%2 == 0? @"www":@"");
     model9.price = [TFAPIRandom randomRMB];
+    
+    model9.isHaveSlideFood = YES;
+    
+    model9.slideFood = @[@{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]},
+                         @{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]},
+                         @{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]},
+                         @{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]},
+                         @{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]},
+                         @{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]}];
     return model9;
 }
 

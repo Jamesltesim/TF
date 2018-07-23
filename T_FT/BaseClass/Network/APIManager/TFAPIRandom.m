@@ -18,7 +18,21 @@
 //生成 人民币 金额
 + (CGFloat)randomRMB{
     //    iOS随机生成浮点数小数
-    int x = (arc4random() % 1000) + 10;
+    int x = (arc4random() % 100) + 1;
+    int y = (arc4random() % 10) ;
+    int z = (arc4random() % 10) ;
+    NSString *str=[NSString stringWithFormat:@"%d.%d%d",x,y,z];
+    CGFloat f =[str floatValue];
+    
+    return f;
+}
+
++ (CGFloat)randomRMBTo:(int)to{
+    return [self randomRMBFrom:0 to:to];
+}
++ (CGFloat)randomRMBFrom:(int)from to:(int)to{
+    //    iOS随机生成浮点数小数
+    int x = (arc4random() % (to-from)) + from;
     int y = (arc4random() % 10) ;
     int z = (arc4random() % 10) ;
     NSString *str=[NSString stringWithFormat:@"%d.%d%d",x,y,z];

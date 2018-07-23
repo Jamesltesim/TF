@@ -16,12 +16,14 @@
 
 #import "LTPersonalMainPageTestVC.h"
 #import "TFAPIForShoppingList.h"
+#import "SlideFoodViewController.h"
 
 @interface ShoppingListViewController ()<ShoppingCarDelegate,TFShoppingListDelegate,TFAPICallBackProtocol>
 
 @property (nonatomic,strong)ShowShoppingCarView *carView;
 
 @property(nonatomic,strong) NSMutableArray *controllerDataArray;
+
 
 @end
 
@@ -180,9 +182,9 @@
         NSLog(@"点击了 -> %ld", index);
     }];
     
-    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
-    self.headerImageView.userInteractionEnabled = YES;
-    [self.headerImageView addGestureRecognizer:gesture];
+//    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
+//    self.headerImageView.userInteractionEnabled = YES;
+//    [self.headerImageView addGestureRecognizer:gesture];
      [self.view bringSubviewToFront:self.navView];
 }
 
@@ -200,9 +202,15 @@
 - (void)TFShoppingListWithTableView:(UITableView *)tableView cell:(ShoppingTableViewCell *)cell didSelectRowAtIndexPath:(TFShoppingIndexPath *)indexPath data:(GoodModel *)data{
     NSLog(@"%@ : titleIndex:%ld rowIndex:%ld",NSStringFromSelector(_cmd),indexPath.titleIndex,indexPath.rowIndex);
     
+    
         //如果需要选择辅食 就弹出新界面
         if(data.isHaveSlideFood){
-    
+           SlideFoodViewController *slideFoodController = [[SlideFoodViewController alloc]initWithTableViewFrame:CGRectMake(0, NAV_HEIGHT, self.view.width, SCREEN_HEIGHT-NAV_HEIGHT-80) style:UITableViewStylePlain];
+            slideFoodController.dataArray = data.slideFood;
+            dispatch_async(dispatch_get_main_queue(),^{
+                [self presentViewController:slideFoodController animated:YES completion:nil];
+            });
+           
         }else{
     //        否则 就更新购物篮
     

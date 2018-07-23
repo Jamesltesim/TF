@@ -12,6 +12,8 @@
 
 //生成 人民币 金额
 + (CGFloat)randomRMB;
++ (CGFloat)randomRMBFrom:(int)from to:(int)to;
++ (CGFloat)randomRMBTo:(int)to;
 
 //生成指定长度的中文字符串
 + (NSMutableString*)randomCreatChinese:(NSInteger)count;

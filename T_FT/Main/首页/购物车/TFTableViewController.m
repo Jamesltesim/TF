@@ -14,9 +14,17 @@
 
 @implementation TFTableViewController
 
+- (instancetype)initWithTableViewFrame:(CGRect)frame style:(UITableViewStyle)style{
+    if(self = [super init]){
+        _tableView = [[UITableView alloc]initWithFrame:frame style:style];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning {

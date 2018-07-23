@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TFTableViewController : UIViewController
+@interface TFTableViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic,strong) UITableView *tableView;
+
+@property (nonatomic,strong) NSArray *dataArray;
+
+- (instancetype)initWithTableViewFrame:(CGRect)frame style:(UITableViewStyle)style;
 @end

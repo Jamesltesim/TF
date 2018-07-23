@@ -26,4 +26,6 @@
 #define THEME_FONT_COLOR_GRAY RGBA(191,191,191,1)
 #define THEME_FONT_COLOR_BLACK RGBA(51,51,51,1)
 
+#define RANDOM_COLOR [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1]
+
 

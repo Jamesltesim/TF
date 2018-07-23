@@ -10,12 +10,23 @@
 
 @implementation SlideFoodHeaderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+         self = [[[NSBundle mainBundle] loadNibNamed:@"SlideFoodHeaderView" owner:self options:nil] lastObject];
+        self.frame = frame;
+    }
+    return self;
 }
-*/
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self = [[[NSBundle mainBundle] loadNibNamed:@"SlideFoodHeaderView" owner:self options:nil] lastObject];
+    }
+    return self;
+}
 
 @end
