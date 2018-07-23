@@ -38,6 +38,8 @@
 @property (nonatomic,strong) NSArray *dataArray;
 @property (nonatomic,strong) FloatingView *floatView;
 
+@property (nonatomic,strong) ShoppingListViewController *shoppingListController;
+
 @end
 
 @implementation HomeViewController{
@@ -147,7 +149,7 @@
 //        [alert addAction:cancleAction];
 //        [alert addAction:defintAction];
 //        [strongSelf presentViewController:alert animated:YES completion:nil];
-        [strongSelf.navigationController pushViewController:[[ShoppingListViewController alloc]init] animated:YES];
+        [strongSelf.navigationController pushViewController:self.shoppingListController animated:YES];
 //        [strongSelf.navigationController pushViewController:[[LTPersonMainPageDemo alloc]init] animated:YES];
     };
 
@@ -443,7 +445,12 @@
 
 #pragma mark get set
 
-
+- (ShoppingListViewController *)shoppingListController{
+    if(!_shoppingListController){
+        _shoppingListController = [[ShoppingListViewController alloc]init];
+    }
+    return _shoppingListController;
+}
 
 - (void)createCollectionView{
     
