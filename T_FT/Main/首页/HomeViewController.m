@@ -23,6 +23,7 @@
 
 #import "ShoppingListViewController.h"
 #import "LTPersonMainPageDemo.h"
+#import "HomeNavView.h"
 
 
 
@@ -37,6 +38,7 @@
 @property (nonatomic,strong) UICollectionView *collectionView;
 @property (nonatomic,strong) NSArray *dataArray;
 @property (nonatomic,strong) FloatingView *floatView;
+@property (nonatomic,strong) HomeNavView *navView;
 
 @property (nonatomic,strong) ShoppingListViewController *shoppingListController;
 
@@ -79,7 +81,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createCollectionView];
-    
+    [self.view addSubview:self.navView];                                                                                                                                                                                                                                                                             
      self.navigationController.navigationBar.hidden = YES;
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -444,6 +446,14 @@
 }
 
 #pragma mark get set
+
+- (HomeNavView *)navView{
+    if(!_navView){
+        _navView = [HomeNavView creatNavView];
+        _navView.backgroundColor = [UIColor purpleColor];
+    }
+    return _navView;
+}
 
 - (ShoppingListViewController *)shoppingListController{
     if(!_shoppingListController){

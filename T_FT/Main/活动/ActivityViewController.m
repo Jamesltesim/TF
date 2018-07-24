@@ -10,15 +10,18 @@
 #import "SeckillNavBarView.h"
 #import "SeckillViewController.h"
 #import "TFSegmentTitleView.h"
+#import "TFAPIForActivity.h"
 
 
 @interface ActivityViewController ()<FSPageContentViewDelegate,
-                                     TFSegmentTitleViewDelegate>
+                                     TFSegmentTitleViewDelegate,
+                                     TFAPICallBackProtocol>
 
 //@property (nonatomic,strong) UICollectionView *collectionView;
 
 @property (nonatomic,strong) SeckillNavBarView *navView;
 
+@property (nonatomic,strong) NSMutableArray <SeckillViewController *>* seckillControllers;
 
 
 @property (nonatomic, strong) FSPageContentView *pageContentView;
@@ -43,15 +46,11 @@
 //    self.title = @[@"全部",@"服饰穿搭",@"生活百货",@"美食吃货",@"美容护理",@"母婴儿童",@"数码家电",@"其他"][endIndex];
 }
 
-
-
-
 #pragma -mark life cycle
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-//     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
 }
 
@@ -62,26 +61,8 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    SeckillViewController *controller1 = [[SeckillViewController alloc]init];
-    SeckillViewController *controller2 = [[SeckillViewController alloc]init];
-    SeckillViewController *controller3 = [[SeckillViewController alloc]init];
-    SeckillViewController *controller4 = [[SeckillViewController alloc]init];
-    SeckillViewController *controller5 = [[SeckillViewController alloc]init];
-    
-
-    controller1.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
-    controller2.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
-    controller3.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
-    controller4.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
-    controller5.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
-    
-    self.pageContentView = [[FSPageContentView alloc]initWithFrame:CGRectMake(0, self.navView.bottom, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT) childVCs:@[controller1,controller2,controller3,controller4,controller5] parentVC:self delegate:self];
-    self.pageContentView.contentViewCurrentIndex = 0;
-    //    self.pageContentView.contentViewCanScroll = NO;//设置滑动属性
-    [self.view addSubview:_pageContentView];
+ 
 }
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -89,13 +70,39 @@
     self.navigationController.navigationBar.hidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    self.navView.seckillTimes = @[@"16:00\n即将开始",@"18:00",@"20:00",@"22:00",@"00:00"];
     [self.view addSubview:self.navView];
     self.navView.segmentTitleDelegate = self;
-    [self.navView.titleView loadTitles: @[@"10:00",@"12:00",@"14:00",@"16:00",@"18:00"]];
+ 
+    
+    TFAPIForActivity *activityManager = [[TFAPIForActivity alloc]init];
+    activityManager.delegate = self;
+    [activityManager loadData];
 }
 
-
+- (void)TFAPICallBackDidSuccess:(TFAPIBaseManager *)manager{
+    NSArray *array = (NSArray *)manager.responseObject;
+    NSMutableArray *titleArray = [[NSMutableArray alloc]initWithCapacity:0];
+    if(!_seckillControllers) _seckillControllers = [[NSMutableArray alloc]initWithCapacity:0];
+    
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSDictionary *dict = (NSDictionary *)obj;
+        [titleArray addObject:dict[@"time"]];
+        
+      SeckillViewController *controller =  [[SeckillViewController alloc]init];
+        controller.dataArray =dict[@"data"];
+          controller.adjustmentRect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT);
+        [self.seckillControllers addObject:controller];
+    }];
+    
+    
+       [self.navView.titleView loadTitles: titleArray];
+    
+    self.pageContentView = [[FSPageContentView alloc]initWithFrame:CGRectMake(0, self.navView.bottom, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - self.navView.bottom - HOME_INDICATOR_HEIGHT - TABNAR_HEIGHT) childVCs:self.seckillControllers parentVC:self delegate:self];
+    self.pageContentView.contentViewCurrentIndex = 0;
+    //    self.pageContentView.contentViewCanScroll = NO;//设置滑动属性
+    [self.view addSubview:_pageContentView];
+    
+}
 
 - (SeckillNavBarView *)navView{
     if(!_navView){

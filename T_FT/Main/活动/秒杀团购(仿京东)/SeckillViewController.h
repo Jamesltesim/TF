@@ -10,7 +10,7 @@
 
 @interface SeckillViewController : UIViewController
 
-
+@property (nonatomic,strong) NSArray *dataArray;
 @property (nonatomic) CGRect adjustmentRect;
 
 @end

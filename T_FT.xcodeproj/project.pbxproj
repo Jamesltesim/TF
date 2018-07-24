@@ -119,6 +119,10 @@
 		1ABDDE5020D3B6EB00E900A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDE4F20D3B6EB00E900A8 /* LaunchScreen.storyboard */; };
 		1ABDDE5420D3BE0800E900A8 /* ActivityCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDDE5220D3BE0800E900A8 /* ActivityCollectionViewCell.m */; };
 		1ABDDE5520D3BE0800E900A8 /* ActivityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDE5320D3BE0800E900A8 /* ActivityCollectionViewCell.xib */; };
+		1AC288412106CB5E009DBC77 /* HomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC288402106CB5E009DBC77 /* HomeNavView.m */; };
+		1AC28846210704C6009DBC77 /* UITextView+XMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC28843210704C6009DBC77 /* UITextView+XMExtension.m */; };
+		1AC28847210704C6009DBC77 /* XMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC28845210704C6009DBC77 /* XMTextView.m */; };
+		1AC2884E21070F64009DBC77 /* TFAPIForActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC2884D21070F64009DBC77 /* TFAPIForActivity.m */; };
 		1AC711AF20E097F40099D2A9 /* NoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC711AE20E097F40099D2A9 /* NoiseViewController.m */; };
 		1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC816C720E102C700B1EE89 /* iBeaconViewController.m */; };
 		1AC816CA20E102C700B1EE89 /* iBeaconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC816C820E102C700B1EE89 /* iBeaconViewController.xib */; };
@@ -194,7 +198,6 @@
 		905233FD2106062C00127250 /* SlideFoodHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 905233F62106062C00127250 /* SlideFoodHeaderView.m */; };
 		90996ACD20FF5AB3007CFFBE /* LTPersonMainPageDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 90996ACA20FF5AB3007CFFBE /* LTPersonMainPageDemo.m */; };
 		90996ACE20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 90996ACC20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.m */; };
-		90996AD220FF6286007CFFBE /* XXTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90996AD120FF6286007CFFBE /* XXTextView.m */; };
 		90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBBDD320F8FCD500D71B62 /* TBKeyChain.m */; };
 		90BBBDD820F8FCD600D71B62 /* TBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBBDD420F8FCD500D71B62 /* TBCommon.m */; };
 		90CC884420FA39C700242C95 /* UINavigationController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CC884320FA39C700242C95 /* UINavigationController+StatusBar.m */; };
@@ -443,6 +446,14 @@
 		1ABDDE5120D3BE0800E900A8 /* ActivityCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityCollectionViewCell.h; sourceTree = "<group>"; };
 		1ABDDE5220D3BE0800E900A8 /* ActivityCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityCollectionViewCell.m; sourceTree = "<group>"; };
 		1ABDDE5320D3BE0800E900A8 /* ActivityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCollectionViewCell.xib; sourceTree = "<group>"; };
+		1AC2883F2106CB5E009DBC77 /* HomeNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeNavView.h; sourceTree = "<group>"; };
+		1AC288402106CB5E009DBC77 /* HomeNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeNavView.m; sourceTree = "<group>"; };
+		1AC28842210704C6009DBC77 /* UITextView+XMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+XMExtension.h"; sourceTree = "<group>"; };
+		1AC28843210704C6009DBC77 /* UITextView+XMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+XMExtension.m"; sourceTree = "<group>"; };
+		1AC28844210704C6009DBC77 /* XMTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMTextView.h; sourceTree = "<group>"; };
+		1AC28845210704C6009DBC77 /* XMTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTextView.m; sourceTree = "<group>"; };
+		1AC2884C21070F64009DBC77 /* TFAPIForActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFAPIForActivity.h; sourceTree = "<group>"; };
+		1AC2884D21070F64009DBC77 /* TFAPIForActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAPIForActivity.m; sourceTree = "<group>"; };
 		1AC711AD20E097F40099D2A9 /* NoiseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoiseViewController.h; sourceTree = "<group>"; };
 		1AC711AE20E097F40099D2A9 /* NoiseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoiseViewController.m; sourceTree = "<group>"; };
 		1AC816C620E102C700B1EE89 /* iBeaconViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iBeaconViewController.h; sourceTree = "<group>"; };
@@ -577,8 +588,6 @@
 		90996ACA20FF5AB3007CFFBE /* LTPersonMainPageDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPersonMainPageDemo.m; sourceTree = "<group>"; };
 		90996ACB20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPersonalMainPageTestVC.h; sourceTree = "<group>"; };
 		90996ACC20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPersonalMainPageTestVC.m; sourceTree = "<group>"; };
-		90996AD020FF6286007CFFBE /* XXTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTextView.h; sourceTree = "<group>"; };
-		90996AD120FF6286007CFFBE /* XXTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTextView.m; sourceTree = "<group>"; };
 		90BBBDD320F8FCD500D71B62 /* TBKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKeyChain.m; sourceTree = "<group>"; };
 		90BBBDD420F8FCD500D71B62 /* TBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCommon.m; sourceTree = "<group>"; };
 		90BBBDD520F8FCD500D71B62 /* TBCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCommon.h; sourceTree = "<group>"; };
@@ -723,6 +732,8 @@
 				1A2BDFFD20C3C5690023C55D /* HomeViewController.m */,
 				1A66B97B20F98A2600464F4E /* HomeCell */,
 				1A66B8D120F2F2A700464F4E /* 购物车 */,
+				1AC2883F2106CB5E009DBC77 /* HomeNavView.h */,
+				1AC288402106CB5E009DBC77 /* HomeNavView.m */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -886,6 +897,7 @@
 		1A66B91720F5DA3900464F4E /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
+				1AC2884821070F09009DBC77 /* 活动 */,
 				1AB64A0721018FE5004342C5 /* TFAPIRandom.h */,
 				1AB64A0821018FE5004342C5 /* TFAPIRandom.m */,
 				1A66B91020F5BCE500464F4E /* TFAPIBaseManager.h */,
@@ -1322,6 +1334,15 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		1AC2884821070F09009DBC77 /* 活动 */ = {
+			isa = PBXGroup;
+			children = (
+				1AC2884C21070F64009DBC77 /* TFAPIForActivity.h */,
+				1AC2884D21070F64009DBC77 /* TFAPIForActivity.m */,
+			);
+			path = "活动";
+			sourceTree = "<group>";
+		};
 		1AC711AC20E097A70099D2A9 /* 声噪 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1537,8 +1558,10 @@
 		90996ACF20FF6286007CFFBE /* 自定义TextView */ = {
 			isa = PBXGroup;
 			children = (
-				90996AD020FF6286007CFFBE /* XXTextView.h */,
-				90996AD120FF6286007CFFBE /* XXTextView.m */,
+				1AC28842210704C6009DBC77 /* UITextView+XMExtension.h */,
+				1AC28843210704C6009DBC77 /* UITextView+XMExtension.m */,
+				1AC28844210704C6009DBC77 /* XMTextView.h */,
+				1AC28845210704C6009DBC77 /* XMTextView.m */,
 			);
 			path = "自定义TextView";
 			sourceTree = "<group>";
@@ -1821,6 +1844,7 @@
 				1A66B91C20F5DA7800464F4E /* TFAPIForHomebanner.m in Sources */,
 				1ABDDE4B20D3B62200E900A8 /* NSArray+MASAdditions.m in Sources */,
 				1A66B99220F9D26100464F4E /* TFDataManage.m in Sources */,
+				1AC288412106CB5E009DBC77 /* HomeNavView.m in Sources */,
 				1AB649FB21003C7D004342C5 /* DeliveryPickView.m in Sources */,
 				1AE423D220FC9021009E8D13 /* AddressManageCell.m in Sources */,
 				1A66B98B20F9CD4A00464F4E /* TFDeviceInfo.m in Sources */,
@@ -1872,10 +1896,10 @@
 				1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */,
 				1AB64A032101797D004342C5 /* TFAPIForShoppingList.m in Sources */,
 				1ABDDE4720D3B62200E900A8 /* MASConstraintMaker.m in Sources */,
-				90996AD220FF6286007CFFBE /* XXTextView.m in Sources */,
 				905233FD2106062C00127250 /* SlideFoodHeaderView.m in Sources */,
 				1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */,
 				90F492D520FCDD7D00C56DD4 /* UITabBar+CustomBadge.m in Sources */,
+				1AC28847210704C6009DBC77 /* XMTextView.m in Sources */,
 				1AE4240320FDB867009E8D13 /* AreaView.m in Sources */,
 				1A66B97820F8949D00464F4E /* ReadMe.txt in Sources */,
 				9027FED020F8E6FE003F0A51 /* TFQRCodeImageView.m in Sources */,
@@ -1932,12 +1956,14 @@
 				1AE4242020FDE44A009E8D13 /* YXAlertController.m in Sources */,
 				1A66B8CD20EF429B00464F4E /* LoginView.m in Sources */,
 				90F492CF20FCD1E100C56DD4 /* LHRatingView.m in Sources */,
+				1AC28846210704C6009DBC77 /* UITextView+XMExtension.m in Sources */,
 				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,
 				9027FEBC20F1B778003F0A51 /* TFUtils+UIColor.m in Sources */,
 				1AE959A720EB5CDF00C5BDE4 /* TFSegmentTitleView.m in Sources */,
 				1A66B8ED20F35E1B00464F4E /* ShoppingCarData.m in Sources */,
 				1AE423CE20FC8EAB009E8D13 /* AdressManageController.m in Sources */,
+				1AC2884E21070F64009DBC77 /* TFAPIForActivity.m in Sources */,
 				1ABDDE4820D3B62200E900A8 /* MASLayoutConstraint.m in Sources */,
 				1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */,
 				1A2BE00120C3C5860023C55D /* ActivityViewController.m in Sources */,

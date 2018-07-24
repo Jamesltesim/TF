@@ -15,7 +15,7 @@
                                     UITableViewDataSource>
 
 
-@property (nonatomic,strong) NSArray *dataArray;
+
 @property (nonatomic,strong) UITableView *tabView;
 @property (nonatomic,strong) ScrollImage *headerView;
 
@@ -27,19 +27,6 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataArray = @[@{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(20),@"iamge":@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530009527846&di=9c4b0a819ee9619e8a2d5f1969e7e9c4&imgtype=0&src=http%3A%2F%2Fcbu01.alicdn.com%2Fimg%2Fibank%2F2015%2F079%2F048%2F2589840970_435159613.jpg"},
-                       
-                       @{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(20)},
-                       @{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(80)},
-                       @{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(60)},
-                       @{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(90)},
-                       @{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(20)},
-                       @{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(20)},
-                       @{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(62)},
-                       @{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(20)},
-                       @{@"name":@"夜光小学生女童手表儿童男孩女孩手表电子表",@"seckill_price":@"15.8",@"original_price":@"58",@"count":@(100),@"sold_count":@(39)}];
-    
-//    NSLog(@"rect:%@",NSStringFromCGRect(self.adjustmentRect));
     self.tabView.frame = self.adjustmentRect;
     [self.view addSubview:self.tabView];
 }
