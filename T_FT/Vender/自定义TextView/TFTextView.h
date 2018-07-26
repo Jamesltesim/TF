@@ -17,7 +17,10 @@ typedef enum {
 /** 返回输入监听内容 */
 typedef void(^XMBackText)(NSString *textViewStr);
 
-@interface XMTextView : UIView
+@interface TFTextView : UIView
+
+/** textView */
+@property (nonatomic, weak) UITextView *textView;
 
 /** 是否设置边框 （默认 Yes） */
 @property (nonatomic, assign) BOOL isSetBorder;

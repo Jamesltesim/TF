@@ -121,7 +121,7 @@
 		1ABDDE5520D3BE0800E900A8 /* ActivityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDDE5320D3BE0800E900A8 /* ActivityCollectionViewCell.xib */; };
 		1AC288412106CB5E009DBC77 /* HomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC288402106CB5E009DBC77 /* HomeNavView.m */; };
 		1AC28846210704C6009DBC77 /* UITextView+XMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC28843210704C6009DBC77 /* UITextView+XMExtension.m */; };
-		1AC28847210704C6009DBC77 /* XMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC28845210704C6009DBC77 /* XMTextView.m */; };
+		1AC28847210704C6009DBC77 /* TFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC28845210704C6009DBC77 /* TFTextView.m */; };
 		1AC2884E21070F64009DBC77 /* TFAPIForActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC2884D21070F64009DBC77 /* TFAPIForActivity.m */; };
 		1AC2885B21096CC0009DBC77 /* PartimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC2885921096CC0009DBC77 /* PartimeTableViewCell.m */; };
 		1AC2885C21096CC0009DBC77 /* PartimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC2885A21096CC0009DBC77 /* PartimeTableViewCell.xib */; };
@@ -453,8 +453,8 @@
 		1AC288402106CB5E009DBC77 /* HomeNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeNavView.m; sourceTree = "<group>"; };
 		1AC28842210704C6009DBC77 /* UITextView+XMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+XMExtension.h"; sourceTree = "<group>"; };
 		1AC28843210704C6009DBC77 /* UITextView+XMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+XMExtension.m"; sourceTree = "<group>"; };
-		1AC28844210704C6009DBC77 /* XMTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMTextView.h; sourceTree = "<group>"; };
-		1AC28845210704C6009DBC77 /* XMTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTextView.m; sourceTree = "<group>"; };
+		1AC28844210704C6009DBC77 /* TFTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTextView.h; sourceTree = "<group>"; };
+		1AC28845210704C6009DBC77 /* TFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFTextView.m; sourceTree = "<group>"; };
 		1AC2884C21070F64009DBC77 /* TFAPIForActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFAPIForActivity.h; sourceTree = "<group>"; };
 		1AC2884D21070F64009DBC77 /* TFAPIForActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAPIForActivity.m; sourceTree = "<group>"; };
 		1AC2885821096CC0009DBC77 /* PartimeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PartimeTableViewCell.h; sourceTree = "<group>"; };
@@ -1581,8 +1581,8 @@
 			children = (
 				1AC28842210704C6009DBC77 /* UITextView+XMExtension.h */,
 				1AC28843210704C6009DBC77 /* UITextView+XMExtension.m */,
-				1AC28844210704C6009DBC77 /* XMTextView.h */,
-				1AC28845210704C6009DBC77 /* XMTextView.m */,
+				1AC28844210704C6009DBC77 /* TFTextView.h */,
+				1AC28845210704C6009DBC77 /* TFTextView.m */,
 			);
 			path = "自定义TextView";
 			sourceTree = "<group>";
@@ -1923,7 +1923,7 @@
 				905233FD2106062C00127250 /* SlideFoodHeaderView.m in Sources */,
 				1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */,
 				90F492D520FCDD7D00C56DD4 /* UITabBar+CustomBadge.m in Sources */,
-				1AC28847210704C6009DBC77 /* XMTextView.m in Sources */,
+				1AC28847210704C6009DBC77 /* TFTextView.m in Sources */,
 				1AE4240320FDB867009E8D13 /* AreaView.m in Sources */,
 				1A66B97820F8949D00464F4E /* ReadMe.txt in Sources */,
 				9027FED020F8E6FE003F0A51 /* TFQRCodeImageView.m in Sources */,

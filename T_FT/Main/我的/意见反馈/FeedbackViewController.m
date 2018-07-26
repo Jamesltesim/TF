@@ -7,10 +7,11 @@
 //
 
 #import "FeedbackViewController.h"
+#import "TFTextView.h"
 
 @interface FeedbackViewController ()<UITextViewDelegate>
 
-@property (nonatomic,strong) UITextView *textView;
+@property (nonatomic,strong) TFTextView *textView;
 @property (nonatomic,strong) UIButton *submit;
 
 @end
@@ -22,13 +23,13 @@
     self.navView.title = @"意见反馈";
     
     // 初始化控件
-    self.textView = [[UITextView alloc]initWithFrame:CGRectMake(10,self.navView.bottom+10,self.view.frame.size.width-20,self.view.height/10*4)];
+    self.textView = [[TFTextView alloc]initWithFrame:CGRectMake(10,self.navView.bottom+10,self.view.frame.size.width-20,self.view.height/10*4)];
     self.textView .layer.cornerRadius = 4;
     self.textView .layer.masksToBounds = YES;
-    self.textView .delegate = self;
+    self.textView.textView.delegate = self;
     self.textView.layer.borderWidth = 1;
 //    self.textView.returnKeyType = UIReturnKeyDone;
-    self.textView.font = [UIFont systemFontOfSize:14];
+    self.textView.textView.font = [UIFont systemFontOfSize:14];
     self.textView.layer.borderColor = [[[UIColor lightGrayColor] colorWithAlphaComponent:0.4] CGColor];
     //加下面一句话的目的是，是为了调整光标的位置，让光标出现在UITextView的正中间
 //    self.textView.textContainerInset = UIEdgeInsetsMake(10,0, 0, 0);

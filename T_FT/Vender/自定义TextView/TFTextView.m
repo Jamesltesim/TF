@@ -6,24 +6,23 @@
 //  Copyright © 2018年 XM. All rights reserved.
 //
 
-#import "XMTextView.h"
+#import "TFTextView.h"
 #import "UITextView+XMExtension.h"
 
-@interface XMTextView ()<UITextViewDelegate>
+@interface TFTextView ()
 
-/** textView */
-@property (nonatomic, weak) UITextView *textView;
+
 /** num */
 @property (nonatomic, weak) UILabel *numLabel;
 
 @end
 
-@implementation XMTextView
+@implementation TFTextView
 
 - (UITextView *)textView{
     if (!_textView) {
         UITextView *textView = [[UITextView alloc] init];
-        textView.delegate = self;
+//        textView.delegate = self;
         textView.textAlignment = NSTextAlignmentJustified;
         [self addSubview:textView];
         _textView = textView;
@@ -195,28 +194,28 @@
 
     self.textView.text = self.contentStr;
     
-    [self textViewDidChange:self.textView];
+//    [self textViewDidChange:self.textView];
 }
 
 #pragma mark - UITextViewDelegate
-- (void)textViewDidChange:(UITextView *)textView{
-    
-    if (self.textView.text.length>self.textMaxNum) {
-        self.textView.text = [self.textView.text substringToIndex:self.textMaxNum];
-    }
-    
-    if (self.maxNumState == XMMaxNumStateNormal) {
-        
-        self.numLabel.text = [NSString stringWithFormat:@"%d/%d",self.textView.text.length,self.textMaxNum];
-    }else{
-        
-        self.numLabel.text = [NSString stringWithFormat:@"%d",self.textMaxNum-self.textView.text.length];
-    }
-    
-    if (self.textViewListening) {
-        self.textViewListening(self.textView.text);
-    }
-}
+//- (void)textViewDidChange:(UITextView *)textView{
+//
+//    if (self.textView.text.length>self.textMaxNum) {
+//        self.textView.text = [self.textView.text substringToIndex:self.textMaxNum];
+//    }
+//
+//    if (self.maxNumState == XMMaxNumStateNormal) {
+//
+//        self.numLabel.text = [NSString stringWithFormat:@"%d/%d",self.textView.text.length,self.textMaxNum];
+//    }else{
+//
+//        self.numLabel.text = [NSString stringWithFormat:@"%d",self.textMaxNum-self.textView.text.length];
+//    }
+//
+//    if (self.textViewListening) {
+//        self.textViewListening(self.textView.text);
+//    }
+//}
 
 #pragma mark - 布局
 - (void)layoutFrame{
