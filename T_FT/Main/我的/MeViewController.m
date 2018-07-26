@@ -23,6 +23,7 @@
 #import "iBeaconViewController.h"
 #import "FeedbackViewController.h"
 #import "AdressManageController.h"
+#import "FindWorkViewController.h"
 
 #import "LoginViewController.h"
 
@@ -389,7 +390,11 @@ static NSString *iden = @"cell";
         AdressManageController *adress = [[AdressManageController alloc]init];
         [self.navigationController pushViewController:adress animated:YES];
     }
-    
+    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:0 inSection:3]]){
+        FindWorkViewController *controller = [[FindWorkViewController alloc]initWithTableViewFrame:RECT_NAVBAR_AND_NOTABBAR style:UITableViewStylePlain];
+        controller.hidesBottomBarWhenPushed = YES;
+         [self.navigationController pushViewController:controller animated:YES];
+    }
     else{
         UIViewController *controller = [[UIViewController alloc]init];
         controller.view.backgroundColor = [UIColor whiteColor];

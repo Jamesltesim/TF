@@ -21,6 +21,14 @@
 }
 
 - (id)getLocalData{
+    
+//    什果西米捞
+//    芒果西米捞
+//    木瓜西米捞
+//    西瓜西米捞
+//    菠萝西米捞
+//    苹果西米捞
+//    芒果布丁鲜奶捞
     NSDictionary *dataDict = @{@"code":@"200",
                                @"data":@[ @{@"title":@"粽子+包子",@"data":[self ramdomArray]},
                                           @{@"title":@"海鲜大餐",@"data":[self ramdomArray]},

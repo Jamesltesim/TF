@@ -123,6 +123,9 @@
 		1AC28846210704C6009DBC77 /* UITextView+XMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC28843210704C6009DBC77 /* UITextView+XMExtension.m */; };
 		1AC28847210704C6009DBC77 /* XMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC28845210704C6009DBC77 /* XMTextView.m */; };
 		1AC2884E21070F64009DBC77 /* TFAPIForActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC2884D21070F64009DBC77 /* TFAPIForActivity.m */; };
+		1AC2885B21096CC0009DBC77 /* PartimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC2885921096CC0009DBC77 /* PartimeTableViewCell.m */; };
+		1AC2885C21096CC0009DBC77 /* PartimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC2885A21096CC0009DBC77 /* PartimeTableViewCell.xib */; };
+		1AC2885F21097243009DBC77 /* FindWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC2885E21097243009DBC77 /* FindWorkViewController.m */; };
 		1AC711AF20E097F40099D2A9 /* NoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC711AE20E097F40099D2A9 /* NoiseViewController.m */; };
 		1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC816C720E102C700B1EE89 /* iBeaconViewController.m */; };
 		1AC816CA20E102C700B1EE89 /* iBeaconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC816C820E102C700B1EE89 /* iBeaconViewController.xib */; };
@@ -454,6 +457,11 @@
 		1AC28845210704C6009DBC77 /* XMTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTextView.m; sourceTree = "<group>"; };
 		1AC2884C21070F64009DBC77 /* TFAPIForActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFAPIForActivity.h; sourceTree = "<group>"; };
 		1AC2884D21070F64009DBC77 /* TFAPIForActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAPIForActivity.m; sourceTree = "<group>"; };
+		1AC2885821096CC0009DBC77 /* PartimeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PartimeTableViewCell.h; sourceTree = "<group>"; };
+		1AC2885921096CC0009DBC77 /* PartimeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PartimeTableViewCell.m; sourceTree = "<group>"; };
+		1AC2885A21096CC0009DBC77 /* PartimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartimeTableViewCell.xib; sourceTree = "<group>"; };
+		1AC2885D21097243009DBC77 /* FindWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindWorkViewController.h; sourceTree = "<group>"; };
+		1AC2885E21097243009DBC77 /* FindWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindWorkViewController.m; sourceTree = "<group>"; };
 		1AC711AD20E097F40099D2A9 /* NoiseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoiseViewController.h; sourceTree = "<group>"; };
 		1AC711AE20E097F40099D2A9 /* NoiseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoiseViewController.m; sourceTree = "<group>"; };
 		1AC816C620E102C700B1EE89 /* iBeaconViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iBeaconViewController.h; sourceTree = "<group>"; };
@@ -756,6 +764,7 @@
 		1A2BDFFB20C3C5500023C55D /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				1AC2884F2108779A009DBC77 /* 果园兼职 */,
 				1A2BE00220C3C58E0023C55D /* MeViewController.h */,
 				1A2BE00320C3C58E0023C55D /* MeViewController.m */,
 				1A2BE02820C519950023C55D /* GradualNavBarController.h */,
@@ -1343,6 +1352,18 @@
 			path = "活动";
 			sourceTree = "<group>";
 		};
+		1AC2884F2108779A009DBC77 /* 果园兼职 */ = {
+			isa = PBXGroup;
+			children = (
+				1AC2885821096CC0009DBC77 /* PartimeTableViewCell.h */,
+				1AC2885921096CC0009DBC77 /* PartimeTableViewCell.m */,
+				1AC2885A21096CC0009DBC77 /* PartimeTableViewCell.xib */,
+				1AC2885D21097243009DBC77 /* FindWorkViewController.h */,
+				1AC2885E21097243009DBC77 /* FindWorkViewController.m */,
+			);
+			path = "果园兼职";
+			sourceTree = "<group>";
+		};
 		1AC711AC20E097A70099D2A9 /* 声噪 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1739,6 +1760,7 @@
 				1AE423D320FC9021009E8D13 /* AddressManageCell.xib in Resources */,
 				1A66B92D20F6F75800464F4E /* LoginViewController.xib in Resources */,
 				1AE959AE20ECA04C00C5BDE4 /* HomeheaderReusableView.xib in Resources */,
+				1AC2885C21096CC0009DBC77 /* PartimeTableViewCell.xib in Resources */,
 				1A66B8E720F3397F00464F4E /* ShoppingListTextCell.xib in Resources */,
 				1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */,
 				1AE4240420FDB867009E8D13 /* TF_Address_2.plist in Resources */,
@@ -1838,6 +1860,7 @@
 				1A2BE00420C3C58E0023C55D /* MeViewController.m in Sources */,
 				1A66B8E220F2F66100464F4E /* ScrollTitleView.m in Sources */,
 				1AC816CD20E1DE5E00B1EE89 /* UILabel+TF.m in Sources */,
+				1AC2885B21096CC0009DBC77 /* PartimeTableViewCell.m in Sources */,
 				1ABDDE1B20D3A4BF00E900A8 /* DCNewFeaturesViewController.m in Sources */,
 				1A66B94820F881D000464F4E /* TFSystemPermission.m in Sources */,
 				1ABDDE4920D3B62200E900A8 /* MASViewAttribute.m in Sources */,
@@ -1853,6 +1876,7 @@
 				1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */,
 				1AE423EF20FD9692009E8D13 /* EditAddressViewController.m in Sources */,
 				1A873A2B20DBC09100B1357E /* TFUtils.m in Sources */,
+				1AC2885F21097243009DBC77 /* FindWorkViewController.m in Sources */,
 				1A66B8DA20F2F31D00464F4E /* ShoppingCarViewController.m in Sources */,
 				1A2BDFF820C3C5180023C55D /* TFViewController.m in Sources */,
 				1A66B90E20F49B8400464F4E /* ShoppingTableViewCell.m in Sources */,

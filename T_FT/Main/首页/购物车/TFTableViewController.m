@@ -17,6 +17,11 @@
 - (instancetype)initWithTableViewFrame:(CGRect)frame style:(UITableViewStyle)style{
     if(self = [super init]){
         _tableView = [[UITableView alloc]initWithFrame:frame style:style];
+        _tableView.estimatedRowHeight = 100;//估算高度
+        _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return self;
 }
@@ -25,6 +30,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
+   
 }
 
 - (void)didReceiveMemoryWarning {
