@@ -15,6 +15,7 @@
 //
 @property (nonatomic) BOOL hidenBottomLine;  //defuit No
 
+@property (nonatomic) BOOL backImageAlpha; //defuit 1
 //0 ~ 1
 @property (nonatomic) CGFloat bottomLineAlpha;
 

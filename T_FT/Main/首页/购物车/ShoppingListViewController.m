@@ -61,6 +61,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
+    self.navView.backImageAlpha = 1;
     [self.navView addTapGestureOnTitleWithTarget:self action:@selector(navViewTap:)];
     
     TFAPIForShoppingList *apiBanner = [[TFAPIForShoppingList alloc]init];

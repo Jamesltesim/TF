@@ -46,6 +46,11 @@
 }
 
 #pragma mark-- set get
+
+- (void)setBackImageAlpha:(BOOL)backImageAlpha{
+    _backImgView.alpha = backImageAlpha;
+}
+
 - (void)setTitle:(NSString *)title{
     if(title)
     self.titleLab.text = title;

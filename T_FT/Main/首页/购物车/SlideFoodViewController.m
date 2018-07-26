@@ -25,10 +25,7 @@
     self.navView.bottomLineAlpha = 1;
     self.navView.title = @"自订";
     [self.view addSubview:self.navView];
-    
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+  
     [self.tableView registerNib:[UINib nibWithNibName:@"SlideFoodTableViewCell" bundle:nil] forCellReuseIdentifier:@"SlideFoodTableViewCell"];
     SlideFoodHeaderView *headerView = [[SlideFoodHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.width, 200)];
     headerView.content.text = @"dfkasdfjdajglhdksa;fdsajkfhdlsjahfjdslhafjldshfjdlskahfjdslhagvkdsahgjkldshguewhvguken.vnjdknlvjen..KLVJEKANLVJKNVJKENJVK.ENjv ne.wlnvje.knvje.nkjvn´≥√˜kjdx,.";
