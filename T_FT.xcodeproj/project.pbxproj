@@ -176,6 +176,17 @@
 		1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959B520ECA81200C5BDE4 /* TFUtils+Device.m */; };
 		1AE959C020EE0D2900C5BDE4 /* DrinksCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE959BE20EE0D2900C5BDE4 /* DrinksCollectionViewCell.m */; };
 		1AE959C120EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE959BF20EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib */; };
+		1AED00F42109E07200ECB82C /* center_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AED00EB2109E07200ECB82C /* center_white.png */; };
+		1AED00F52109E07200ECB82C /* XYCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AED00ED2109E07200ECB82C /* XYCommon.m */; };
+		1AED00F62109E07200ECB82C /* XYPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AED00EF2109E07200ECB82C /* XYPieChartView.m */; };
+		1AED00F72109E07200ECB82C /* XYRenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AED00F12109E07200ECB82C /* XYRenderView.m */; };
+		1AED00F82109E07200ECB82C /* XYRotatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AED00F32109E07200ECB82C /* XYRotatedView.m */; };
+		1AED00FF2109E08100ECB82C /* XYPieChart001.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AED00FA2109E08100ECB82C /* XYPieChart001.png */; };
+		1AED01002109E08100ECB82C /* XYPieChart002.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1AED00FB2109E08100ECB82C /* XYPieChart002.gif */; };
+		1AED01012109E08100ECB82C /* XYPieChart002.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AED00FC2109E08100ECB82C /* XYPieChart002.png */; };
+		1AED01022109E08100ECB82C /* XYPieChart003.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AED00FD2109E08100ECB82C /* XYPieChart003.png */; };
+		1AED01032109E08100ECB82C /* XYPieChart01.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1AED00FE2109E08100ECB82C /* XYPieChart01.gif */; };
+		1AED01052109E0A000ECB82C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1AED01042109E0A000ECB82C /* README.md */; };
 		1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */; };
 		1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247920CA768800587A6F /* ScrollImage.m */; };
 		1AF8247C20CA76D100587A6F /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8247B20CA76D100587A6F /* 12.jpg */; };
@@ -549,6 +560,21 @@
 		1AE959BD20EE0D2900C5BDE4 /* DrinksCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinksCollectionViewCell.h; sourceTree = "<group>"; };
 		1AE959BE20EE0D2900C5BDE4 /* DrinksCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinksCollectionViewCell.m; sourceTree = "<group>"; };
 		1AE959BF20EE0D2900C5BDE4 /* DrinksCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksCollectionViewCell.xib; sourceTree = "<group>"; };
+		1AED00EB2109E07200ECB82C /* center_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = center_white.png; sourceTree = "<group>"; };
+		1AED00EC2109E07200ECB82C /* XYCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommon.h; sourceTree = "<group>"; };
+		1AED00ED2109E07200ECB82C /* XYCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommon.m; sourceTree = "<group>"; };
+		1AED00EE2109E07200ECB82C /* XYPieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPieChartView.h; sourceTree = "<group>"; };
+		1AED00EF2109E07200ECB82C /* XYPieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPieChartView.m; sourceTree = "<group>"; };
+		1AED00F02109E07200ECB82C /* XYRenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRenderView.h; sourceTree = "<group>"; };
+		1AED00F12109E07200ECB82C /* XYRenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRenderView.m; sourceTree = "<group>"; };
+		1AED00F22109E07200ECB82C /* XYRotatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRotatedView.h; sourceTree = "<group>"; };
+		1AED00F32109E07200ECB82C /* XYRotatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRotatedView.m; sourceTree = "<group>"; };
+		1AED00FA2109E08100ECB82C /* XYPieChart001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XYPieChart001.png; sourceTree = "<group>"; };
+		1AED00FB2109E08100ECB82C /* XYPieChart002.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = XYPieChart002.gif; sourceTree = "<group>"; };
+		1AED00FC2109E08100ECB82C /* XYPieChart002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XYPieChart002.png; sourceTree = "<group>"; };
+		1AED00FD2109E08100ECB82C /* XYPieChart003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XYPieChart003.png; sourceTree = "<group>"; };
+		1AED00FE2109E08100ECB82C /* XYPieChart01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = XYPieChart01.gif; sourceTree = "<group>"; };
+		1AED01042109E0A000ECB82C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
 		1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		1AF8247820CA768800587A6F /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
@@ -1235,6 +1261,7 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				1AED00E92109DFEF00ECB82C /* 扇形图绘制 */,
 				1AB649FF2100474A004342C5 /* TFTableView */,
 				1AB649EF210037B5004342C5 /* 选择器 */,
 				90996ACF20FF6286007CFFBE /* 自定义TextView */,
@@ -1518,6 +1545,44 @@
 			path = NavBar;
 			sourceTree = "<group>";
 		};
+		1AED00E92109DFEF00ECB82C /* 扇形图绘制 */ = {
+			isa = PBXGroup;
+			children = (
+				1AED00F92109E08100ECB82C /* gif */,
+				1AED01042109E0A000ECB82C /* README.md */,
+				1AED00EA2109E07200ECB82C /* PieChartView */,
+			);
+			path = "扇形图绘制";
+			sourceTree = "<group>";
+		};
+		1AED00EA2109E07200ECB82C /* PieChartView */ = {
+			isa = PBXGroup;
+			children = (
+				1AED00EB2109E07200ECB82C /* center_white.png */,
+				1AED00EC2109E07200ECB82C /* XYCommon.h */,
+				1AED00ED2109E07200ECB82C /* XYCommon.m */,
+				1AED00EE2109E07200ECB82C /* XYPieChartView.h */,
+				1AED00EF2109E07200ECB82C /* XYPieChartView.m */,
+				1AED00F02109E07200ECB82C /* XYRenderView.h */,
+				1AED00F12109E07200ECB82C /* XYRenderView.m */,
+				1AED00F22109E07200ECB82C /* XYRotatedView.h */,
+				1AED00F32109E07200ECB82C /* XYRotatedView.m */,
+			);
+			path = PieChartView;
+			sourceTree = "<group>";
+		};
+		1AED00F92109E08100ECB82C /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				1AED00FA2109E08100ECB82C /* XYPieChart001.png */,
+				1AED00FB2109E08100ECB82C /* XYPieChart002.gif */,
+				1AED00FC2109E08100ECB82C /* XYPieChart002.png */,
+				1AED00FD2109E08100ECB82C /* XYPieChart003.png */,
+				1AED00FE2109E08100ECB82C /* XYPieChart01.gif */,
+			);
+			path = gif;
+			sourceTree = "<group>";
+		};
 		60630A4EE00C41CD7C1B9D85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1728,10 +1793,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AED01032109E08100ECB82C /* XYPieChart01.gif in Resources */,
+				1AED00FF2109E08100ECB82C /* XYPieChart001.png in Resources */,
 				1AE4240520FDB867009E8D13 /* TF_Address_3.plist in Resources */,
 				1A873A1E20DB987400B1357E /* ShowImageCollectionViewCell.xib in Resources */,
 				90F492CE20FCD1E100C56DD4 /* image.bundle in Resources */,
 				1AE423EA20FD8C44009E8D13 /* address_edit@2x.png in Resources */,
+				1AED01022109E08100ECB82C /* XYPieChart003.png in Resources */,
 				1A66B92820F5FCD000464F4E /* BundlingCollectionViewCell_1.xib in Resources */,
 				1A66B93520F7213100464F4E /* policy.html in Resources */,
 				1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */,
@@ -1766,14 +1834,18 @@
 				1AE4240420FDB867009E8D13 /* TF_Address_2.plist in Resources */,
 				1AC816CA20E102C700B1EE89 /* iBeaconViewController.xib in Resources */,
 				1AE423C120FC4998009E8D13 /* MeFooterReusableView.xib in Resources */,
+				1AED01012109E08100ECB82C /* XYPieChart002.png in Resources */,
+				1AED01052109E0A000ECB82C /* README.md in Resources */,
 				1ABDDE0A20D34A1D00E900A8 /* ImgAndTextCollectionViewCell.xib in Resources */,
 				1AE423DF20FD882F009E8D13 /* address_circle@2x.png in Resources */,
+				1AED00F42109E07200ECB82C /* center_white.png in Resources */,
 				1A2BDFC720C3C4390023C55D /* Assets.xcassets in Resources */,
 				1AC816FC20E2238100B1EE89 /* PrintPhotoTableViewCell.xib in Resources */,
 				1AE4242720FDED52009E8D13 /* address_cancel@2x.png in Resources */,
 				1A2BDFC520C3C4370023C55D /* Main.storyboard in Resources */,
 				1A66B98020F98A6600464F4E /* HomeFooterReusableView.xib in Resources */,
 				1AE4242520FDE46C009E8D13 /* README.md in Resources */,
+				1AED01002109E08100ECB82C /* XYPieChart002.gif in Resources */,
 				1AF8248020CA76DC00587A6F /* 25.jpg in Resources */,
 				9027FEE420F8EF25003F0A51 /* noNetwork@2x.png in Resources */,
 			);
@@ -1891,6 +1963,7 @@
 				1AE423D720FD7DEB009E8D13 /* TFUserInfo.m in Sources */,
 				1AE4240220FDB867009E8D13 /* AddressAreaModel.m in Sources */,
 				1A66B8D720F2F31300464F4E /* ShoppingListViewController.m in Sources */,
+				1AED00F62109E07200ECB82C /* XYPieChartView.m in Sources */,
 				1A873A1D20DB987400B1357E /* ShowImageCollectionViewCell.m in Sources */,
 				1A2BE01820C3CB670023C55D /* UIView+Frame.m in Sources */,
 				1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */,
@@ -1952,11 +2025,13 @@
 				1A2BDFFE20C3C5690023C55D /* HomeViewController.m in Sources */,
 				1ABDDE4C20D3B62200E900A8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				1A03A70520DC836200576A03 /* SeckillTableViewCell.m in Sources */,
+				1AED00F52109E07200ECB82C /* XYCommon.m in Sources */,
 				90996ACE20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.m in Sources */,
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,
 				1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */,
 				1AB64A0621017BE0004342C5 /* TFAPIConfig.m in Sources */,
+				1AED00F82109E07200ECB82C /* XYRotatedView.m in Sources */,
 				1A66B94020F844CB00464F4E /* TFVerification.m in Sources */,
 				1AC8170820E237D700B1EE89 /* EventCalendar.m in Sources */,
 				1A66B91220F5BCE500464F4E /* TFAPIBaseManager.m in Sources */,
@@ -1992,6 +2067,7 @@
 				1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */,
 				1A2BE00120C3C5860023C55D /* ActivityViewController.m in Sources */,
 				1A66B90B20F4886E00464F4E /* TriangleView.m in Sources */,
+				1AED00F72109E07200ECB82C /* XYRenderView.m in Sources */,
 				1AE959AD20ECA04C00C5BDE4 /* HomeheaderReusableView.m in Sources */,
 				1ABDDE4E20D3B62200E900A8 /* ViewController+MASAdditions.m in Sources */,
 				1A66B8DE20F2F4B400464F4E /* ShoppingListImageCell.m in Sources */,
