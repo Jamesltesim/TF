@@ -24,6 +24,7 @@
 #import "FeedbackViewController.h"
 #import "AdressManageController.h"
 #import "FindWorkViewController.h"
+#import "AccountBookViewController.h"
 
 #import "LoginViewController.h"
 
@@ -364,40 +365,44 @@ static NSString *iden = @"cell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MeCollectionViewCell *cell = (MeCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    //    NSString *msg = cell.botlabel.text;
-    //    NSLog(@"%@",msg);
     
-    //失物招领
-    if([indexPath isEqual:[NSIndexPath indexPathForRow:0 inSection:1]]){
+    NSString *title = cell.title.text;
+    
+//    NSArray *array = [self.labArray objectAtIndex:indexPath.section];
+    
+    if([title isEqualToString:@"每月账本"]){
+        AccountBookViewController *account = [[AccountBookViewController alloc]init];
+        [self.navigationController pushViewController:account animated:YES];
+    }
+    
+    else if([title isEqualToString:@"失物招领"]){
         LostViewController *lost = [[LostViewController alloc]init];
-       
         [self.navigationController pushViewController:lost animated:YES];
     }
-    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:2 inSection:1]]){
+    
+    else if([title isEqualToString:@"打印/复印"]){
         PrintPhotoViewController *print = [[PrintPhotoViewController alloc]init];
         [self.navigationController pushViewController:print animated:YES];
     }
-    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:3 inSection:1]]){
+    
+    else if([title isEqualToString:@"噪声检测"]){
         NoiseViewController *print = [[NoiseViewController alloc]init];
         [self.navigationController pushViewController:print animated:YES];
     }
-    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:4 inSection:1]]){
+    
+    else if([title isEqualToString:@"iBeacon"]){
         iBeaconViewController *iBeacon = [[iBeaconViewController alloc]initWithNibName:@"iBeaconViewController" bundle:nil];
         [self.navigationController pushViewController:iBeacon animated:YES];
     }
     
-    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:0 inSection:2]]){
+    else if ([title isEqualToString:@"我的地址"]){
         AdressManageController *adress = [[AdressManageController alloc]init];
         [self.navigationController pushViewController:adress animated:YES];
     }
-    else if ([indexPath isEqual:[NSIndexPath indexPathForRow:0 inSection:3]]){
+    
+    else if([title isEqualToString:@"果园兼职"]){
         FindWorkViewController *controller = [[FindWorkViewController alloc]initWithTableViewFrame:RECT_NAVBAR_AND_NOTABBAR style:UITableViewStylePlain];
         controller.hidesBottomBarWhenPushed = YES;
-         [self.navigationController pushViewController:controller animated:YES];
-    }
-    else{
-        UIViewController *controller = [[UIViewController alloc]init];
-        controller.view.backgroundColor = [UIColor whiteColor];
         [self.navigationController pushViewController:controller animated:YES];
     }
     

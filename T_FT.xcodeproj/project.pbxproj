@@ -187,6 +187,7 @@
 		1AED01022109E08100ECB82C /* XYPieChart003.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AED00FD2109E08100ECB82C /* XYPieChart003.png */; };
 		1AED01032109E08100ECB82C /* XYPieChart01.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1AED00FE2109E08100ECB82C /* XYPieChart01.gif */; };
 		1AED01052109E0A000ECB82C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1AED01042109E0A000ECB82C /* README.md */; };
+		1AED01092109E12A00ECB82C /* AccountBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AED01082109E12A00ECB82C /* AccountBookViewController.m */; };
 		1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */; };
 		1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247920CA768800587A6F /* ScrollImage.m */; };
 		1AF8247C20CA76D100587A6F /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8247B20CA76D100587A6F /* 12.jpg */; };
@@ -575,6 +576,8 @@
 		1AED00FD2109E08100ECB82C /* XYPieChart003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XYPieChart003.png; sourceTree = "<group>"; };
 		1AED00FE2109E08100ECB82C /* XYPieChart01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = XYPieChart01.gif; sourceTree = "<group>"; };
 		1AED01042109E0A000ECB82C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1AED01072109E12A00ECB82C /* AccountBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountBookViewController.h; sourceTree = "<group>"; };
+		1AED01082109E12A00ECB82C /* AccountBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountBookViewController.m; sourceTree = "<group>"; };
 		1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
 		1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		1AF8247820CA768800587A6F /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
@@ -790,6 +793,7 @@
 		1A2BDFFB20C3C5500023C55D /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				1AED01062109E0F600ECB82C /* 每月账本 */,
 				1AC2884F2108779A009DBC77 /* 果园兼职 */,
 				1A2BE00220C3C58E0023C55D /* MeViewController.h */,
 				1A2BE00320C3C58E0023C55D /* MeViewController.m */,
@@ -1583,6 +1587,15 @@
 			path = gif;
 			sourceTree = "<group>";
 		};
+		1AED01062109E0F600ECB82C /* 每月账本 */ = {
+			isa = PBXGroup;
+			children = (
+				1AED01072109E12A00ECB82C /* AccountBookViewController.h */,
+				1AED01082109E12A00ECB82C /* AccountBookViewController.m */,
+			);
+			path = "每月账本";
+			sourceTree = "<group>";
+		};
 		60630A4EE00C41CD7C1B9D85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1938,6 +1951,7 @@
 				1ABDDE4920D3B62200E900A8 /* MASViewAttribute.m in Sources */,
 				1A66B91C20F5DA7800464F4E /* TFAPIForHomebanner.m in Sources */,
 				1ABDDE4B20D3B62200E900A8 /* NSArray+MASAdditions.m in Sources */,
+				1AED01092109E12A00ECB82C /* AccountBookViewController.m in Sources */,
 				1A66B99220F9D26100464F4E /* TFDataManage.m in Sources */,
 				1AC288412106CB5E009DBC77 /* HomeNavView.m in Sources */,
 				1AB649FB21003C7D004342C5 /* DeliveryPickView.m in Sources */,
