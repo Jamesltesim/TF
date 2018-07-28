@@ -61,8 +61,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    self.navView.backImageAlpha = 1;
-    [self.navView addTapGestureOnTitleWithTarget:self action:@selector(navViewTap:)];
+//    self.navView.backImageAlpha = 1;
+//    [self.navView addTapGestureOnTitleWithTarget:self action:@selector(navViewTap:)];
     
     TFAPIForShoppingList *apiBanner = [[TFAPIForShoppingList alloc]init];
     apiBanner.delegate = self;
@@ -151,9 +151,9 @@
     [super glt_scrollViewDidScroll:scrollView];
     
     if(self.currentProgress > 0.5){
-        self.navView.title = @"外送 45分钟";
+//        self.navView.title = @"外送 45分钟";
     }
-    //    NSLog(@"%@",NSStringFromSelector(_cmd));
+   
 }
 
 #pragma mark ---  TFAPICallBackProtocol  ---

@@ -372,37 +372,44 @@ static NSString *iden = @"cell";
     
     if([title isEqualToString:@"每月账本"]){
         AccountBookViewController *account = [[AccountBookViewController alloc]init];
+        account.navView.title = title;
         [self.navigationController pushViewController:account animated:YES];
     }
     
     else if([title isEqualToString:@"失物招领"]){
         LostViewController *lost = [[LostViewController alloc]init];
+        lost.navView.title = title;
         [self.navigationController pushViewController:lost animated:YES];
     }
     
     else if([title isEqualToString:@"打印/复印"]){
         PrintPhotoViewController *print = [[PrintPhotoViewController alloc]init];
+        print.navView.title = title;
         [self.navigationController pushViewController:print animated:YES];
     }
     
     else if([title isEqualToString:@"噪声检测"]){
         NoiseViewController *print = [[NoiseViewController alloc]init];
+        print.navView.title = title;
         [self.navigationController pushViewController:print animated:YES];
     }
     
     else if([title isEqualToString:@"iBeacon"]){
         iBeaconViewController *iBeacon = [[iBeaconViewController alloc]initWithNibName:@"iBeaconViewController" bundle:nil];
+        iBeacon.navView.title = title;
         [self.navigationController pushViewController:iBeacon animated:YES];
     }
     
     else if ([title isEqualToString:@"我的地址"]){
         AdressManageController *adress = [[AdressManageController alloc]init];
+        adress.navView.title = title;
         [self.navigationController pushViewController:adress animated:YES];
     }
     
     else if([title isEqualToString:@"果园兼职"]){
         FindWorkViewController *controller = [[FindWorkViewController alloc]initWithTableViewFrame:RECT_NAVBAR_AND_NOTABBAR style:UITableViewStylePlain];
         controller.hidesBottomBarWhenPushed = YES;
+//        controller.navView.title = title;
         [self.navigationController pushViewController:controller animated:YES];
     }
     

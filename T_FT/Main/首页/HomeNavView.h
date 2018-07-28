@@ -6,8 +6,8 @@
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#import "TFNavView.h"
+#import "TFForwardNavView.h"
 
-@interface HomeNavView : TFNavView
+@interface HomeNavView : TFForwardNavView
 
 @end

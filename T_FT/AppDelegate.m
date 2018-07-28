@@ -21,6 +21,8 @@
 #import "IQKeyboardManager.h"
 #import "TFAPIConfig.h"
 
+
+#import "TFVerification.h"
 //参考
 //天天果园 app
 
@@ -49,7 +51,7 @@
       [IQKeyboardManager sharedManager].enable = NO;
 //    NSLog(@"是否展示新特性页面：%@",[DCFeaturesTool dc_isShowNewFeatures] ? @"true" : @"false");
     
-    
+    NSLog(@"checkUserIdCard %d", [TFVerification checkUserIdCard:@"921111199001201111"]);
     if (@available(iOS 11.0, *)) {
         
     }else{

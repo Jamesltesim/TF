@@ -188,6 +188,7 @@
 		1AED01032109E08100ECB82C /* XYPieChart01.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1AED00FE2109E08100ECB82C /* XYPieChart01.gif */; };
 		1AED01052109E0A000ECB82C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1AED01042109E0A000ECB82C /* README.md */; };
 		1AED01092109E12A00ECB82C /* AccountBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AED01082109E12A00ECB82C /* AccountBookViewController.m */; };
+		1AED010C210ABF5200ECB82C /* TFForwardNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AED010B210ABF5200ECB82C /* TFForwardNavView.m */; };
 		1AF8247420C9376C00587A6F /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */; };
 		1AF8247A20CA768800587A6F /* ScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8247920CA768800587A6F /* ScrollImage.m */; };
 		1AF8247C20CA76D100587A6F /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF8247B20CA76D100587A6F /* 12.jpg */; };
@@ -578,6 +579,8 @@
 		1AED01042109E0A000ECB82C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1AED01072109E12A00ECB82C /* AccountBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountBookViewController.h; sourceTree = "<group>"; };
 		1AED01082109E12A00ECB82C /* AccountBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountBookViewController.m; sourceTree = "<group>"; };
+		1AED010A210ABF5200ECB82C /* TFForwardNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFForwardNavView.h; sourceTree = "<group>"; };
+		1AED010B210ABF5200ECB82C /* TFForwardNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFForwardNavView.m; sourceTree = "<group>"; };
 		1AF8247220C9376C00587A6F /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
 		1AF8247320C9376C00587A6F /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		1AF8247820CA768800587A6F /* ScrollImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollImage.h; sourceTree = "<group>"; };
@@ -1157,6 +1160,8 @@
 				1AABE74620D7AD0F001BA4C9 /* TFNavView.m */,
 				1A873A2320DBAB6500B1357E /* UIView+Gradient.h */,
 				1A873A2420DBAB6500B1357E /* UIView+Gradient.m */,
+				1AED010A210ABF5200ECB82C /* TFForwardNavView.h */,
+				1AED010B210ABF5200ECB82C /* TFForwardNavView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2034,6 +2039,7 @@
 				1AE4241D20FDE44A009E8D13 /* UIView+Edge.m in Sources */,
 				1A66B97620F8946800464F4E /* KeychainWrapper.m in Sources */,
 				1AE4241E20FDE44A009E8D13 /* YXActionSheetView.m in Sources */,
+				1AED010C210ABF5200ECB82C /* TFForwardNavView.m in Sources */,
 				1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */,
 				1A66B93A20F74AA600464F4E /* FingerprintViewController.m in Sources */,
 				1A2BDFFE20C3C5690023C55D /* HomeViewController.m in Sources */,

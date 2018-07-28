@@ -449,10 +449,15 @@
 
 - (HomeNavView *)navView{
     if(!_navView){
-        _navView = [HomeNavView creatNavView];
-        _navView.backgroundColor = [UIColor purpleColor];
+        _navView = [[HomeNavView alloc] init];
+        [_navView addBackButtonWithTarget:self action:@selector(backTap:)];
+        
     }
     return _navView;
+}
+
+- (void)backTap:(UIButton *)sender{
+    
 }
 
 - (ShoppingListViewController *)shoppingListController{

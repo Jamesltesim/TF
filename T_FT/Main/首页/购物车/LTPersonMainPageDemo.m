@@ -62,7 +62,9 @@
      
 //         [self preferredStatusBarStyle];
     }
-       self.navView.alpha = self.currentProgress;
+//       self.navView.contentBgView.alpha = self.currentProgress;
+    [self.navView scrollToChangeAlpha:self.currentProgress];
+    
     CGRect headerImageFrame = self.headerImageView.frame;
     headerImageFrame.origin.y = headerImageY;
     headerImageFrame.size.height = headerImageH;
@@ -72,14 +74,14 @@
 - (void)glt_scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
    
     if(scrollView.contentOffset.y <= 0.1){
-        self.navView.alpha = 0;
+//        self.navView.contentBgView.alpha = 0;
     }
 }
 - (void)glt_scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
   
     if(scrollView.contentOffset.y <= 0.1){
          NSLog(@"%@  %@",NSStringFromSelector(_cmd),NSStringFromCGPoint(scrollView.contentOffset));
-        self.navView.alpha = 0;
+//        self.navView.alpha = 0;
     }
 //    CGFloat adjustHeight = HeaderHeight - NavHeight;
 //     CGFloat offsetY = scrollView.contentOffset.y;
@@ -145,7 +147,7 @@
 //    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:18.0f]};
     
    
-    self.navView.alpha = self.currentProgress;
+//    self.navView.alpha = self.currentProgress;
 }
 
 - (void)viewDidLoad {
@@ -154,9 +156,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.navView = [TFNavView creatNavView];
-    self.navView.backgroundColor = [UIColor whiteColor];
-    [self.navView addLeftButtonWithTarget:self action:@selector(back:)];
+    self.navView = [[TFForwardNavView alloc] init];
+//    self.navView.backgroundColor = [UIColor whiteColor];
+    [self.navView addBackButtonWithTarget:self action:@selector(back:)];
     [self.view addSubview:self.navView];
     
 }

@@ -23,12 +23,12 @@
 /**
  * 选中的标题
  */
-@property (weak, nonatomic) IBOutlet UILabel *titlelabel;
+@property (strong, nonatomic) UILabel *titlelabel;
 
 /**
  * 选中的金额
  */
-@property (weak, nonatomic) IBOutlet UILabel *amountLabel;
+@property (strong, nonatomic) UILabel *amountLabel;
 
 /**
  * 选中的百分比
@@ -63,12 +63,16 @@
     // 设置圆心标题 （NSString类型）
     //    [self.pieChartView setAmountText:@"总资产"];
     
-    NSMutableAttributedString * str = [[NSMutableAttributedString alloc] initWithString:@"总支出"];
+    NSMutableAttributedString * str = [[NSMutableAttributedString alloc] initWithString:@"总支出 10000元"];
     
     // 设置圆心标题（NSMutableAttributedString类型）
     [self.pieChartView setTitleText:str];
     
     [self.view addSubview:self.pieChartView];
+    
+    self.amountLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, pieChartFrame.origin.y+pieChartFrame.size.height+20, 200, 30)];
+    self.amountLabel.backgroundColor = [UIColor purpleColor];
+    [self.view addSubview:self.amountLabel];
 }
 
 - (NSMutableArray *)pieChartArray {

@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "LTScrollView-Swift.h"
-#import "TFNavView.h"
+#import "TFForwardNavView.h"
 
 @interface LTPersonMainPageDemo : UIViewController<LTSimpleScrollViewDelegate>
 
 @property(copy, nonatomic) NSArray <NSString *> *titles;
 
 
-@property (nonatomic,strong) TFNavView *navView;
+@property (nonatomic,strong) TFForwardNavView *navView;
 @property(strong, nonatomic) LTSimpleManager *managerView;
 
 @property(strong, nonatomic) UIView *headerView;

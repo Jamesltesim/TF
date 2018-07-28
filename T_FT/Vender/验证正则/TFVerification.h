@@ -19,7 +19,7 @@
 #pragma 正则匹配用户姓名,20位的中文或英文
 + (BOOL)checkUserName : (NSString *) userName;
 #pragma 正则匹配用户身份证号
-+ (BOOL)checkUserIdCard: (NSString *) idCard;
++ (BOOL)checkUserIdCard: (NSString *) value;
 #pragma 正则匹配URL
 + (BOOL)checkURL : (NSString *) url;
 
