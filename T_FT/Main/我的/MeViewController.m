@@ -25,6 +25,8 @@
 #import "AdressManageController.h"
 #import "FindWorkViewController.h"
 #import "AccountBookViewController.h"
+#import "GradeViewController.h"
+
 
 #import "LoginViewController.h"
 
@@ -410,6 +412,13 @@ static NSString *iden = @"cell";
         FindWorkViewController *controller = [[FindWorkViewController alloc]initWithTableViewFrame:RECT_NAVBAR_AND_NOTABBAR style:UITableViewStylePlain];
         controller.hidesBottomBarWhenPushed = YES;
 //        controller.navView.title = title;
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    
+    else if([title isEqualToString:@"积分"]){
+        GradeViewController *controller = [[GradeViewController alloc]init];
+//        controller.hidesBottomBarWhenPushed = YES;
+        //        controller.navView.title = title;
         [self.navigationController pushViewController:controller animated:YES];
     }
     

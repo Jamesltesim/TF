@@ -85,6 +85,14 @@
 		1A873A2B20DBC09100B1357E /* TFUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A2A20DBC09100B1357E /* TFUtils.m */; };
 		1A873A2E20DBC78800B1357E /* TFUtils+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A2D20DBC78800B1357E /* TFUtils+Date.m */; };
 		1A8C614120D3D30C00EE4CB5 /* ADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C614020D3D30C00EE4CB5 /* ADViewController.m */; };
+		1A9329EF210EA3DA0041B71E /* DVFoodPieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9329E9210EA3D90041B71E /* DVFoodPieModel.m */; };
+		1A9329F0210EA3DA0041B71E /* DVPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9329EC210EA3D90041B71E /* DVPieChart.m */; };
+		1A9329F1210EA3DA0041B71E /* DVPieCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9329EE210EA3DA0041B71E /* DVPieCenterView.m */; };
+		1A9329F5210EA54B0041B71E /* GradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9329F4210EA54B0041B71E /* GradeViewController.m */; };
+		1A9329F9210EA6500041B71E /* GradeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9329F7210EA6500041B71E /* GradeCollectionViewCell.m */; };
+		1A9329FA210EA6500041B71E /* GradeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9329F8210EA6500041B71E /* GradeCollectionViewCell.xib */; };
+		1A9329FE210EB0FB0041B71E /* GradeCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9329FC210EB0FB0041B71E /* GradeCollectionReusableView.m */; };
+		1A9329FF210EB0FB0041B71E /* GradeCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9329FD210EB0FB0041B71E /* GradeCollectionReusableView.xib */; };
 		1A9ABF8220D4E36700DC1F1B /* ADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8120D4E36700DC1F1B /* ADView.m */; };
 		1A9ABF8620D4E9E700DC1F1B /* LostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8520D4E9E700DC1F1B /* LostViewController.m */; };
 		1A9ABF8A20D4EA9500DC1F1B /* LostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9ABF8820D4EA9500DC1F1B /* LostCollectionViewCell.m */; };
@@ -393,6 +401,20 @@
 		1A873A2F20DBC81E00B1357E /* TFUtilsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFUtilsHeader.h; sourceTree = "<group>"; };
 		1A8C613F20D3D30C00EE4CB5 /* ADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADViewController.h; sourceTree = "<group>"; };
 		1A8C614020D3D30C00EE4CB5 /* ADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADViewController.m; sourceTree = "<group>"; };
+		1A9329E9210EA3D90041B71E /* DVFoodPieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVFoodPieModel.m; sourceTree = "<group>"; };
+		1A9329EA210EA3D90041B71E /* DVPieCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVPieCenterView.h; sourceTree = "<group>"; };
+		1A9329EB210EA3D90041B71E /* DVFoodPieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVFoodPieModel.h; sourceTree = "<group>"; };
+		1A9329EC210EA3D90041B71E /* DVPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVPieChart.m; sourceTree = "<group>"; };
+		1A9329ED210EA3DA0041B71E /* DVPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVPieChart.h; sourceTree = "<group>"; };
+		1A9329EE210EA3DA0041B71E /* DVPieCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVPieCenterView.m; sourceTree = "<group>"; };
+		1A9329F3210EA54B0041B71E /* GradeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradeViewController.h; sourceTree = "<group>"; };
+		1A9329F4210EA54B0041B71E /* GradeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradeViewController.m; sourceTree = "<group>"; };
+		1A9329F6210EA6500041B71E /* GradeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradeCollectionViewCell.h; sourceTree = "<group>"; };
+		1A9329F7210EA6500041B71E /* GradeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradeCollectionViewCell.m; sourceTree = "<group>"; };
+		1A9329F8210EA6500041B71E /* GradeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeCollectionViewCell.xib; sourceTree = "<group>"; };
+		1A9329FB210EB0FB0041B71E /* GradeCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradeCollectionReusableView.h; sourceTree = "<group>"; };
+		1A9329FC210EB0FB0041B71E /* GradeCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradeCollectionReusableView.m; sourceTree = "<group>"; };
+		1A9329FD210EB0FB0041B71E /* GradeCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeCollectionReusableView.xib; sourceTree = "<group>"; };
 		1A9ABF8020D4E36700DC1F1B /* ADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADView.h; sourceTree = "<group>"; };
 		1A9ABF8120D4E36700DC1F1B /* ADView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADView.m; sourceTree = "<group>"; };
 		1A9ABF8420D4E9E700DC1F1B /* LostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LostViewController.h; sourceTree = "<group>"; };
@@ -796,10 +818,11 @@
 		1A2BDFFB20C3C5500023C55D /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				1AED01062109E0F600ECB82C /* 每月账本 */,
-				1AC2884F2108779A009DBC77 /* 果园兼职 */,
 				1A2BE00220C3C58E0023C55D /* MeViewController.h */,
 				1A2BE00320C3C58E0023C55D /* MeViewController.m */,
+				1A9329F2210EA5120041B71E /* 会员 */,
+				1AED01062109E0F600ECB82C /* 每月账本 */,
+				1AC2884F2108779A009DBC77 /* 果园兼职 */,
 				1A2BE02820C519950023C55D /* GradualNavBarController.h */,
 				1A2BE02920C519950023C55D /* GradualNavBarController.m */,
 				1AABE74920D8B91F001BA4C9 /* MeSubViewController.h */,
@@ -1200,6 +1223,44 @@
 			path = "广告";
 			sourceTree = "<group>";
 		};
+		1A9329E7210EA3B60041B71E /* dome1 */ = {
+			isa = PBXGroup;
+			children = (
+				1AED00F92109E08100ECB82C /* gif */,
+				1AED01042109E0A000ECB82C /* README.md */,
+				1AED00EA2109E07200ECB82C /* PieChartView */,
+			);
+			path = dome1;
+			sourceTree = "<group>";
+		};
+		1A9329E8210EA3C20041B71E /* dome2 */ = {
+			isa = PBXGroup;
+			children = (
+				1A9329EA210EA3D90041B71E /* DVPieCenterView.h */,
+				1A9329EE210EA3DA0041B71E /* DVPieCenterView.m */,
+				1A9329ED210EA3DA0041B71E /* DVPieChart.h */,
+				1A9329EC210EA3D90041B71E /* DVPieChart.m */,
+				1A9329EB210EA3D90041B71E /* DVFoodPieModel.h */,
+				1A9329E9210EA3D90041B71E /* DVFoodPieModel.m */,
+			);
+			path = dome2;
+			sourceTree = "<group>";
+		};
+		1A9329F2210EA5120041B71E /* 会员 */ = {
+			isa = PBXGroup;
+			children = (
+				1A9329F3210EA54B0041B71E /* GradeViewController.h */,
+				1A9329F4210EA54B0041B71E /* GradeViewController.m */,
+				1A9329F6210EA6500041B71E /* GradeCollectionViewCell.h */,
+				1A9329F7210EA6500041B71E /* GradeCollectionViewCell.m */,
+				1A9329F8210EA6500041B71E /* GradeCollectionViewCell.xib */,
+				1A9329FB210EB0FB0041B71E /* GradeCollectionReusableView.h */,
+				1A9329FC210EB0FB0041B71E /* GradeCollectionReusableView.m */,
+				1A9329FD210EB0FB0041B71E /* GradeCollectionReusableView.xib */,
+			);
+			path = "会员";
+			sourceTree = "<group>";
+		};
 		1A9ABF8320D4E59400DC1F1B /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1557,9 +1618,8 @@
 		1AED00E92109DFEF00ECB82C /* 扇形图绘制 */ = {
 			isa = PBXGroup;
 			children = (
-				1AED00F92109E08100ECB82C /* gif */,
-				1AED01042109E0A000ECB82C /* README.md */,
-				1AED00EA2109E07200ECB82C /* PieChartView */,
+				1A9329E8210EA3C20041B71E /* dome2 */,
+				1A9329E7210EA3B60041B71E /* dome1 */,
 			);
 			path = "扇形图绘制";
 			sourceTree = "<group>";
@@ -1816,6 +1876,7 @@
 				1AE4240520FDB867009E8D13 /* TF_Address_3.plist in Resources */,
 				1A873A1E20DB987400B1357E /* ShowImageCollectionViewCell.xib in Resources */,
 				90F492CE20FCD1E100C56DD4 /* image.bundle in Resources */,
+				1A9329FF210EB0FB0041B71E /* GradeCollectionReusableView.xib in Resources */,
 				1AE423EA20FD8C44009E8D13 /* address_edit@2x.png in Resources */,
 				1AED01022109E08100ECB82C /* XYPieChart003.png in Resources */,
 				1A66B92820F5FCD000464F4E /* BundlingCollectionViewCell_1.xib in Resources */,
@@ -1841,6 +1902,7 @@
 				1A66B8DF20F2F4B400464F4E /* ShoppingListImageCell.xib in Resources */,
 				1A66B8C620EF41D200464F4E /* timg1.jpeg in Resources */,
 				1ABDDE5020D3B6EB00E900A8 /* LaunchScreen.storyboard in Resources */,
+				1A9329FA210EA6500041B71E /* GradeCollectionViewCell.xib in Resources */,
 				905233FC2106062C00127250 /* SlideFoodHeaderView.xib in Resources */,
 				905233FA2106062C00127250 /* SlideFoodTableViewCell.xib in Resources */,
 				1AE423D320FC9021009E8D13 /* AddressManageCell.xib in Resources */,
@@ -1939,6 +2001,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9329F1210EA3DA0041B71E /* DVPieCenterView.m in Sources */,
 				90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */,
 				1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */,
 				1AE4241C20FDE44A009E8D13 /* NSString+lineSpace.m in Sources */,
@@ -1978,6 +2041,7 @@
 				1A873A2220DBA88200B1357E /* SeckillNavBarView.m in Sources */,
 				1A2BDFF520C3C5090023C55D /* TFNavigationController.m in Sources */,
 				1A873A1220DB536500B1357E /* TFReadPhoto.m in Sources */,
+				1A9329F0210EA3DA0041B71E /* DVPieChart.m in Sources */,
 				1A9ABF8220D4E36700DC1F1B /* ADView.m in Sources */,
 				1AE423D720FD7DEB009E8D13 /* TFUserInfo.m in Sources */,
 				1AE4240220FDB867009E8D13 /* AddressAreaModel.m in Sources */,
@@ -2014,6 +2078,7 @@
 				1ABDDE4720D3B62200E900A8 /* MASConstraintMaker.m in Sources */,
 				905233FD2106062C00127250 /* SlideFoodHeaderView.m in Sources */,
 				1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */,
+				1A9329F5210EA54B0041B71E /* GradeViewController.m in Sources */,
 				90F492D520FCDD7D00C56DD4 /* UITabBar+CustomBadge.m in Sources */,
 				1AC28847210704C6009DBC77 /* TFTextView.m in Sources */,
 				1AE4240320FDB867009E8D13 /* AreaView.m in Sources */,
@@ -2048,11 +2113,13 @@
 				1AED00F52109E07200ECB82C /* XYCommon.m in Sources */,
 				90996ACE20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.m in Sources */,
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
+				1A9329F9210EA6500041B71E /* GradeCollectionViewCell.m in Sources */,
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,
 				1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */,
 				1AB64A0621017BE0004342C5 /* TFAPIConfig.m in Sources */,
 				1AED00F82109E07200ECB82C /* XYRotatedView.m in Sources */,
 				1A66B94020F844CB00464F4E /* TFVerification.m in Sources */,
+				1A9329EF210EA3DA0041B71E /* DVFoodPieModel.m in Sources */,
 				1AC8170820E237D700B1EE89 /* EventCalendar.m in Sources */,
 				1A66B91220F5BCE500464F4E /* TFAPIBaseManager.m in Sources */,
 				1A66B92C20F6F75800464F4E /* LoginViewController.m in Sources */,
@@ -2075,6 +2142,7 @@
 				1AE4242020FDE44A009E8D13 /* YXAlertController.m in Sources */,
 				1A66B8CD20EF429B00464F4E /* LoginView.m in Sources */,
 				90F492CF20FCD1E100C56DD4 /* LHRatingView.m in Sources */,
+				1A9329FE210EB0FB0041B71E /* GradeCollectionReusableView.m in Sources */,
 				1AC28846210704C6009DBC77 /* UITextView+XMExtension.m in Sources */,
 				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,
