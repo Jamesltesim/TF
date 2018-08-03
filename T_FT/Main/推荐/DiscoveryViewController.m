@@ -7,7 +7,8 @@
 //
 
 #import "DiscoveryViewController.h"
-
+//#import "DWAnimatedLabel.h"
+//#import "T_FT-Swift.h"
 @interface DiscoveryViewController ()
 
 @end
@@ -17,6 +18,8 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+//    DWAnimatedLabel *lab = [[DWAnimatedLabel alloc]init];
+
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

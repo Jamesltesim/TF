@@ -26,6 +26,9 @@
 		1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02220C4DA390023C55D /* UIImage+imgaeWithColor.m */; };
 		1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02920C519950023C55D /* GradualNavBarController.m */; };
 		1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02C20C5250F0023C55D /* MeHeaderView.m */; };
+		1A4DF29821145F7A009854B9 /* DWAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DF29521145F79009854B9 /* DWAnimator.swift */; };
+		1A4DF29921145F7A009854B9 /* DWAnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DF29621145F79009854B9 /* DWAnimatedLabel.swift */; };
+		1A4DF29A21145F7A009854B9 /* DWHollowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DF29721145F7A009854B9 /* DWHollowLabel.swift */; };
 		1A66B8C620EF41D200464F4E /* timg1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B8C520EF41D200464F4E /* timg1.jpeg */; };
 		1A66B8CA20EF429000464F4E /* LogoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8C920EF429000464F4E /* LogoutView.m */; };
 		1A66B8CD20EF429B00464F4E /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B8CC20EF429B00464F4E /* LoginView.m */; };
@@ -289,6 +292,11 @@
 		1A2BE02920C519950023C55D /* GradualNavBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradualNavBarController.m; sourceTree = "<group>"; };
 		1A2BE02B20C5250F0023C55D /* MeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeHeaderView.h; sourceTree = "<group>"; };
 		1A2BE02C20C5250F0023C55D /* MeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeHeaderView.m; sourceTree = "<group>"; };
+		1A4DF29421145F79009854B9 /* DWAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWAnimatedLabel.h; sourceTree = "<group>"; };
+		1A4DF29521145F79009854B9 /* DWAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DWAnimator.swift; sourceTree = "<group>"; };
+		1A4DF29621145F79009854B9 /* DWAnimatedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DWAnimatedLabel.swift; sourceTree = "<group>"; };
+		1A4DF29721145F7A009854B9 /* DWHollowLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DWHollowLabel.swift; sourceTree = "<group>"; };
+		1A4DF29B21145FA4009854B9 /* T_FT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "T_FT-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A66B8C520EF41D200464F4E /* timg1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg1.jpeg; sourceTree = "<group>"; };
 		1A66B8C820EF429000464F4E /* LogoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogoutView.h; sourceTree = "<group>"; };
 		1A66B8C920EF429000464F4E /* LogoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogoutView.m; sourceTree = "<group>"; };
@@ -818,7 +826,6 @@
 		1A2BDFFB20C3C5500023C55D /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				1A932A00210EBE390041B71E /* 子界面 */,
 				1A2BE00220C3C58E0023C55D /* MeViewController.h */,
 				1A2BE00320C3C58E0023C55D /* MeViewController.m */,
 				1A2BE02820C519950023C55D /* GradualNavBarController.h */,
@@ -828,9 +835,7 @@
 				1A9ABF8320D4E59400DC1F1B /* View */,
 				1A2BE02320C4DA390023C55D /* UIImage+imgaeWithColor.h */,
 				1A2BE02220C4DA390023C55D /* UIImage+imgaeWithColor.m */,
-				1AE423BD20FC4998009E8D13 /* MeFooterReusableView.h */,
-				1AE423BE20FC4998009E8D13 /* MeFooterReusableView.m */,
-				1AE423BF20FC4998009E8D13 /* MeFooterReusableView.xib */,
+				1A932A00210EBE390041B71E /* 子界面 */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -851,6 +856,18 @@
 				1AE423C920FC660F009E8D13 /* UIView+UITapGestureRecognizer.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		1A4DF28A21145B06009854B9 /* label各种样式显示字 */ = {
+			isa = PBXGroup;
+			children = (
+				1A4DF29B21145FA4009854B9 /* T_FT-Bridging-Header.h */,
+				1A4DF29421145F79009854B9 /* DWAnimatedLabel.h */,
+				1A4DF29621145F79009854B9 /* DWAnimatedLabel.swift */,
+				1A4DF29521145F79009854B9 /* DWAnimator.swift */,
+				1A4DF29721145F7A009854B9 /* DWHollowLabel.swift */,
+			);
+			path = "label各种样式显示字";
 			sourceTree = "<group>";
 		};
 		1A66B8B820EF194000464F4E /* Network */ = {
@@ -1272,6 +1289,9 @@
 		1A9ABF8320D4E59400DC1F1B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1AE423BD20FC4998009E8D13 /* MeFooterReusableView.h */,
+				1AE423BE20FC4998009E8D13 /* MeFooterReusableView.m */,
+				1AE423BF20FC4998009E8D13 /* MeFooterReusableView.xib */,
 				1A66B8C720EF425D00464F4E /* headerView */,
 				1AF8247820CA768800587A6F /* ScrollImage.h */,
 				1AF8247920CA768800587A6F /* ScrollImage.m */,
@@ -1339,6 +1359,7 @@
 		1ABDDE1020D3A4B600E900A8 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				1A4DF28A21145B06009854B9 /* label各种样式显示字 */,
 				1AED00E92109DFEF00ECB82C /* 扇形图绘制 */,
 				1AB649FF2100474A004342C5 /* TFTableView */,
 				1AB649EF210037B5004342C5 /* 选择器 */,
@@ -1838,6 +1859,7 @@
 				TargetAttributes = {
 					1A2BDFB920C3C4370023C55D = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -2103,6 +2125,7 @@
 				1A66B8CA20EF429000464F4E /* LogoutView.m in Sources */,
 				1A66B8EA20F344C400464F4E /* ShowShoppingCarView.m in Sources */,
 				1AE959A420EB4D6B00C5BDE4 /* TFCloseBothLabel.m in Sources */,
+				1A4DF29A21145F7A009854B9 /* DWHollowLabel.swift in Sources */,
 				1AE4241F20FDE44A009E8D13 /* YXAlertAction.m in Sources */,
 				1AE4242120FDE44A009E8D13 /* YXAlertLayout.m in Sources */,
 				1A66B8E620F3397F00464F4E /* ShoppingListTextCell.m in Sources */,
@@ -2138,6 +2161,7 @@
 				1AE423CA20FC660F009E8D13 /* UIView+UITapGestureRecognizer.m in Sources */,
 				9027FEE520F8EF25003F0A51 /* LYEmptyBaseView.m in Sources */,
 				1A873A1520DB539500B1357E /* TFImageDataModel.m in Sources */,
+				1A4DF29821145F7A009854B9 /* DWAnimator.swift in Sources */,
 				1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */,
 				1AE4242320FDE44A009E8D13 /* YXTableViewCell.m in Sources */,
 				1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */,
@@ -2154,6 +2178,7 @@
 				1AC28846210704C6009DBC77 /* UITextView+XMExtension.m in Sources */,
 				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,
+				1A4DF29921145F7A009854B9 /* DWAnimatedLabel.swift in Sources */,
 				9027FEBC20F1B778003F0A51 /* TFUtils+UIColor.m in Sources */,
 				1AE959A720EB5CDF00C5BDE4 /* TFSegmentTitleView.m in Sources */,
 				1A66B8ED20F35E1B00464F4E /* ShoppingCarData.m in Sources */,
@@ -2333,8 +2358,10 @@
 			baseConfigurationReference = 31E9D9DE69F81798A6B6BA82 /* Pods-T_FT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JB6RNYDXWS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/T_FT/PrefixHeader.pch";
@@ -2348,6 +2375,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a31062b5-5169-41a2-9783-6ea2ccea247d";
 				PROVISIONING_PROFILE_SPECIFIER = common;
+				SWIFT_OBJC_BRIDGING_HEADER = "T_FT/Vender/label各种样式显示字/T_FT-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2357,8 +2387,10 @@
 			baseConfigurationReference = 8B979648983910F66FE81A7A /* Pods-T_FT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JB6RNYDXWS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/T_FT/PrefixHeader.pch";
@@ -2372,6 +2404,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "65441631-da67-4e05-b1e7-7d650c9a4e08";
 				PROVISIONING_PROFILE_SPECIFIER = cashProduction;
+				SWIFT_OBJC_BRIDGING_HEADER = "T_FT/Vender/label各种样式显示字/T_FT-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2379,6 +2413,7 @@
 		1A2BDFEA20C3C4390023C55D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = T_FTTests/Info.plist;
@@ -2397,6 +2432,7 @@
 		1A2BDFEB20C3C4390023C55D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = T_FTTests/Info.plist;
@@ -2415,6 +2451,7 @@
 		1A2BDFED20C3C4390023C55D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = T_FTUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2432,6 +2469,7 @@
 		1A2BDFEE20C3C4390023C55D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = T_FTUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
