@@ -25,6 +25,8 @@
 #import "LTPersonMainPageDemo.h"
 #import "HomeNavView.h"
 
+#import "TestViewController.h"
+
 
 
 @interface HomeViewController ()<UICollectionViewDataSource,
@@ -151,8 +153,8 @@
 //        [alert addAction:cancleAction];
 //        [alert addAction:defintAction];
 //        [strongSelf presentViewController:alert animated:YES completion:nil];
-        [strongSelf.navigationController pushViewController:self.shoppingListController animated:YES];
-//        [strongSelf.navigationController pushViewController:[[LTPersonMainPageDemo alloc]init] animated:YES];
+//        [strongSelf.navigationController pushViewController:self.shoppingListController animated:YES];
+        [strongSelf.navigationController pushViewController:[[TestViewController alloc]init] animated:YES];
     };
 
 //    [TFAPICenter loadData:TFAPIRequestNameForHomeBannner delegate:weakSelf];

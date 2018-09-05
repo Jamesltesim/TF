@@ -75,6 +75,11 @@
 		1A66B99220F9D26100464F4E /* TFDataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B99120F9D26100464F4E /* TFDataManage.m */; };
 		1A66B99520F9D7AF00464F4E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B99420F9D7AF00464F4E /* Reachability.m */; };
 		1A66B99720F9D80E00464F4E /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B99620F9D80E00464F4E /* ReadMe.md */; };
+		1A7181C5213F6DF70034CEE7 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C0213F6DF70034CEE7 /* PageView.m */; };
+		1A7181C6213F6DF70034CEE7 /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C1213F6DF70034CEE7 /* SegmentView.m */; };
+		1A7181C7213F6DF70034CEE7 /* ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C3213F6DF70034CEE7 /* ContentView.m */; };
+		1A7181CA213F6E280034CEE7 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C9213F6E280034CEE7 /* TestViewController.m */; };
+		1A7181CE213F7AD60034CEE7 /* TFShoppingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181CD213F7AD60034CEE7 /* TFShoppingTableView.m */; };
 		1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
@@ -383,6 +388,17 @@
 		1A66B99320F9D7AF00464F4E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1A66B99420F9D7AF00464F4E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		1A66B99620F9D80E00464F4E /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		1A7181BF213F6DF70034CEE7 /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageView.h; sourceTree = "<group>"; };
+		1A7181C0213F6DF70034CEE7 /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
+		1A7181C1213F6DF70034CEE7 /* SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentView.m; sourceTree = "<group>"; };
+		1A7181C2213F6DF70034CEE7 /* ContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentView.h; sourceTree = "<group>"; };
+		1A7181C3213F6DF70034CEE7 /* ContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentView.m; sourceTree = "<group>"; };
+		1A7181C4213F6DF70034CEE7 /* SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentView.h; sourceTree = "<group>"; };
+		1A7181C8213F6E280034CEE7 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		1A7181C9213F6E280034CEE7 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		1A7181CB213F7A800034CEE7 /* PageViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewDelegate.h; sourceTree = "<group>"; };
+		1A7181CC213F7AD60034CEE7 /* TFShoppingTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFShoppingTableView.h; sourceTree = "<group>"; };
+		1A7181CD213F7AD60034CEE7 /* TFShoppingTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFShoppingTableView.m; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -898,6 +914,7 @@
 		1A66B8D120F2F2A700464F4E /* 购物车 */ = {
 			isa = PBXGroup;
 			children = (
+				1A7181BE213F6DE00034CEE7 /* Test */,
 				905233F02106062B00127250 /* SlideFoodHeaderView.h */,
 				905233F62106062C00127250 /* SlideFoodHeaderView.m */,
 				905233F52106062B00127250 /* SlideFoodHeaderView.xib */,
@@ -1148,6 +1165,32 @@
 			children = (
 			);
 			path = "系统相册";
+			sourceTree = "<group>";
+		};
+		1A7181BE213F6DE00034CEE7 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				1A7181C8213F6E280034CEE7 /* TestViewController.h */,
+				1A7181C9213F6E280034CEE7 /* TestViewController.m */,
+				1A7181CB213F7A800034CEE7 /* PageViewDelegate.h */,
+				1A7181CF213F80060034CEE7 /* View */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		1A7181CF213F80060034CEE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A7181C2213F6DF70034CEE7 /* ContentView.h */,
+				1A7181C3213F6DF70034CEE7 /* ContentView.m */,
+				1A7181C4213F6DF70034CEE7 /* SegmentView.h */,
+				1A7181C1213F6DF70034CEE7 /* SegmentView.m */,
+				1A7181BF213F6DF70034CEE7 /* PageView.h */,
+				1A7181C0213F6DF70034CEE7 /* PageView.m */,
+				1A7181CC213F7AD60034CEE7 /* TFShoppingTableView.h */,
+				1A7181CD213F7AD60034CEE7 /* TFShoppingTableView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1A8739FC20DA01CA00B1357E /* 照片冲印 */ = {
@@ -2034,6 +2077,7 @@
 				1A9329F1210EA3DA0041B71E /* DVPieCenterView.m in Sources */,
 				90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */,
 				1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */,
+				1A7181CE213F7AD60034CEE7 /* TFShoppingTableView.m in Sources */,
 				1AE4241C20FDE44A009E8D13 /* NSString+lineSpace.m in Sources */,
 				1AB649FE210046B7004342C5 /* TFTableView.m in Sources */,
 				905233FB2106062C00127250 /* SlideFoodTableViewCell.m in Sources */,
@@ -2053,6 +2097,7 @@
 				1A66B99220F9D26100464F4E /* TFDataManage.m in Sources */,
 				1AC288412106CB5E009DBC77 /* HomeNavView.m in Sources */,
 				1AB649FB21003C7D004342C5 /* DeliveryPickView.m in Sources */,
+				1A7181C6213F6DF70034CEE7 /* SegmentView.m in Sources */,
 				1AE423D220FC9021009E8D13 /* AddressManageCell.m in Sources */,
 				1A66B98B20F9CD4A00464F4E /* TFDeviceInfo.m in Sources */,
 				1ABDDE2320D3B5BB00E900A8 /* MoreViewController.m in Sources */,
@@ -2090,6 +2135,7 @@
 				1A2BDFCD20C3C4390023C55D /* main.m in Sources */,
 				1A66B8F020F35F0000464F4E /* GoodModel.m in Sources */,
 				1A66B98F20F9D02700464F4E /* TFAPPInfo.m in Sources */,
+				1A7181C7213F6DF70034CEE7 /* ContentView.m in Sources */,
 				1AB64A0921018FE5004342C5 /* TFAPIRandom.m in Sources */,
 				1ABDDE4620D3B62200E900A8 /* MASConstraint.m in Sources */,
 				1ABDDDF820D0F09200E900A8 /* MeCollectionViewCell.m in Sources */,
@@ -2118,6 +2164,7 @@
 				1AE959B220ECA56B00C5BDE4 /* FruitCollectionViewCell.m in Sources */,
 				9027FEE220F8EF25003F0A51 /* UIScrollView+Empty.m in Sources */,
 				1AE423C520FC641C009E8D13 /* FeedbackViewController.m in Sources */,
+				1A7181C5213F6DF70034CEE7 /* PageView.m in Sources */,
 				1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */,
 				1AC816FB20E2238100B1EE89 /* PrintPhotoTableViewCell.m in Sources */,
 				1AE959C020EE0D2900C5BDE4 /* DrinksCollectionViewCell.m in Sources */,
@@ -2142,6 +2189,7 @@
 				1ABDDE4C20D3B62200E900A8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				1A03A70520DC836200576A03 /* SeckillTableViewCell.m in Sources */,
 				1AED00F52109E07200ECB82C /* XYCommon.m in Sources */,
+				1A7181CA213F6E280034CEE7 /* TestViewController.m in Sources */,
 				90996ACE20FF5AB3007CFFBE /* LTPersonalMainPageTestVC.m in Sources */,
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
 				1A9329F9210EA6500041B71E /* GradeCollectionViewCell.m in Sources */,
