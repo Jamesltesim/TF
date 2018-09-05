@@ -26,4 +26,6 @@
 
 - (void)registerNib:(UINib *)nib forCellReuseIdentifier:(NSString *)identifier;
 
+- (void)showCashierDeskWithHeight:(CGFloat)height;
+- (void)hiddenCashierDeskWithHeight:(CGFloat)height;
 @end

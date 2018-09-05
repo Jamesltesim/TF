@@ -17,4 +17,6 @@
 - (NSInteger)shoppingTableView:(TFShoppingTableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
 - (CGFloat)shoppingTableView:(TFShoppingTableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+- (void)shoppingTableView:(TFShoppingTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 @end

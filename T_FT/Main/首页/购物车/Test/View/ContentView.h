@@ -19,7 +19,11 @@
 
 @property (nonatomic) NSInteger index;
 
+- (void)updateFrame:(CGRect)frame;
+
 - (void)registerNib:(UINib *)nib forCellReuseIdentifier:(NSString *)identifier;
 
 - (instancetype)initWithFrame:(CGRect)frame dataArray:(NSArray <GoodModel *>*)array segmentTitle:(NSString *)title;
+
+
 @end

@@ -95,15 +95,15 @@
     CGFloat scrollContentWidth = self.scrollView.contentSize.width;
     [UIView animateWithDuration:0.3 animations:^{
         if(lab.center.x < screenWidth/2){
-            NSLog(@"111111");
+//            NSLog(@"111111");
             self.scrollView.contentOffset = CGPointMake(0, 0);
         }
         else if ((lab.frame.origin.x+lab.frame.size.width/2) > scrollContentWidth-screenWidth/2){
             self.scrollView.contentOffset = CGPointMake(scrollContentWidth-screenWidth, 0);
-            NSLog(@"222222");
+//            NSLog(@"222222");
         }
         else{
-            NSLog(@"333333");
+//            NSLog(@"333333");
             self.scrollView.contentOffset = CGPointMake(lab.center.x-screenWidth/2, 0);
             
             

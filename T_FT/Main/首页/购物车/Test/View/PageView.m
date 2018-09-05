@@ -32,6 +32,21 @@
     return _contentViewArray;
 }
 
+- (void)showCashierDeskWithHeight:(CGFloat)height{
+    for (ContentView *view in self.contentViewArray){
+        CGRect rect = view.frame;
+        [view updateFrame:CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, rect.size.height -height)];
+    }
+}
+
+- (void)hiddenCashierDeskWithHeight:(CGFloat)height{
+    
+    for (UIView *view in self.contentViewArray){
+        CGRect rect = view.frame;
+        view.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, rect.size.height +height);
+    }
+}
+
 - (void)registerNib:(UINib *)nib forCellReuseIdentifier:(NSString *)identifier{
 
 }
@@ -129,7 +144,7 @@
     NSInteger w = self.bounds.size.width;
     
     if(x % w == 0 && self.isTapSegment == NO){
-        NSLog(@"%@",NSStringFromCGPoint(scrollView.contentOffset));
+//        NSLog(@"%@",NSStringFromCGPoint(scrollView.contentOffset));
         
         self.segment.index = x/w;
     }

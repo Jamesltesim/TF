@@ -44,6 +44,19 @@
     _tableView.segmentIndex = index;
 }
 
+- (void)updateFrame:(CGRect)frame{
+    _tableView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    self.frame = frame;
+}
+
+- (void)setFrame:(CGRect)frame{
+    
+    [super setFrame:frame];
+    
+    CGRect rect = _tableView.frame;
+    
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if([self.delegate respondsToSelector:@selector(shoppingTableView:heightForRowAtIndexPath:)]){
@@ -73,6 +86,13 @@
         GoodModel *model = self.dataArray[indexPath.row];
         cell.textLabel.text = [NSString stringWithFormat:@"index ---> %ld    %@",indexPath.row,model.title];
         return cell;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if([self.delegate respondsToSelector:@selector(shoppingTableView:didSelectRowAtIndexPath:)]){
+        return [self.delegate shoppingTableView:self.tableView didSelectRowAtIndexPath:indexPath];
     }
 }
 

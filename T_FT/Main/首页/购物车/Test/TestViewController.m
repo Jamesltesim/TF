@@ -13,6 +13,11 @@
 
 #import "ShoppingListTextCell.h"
 #import "ShoppingListImageCell.h"
+#import "SlideFoodViewController.h"
+#import "ShoppingCarData.h"
+#import "ShowShoppingCarView.h"
+#import "DeliveryPickView.h"
+#import "UIView+LXShadowPath.h"
 
 @interface TestViewController ()<TFAPICallBackProtocol,PageViewDelegate>
 
@@ -21,6 +26,7 @@
 @property (nonatomic,strong)NSMutableArray *titleArray;
 @property (nonatomic,strong)NSMutableArray *contentArray;
 
+@property (nonatomic,strong)ShowShoppingCarView *carView;
 
 @end
 
@@ -41,9 +47,38 @@
     
     [self.view addSubview:self.pageView];
     
-    TFAPIForShoppingList *apiBanner = [[TFAPIForShoppingList alloc]init];
-    apiBanner.delegate = self;
-    [apiBanner loadData];
+    if([ShoppingCarData getCount]){
+        [self showCashierDesk];
+    }
+}
+
+- (void)navViewTap:(UITapGestureRecognizer *)tap {
+    DeliveryPickView *pickerView = [[DeliveryPickView alloc]init];
+    pickerView.titleLable.text = @"送餐时间";
+    [pickerView.confirmButton setTitleColor:THEME_COLOR_RED forState:UIControlStateNormal];
+    [pickerView.cancelButton setTitleColor:THEME_COLOR_RED forState:UIControlStateNormal];
+    [pickerView showOn:self.view];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    if(!self.titleArray){
+        TFAPIForShoppingList *apiBanner = [[TFAPIForShoppingList alloc]init];
+        apiBanner.delegate = self;
+        [apiBanner loadData];
+    }
+   
+}
+#pragma mark---  get set  ---
+
+- (ShowShoppingCarView *)carView{
+    if(!_carView){
+        _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-50-HOME_INDICATOR_HEIGHT, SCREEN_WIDTH, 70)];
+        _carView.delegate = self;
+        [_carView LX_SetShadowPathWith:[UIColor blackColor] shadowOpacity:0.03 shadowRadius:2 shadowSide:LXShadowPathTop shadowPathWidth:30];
+    }
+    return _carView;
 }
 
 - (PageView *)pageView{
@@ -72,6 +107,12 @@
 }
 
 - (void)TFAPICallBackDidFailed:(TFAPIBaseManager *)manager{
+    
+}
+
+#pragma mark ---  ShoppingCarDelegate  ---
+
+- (void)cashierDeskTap{
     
 }
 
@@ -136,15 +177,90 @@
         shoppingCell = cell;
     }
     
-//    if([self.delegate respondsToSelector:@selector(TFShoppingListWithTableView:cell:cellForRowAtIndexPath:data:)]){
-//        [self.delegate TFShoppingListWithTableView:tableView cell:shoppingCell cellForRowAtIndexPath:indexPath data:model];
-//    }
-//
-//    [shoppingCell setGoodsCount:[ShoppingCarData countOfGood:model]];
-    
-    
+    [shoppingCell setGoodsCount:[ShoppingCarData countOfGood:model]];
     
     return shoppingCell;
+}
+
+- (void)shoppingTableView:(TFShoppingTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger index = tableView.segmentIndex;
+    NSArray *array = self.contentArray[tableView.segmentIndex];
+    GoodModel *model = array[indexPath.row];
+    ShoppingTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        NSLog(@"%@ : titleIndex:%ld rowIndex:%ld",NSStringFromSelector(_cmd),index,indexPath.row);
+    
+    
+        //如果需要选择辅食 就弹出新界面
+        if(model.isHaveSlideFood){
+            SlideFoodViewController *slideFoodController = [[SlideFoodViewController alloc]initWithTableViewFrame:CGRectMake(0, NAV_HEIGHT, self.view.width, SCREEN_HEIGHT-NAV_HEIGHT-80) style:UITableViewStylePlain];
+            slideFoodController.dataArray = model.slideFood;
+            dispatch_async(dispatch_get_main_queue(),^{
+                [self presentViewController:slideFoodController animated:YES completion:nil];
+            });
+    
+        }else{
+            //        否则 就更新购物篮
+    
+            [self showCashierDesk];
+    
+            [ShoppingCarData addGood:model];
+           [cell setGoodsCount:[ShoppingCarData countOfGood:model]];    
+            [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
+        }
+    
+    
+        [ShoppingCarData showOrder];
+}
+//
+//
+//- (void)TFShoppingListWithTableView:(UITableView *)tableView cell:(ShoppingTableViewCell *)cell cellForRowAtIndexPath:(NSIndexPath *)indexPath data:(GoodModel *)data{
+//    [cell setGoodsCount:[ShoppingCarData countOfGood:data]];
+//
+//}
+//
+//- (void)TFShoppingListWithTableView:(UITableView *)tableView cell:(ShoppingTableViewCell *)cell didSelectRowAtIndexPath:(TFShoppingIndexPath *)indexPath data:(GoodModel *)data{
+//    NSLog(@"%@ : titleIndex:%ld rowIndex:%ld",NSStringFromSelector(_cmd),indexPath.titleIndex,indexPath.rowIndex);
+//
+//
+//    //如果需要选择辅食 就弹出新界面
+//    if(data.isHaveSlideFood){
+//        SlideFoodViewController *slideFoodController = [[SlideFoodViewController alloc]initWithTableViewFrame:CGRectMake(0, NAV_HEIGHT, self.view.width, SCREEN_HEIGHT-NAV_HEIGHT-80) style:UITableViewStylePlain];
+//        slideFoodController.dataArray = data.slideFood;
+//        dispatch_async(dispatch_get_main_queue(),^{
+//            [self presentViewController:slideFoodController animated:YES completion:nil];
+//        });
+//
+//    }else{
+//        //        否则 就更新购物篮
+//
+//        [self showCashierDesk];
+//
+//        [ShoppingCarData addGood:data];
+//        [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
+//    }
+//
+//    [cell setGoodsCount:[ShoppingCarData countOfGood:data]];
+//    [ShoppingCarData showOrder];
+//
+//}
+
+#pragma mark ---  内部方法  ---
+- (void)showCashierDesk{
+    if(!self.carView.superview){
+        [self.view addSubview:self.carView];
+        
+        [self.pageView showCashierDeskWithHeight:self.carView.height];
+        [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
+        
+    }
+}
+
+- (void)hidenCashierDesk{
+    if(self.carView.superview){
+        [self.carView removeFromSuperview];
+        [self.pageView hiddenCashierDeskWithHeight:self.carView.height];
+        
+    }
     
 }
 
