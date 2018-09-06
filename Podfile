@@ -18,6 +18,6 @@ pod 'MJRefresh'
 pod 'IQKeyboardManager'
 
 #注意此处需要添加use_frameworks!
-use_frameworks!
-pod 'LTScrollView', '~> 0.1.7'
+#use_frameworks!
+#pod 'LTScrollView', '~> 0.1.7'
 

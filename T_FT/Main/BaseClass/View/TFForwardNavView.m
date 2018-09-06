@@ -71,6 +71,9 @@
     [self.clearBgView addSubview:back1];
 }
 
+- (void)addRightButtonWithTarget:(id)target action:(SEL)action backgroundImage:(UIImage *)image{
+    
+}
 @end
 
 

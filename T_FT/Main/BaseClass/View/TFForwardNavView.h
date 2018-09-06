@@ -15,6 +15,10 @@
 
 @interface TFContentBackgroundView : UIView
 
+
+//导航栏上面右侧按钮
+@property (nonatomic,strong) UIButton *rightButton;
+
 @property (nonatomic,strong) UIImageView *backBtton;
 
 @end
@@ -40,5 +44,7 @@
 - (void)scrollToChangeAlpha:(CGFloat)alpha;
 
 - (void)addBackButtonWithTarget:(id)target action:(SEL)action;
+
+- (void)addRightButtonWithTarget:(id)target action:(SEL)action backgroundImage:(UIImage *)image;
 
 @end

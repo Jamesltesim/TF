@@ -10,4 +10,6 @@
 
 @interface HomeNavView : TFForwardNavView
 
+-(instancetype)initWithNoBackButton;
+
 @end

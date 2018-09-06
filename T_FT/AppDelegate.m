@@ -11,7 +11,6 @@
 #import "TFTabBarController.h"
 #import "DCFeaturesTool.h"
 
-#import "ShoppingListViewController.h"
 #import "LoginViewController.h"
 
 #import<CoreTelephony/CTCellularData.h>

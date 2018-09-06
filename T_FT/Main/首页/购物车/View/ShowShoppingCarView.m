@@ -44,20 +44,19 @@
         
         self.backgroundColor = [UIColor whiteColor];
         
-        
-        
         //contentView
-        _contentVeiw = [UIView new];
+        _contentVeiw = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width-14, frame.size.height-12)];
+        _contentVeiw.center = CGPointMake(frame.size.width/2, frame.size.height/2);
         _contentVeiw.backgroundColor = THEME_COLOR_RED;
         [self addSubview:_contentVeiw];
-        [_contentVeiw mas_makeConstraints:^(MASConstraintMaker *make) {
-            
-            CGFloat pace = 13.0;
-            make.top.equalTo(self).offset(pace);
-            make.left.equalTo(self).offset(pace);
-            make.bottom.equalTo(self).offset(-pace);
-            make.right.equalTo(self).offset(-pace);
-        }];
+//        [_contentVeiw mas_makeConstraints:^(MASConstraintMaker *make) {
+//
+//            CGFloat pace = 13.0;
+//            make.top.equalTo(self).offset(pace);
+//            make.left.equalTo(self).offset(pace);
+//            make.bottom.equalTo(self).offset(-pace/2);
+//            make.right.equalTo(self).offset(-pace);
+//        }];
         //
         _number = [[UILabel alloc]init];
         _number.font = [UIFont systemFontOfSize:11];

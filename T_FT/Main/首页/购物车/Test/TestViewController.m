@@ -19,7 +19,7 @@
 #import "DeliveryPickView.h"
 #import "UIView+LXShadowPath.h"
 
-@interface TestViewController ()<TFAPICallBackProtocol,PageViewDelegate>
+@interface TestViewController ()<TFAPICallBackProtocol,PageViewDelegate,ShoppingCarDelegate>
 
 @property (nonatomic,strong)PageView *pageView;
 
@@ -74,7 +74,7 @@
 
 - (ShowShoppingCarView *)carView{
     if(!_carView){
-        _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-50-HOME_INDICATOR_HEIGHT, SCREEN_WIDTH, 70)];
+        _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-HOME_INDICATOR_HEIGHT - 50, SCREEN_WIDTH, 50)];
         _carView.delegate = self;
         [_carView LX_SetShadowPathWith:[UIColor blackColor] shadowOpacity:0.03 shadowRadius:2 shadowSide:LXShadowPathTop shadowPathWidth:30];
     }
@@ -136,12 +136,6 @@
 }
 
 - (UITableViewCell *)shoppingTableView:(TFShoppingTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-//
-//    NSArray *array = self.contentArray[tableView.segmentIndex];
-//    GoodModel *model = array[indexPath.row];
-//    cell.textLabel.text = [NSString stringWithFormat:@"index ---> %ld    %@",indexPath.row,model.title];
-//    return cell;
     
     NSArray *array = self.contentArray[tableView.segmentIndex];
     GoodModel *model = array[indexPath.row];
@@ -189,7 +183,6 @@
     ShoppingTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         NSLog(@"%@ : titleIndex:%ld rowIndex:%ld",NSStringFromSelector(_cmd),index,indexPath.row);
     
-    
         //如果需要选择辅食 就弹出新界面
         if(model.isHaveSlideFood){
             SlideFoodViewController *slideFoodController = [[SlideFoodViewController alloc]initWithTableViewFrame:CGRectMake(0, NAV_HEIGHT, self.view.width, SCREEN_HEIGHT-NAV_HEIGHT-80) style:UITableViewStylePlain];
@@ -204,45 +197,13 @@
             [self showCashierDesk];
     
             [ShoppingCarData addGood:model];
-           [cell setGoodsCount:[ShoppingCarData countOfGood:model]];    
+           [cell setGoodsCount:[ShoppingCarData countOfGood:model]];
             [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
         }
     
     
         [ShoppingCarData showOrder];
 }
-//
-//
-//- (void)TFShoppingListWithTableView:(UITableView *)tableView cell:(ShoppingTableViewCell *)cell cellForRowAtIndexPath:(NSIndexPath *)indexPath data:(GoodModel *)data{
-//    [cell setGoodsCount:[ShoppingCarData countOfGood:data]];
-//
-//}
-//
-//- (void)TFShoppingListWithTableView:(UITableView *)tableView cell:(ShoppingTableViewCell *)cell didSelectRowAtIndexPath:(TFShoppingIndexPath *)indexPath data:(GoodModel *)data{
-//    NSLog(@"%@ : titleIndex:%ld rowIndex:%ld",NSStringFromSelector(_cmd),indexPath.titleIndex,indexPath.rowIndex);
-//
-//
-//    //如果需要选择辅食 就弹出新界面
-//    if(data.isHaveSlideFood){
-//        SlideFoodViewController *slideFoodController = [[SlideFoodViewController alloc]initWithTableViewFrame:CGRectMake(0, NAV_HEIGHT, self.view.width, SCREEN_HEIGHT-NAV_HEIGHT-80) style:UITableViewStylePlain];
-//        slideFoodController.dataArray = data.slideFood;
-//        dispatch_async(dispatch_get_main_queue(),^{
-//            [self presentViewController:slideFoodController animated:YES completion:nil];
-//        });
-//
-//    }else{
-//        //        否则 就更新购物篮
-//
-//        [self showCashierDesk];
-//
-//        [ShoppingCarData addGood:data];
-//        [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
-//    }
-//
-//    [cell setGoodsCount:[ShoppingCarData countOfGood:data]];
-//    [ShoppingCarData showOrder];
-//
-//}
 
 #pragma mark ---  内部方法  ---
 - (void)showCashierDesk{

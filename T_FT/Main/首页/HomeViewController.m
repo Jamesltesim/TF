@@ -21,8 +21,6 @@
 #import "TFAPICenter.h"
 #import "TFAPIForHomebanner.h"
 
-#import "ShoppingListViewController.h"
-#import "LTPersonMainPageDemo.h"
 #import "HomeNavView.h"
 
 #import "TestViewController.h"
@@ -42,7 +40,6 @@
 @property (nonatomic,strong) FloatingView *floatView;
 @property (nonatomic,strong) HomeNavView *navView;
 
-@property (nonatomic,strong) ShoppingListViewController *shoppingListController;
 
 @end
 
@@ -201,29 +198,12 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     
-    //    CGFloat height = scrollView.frame.size.height;
-    //    CGFloat contentOffsetY = scrollView.contentOffset.y;
-    //    CGFloat bottomOffset = scrollView.contentSize.height - contentOffsetY;
-    //    if (bottomOffset <= height)
-    //    {
-    //        //在最底部
-    ////        self.currentIsInBottom = YES;
-    //
-    //    }
-    //    else
-    //    {
-    ////        self.currentIsInBottom = NO;
-    //    }
-    
-    //    NSLog(@"%@",NSStringFromCGRect(self.collectionView.backgroundView.frame));
-    
+    [self.navView scrollToChangeAlpha:scrollView.contentOffset.y];
     if((scrollView.contentOffset.y+STATUSVIEW_HEIGHT+CONTENT_HEIGHT_NO_BAR_HERGHT) > scrollView.contentSize.height){
         NSLog(@"到底部了");
         
         
         //        NSLog(@"%f",(scrollView.contentOffset.y+STATUSVIEW_HEIGHT+CONTENT_HEIGHT_NO_BAR_HERGHT) - scrollView.contentSize.height);
-        
-        
     }
 }
 
@@ -451,8 +431,8 @@
 
 - (HomeNavView *)navView{
     if(!_navView){
-        _navView = [[HomeNavView alloc] init];
-        [_navView addBackButtonWithTarget:self action:@selector(backTap:)];
+        _navView = [[HomeNavView alloc] initWithNoBackButton];
+//        [_navView addBackButtonWithTarget:self action:@selector(backTap:)];
         
     }
     return _navView;
@@ -462,12 +442,6 @@
     
 }
 
-- (ShoppingListViewController *)shoppingListController{
-    if(!_shoppingListController){
-        _shoppingListController = [[ShoppingListViewController alloc]init];
-    }
-    return _shoppingListController;
-}
 
 - (void)createCollectionView{
     
@@ -481,10 +455,12 @@
     //该方法也可以设置itemSize
     
     //2.初始化collectionView
-    _collectionView = [[UICollectionView alloc] initWithFrame:RECT_NAVBAR_AND_TABBAR collectionViewLayout:layout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:RECT_NONAVBAR_AND_TABBAR collectionViewLayout:layout];
     [self.view addSubview:_collectionView];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.showsVerticalScrollIndicator = NO;
+    //    _collectionView.contentOffset = CGPointMake(0, NAV_HEIGHT);
+    _collectionView.contentInset = UIEdgeInsetsMake(NAV_HEIGHT-STATUSVIEW_HEIGHT, 0, 0, 0);
     
     //3.注册collectionViewCell
     //注意，此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致 均为 cellId
