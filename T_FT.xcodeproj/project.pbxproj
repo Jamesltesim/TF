@@ -81,6 +81,8 @@
 		1A7181CE213F7AD60034CEE7 /* TFShoppingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181CD213F7AD60034CEE7 /* TFShoppingTableView.m */; };
 		1A7181D42140B91E0034CEE7 /* HomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181D32140B91E0034CEE7 /* HomeNavView.m */; };
 		1A7181D72140BA380034CEE7 /* TFForwardNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181D62140BA380034CEE7 /* TFForwardNavView.m */; };
+		1A7181DB2140F55C0034CEE7 /* SlideFoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181DA2140F55C0034CEE7 /* SlideFoodModel.m */; };
+		1A7181DE214100310034CEE7 /* SlideCashierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181DD214100310034CEE7 /* SlideCashierView.m */; };
 		1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
@@ -225,7 +227,6 @@
 		905233F92106062C00127250 /* SlideFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905233F22106062B00127250 /* SlideFoodViewController.m */; };
 		905233FA2106062C00127250 /* SlideFoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 905233F32106062B00127250 /* SlideFoodTableViewCell.xib */; };
 		905233FB2106062C00127250 /* SlideFoodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 905233F42106062B00127250 /* SlideFoodTableViewCell.m */; };
-		905233FC2106062C00127250 /* SlideFoodHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 905233F52106062B00127250 /* SlideFoodHeaderView.xib */; };
 		905233FD2106062C00127250 /* SlideFoodHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 905233F62106062C00127250 /* SlideFoodHeaderView.m */; };
 		90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBBDD320F8FCD500D71B62 /* TBKeyChain.m */; };
 		90BBBDD820F8FCD600D71B62 /* TBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBBDD420F8FCD500D71B62 /* TBCommon.m */; };
@@ -398,6 +399,10 @@
 		1A7181D32140B91E0034CEE7 /* HomeNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavView.m; sourceTree = "<group>"; };
 		1A7181D52140BA370034CEE7 /* TFForwardNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFForwardNavView.h; sourceTree = "<group>"; };
 		1A7181D62140BA380034CEE7 /* TFForwardNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFForwardNavView.m; sourceTree = "<group>"; };
+		1A7181D92140F55C0034CEE7 /* SlideFoodModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideFoodModel.h; sourceTree = "<group>"; };
+		1A7181DA2140F55C0034CEE7 /* SlideFoodModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideFoodModel.m; sourceTree = "<group>"; };
+		1A7181DC214100310034CEE7 /* SlideCashierView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideCashierView.h; sourceTree = "<group>"; };
+		1A7181DD214100310034CEE7 /* SlideCashierView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideCashierView.m; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -662,7 +667,6 @@
 		905233F22106062B00127250 /* SlideFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideFoodViewController.m; sourceTree = "<group>"; };
 		905233F32106062B00127250 /* SlideFoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideFoodTableViewCell.xib; sourceTree = "<group>"; };
 		905233F42106062B00127250 /* SlideFoodTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideFoodTableViewCell.m; sourceTree = "<group>"; };
-		905233F52106062B00127250 /* SlideFoodHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideFoodHeaderView.xib; sourceTree = "<group>"; };
 		905233F62106062C00127250 /* SlideFoodHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideFoodHeaderView.m; sourceTree = "<group>"; };
 		905233F72106062C00127250 /* SlideFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideFoodViewController.h; sourceTree = "<group>"; };
 		907FD33420F8F09F00789067 /* Macros_size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros_size.h; sourceTree = "<group>"; };
@@ -905,15 +909,13 @@
 		1A66B8D120F2F2A700464F4E /* 购物车 */ = {
 			isa = PBXGroup;
 			children = (
-				1A7181D02140B69A0034CEE7 /* 辅食 */,
-				1A7181BE213F6DE00034CEE7 /* Test */,
+				1A7181D82140C66F0034CEE7 /* 结算 */,
+				1A7181D02140B69A0034CEE7 /* slideFood */,
+				1A7181BE213F6DE00034CEE7 /* shoppingList */,
 				905233EE2106062700127250 /* TFTableViewController.h */,
 				905233EF2106062B00127250 /* TFTableViewController.m */,
 				1A66B8F220F35F3E00464F4E /* View */,
 				1A66B8F120F35F2E00464F4E /* Model */,
-				1A66B8D820F2F31D00464F4E /* ShoppingCarViewController.h */,
-				1A66B8D920F2F31D00464F4E /* ShoppingCarViewController.m */,
-				1A66B90F20F4B44400464F4E /* ShoppingCarDelegate.h */,
 			);
 			path = "购物车";
 			sourceTree = "<group>";
@@ -927,6 +929,8 @@
 				1A66B8EF20F35F0000464F4E /* GoodModel.m */,
 				1A66B8F320F363EA00464F4E /* ShoppingCarModel.h */,
 				1A66B8F420F363EA00464F4E /* ShoppingCarModel.m */,
+				1A7181D92140F55C0034CEE7 /* SlideFoodModel.h */,
+				1A7181DA2140F55C0034CEE7 /* SlideFoodModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -934,20 +938,8 @@
 		1A66B8F220F35F3E00464F4E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1A66B8DB20F2F4B400464F4E /* ShoppingListImageCell.h */,
-				1A66B8DC20F2F4B400464F4E /* ShoppingListImageCell.m */,
-				1A66B8DD20F2F4B400464F4E /* ShoppingListImageCell.xib */,
 				1A66B8E020F2F66100464F4E /* ScrollTitleView.h */,
 				1A66B8E120F2F66100464F4E /* ScrollTitleView.m */,
-				1A66B8E320F3397F00464F4E /* ShoppingListTextCell.h */,
-				1A66B8E420F3397F00464F4E /* ShoppingListTextCell.m */,
-				1A66B8E520F3397F00464F4E /* ShoppingListTextCell.xib */,
-				1A66B8E820F344C400464F4E /* ShowShoppingCarView.h */,
-				1A66B8E920F344C400464F4E /* ShowShoppingCarView.m */,
-				1A66B90920F4886E00464F4E /* TriangleView.h */,
-				1A66B90A20F4886E00464F4E /* TriangleView.m */,
-				1A66B90C20F49B8400464F4E /* ShoppingTableViewCell.h */,
-				1A66B90D20F49B8400464F4E /* ShoppingTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1145,15 +1137,27 @@
 			path = "系统相册";
 			sourceTree = "<group>";
 		};
-		1A7181BE213F6DE00034CEE7 /* Test */ = {
+		1A7181BE213F6DE00034CEE7 /* shoppingList */ = {
 			isa = PBXGroup;
 			children = (
 				1A7181C8213F6E280034CEE7 /* ShoppingListController.h */,
 				1A7181C9213F6E280034CEE7 /* ShoppingListController.m */,
+				1A66B8DB20F2F4B400464F4E /* ShoppingListImageCell.h */,
+				1A66B8DC20F2F4B400464F4E /* ShoppingListImageCell.m */,
+				1A66B8DD20F2F4B400464F4E /* ShoppingListImageCell.xib */,
+				1A66B8E320F3397F00464F4E /* ShoppingListTextCell.h */,
+				1A66B8E420F3397F00464F4E /* ShoppingListTextCell.m */,
+				1A66B8E520F3397F00464F4E /* ShoppingListTextCell.xib */,
+				1A66B8E820F344C400464F4E /* ShowShoppingCarView.h */,
+				1A66B8E920F344C400464F4E /* ShowShoppingCarView.m */,
+				1A66B90920F4886E00464F4E /* TriangleView.h */,
+				1A66B90A20F4886E00464F4E /* TriangleView.m */,
+				1A66B90C20F49B8400464F4E /* ShoppingTableViewCell.h */,
+				1A66B90D20F49B8400464F4E /* ShoppingTableViewCell.m */,
 				1A7181CB213F7A800034CEE7 /* PageViewDelegate.h */,
 				1A7181CF213F80060034CEE7 /* View */,
 			);
-			path = Test;
+			path = shoppingList;
 			sourceTree = "<group>";
 		};
 		1A7181CF213F80060034CEE7 /* View */ = {
@@ -1171,19 +1175,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1A7181D02140B69A0034CEE7 /* 辅食 */ = {
+		1A7181D02140B69A0034CEE7 /* slideFood */ = {
 			isa = PBXGroup;
 			children = (
 				905233F02106062B00127250 /* SlideFoodHeaderView.h */,
 				905233F62106062C00127250 /* SlideFoodHeaderView.m */,
-				905233F52106062B00127250 /* SlideFoodHeaderView.xib */,
 				905233F12106062B00127250 /* SlideFoodTableViewCell.h */,
 				905233F42106062B00127250 /* SlideFoodTableViewCell.m */,
 				905233F32106062B00127250 /* SlideFoodTableViewCell.xib */,
 				905233F72106062C00127250 /* SlideFoodViewController.h */,
 				905233F22106062B00127250 /* SlideFoodViewController.m */,
+				1A7181DC214100310034CEE7 /* SlideCashierView.h */,
+				1A7181DD214100310034CEE7 /* SlideCashierView.m */,
 			);
-			path = "辅食";
+			path = slideFood;
+			sourceTree = "<group>";
+		};
+		1A7181D82140C66F0034CEE7 /* 结算 */ = {
+			isa = PBXGroup;
+			children = (
+				1A66B8D820F2F31D00464F4E /* ShoppingCarViewController.h */,
+				1A66B8D920F2F31D00464F4E /* ShoppingCarViewController.m */,
+				1A66B90F20F4B44400464F4E /* ShoppingCarDelegate.h */,
+			);
+			path = "结算";
 			sourceTree = "<group>";
 		};
 		1A8739FC20DA01CA00B1357E /* 照片冲印 */ = {
@@ -1969,7 +1984,6 @@
 				1A66B8C620EF41D200464F4E /* timg1.jpeg in Resources */,
 				1ABDDE5020D3B6EB00E900A8 /* LaunchScreen.storyboard in Resources */,
 				1A9329FA210EA6500041B71E /* GradeCollectionViewCell.xib in Resources */,
-				905233FC2106062C00127250 /* SlideFoodHeaderView.xib in Resources */,
 				905233FA2106062C00127250 /* SlideFoodTableViewCell.xib in Resources */,
 				1AE423D320FC9021009E8D13 /* AddressManageCell.xib in Resources */,
 				1A66B92D20F6F75800464F4E /* LoginViewController.xib in Resources */,
@@ -2069,6 +2083,7 @@
 				1AE4240920FDD618009E8D13 /* EditAndNewViewController.m in Sources */,
 				1AE4242220FDE44A009E8D13 /* YXAlertView.m in Sources */,
 				1A873A2E20DBC78800B1357E /* TFUtils+Date.m in Sources */,
+				1A7181DE214100310034CEE7 /* SlideCashierView.m in Sources */,
 				1A2BE00420C3C58E0023C55D /* MeViewController.m in Sources */,
 				1A66B8E220F2F66100464F4E /* ScrollTitleView.m in Sources */,
 				1AC816CD20E1DE5E00B1EE89 /* UILabel+TF.m in Sources */,
@@ -2191,6 +2206,7 @@
 				9027FEE520F8EF25003F0A51 /* LYEmptyBaseView.m in Sources */,
 				1A873A1520DB539500B1357E /* TFImageDataModel.m in Sources */,
 				1A4DF29821145F7A009854B9 /* DWAnimator.swift in Sources */,
+				1A7181DB2140F55C0034CEE7 /* SlideFoodModel.m in Sources */,
 				1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */,
 				1AE4242320FDE44A009E8D13 /* YXTableViewCell.m in Sources */,
 				1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */,

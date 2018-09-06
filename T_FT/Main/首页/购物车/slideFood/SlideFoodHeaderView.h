@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SlideFoodHeaderView : UIView
-@property (weak, nonatomic) IBOutlet UILabel *content;
+
+@property (nonatomic,strong) UILabel *titleLab;
+@property (nonatomic,strong) UILabel *priceLab;
 
 @end

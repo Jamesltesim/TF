@@ -11,6 +11,7 @@
 
 @protocol ShoppingCarDelegate <NSObject>
 
+- (void)slideCashierViewGotoBillView;
 
 /**
  点击收银台

@@ -60,14 +60,28 @@
     model9.imgUrl = (arc4random()%2 == 0? @"www":@"");
     model9.price = [TFAPIRandom randomRMB];
     
-    model9.isHaveSlideFood = YES;
+    if(index == 0){
+        model9.isHaveSlideFood = NO;
+    }else{
+         model9.isHaveSlideFood = YES;
+    }
+   
+    SlideFoodModel *slide1 = [[SlideFoodModel alloc]initWithTitle:[TFAPIRandom randomCreatChinese:arc4random() % 5+2] price:[TFAPIRandom randomRMBTo:5]];
     
-    model9.slideFood = @[@{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]},
-                         @{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]},
-                         @{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]},
-                         @{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]},
-                         @{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]},
-                         @{@"title":[TFAPIRandom randomCreatChinese:arc4random() % 5+2],@"price":[NSString stringWithFormat:@"%.2lf",[TFAPIRandom randomRMBTo:5]]}];
+     SlideFoodModel *slide2 = [[SlideFoodModel alloc]initWithTitle:[TFAPIRandom randomCreatChinese:arc4random() % 5+2] price:[TFAPIRandom randomRMBTo:5]];
+    
+     SlideFoodModel *slide3 = [[SlideFoodModel alloc]initWithTitle:[TFAPIRandom randomCreatChinese:arc4random() % 5+2] price:[TFAPIRandom randomRMBTo:5]];
+    
+     SlideFoodModel *slide4 = [[SlideFoodModel alloc]initWithTitle:[TFAPIRandom randomCreatChinese:arc4random() % 5+2] price:[TFAPIRandom randomRMBTo:5]];
+    
+     SlideFoodModel *slide5 = [[SlideFoodModel alloc]initWithTitle:[TFAPIRandom randomCreatChinese:arc4random() % 5+2] price:[TFAPIRandom randomRMBTo:5]];
+    
+     SlideFoodModel *slide6 = [[SlideFoodModel alloc]initWithTitle:[TFAPIRandom randomCreatChinese:arc4random() % 5+2] price:[TFAPIRandom randomRMBTo:5]];
+    
+     SlideFoodModel *slide7 = [[SlideFoodModel alloc]initWithTitle:[TFAPIRandom randomCreatChinese:arc4random() % 5+2] price:[TFAPIRandom randomRMBTo:5]];
+    
+    model9.slideFood = @[slide1,slide2,slide3,slide4,slide5,slide6,slide7];
+    
     return model9;
 }
 

@@ -21,7 +21,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yi-A0-mXt" userLabel="title">
-                        <rect key="frame" x="50" y="43" width="29" height="21"/>
+                        <rect key="frame" x="40" y="43" width="29" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,18 +33,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9e-bq-uHk" userLabel="line">
-                        <rect key="frame" x="50" y="105.5" width="458" height="0.5"/>
+                        <rect key="frame" x="40" y="105.5" width="468" height="0.5"/>
                         <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="6Gy-NV-Ob8"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="smg-D3-u0I">
-                        <rect key="frame" x="10" y="38" width="30" height="30"/>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_order_slide_circle" translatesAutoresizingMaskIntoConstraints="NO" id="smg-D3-u0I">
+                        <rect key="frame" x="10" y="43" width="20" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="9AK-ci-W9A"/>
-                            <constraint firstAttribute="width" constant="30" id="SNl-Z6-yij"/>
+                            <constraint firstAttribute="height" constant="20" id="9AK-ci-W9A"/>
+                            <constraint firstAttribute="width" constant="20" id="SNl-Z6-yij"/>
                         </constraints>
                     </imageView>
                 </subviews>
@@ -63,9 +62,13 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="price" destination="Wr0-5C-vFi" id="obn-xc-p72"/>
+                <outlet property="selectedImageView" destination="smg-D3-u0I" id="d5h-Wa-Lb0"/>
                 <outlet property="title" destination="1Yi-A0-mXt" id="7iU-yD-mra"/>
             </connections>
             <point key="canvasLocation" x="-60" y="22.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="home_order_slide_circle" width="16" height="16"/>
+    </resources>
 </document>

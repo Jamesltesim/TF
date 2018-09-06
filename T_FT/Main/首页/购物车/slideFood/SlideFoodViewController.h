@@ -7,7 +7,11 @@
 //
 
 #import "TFTableViewController.h"
+#import "GoodModel.h"
 
-@interface SlideFoodViewController : TFTableViewController
+@interface SlideFoodViewController : UIViewController
+
+@property (nonatomic,strong) GoodModel *goodModel;
+
 
 @end

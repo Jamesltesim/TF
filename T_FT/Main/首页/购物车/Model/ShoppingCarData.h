@@ -14,7 +14,9 @@
 +(instancetype)shareInstance;
 
 + (void)addGood:(GoodModel *)model;
++ (void)addGood:(GoodModel *)model slideFood:(SlideFoodModel *)slideFood;
 + (void)subGood:(GoodModel *)model;
++ (void)subGood:(GoodModel *)model slideFood:(SlideFoodModel *)slideFood;
 
 
 /**

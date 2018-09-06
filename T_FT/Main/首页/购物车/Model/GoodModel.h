@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SlideFoodModel.h"
 
 @interface GoodModel : NSObject
 
@@ -15,8 +16,8 @@
 @property (nonatomic,strong) NSString *content;
 @property (nonatomic,strong) NSString *imgUrl;
 @property (nonatomic) CGFloat price;
-@property (nonatomic,strong) NSArray *slideFood;
 
+@property (nonatomic,strong) NSMutableArray <SlideFoodModel *>*slideFood;
 @property (nonatomic) BOOL isHaveSlideFood;
 
 @end

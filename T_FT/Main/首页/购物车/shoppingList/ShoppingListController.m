@@ -185,8 +185,8 @@
     
         //如果需要选择辅食 就弹出新界面
         if(model.isHaveSlideFood){
-            SlideFoodViewController *slideFoodController = [[SlideFoodViewController alloc]initWithTableViewFrame:CGRectMake(0, NAV_HEIGHT, self.view.width, SCREEN_HEIGHT-NAV_HEIGHT-80) style:UITableViewStylePlain];
-            slideFoodController.dataArray = model.slideFood;
+            SlideFoodViewController *slideFoodController = [[SlideFoodViewController alloc] init];
+            slideFoodController.goodModel = model;
             dispatch_async(dispatch_get_main_queue(),^{
                 [self presentViewController:slideFoodController animated:YES completion:nil];
             });

@@ -27,7 +27,13 @@
     return model;
 }
 
+//+ (instancetype)initWithGoodModel:(GoodModel *)good slideFoode:(NSArray< NSDictionary *> *)slideFood{
+//    ShoppingCarModel *model = [self initWithGoodModel:good];
+//    model.slideFood = slideFood;
+//    return model;
+//}
+
 - (NSString *)description{
-    return [NSString stringWithFormat:@"count:%ld title:%@ price:%.2f",self.count,self.title,self.price];
+    return [NSString stringWithFormat:@"count:%ld title:%@ price:%.2f slideFood:%@",self.count,self.title,self.price,self.slideFood];
 }
 @end

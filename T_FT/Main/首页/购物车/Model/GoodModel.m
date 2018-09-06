@@ -10,4 +10,19 @@
 
 @implementation GoodModel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+       
+    }
+    return self;
+}
+
+- (NSMutableArray<SlideFoodModel *> *)slideFood{
+    if(!_slideFood){
+        _slideFood = [[NSMutableArray alloc]initWithCapacity:0];
+    }
+    return _slideFood;
+}
 @end

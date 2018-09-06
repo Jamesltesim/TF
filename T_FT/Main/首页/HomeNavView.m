@@ -52,7 +52,7 @@
         
     }
     
-    NSLog(@"%lf",self.currentProgress);
+//    NSLog(@"%lf",self.currentProgress);
     
     self.contentBgView.alpha = 1-self.currentProgress;
 //    self.clearBgView.alpha = 1-self.currentProgress;
