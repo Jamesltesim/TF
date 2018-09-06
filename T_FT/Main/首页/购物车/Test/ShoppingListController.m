@@ -6,7 +6,7 @@
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#import "TestViewController.h"
+#import "ShoppingListController.h"
 #import "PageView.h"
 #import "TFAPIForShoppingList.h"
 #import "PageViewDelegate.h"
@@ -19,7 +19,7 @@
 #import "DeliveryPickView.h"
 #import "UIView+LXShadowPath.h"
 
-@interface TestViewController ()<TFAPICallBackProtocol,PageViewDelegate,ShoppingCarDelegate>
+@interface ShoppingListController ()<TFAPICallBackProtocol,PageViewDelegate,ShoppingCarDelegate>
 
 @property (nonatomic,strong)PageView *pageView;
 
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation TestViewController
+@implementation ShoppingListController
 
 - (instancetype)init
 {

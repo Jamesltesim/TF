@@ -77,7 +77,7 @@
 		1A7181C5213F6DF70034CEE7 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C0213F6DF70034CEE7 /* PageView.m */; };
 		1A7181C6213F6DF70034CEE7 /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C1213F6DF70034CEE7 /* SegmentView.m */; };
 		1A7181C7213F6DF70034CEE7 /* ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C3213F6DF70034CEE7 /* ContentView.m */; };
-		1A7181CA213F6E280034CEE7 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C9213F6E280034CEE7 /* TestViewController.m */; };
+		1A7181CA213F6E280034CEE7 /* ShoppingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C9213F6E280034CEE7 /* ShoppingListController.m */; };
 		1A7181CE213F7AD60034CEE7 /* TFShoppingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181CD213F7AD60034CEE7 /* TFShoppingTableView.m */; };
 		1A7181D42140B91E0034CEE7 /* HomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181D32140B91E0034CEE7 /* HomeNavView.m */; };
 		1A7181D72140BA380034CEE7 /* TFForwardNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181D62140BA380034CEE7 /* TFForwardNavView.m */; };
@@ -389,8 +389,8 @@
 		1A7181C2213F6DF70034CEE7 /* ContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentView.h; sourceTree = "<group>"; };
 		1A7181C3213F6DF70034CEE7 /* ContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentView.m; sourceTree = "<group>"; };
 		1A7181C4213F6DF70034CEE7 /* SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentView.h; sourceTree = "<group>"; };
-		1A7181C8213F6E280034CEE7 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		1A7181C9213F6E280034CEE7 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		1A7181C8213F6E280034CEE7 /* ShoppingListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingListController.h; sourceTree = "<group>"; };
+		1A7181C9213F6E280034CEE7 /* ShoppingListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingListController.m; sourceTree = "<group>"; };
 		1A7181CB213F7A800034CEE7 /* PageViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewDelegate.h; sourceTree = "<group>"; };
 		1A7181CC213F7AD60034CEE7 /* TFShoppingTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFShoppingTableView.h; sourceTree = "<group>"; };
 		1A7181CD213F7AD60034CEE7 /* TFShoppingTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFShoppingTableView.m; sourceTree = "<group>"; };
@@ -1148,8 +1148,8 @@
 		1A7181BE213F6DE00034CEE7 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				1A7181C8213F6E280034CEE7 /* TestViewController.h */,
-				1A7181C9213F6E280034CEE7 /* TestViewController.m */,
+				1A7181C8213F6E280034CEE7 /* ShoppingListController.h */,
+				1A7181C9213F6E280034CEE7 /* ShoppingListController.m */,
 				1A7181CB213F7A800034CEE7 /* PageViewDelegate.h */,
 				1A7181CF213F80060034CEE7 /* View */,
 			);
@@ -2171,7 +2171,7 @@
 				1ABDDE4C20D3B62200E900A8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				1A03A70520DC836200576A03 /* SeckillTableViewCell.m in Sources */,
 				1AED00F52109E07200ECB82C /* XYCommon.m in Sources */,
-				1A7181CA213F6E280034CEE7 /* TestViewController.m in Sources */,
+				1A7181CA213F6E280034CEE7 /* ShoppingListController.m in Sources */,
 				1ABDDE1C20D3A4BF00E900A8 /* DCFeaturesTool.m in Sources */,
 				1A9329F9210EA6500041B71E /* GradeCollectionViewCell.m in Sources */,
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,

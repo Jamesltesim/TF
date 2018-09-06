@@ -23,7 +23,7 @@
 
 #import "HomeNavView.h"
 
-#import "TestViewController.h"
+#import "ShoppingListController.h"
 
 
 
@@ -39,6 +39,8 @@
 @property (nonatomic,strong) NSArray *dataArray;
 @property (nonatomic,strong) FloatingView *floatView;
 @property (nonatomic,strong) HomeNavView *navView;
+
+@property (nonatomic,strong) ShoppingListController *shoppingController;
 
 
 @end
@@ -99,15 +101,14 @@
     [self.collectionView.mj_header beginRefreshing];
     
     
-    self.dataArray = @[@[@{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
-                         @{@"name":@"甜心大苹果",@"price":@""},
-                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""}
-                         ],
-  
+    self.dataArray = @[
                         @[@{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
                          @{@"name":@"甜心大苹果",@"price":@""},
                          @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
-                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""}
+                         @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                          @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
+                          @{@"name":@"甜心大苹果",@"price":@""},
+                          @{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""}
                          ],
                        
                        @[@{@"name":@"巨无霸超级新西兰阳光金果系列",@"price":@""},
@@ -127,7 +128,7 @@
     //悬浮窗
     self.floatView = [[FloatingView alloc]initWithFrame:CGRectMake(kScreenWidth-80, kScreenHeight-150, 65, 65) mainImageName:@"timg1.png" bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
     
-    [self.tabBarController.view addSubview:self.floatView];
+//    [self.tabBarController.view addSubview:self.floatView];
     
     __weak __typeof(self)weakSelf = self;
     self.floatView.callService = ^{
@@ -151,7 +152,7 @@
 //        [alert addAction:defintAction];
 //        [strongSelf presentViewController:alert animated:YES completion:nil];
 //        [strongSelf.navigationController pushViewController:self.shoppingListController animated:YES];
-        [strongSelf.navigationController pushViewController:[[TestViewController alloc]init] animated:YES];
+//        [strongSelf.navigationController pushViewController:[[TestViewController alloc]init] animated:YES];
     };
 
 //    [TFAPICenter loadData:TFAPIRequestNameForHomeBannner delegate:weakSelf];
@@ -227,11 +228,11 @@
     
     if(indexPath.section == 0){
     
-       BundlingCollectionViewCell_1 *cell = (BundlingCollectionViewCell_1 *)[collectionView dequeueReusableCellWithReuseIdentifier:@"BundlingCollectionViewCell_1" forIndexPath:indexPath];
-        cell.backgroundColor = [UIColor yellowColor];
-        return cell;
-
-    }else if (indexPath.section == 1){
+//       BundlingCollectionViewCell_1 *cell = (BundlingCollectionViewCell_1 *)[collectionView dequeueReusableCellWithReuseIdentifier:@"BundlingCollectionViewCell_1" forIndexPath:indexPath];
+//        cell.backgroundColor = [UIColor yellowColor];
+//        return cell;
+//
+//    }else if (indexPath.section == 1){
         DrinksCollectionViewCell *cell = (DrinksCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"DrinksCollectionViewCell" forIndexPath:indexPath];
         
         
@@ -269,32 +270,32 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section == 0){
-        CGFloat height = 0.;
-        switch ([TFUtils deviceScreenSize]) {
-                
-            case TFScreenSize_3_5:
-                height = 165;
-                break;
-            case TFScreenSize_4_0:
-                height = 145;
-                break;
-            case TFScreenSize_4_7:
-                height = 170;
-                break;
-            case TFScreenSize_5_5:
-                height = 200;
-                break;
-            case TFScreenSize_5_8:
-                height = 205;
-                break;
-            default:
-                height = 0.;
-                break;
-        }
-        
-        return CGSizeMake(self.view.width, height);
-        
-    }else if (indexPath.section == 1){
+//        CGFloat height = 0.;
+//        switch ([TFUtils deviceScreenSize]) {
+//
+//            case TFScreenSize_3_5:
+//                height = 165;
+//                break;
+//            case TFScreenSize_4_0:
+//                height = 145;
+//                break;
+//            case TFScreenSize_4_7:
+//                height = 170;
+//                break;
+//            case TFScreenSize_5_5:
+//                height = 200;
+//                break;
+//            case TFScreenSize_5_8:
+//                height = 205;
+//                break;
+//            default:
+//                height = 0.;
+//                break;
+//        }
+//
+//        return CGSizeMake(self.view.width, height);
+//
+//    }else if (indexPath.section == 1){
         CGFloat height = 0.;
         switch ([TFUtils deviceScreenSize]) {
                 
@@ -344,18 +345,18 @@
 //设置每个item的UIEdgeInsets
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    if(section == 0){
-       return UIEdgeInsetsMake(0, 0, 0, 0);
-    }
+//    if(section == 0){
+//       return UIEdgeInsetsMake(0, 0, 0, 0);
+//    }
     return UIEdgeInsetsMake(8, 8, 8, 8);
 }
 
 //设置每个item水平间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    if(section == 0){
-        return 0.;
-    }
+//    if(section == 0){
+//        return 0.;
+//    }
     return 5;
 }
 
@@ -363,9 +364,9 @@
 //设置每个item垂直间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    if(section == 0){
-        return 0.;
-    }
+//    if(section == 0){
+//        return 0.;
+//    }
     return 8;
 }
 
@@ -382,7 +383,7 @@
             headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView" forIndexPath:indexPath];
             [headerView addSubview:self.bannerView];
             headerView.backgroundColor = [UIColor blueColor];
-            
+
         }else{
             headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
             headerView.backgroundColor =[UIColor whiteColor];
@@ -408,8 +409,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     DrinksCollectionViewCell *cell = (DrinksCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    //    NSString *msg = cell.botlabel.text;
-    //    NSLog(@"%@",msg);
+    [self.navigationController pushViewController:self.shoppingController animated:YES];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
@@ -428,6 +428,13 @@
 }
 
 #pragma mark get set
+
+- (ShoppingListController *)shoppingController{
+    if(!_shoppingController){
+        _shoppingController = [[ShoppingListController alloc]init];
+    }
+    return _shoppingController;
+}
 
 - (HomeNavView *)navView{
     if(!_navView){
