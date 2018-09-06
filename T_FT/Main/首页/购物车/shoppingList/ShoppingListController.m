@@ -18,6 +18,7 @@
 #import "ShowShoppingCarView.h"
 #import "DeliveryPickView.h"
 #import "UIView+LXShadowPath.h"
+#import "ShoppingCarViewController.h"
 
 @interface ShoppingListController ()<TFAPICallBackProtocol,PageViewDelegate,ShoppingCarDelegate>
 
@@ -47,9 +48,7 @@
     
     [self.view addSubview:self.pageView];
     
-    if([ShoppingCarData getCount]){
-        [self showCashierDesk];
-    }
+    
 }
 
 - (void)navViewTap:(UITapGestureRecognizer *)tap {
@@ -68,6 +67,13 @@
         apiBanner.delegate = self;
         [apiBanner loadData];
     }
+    
+    if([ShoppingCarData getCount]){
+        [self showCashierDesk];
+    }
+    
+    [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
+    [self.pageView reloadCurrentTableView];
    
 }
 #pragma mark---  get set  ---
@@ -113,7 +119,7 @@
 #pragma mark ---  ShoppingCarDelegate  ---
 
 - (void)cashierDeskTap{
-    
+    [self.navigationController pushViewController:[[ShoppingCarViewController alloc]init] animated:YES];
 }
 
 #pragma mark ---  PageViewDelegate  ---

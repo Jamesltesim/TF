@@ -51,6 +51,13 @@
 
 }
 
+- (void)reloadCurrentTableView{
+    ContentView *contentView = self.contentViewArray[self.segment.index];
+    if(contentView){
+        [contentView.tableView reloadData];
+    }
+}
+
 - (void)reloadData:(NSArray<NSDictionary *> *)dataArray{
     
 //    处理数据

@@ -11,7 +11,7 @@
 
 @interface ContentView()
 
-@property(nonatomic,strong)TFShoppingTableView *tableView;
+
 
 @end
 

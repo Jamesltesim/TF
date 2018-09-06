@@ -19,6 +19,23 @@
     return self;
 }
 
+
+/**
+ 屏蔽掉了父类中的该属性
+
+ @return nil
+ */
+- (NSMutableArray<SlideFoodModel *> *)slideFood{
+    return nil;
+}
+
+- (NSMutableArray<NSArray<SlideFoodModel *> *> *)slideFoods{
+    if(!_slideFoods){
+        _slideFoods = [[NSMutableArray alloc]initWithCapacity:0];
+    }
+    return _slideFoods;
+}
+
 + (instancetype)initWithGoodModel:(GoodModel *)good{
     ShoppingCarModel *model = [[ShoppingCarModel alloc] init];
     model.goodId = good.goodId;
@@ -34,6 +51,6 @@
 //}
 
 - (NSString *)description{
-    return [NSString stringWithFormat:@"count:%ld title:%@ price:%.2f slideFood:%@",self.count,self.title,self.price,self.slideFood];
+    return [NSString stringWithFormat:@"goodID:%@ count:%ld title:%@ price:%.2f slideFoods:%@",self.goodId,self.count,self.title,self.price,self.slideFoods];
 }
 @end

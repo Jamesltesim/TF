@@ -68,6 +68,7 @@
 
 - (void)setIndex:(NSInteger)index{
     
+    _index = index;
     UILabel *lab = self.labArray[index];
     
     [self animateWithLab:lab];

@@ -13,6 +13,8 @@
 
 @interface ContentView : UIView<UITableViewDelegate,UITableViewDataSource>
 
+@property(nonatomic,strong)TFShoppingTableView *tableView;
+
 @property (nonatomic,weak) id<PageViewDelegate> delegate;
 
 @property (nonatomic,strong) NSArray *dataArray;

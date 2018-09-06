@@ -10,6 +10,15 @@
 
 @interface ShoppingCarModel : GoodModel
 
+//目前没用到
+@property (nonatomic) NSInteger shoppingGoodID;
+
+
+/**
+ 该属性使用在 如果选择了两个以上的同一个商品，并且该商品是附带有slidefood的情况
+ */
+@property (nonatomic,strong) NSMutableArray <NSArray <SlideFoodModel *>*>*slideFoods;
+
 @property (nonatomic) NSInteger count;
 
 

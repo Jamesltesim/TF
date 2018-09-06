@@ -17,6 +17,10 @@
 
 //@property (nonatomic,strong) NSMutableArray *dataArray;
 @property (nonatomic,strong) NSMutableDictionary *goodsDict;
+
+
+//创建自增长的购物车商品ID (目前没用到)
+@property (nonatomic) NSInteger autoIncrementGenerateShoppingGoodID;
 @end
 
 @implementation ShoppingCarData
@@ -70,7 +74,7 @@
 
 + (CGFloat)getTotalPrices{
     ShoppingCarData *data = [self shareInstance];
-   NSNumber *price = [data.goodsDict objectForKey:PRICE_KEY];
+    NSNumber *price = [data.goodsDict objectForKey:PRICE_KEY];
     return [price floatValue];
 }
 
@@ -91,21 +95,48 @@
     ShoppingCarModel *good = [self findModelWithId:model.goodId];
     ShoppingCarData *data = [self shareInstance];
     CGFloat price = [[data.goodsDict objectForKey:PRICE_KEY] floatValue];
-   
+    
     NSNumber *priceNumber = nil;
-    //当前购物车中已经有该商品
+    
     if(good){
         good.count ++;
-        
         price +=  good.price;
         priceNumber = [NSNumber numberWithFloat:price];
+        
+        //当前购物车中已经有该商品
+        //并且是带有slidefood的商品 就在slideFoods中添加一个array
+        if(model.slideFood.count > 0){
+            //                    NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
+            //                    [marr addObject:[ShoppingCarModel initWithGoodModel:model]];
+            [good.slideFoods addObject:[[NSMutableArray alloc]initWithCapacity:0]];
+        }
+        
+        //        //如果是带有slidefood的商品
+        //        if(model.slideFood.count > 0){
+        //            NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
+        //            [marr addObject:[ShoppingCarModel initWithGoodModel:model]];
+        //
+        //        }else{
+        //              //当前购物车中已经有该商品
+        //
+        //        }
+        
     }else{
-       //当前购物车中没有该商品
-      
-         NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
-        [marr addObject:[ShoppingCarModel initWithGoodModel:model]];
+        //当前购物车中没有该商品
+        
+        NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
+        ShoppingCarModel *shoppingModel = [ShoppingCarModel initWithGoodModel:model];
+        [marr addObject:shoppingModel];
+       
+        //并且是带有slidefood的商品 就在slideFoods中添加一个array
+        if(model.slideFood.count > 0){
+            //                    NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
+            //                    [marr addObject:[ShoppingCarModel initWithGoodModel:model]];
+            [shoppingModel.slideFoods addObject:[[NSMutableArray alloc]initWithCapacity:0]];
+        }
+        
         price +=  model.price;
-         priceNumber = [NSNumber numberWithFloat:price];
+        priceNumber = [NSNumber numberWithFloat:price];
     }
     
     [data.goodsDict setObject:priceNumber forKey:PRICE_KEY];
@@ -117,55 +148,64 @@
     ShoppingCarData *data = [self shareInstance];
     CGFloat price = [[data.goodsDict objectForKey:PRICE_KEY] floatValue];
     
-    NSNumber *priceNumber = nil;
     //当前购物车中已经有该商品
     if(good){
-        good.count ++;
-        
+        NSMutableArray *marr = (NSMutableArray *)good.slideFoods.lastObject;
+        [marr addObject:slideFood];
         //slideFood
-        [good.slideFood addObject:slideFood];
-         price += slideFood.price;
+        //        [good.slideFood addObject:slideFood];
+        price += slideFood.price;
+        
     }else{
         //当前购物车中没有该商品
         
-//        NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
-//         ShoppingCarModel *carModel = [ShoppingCarModel initWithGoodModel:model];
-//        [carModel.slideFood addObject:slideFood];
-//        [marr addObject:carModel];
-//        price +=  model.price;
-//        price += slideFood.price;
-//        priceNumber = [NSNumber numberWithFloat:price];
+        //        NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
+        //         ShoppingCarModel *carModel = [ShoppingCarModel initWithGoodModel:model];
+        //        [carModel.slideFood addObject:slideFood];
+        //        [marr addObject:carModel];
+        //        price +=  model.price;
+        //        price += slideFood.price;
+        //        priceNumber = [NSNumber numberWithFloat:price];
         
         
     }
- 
+    
     [data.goodsDict setObject:[NSNumber numberWithFloat:price] forKey:PRICE_KEY];
 }
 
 //还没有测试
 + (void)subGood:(GoodModel *)model{
-     ShoppingCarModel *good = [self findModelWithId:model.goodId];
+    ShoppingCarModel *good = [self findModelWithId:model.goodId];
     
     if(good){
-         ShoppingCarData *data = [self shareInstance];
+        ShoppingCarData *data = [self shareInstance];
         
-//        减去金额
+        //        减去金额
         CGFloat price = [[data.goodsDict objectForKey:PRICE_KEY] floatValue];
         price -= good.price;
         
-        if(good.slideFood.count > 0){
-            for (SlideFoodModel *slide in good.slideFood){
-                price -= slide.price;
+        if(good.slideFoods.count > 0){
+            for (NSArray *array in good.slideFoods){
+                for (SlideFoodModel *slide in array){
+                    price -= slide.price;
+                }
             }
+            
         }
+        
+        //        if(good.slideFood.count > 0){
+        //            for (SlideFoodModel *slide in good.slideFood){
+        //                price -= slide.price;
+        //            }
+        //        }
         
         NSNumber *priceNumber = [NSNumber numberWithFloat:price];
         
         [data.goodsDict setObject:priceNumber forKey:PRICE_KEY];
         
-//        删掉 商品
+        //        删掉 商品
         NSMutableArray *marr = [data.goodsDict objectForKey:GOODS_KEY];
-         [marr removeObject:good];
+        [marr removeObject:good];
         
     }else{
         //出现错误
@@ -179,13 +219,15 @@
     ShoppingCarModel *good = [self findModelWithId:model.goodId];
     
     if(good){
-      
+        
         ShoppingCarData *data = [self shareInstance];
         CGFloat price = [[data.goodsDict objectForKey:PRICE_KEY] floatValue];
         NSNumber *priceNumber = [NSNumber numberWithFloat:price-slideFood.price];
         [data.goodsDict setObject:priceNumber forKey:PRICE_KEY];
         
-          [good.slideFood removeObject:slideFood];
+        NSMutableArray *marr = (NSMutableArray *)good.slideFoods.lastObject;
+        [marr removeObject:slideFood];
+        //          [good.slideFood removeObject:slideFood];
     }else{
         //出现错误
         return;
@@ -250,3 +292,4 @@ static ShoppingCarData *_instance;
 }
 
 @end
+

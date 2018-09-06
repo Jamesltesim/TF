@@ -23,6 +23,7 @@
 - (instancetype)initWithFrame:(CGRect)frame dataArray:(NSArray *)dataArray;
 
 - (void)reloadData:(NSArray <NSDictionary *>*)dataArray;
+- (void)reloadCurrentTableView;
 
 - (void)registerNib:(UINib *)nib forCellReuseIdentifier:(NSString *)identifier;
 

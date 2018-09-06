@@ -138,7 +138,9 @@
 }
 
 - (void)slideCashierViewGotoBillView{
-
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
