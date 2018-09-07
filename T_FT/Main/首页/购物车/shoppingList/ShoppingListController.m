@@ -82,6 +82,7 @@
     if(!_carView){
         _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-HOME_INDICATOR_HEIGHT - 50, SCREEN_WIDTH, 50)];
         _carView.delegate = self;
+        _carView.title = @"查看我的购物篮";
         [_carView LX_SetShadowPathWith:[UIColor blackColor] shadowOpacity:0.03 shadowRadius:2 shadowSide:LXShadowPathTop shadowPathWidth:30];
     }
     return _carView;

@@ -7,11 +7,9 @@
 //
 
 #import "ShoppingCarData.h"
-#import "ShoppingCarModel.h"
 
-#define GOODS_KEY   @"GOODS_KEY"
-#define PRICE_KEY   @"PRICE_KEY"
-#define SLIDE_KEY   @"SLIDE_KEY"
+
+
 
 @interface ShoppingCarData()
 
@@ -89,6 +87,11 @@
         count += model.count;
     }
     return count;
+}
+
++ (NSDictionary *)getAllGoods{
+    ShoppingCarData *data = [self shareInstance];
+    return data.goodsDict;
 }
 
 + (void)addGood:(GoodModel *)model{

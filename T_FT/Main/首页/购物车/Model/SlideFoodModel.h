@@ -13,5 +13,7 @@
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic) CGFloat price;
 
+- (NSDictionary *)toDictionary;
+
 - (instancetype)initWithTitle:(NSString *)title price:(CGFloat)price;
 @end

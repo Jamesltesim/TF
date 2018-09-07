@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "GoodModel.h"
+#import "ShoppingCarModel.h"
+
+
+
+#define GOODS_KEY   @"GOODS_KEY"
+#define PRICE_KEY   @"PRICE_KEY"
 
 @interface ShoppingCarData : NSObject
 
@@ -49,6 +55,14 @@
  @return return value description
  */
 + (CGFloat)getTotalPrices;
+
+
+/**
+ 得到购物车中的所有商品
+
+ @return dict
+ */
++ (NSDictionary *)getAllGoods;
 
 
 /**

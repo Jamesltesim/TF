@@ -11,6 +11,7 @@
 
 @interface ShowShoppingCarView()
 
+@property (nonatomic,strong)  UILabel *name;
 @property (nonatomic,strong) UILabel *number;
 @property (nonatomic,strong) UILabel *price;
 
@@ -77,15 +78,15 @@
         _number.layer.masksToBounds = YES;
         
         //
-        UILabel *name = [[UILabel alloc]init];
-        name.textColor = textColor;
-        name.text = @"查看我的购物篮";
-        name.font = [UIFont systemFontOfSize:15.5];
-        name.backgroundColor = [UIColor clearColor];
+        _name = [[UILabel alloc]init];
+        _name.textColor = textColor;
+        _name.text = self.title;
+        _name.font = [UIFont systemFontOfSize:15.5];
+        _name.backgroundColor = [UIColor clearColor];
         
-        name.center = CGPointMake(frame.size.width/2, frame.size.height/2);
-        [_contentVeiw addSubview:name];
-        [name mas_makeConstraints:^(MASConstraintMaker *make) {
+        _name.center = CGPointMake(frame.size.width/2, frame.size.height/2);
+        [_contentVeiw addSubview:_name];
+        [_name mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(weakSelf);
             
         }];
@@ -109,6 +110,11 @@
         [self addGestureRecognizer:tap];
     }
     return self;
+}
+
+- (void)setTitle:(NSString *)title{
+    _title = title;
+    self.name.text = title;
 }
 
 - (void)tap:(UITapGestureRecognizer *)tap {

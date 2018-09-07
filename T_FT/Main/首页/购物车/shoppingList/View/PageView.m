@@ -99,7 +99,7 @@
         [self.contentViewArray addObject:contentView];
     }
     
-    self.scrollView.contentSize = CGSizeMake(self.frame.size.width*contentArray.count,self.frame.size.height - self.segment.bounds.size.height);
+    self.scrollView.contentSize = CGSizeMake(self.frame.size.width*contentArray.count,self.frame.size.height - self.segment.bounds.size.height-100);
     
 }
 
@@ -118,7 +118,7 @@
         self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, _segment.frame.origin.y+_segment.frame.size.height, self.bounds.size.width, frame.size.height - self.segment.bounds.size.height)];
         self.scrollView.pagingEnabled = YES;
         self.scrollView.delegate = self;
-        self.scrollView.contentSize = CGSizeMake(self.frame.size.width*7,frame.size.height - self.segment.bounds.size.height);
+        self.scrollView.contentSize = CGSizeMake(self.frame.size.width*7,frame.size.height - self.segment.bounds.size.height-100);
         [self addSubview:self.scrollView];
         
         

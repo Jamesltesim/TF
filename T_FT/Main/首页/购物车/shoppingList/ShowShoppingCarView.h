@@ -11,6 +11,8 @@
 
 @interface ShowShoppingCarView : UIView
 
+@property (nonatomic,strong) NSString *title;
+
 @property (nonatomic,strong) id<ShoppingCarDelegate> delegate;
 
 - (void)setNumber:(NSInteger)count price:(CGFloat)price;

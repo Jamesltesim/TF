@@ -11,6 +11,10 @@
 
 @protocol ShoppingCarDelegate <NSObject>
 
+@optional
+- (void)gotoPay;
+
+//slidefood
 - (void)slideCashierViewGotoBillView;
 
 /**

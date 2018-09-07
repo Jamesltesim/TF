@@ -83,6 +83,8 @@
 		1A7181D72140BA380034CEE7 /* TFForwardNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181D62140BA380034CEE7 /* TFForwardNavView.m */; };
 		1A7181DB2140F55C0034CEE7 /* SlideFoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181DA2140F55C0034CEE7 /* SlideFoodModel.m */; };
 		1A7181DE214100310034CEE7 /* SlideCashierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181DD214100310034CEE7 /* SlideCashierView.m */; };
+		1A7181E2214229E30034CEE7 /* ShoppingCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181E0214229E30034CEE7 /* ShoppingCarCell.m */; };
+		1A7181E3214229E30034CEE7 /* ShoppingCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7181E1214229E30034CEE7 /* ShoppingCarCell.xib */; };
 		1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
@@ -403,6 +405,9 @@
 		1A7181DA2140F55C0034CEE7 /* SlideFoodModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideFoodModel.m; sourceTree = "<group>"; };
 		1A7181DC214100310034CEE7 /* SlideCashierView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideCashierView.h; sourceTree = "<group>"; };
 		1A7181DD214100310034CEE7 /* SlideCashierView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideCashierView.m; sourceTree = "<group>"; };
+		1A7181DF214229E30034CEE7 /* ShoppingCarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCarCell.h; sourceTree = "<group>"; };
+		1A7181E0214229E30034CEE7 /* ShoppingCarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarCell.m; sourceTree = "<group>"; };
+		1A7181E1214229E30034CEE7 /* ShoppingCarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCarCell.xib; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -1197,6 +1202,9 @@
 				1A66B8D820F2F31D00464F4E /* ShoppingCarViewController.h */,
 				1A66B8D920F2F31D00464F4E /* ShoppingCarViewController.m */,
 				1A66B90F20F4B44400464F4E /* ShoppingCarDelegate.h */,
+				1A7181DF214229E30034CEE7 /* ShoppingCarCell.h */,
+				1A7181E0214229E30034CEE7 /* ShoppingCarCell.m */,
+				1A7181E1214229E30034CEE7 /* ShoppingCarCell.xib */,
 			);
 			path = "结算";
 			sourceTree = "<group>";
@@ -1996,6 +2004,7 @@
 				1AE423C120FC4998009E8D13 /* MeFooterReusableView.xib in Resources */,
 				1AED01012109E08100ECB82C /* XYPieChart002.png in Resources */,
 				1AED01052109E0A000ECB82C /* README.md in Resources */,
+				1A7181E3214229E30034CEE7 /* ShoppingCarCell.xib in Resources */,
 				1ABDDE0A20D34A1D00E900A8 /* ImgAndTextCollectionViewCell.xib in Resources */,
 				1AE423DF20FD882F009E8D13 /* address_circle@2x.png in Resources */,
 				1AED00F42109E07200ECB82C /* center_white.png in Resources */,
@@ -2191,6 +2200,7 @@
 				1A9329F9210EA6500041B71E /* GradeCollectionViewCell.m in Sources */,
 				1ABDDE2620D3B5E800E900A8 /* WHGradientHelper.m in Sources */,
 				1A2BDFBF20C3C4370023C55D /* AppDelegate.m in Sources */,
+				1A7181E2214229E30034CEE7 /* ShoppingCarCell.m in Sources */,
 				1AB64A0621017BE0004342C5 /* TFAPIConfig.m in Sources */,
 				1AED00F82109E07200ECB82C /* XYRotatedView.m in Sources */,
 				1A66B94020F844CB00464F4E /* TFVerification.m in Sources */,
