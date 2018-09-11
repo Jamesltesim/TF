@@ -72,7 +72,29 @@
 }
 
 - (void)addRightButtonWithTarget:(id)target action:(SEL)action backgroundImage:(UIImage *)image{
+    UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
+    CGFloat width = 25.0;
+    back.frame = CGRectMake(self.width-width-10, 0, width, width);
+    back.center = CGPointMake(self.width-width/2-10, (self.height- STATUSVIEW_HEIGHT)/2+STATUSVIEW_HEIGHT);
+    [back addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    UIImageView *imgV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, width,width)];
+    imgV.image = [UIImage imageNamed:@"home_nav_qrcode"];
+    imgV.center = CGPointMake(back.frame.size.width/2, back.frame.size.height/2);
+    [back addSubview:imgV];
     
+    
+    
+    UIButton *back1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    back1.frame = CGRectMake(self.width-width-10, 0, width, width);
+    back1.center = CGPointMake(self.width-width/2-10, (self.height- STATUSVIEW_HEIGHT)/2+STATUSVIEW_HEIGHT);
+    [back1 addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    UIImageView *imgV1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, width,width)];
+    imgV1.center = CGPointMake(back.frame.size.width/2, back.frame.size.height/2);
+    imgV1.image = [UIImage imageNamed:@"home_nav_qrcode"];
+    [back1 addSubview:imgV1];
+    
+    [self.contentBgView addSubview:back];
+    [self.clearBgView addSubview:back1];
 }
 @end
 

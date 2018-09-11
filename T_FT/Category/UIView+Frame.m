@@ -16,7 +16,7 @@
 
 - (CGFloat)right
 {
-    return self.frame.origin.x + self.frame.size.width;
+    return (self.frame.origin.x + self.frame.size.width);
 }
 
 - (CGFloat)top

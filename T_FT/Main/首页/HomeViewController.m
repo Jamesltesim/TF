@@ -199,7 +199,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     
-    [self.navView scrollToChangeAlpha:scrollView.contentOffset.y];
+//    [self.navView scrollToChangeAlpha:scrollView.contentOffset.y];
     if((scrollView.contentOffset.y+STATUSVIEW_HEIGHT+CONTENT_HEIGHT_NO_BAR_HERGHT) > scrollView.contentSize.height){
         NSLog(@"到底部了");
         
@@ -439,13 +439,15 @@
 - (HomeNavView *)navView{
     if(!_navView){
         _navView = [[HomeNavView alloc] initWithNoBackButton];
+        [_navView addRightButtonWithTarget:self action:@selector(qrCode:) backgroundImage:[UIImage imageNamed:@""]];
 //        [_navView addBackButtonWithTarget:self action:@selector(backTap:)];
         
     }
     return _navView;
 }
 
-- (void)backTap:(UIButton *)sender{
+
+- (void)qrCode:(UIButton *)sender{
     
 }
 

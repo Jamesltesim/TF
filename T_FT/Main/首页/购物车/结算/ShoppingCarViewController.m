@@ -12,6 +12,8 @@
 #import "UIView+LXShadowPath.h"
 #import "ShoppingCarCell.h"
 
+#import "ShoppingCarFoodView.h"
+
 @interface ShoppingCarViewController ()<UITableViewDelegate,UITableViewDataSource,ShoppingCarDelegate>
 
 @property (nonatomic,strong)ShowShoppingCarView *carView;
@@ -40,6 +42,7 @@
     _tabView.dataSource = self;
     
     [_tabView registerNib:[UINib nibWithNibName:@"ShoppingCarCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    _tabView.tableFooterView = [[ShoppingCarFoodView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 150) xiaoji:20.0 discount:45.8 total:22.8];
     [self.view addSubview:_tabView];
     
 }
@@ -76,14 +79,6 @@
     
     if(model.slideFoods.count != 0){
         [cell addSlideFoods:model.slideFoods];
-//        for (NSArray *array in model.slideFoods){
-////            cell addSlideFood:<#(NSDictionary *)#>
-//            for (SlideFoodModel*slideFood in array){
-////                  NSLog(@"slideFood:%@",[slideFood toDictionary]);
-//                [cell addSlideFood:[slideFood toDictionary]];
-//            }
-//
-//        }
     }
     return cell;
 }

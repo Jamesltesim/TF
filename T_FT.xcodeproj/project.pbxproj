@@ -74,6 +74,8 @@
 		1A66B99220F9D26100464F4E /* TFDataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B99120F9D26100464F4E /* TFDataManage.m */; };
 		1A66B99520F9D7AF00464F4E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66B99420F9D7AF00464F4E /* Reachability.m */; };
 		1A66B99720F9D80E00464F4E /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 1A66B99620F9D80E00464F4E /* ReadMe.md */; };
+		1A67E03521478C71002A390B /* abc.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A67E03421478C71002A390B /* abc.plist */; };
+		1A67E03A2147B412002A390B /* ShoppingCarSlideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A67E0392147B412002A390B /* ShoppingCarSlideCell.m */; };
 		1A7181C5213F6DF70034CEE7 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C0213F6DF70034CEE7 /* PageView.m */; };
 		1A7181C6213F6DF70034CEE7 /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C1213F6DF70034CEE7 /* SegmentView.m */; };
 		1A7181C7213F6DF70034CEE7 /* ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181C3213F6DF70034CEE7 /* ContentView.m */; };
@@ -85,6 +87,7 @@
 		1A7181DE214100310034CEE7 /* SlideCashierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181DD214100310034CEE7 /* SlideCashierView.m */; };
 		1A7181E2214229E30034CEE7 /* ShoppingCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7181E0214229E30034CEE7 /* ShoppingCarCell.m */; };
 		1A7181E3214229E30034CEE7 /* ShoppingCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7181E1214229E30034CEE7 /* ShoppingCarCell.xib */; };
+		1A718229214768910034CEE7 /* ShoppingCarFoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A718228214768910034CEE7 /* ShoppingCarFoodView.m */; };
 		1A8739FF20DA03A400B1357E /* PrintPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */; };
 		1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873A0720DA35F800B1357E /* timg-2.jpeg */; };
 		1A873A0B20DA397B00B1357E /* PhotoDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A873A0A20DA397B00B1357E /* PhotoDescViewController.m */; };
@@ -386,6 +389,9 @@
 		1A66B99320F9D7AF00464F4E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1A66B99420F9D7AF00464F4E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		1A66B99620F9D80E00464F4E /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		1A67E03421478C71002A390B /* abc.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = abc.plist; sourceTree = "<group>"; };
+		1A67E0382147B412002A390B /* ShoppingCarSlideCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCarSlideCell.h; sourceTree = "<group>"; };
+		1A67E0392147B412002A390B /* ShoppingCarSlideCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarSlideCell.m; sourceTree = "<group>"; };
 		1A7181BF213F6DF70034CEE7 /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageView.h; sourceTree = "<group>"; };
 		1A7181C0213F6DF70034CEE7 /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
 		1A7181C1213F6DF70034CEE7 /* SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentView.m; sourceTree = "<group>"; };
@@ -408,6 +414,8 @@
 		1A7181DF214229E30034CEE7 /* ShoppingCarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCarCell.h; sourceTree = "<group>"; };
 		1A7181E0214229E30034CEE7 /* ShoppingCarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarCell.m; sourceTree = "<group>"; };
 		1A7181E1214229E30034CEE7 /* ShoppingCarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingCarCell.xib; sourceTree = "<group>"; };
+		1A718227214768910034CEE7 /* ShoppingCarFoodView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCarFoodView.h; sourceTree = "<group>"; };
+		1A718228214768910034CEE7 /* ShoppingCarFoodView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarFoodView.m; sourceTree = "<group>"; };
 		1A8739FD20DA03A400B1357E /* PrintPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintPhotoViewController.h; sourceTree = "<group>"; };
 		1A8739FE20DA03A400B1357E /* PrintPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintPhotoViewController.m; sourceTree = "<group>"; };
 		1A873A0720DA35F800B1357E /* timg-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "timg-2.jpeg"; sourceTree = "<group>"; };
@@ -761,6 +769,7 @@
 		1A2BDFBC20C3C4370023C55D /* T_FT */ = {
 			isa = PBXGroup;
 			children = (
+				1A67E03421478C71002A390B /* abc.plist */,
 				1A2BDFBD20C3C4370023C55D /* AppDelegate.h */,
 				1A2BDFBE20C3C4370023C55D /* AppDelegate.m */,
 				1A2BDFC320C3C4370023C55D /* Main.storyboard */,
@@ -1205,6 +1214,10 @@
 				1A7181DF214229E30034CEE7 /* ShoppingCarCell.h */,
 				1A7181E0214229E30034CEE7 /* ShoppingCarCell.m */,
 				1A7181E1214229E30034CEE7 /* ShoppingCarCell.xib */,
+				1A718227214768910034CEE7 /* ShoppingCarFoodView.h */,
+				1A718228214768910034CEE7 /* ShoppingCarFoodView.m */,
+				1A67E0382147B412002A390B /* ShoppingCarSlideCell.h */,
+				1A67E0392147B412002A390B /* ShoppingCarSlideCell.m */,
 			);
 			path = "结算";
 			sourceTree = "<group>";
@@ -1971,6 +1984,7 @@
 				1A66B92820F5FCD000464F4E /* BundlingCollectionViewCell_1.xib in Resources */,
 				1A66B93520F7213100464F4E /* policy.html in Resources */,
 				1A9ABF8B20D4EA9500DC1F1B /* LostCollectionViewCell.xib in Resources */,
+				1A67E03521478C71002A390B /* abc.plist in Resources */,
 				1AE4240620FDB867009E8D13 /* TF_Address_1.plist in Resources */,
 				1A66B93D20F751D700464F4E /* fingerprint@2x.png in Resources */,
 				90F492D720FCDD9200C56DD4 /* README.md in Resources */,
@@ -2101,6 +2115,7 @@
 				1A66B94820F881D000464F4E /* TFSystemPermission.m in Sources */,
 				1ABDDE4920D3B62200E900A8 /* MASViewAttribute.m in Sources */,
 				1A7181D42140B91E0034CEE7 /* HomeNavView.m in Sources */,
+				1A67E03A2147B412002A390B /* ShoppingCarSlideCell.m in Sources */,
 				1A66B91C20F5DA7800464F4E /* TFAPIForHomebanner.m in Sources */,
 				1ABDDE4B20D3B62200E900A8 /* NSArray+MASAdditions.m in Sources */,
 				1AED01092109E12A00ECB82C /* AccountBookViewController.m in Sources */,
@@ -2119,6 +2134,7 @@
 				1A2BDFF820C3C5180023C55D /* TFViewController.m in Sources */,
 				1A66B90E20F49B8400464F4E /* ShoppingTableViewCell.m in Sources */,
 				1A66B90320F4465800464F4E /* FloatingView.m in Sources */,
+				1A718229214768910034CEE7 /* ShoppingCarFoodView.m in Sources */,
 				1ABDDE1D20D3A4BF00E900A8 /* DCNewFeaturesCell.m in Sources */,
 				1A66B92320F5DE5C00464F4E /* DiscoveryViewController.m in Sources */,
 				1A03A70A20DC976600576A03 /* SoldoutProgressView.m in Sources */,

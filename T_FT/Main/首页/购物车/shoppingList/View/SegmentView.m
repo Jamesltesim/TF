@@ -13,7 +13,7 @@
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) UIView *bottomLine;
 
-@property (nonatomic,strong) NSMutableArray *labArray;
+@property (nonatomic,strong) NSMutableArray *cellArray;
 
 @end
 
@@ -26,22 +26,18 @@
         self.scrollView.showsHorizontalScrollIndicator = NO;
         [self addSubview:self.scrollView];
         
-        self.labArray = [[NSMutableArray alloc]initWithCapacity:0];
+        self.cellArray = [[NSMutableArray alloc]initWithCapacity:0];
         CGFloat x = 0;
         for(int i=0;i<titles.count;i++){
             
             NSString *title = titles[i];
             CGFloat width = [self rectWithString:title fontSize:16];
             
-            UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(x, 0, width, frame.size.height)];
-            label.userInteractionEnabled = YES;
-            label.textColor = [UIColor blueColor];
-            label.backgroundColor = [UIColor yellowColor];
-            label.font = [UIFont systemFontOfSize:16];
-            label.text = title;
-            label.tag = i;
-            label.textAlignment = NSTextAlignmentCenter;
+                SegmentCell *label = [[SegmentCell alloc]initWithFrame:CGRectMake(x, 0, width, frame.size.height)];
+                label.tag = i;
+            label.title = title;
             [self.scrollView addSubview:label];
+
             
             x+=width;
             
@@ -51,7 +47,7 @@
             [label addGestureRecognizer:tap];
             
             
-            [self.labArray addObject:label];
+            [self.cellArray addObject:label];
             
             if(i == 0){
                 self.bottomLine = [[UIView alloc] initWithFrame:CGRectMake(0, label.bounds.size.height-2, label.bounds.size.width, 2)];
@@ -66,10 +62,16 @@
     return self;
 }
 
+- (void)updateRedCircle:(NSInteger)number atIndex:(NSInteger)index{
+    SegmentCell *cell = self.cellArray[index];
+    
+    cell.markRedCircle = [NSString stringWithFormat:@"%ld",number];
+}
+
 - (void)setIndex:(NSInteger)index{
     
     _index = index;
-    UILabel *lab = self.labArray[index];
+    UIView *lab = self.cellArray[index];
     
     [self animateWithLab:lab];
 //    self.scrollView.contentOffset = CGPointMake(screenWidth*index, 0);
@@ -89,7 +91,7 @@
 
 }
 
-- (void)animateWithLab:(UILabel *)lab{
+- (void)animateWithLab:(UIView *)lab{
     //    lab在屏幕的左边，不到屏幕一半的位置
     //     lab在屏幕的右边，大于屏幕一半的位置
     CGFloat screenWidth = self.bounds.size.width;
@@ -132,5 +134,47 @@
     // Drawing code
 }
 */
+
+@end
+
+@interface SegmentCell()
+
+@property (nonatomic,strong) UILabel *titleLab;
+@property (nonatomic,strong) UILabel *circleLab;
+
+@end
+
+@implementation SegmentCell
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        _titleLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        _titleLab.userInteractionEnabled = YES;
+        _titleLab.textColor = [UIColor blueColor];
+        _titleLab.backgroundColor = [UIColor yellowColor];
+        _titleLab.font = [UIFont systemFontOfSize:16];
+        _titleLab.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:_titleLab];
+        
+        _circleLab = [[UILabel alloc]initWithFrame:CGRectMake(frame.size.width-12, 0, 12, 12)];
+        _circleLab.backgroundColor = [UIColor redColor];
+        _circleLab.text = @"1";
+        [self addSubview:_circleLab];
+        
+    }
+    return self;
+}
+
+-(void)setTitle:(NSString *)title{
+    _title = title;
+    _titleLab.text = title;
+}
+
+- (void)setMarkRedCircle:(NSString *)markRedCircle{
+    _markRedCircle = markRedCircle;
+    _circleLab.text = markRedCircle;
+}
 
 @end

@@ -208,8 +208,11 @@
             [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
         }
     
-    
         [ShoppingCarData showOrder];
+}
+
+- (NSInteger)getSelectedGoodCountAtCurrentView{
+    return 0;
 }
 
 #pragma mark ---  内部方法  ---
