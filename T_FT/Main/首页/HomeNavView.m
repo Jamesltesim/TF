@@ -22,8 +22,8 @@
         self.clearBgView.backBtton.hidden = YES;
         self.contentBgView.backBtton.hidden = YES;
         
-        self.contentBgView.backgroundColor = [UIColor yellowColor];
-        self.clearBgView.backgroundColor = [UIColor clearColor];
+        self.contentBgView.alpha = 0;
+        self.clearBgView.alpha = 0;
         self.backgroundColor = [UIColor clearColor];
     }
     return self;
@@ -52,9 +52,9 @@
         
     }
     
-//    NSLog(@"%lf",self.currentProgress);
+    NSLog(@"%lf",self.currentProgress);
     
-    self.contentBgView.alpha = 1-self.currentProgress;
+    self.contentBgView.alpha = self.currentProgress;
 //    self.clearBgView.alpha = 1-self.currentProgress;
 //    [super scrollToChangeAlpha:self.currentProgress];
     

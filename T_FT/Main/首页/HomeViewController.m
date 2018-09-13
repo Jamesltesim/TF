@@ -199,7 +199,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     
-//    [self.navView scrollToChangeAlpha:scrollView.contentOffset.y];
+    [self.navView scrollToChangeAlpha:scrollView.contentOffset.y];
     if((scrollView.contentOffset.y+STATUSVIEW_HEIGHT+CONTENT_HEIGHT_NO_BAR_HERGHT) > scrollView.contentSize.height){
         NSLog(@"到底部了");
         
@@ -469,7 +469,7 @@
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.showsVerticalScrollIndicator = NO;
     //    _collectionView.contentOffset = CGPointMake(0, NAV_HEIGHT);
-    _collectionView.contentInset = UIEdgeInsetsMake(NAV_HEIGHT-STATUSVIEW_HEIGHT, 0, 0, 0);
+    _collectionView.contentInset = UIEdgeInsetsMake(-STATUSVIEW_HEIGHT, 0, 0, 0);
     
     //3.注册collectionViewCell
     //注意，此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致 均为 cellId

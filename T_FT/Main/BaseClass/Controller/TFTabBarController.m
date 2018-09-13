@@ -11,6 +11,7 @@
 #import "HomeViewController.h"
 
 #import "ActivityViewController.h"
+#import "ConvertViewController.h"
 #import "DiscoveryViewController.h"
 
 #import "MeViewController.h"
@@ -29,7 +30,8 @@
     [super viewDidLoad];
     
     self.HomeController = [[HomeViewController alloc]init];
-    ActivityViewController *second = [[ActivityViewController alloc]init];
+//    ActivityViewController *second = [[ActivityViewController alloc]init];
+    ConvertViewController *second = [[ConvertViewController alloc]init];
     
     DiscoveryViewController *discovery = [[DiscoveryViewController alloc]init];
     MeViewController *third = [[MeViewController alloc]init];

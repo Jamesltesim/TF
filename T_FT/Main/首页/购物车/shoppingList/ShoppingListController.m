@@ -52,7 +52,7 @@
 }
 
 - (void)navViewTap:(UITapGestureRecognizer *)tap {
-    DeliveryPickView *pickerView = [[DeliveryPickView alloc]init];
+    DeliveryPickView *pickerView = [[DeliveryPickView alloc] init];
     pickerView.titleLable.text = @"送餐时间";
     [pickerView.confirmButton setTitleColor:THEME_COLOR_RED forState:UIControlStateNormal];
     [pickerView.cancelButton setTitleColor:THEME_COLOR_RED forState:UIControlStateNormal];

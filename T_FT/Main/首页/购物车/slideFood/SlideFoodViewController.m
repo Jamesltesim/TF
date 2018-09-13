@@ -63,8 +63,8 @@
     
     [self.view addSubview:self.slideCashierView];
     
-    [ShoppingCarData addGood:self.goodModel];
-    [ShoppingCarData showOrder];
+//    [ShoppingCarData addGood:self.goodModel];
+//    [ShoppingCarData showOrder];
     
     self.price = self.goodModel.price;
     
@@ -72,8 +72,8 @@
 }
 
 - (void)back:(UIButton *)sender {
-    [ShoppingCarData subGood:self.goodModel];
-    [ShoppingCarData showOrder];
+//    [ShoppingCarData subGood:self.goodModel];
+//    [ShoppingCarData showOrder];
     
     [self dismissViewControllerAnimated:YES completion:^{
     
@@ -107,13 +107,13 @@
     if([self.selectArray containsObject:model]){
         cell.selectedImageView.image = [UIImage imageNamed:@"home_order_slide_circle"];
         [self.selectArray removeObject:model];
-        [ShoppingCarData subGood:self.goodModel slideFood:model];
+//        [ShoppingCarData subGood:self.goodModel slideFood:model];
         
         self.price -= model.price;
     }else{
         cell.selectedImageView.image = [UIImage imageNamed:@"home_order_slide_duihao"];
         [self.selectArray addObject:model];
-        [ShoppingCarData addGood:self.goodModel slideFood:model];
+//        [ShoppingCarData addGood:self.goodModel slideFood:model];
         self.price += model.price;
         
     }
@@ -138,6 +138,12 @@
 }
 
 - (void)slideCashierViewGotoBillView{
+    [ShoppingCarData addGood:self.goodModel];
+    
+    for (SlideFoodModel *model in self.selectArray){
+        [ShoppingCarData addGood:self.goodModel slideFood:model];
+    }
+    [ShoppingCarData showOrder];
     [self dismissViewControllerAnimated:YES completion:^{
         
     }];

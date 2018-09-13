@@ -26,6 +26,14 @@
 		1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02220C4DA390023C55D /* UIImage+imgaeWithColor.m */; };
 		1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02920C519950023C55D /* GradualNavBarController.m */; };
 		1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02C20C5250F0023C55D /* MeHeaderView.m */; };
+		1A4CEB352149F6C000F5A98D /* ConvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB342149F6C000F5A98D /* ConvertViewController.m */; };
+		1A4CEB392149F81500F5A98D /* SeckillTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB372149F81400F5A98D /* SeckillTableViewCell1.m */; };
+		1A4CEB3A2149F81500F5A98D /* SeckillTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A4CEB382149F81400F5A98D /* SeckillTableViewCell1.xib */; };
+		1A4CEB3E2149FCE000F5A98D /* ConvertDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB3D2149FCE000F5A98D /* ConvertDetailController.m */; };
+		1A4CEB422149FF0600F5A98D /* ConvertDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB402149FF0600F5A98D /* ConvertDetailCell.m */; };
+		1A4CEB432149FF0600F5A98D /* ConvertDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A4CEB412149FF0600F5A98D /* ConvertDetailCell.xib */; };
+		1A4CEB46214A01E600F5A98D /* ConvertHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB45214A01E600F5A98D /* ConvertHeaderView.m */; };
+		1A4CEB49214A05C900F5A98D /* ConvertBannerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB48214A05C900F5A98D /* ConvertBannerHeaderView.m */; };
 		1A4DF29821145F7A009854B9 /* DWAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DF29521145F79009854B9 /* DWAnimator.swift */; };
 		1A4DF29921145F7A009854B9 /* DWAnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DF29621145F79009854B9 /* DWAnimatedLabel.swift */; };
 		1A4DF29A21145F7A009854B9 /* DWHollowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4DF29721145F7A009854B9 /* DWHollowLabel.swift */; };
@@ -300,6 +308,20 @@
 		1A2BE02920C519950023C55D /* GradualNavBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradualNavBarController.m; sourceTree = "<group>"; };
 		1A2BE02B20C5250F0023C55D /* MeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeHeaderView.h; sourceTree = "<group>"; };
 		1A2BE02C20C5250F0023C55D /* MeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeHeaderView.m; sourceTree = "<group>"; };
+		1A4CEB332149F6C000F5A98D /* ConvertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvertViewController.h; sourceTree = "<group>"; };
+		1A4CEB342149F6C000F5A98D /* ConvertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConvertViewController.m; sourceTree = "<group>"; };
+		1A4CEB362149F81400F5A98D /* SeckillTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeckillTableViewCell1.h; sourceTree = "<group>"; };
+		1A4CEB372149F81400F5A98D /* SeckillTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeckillTableViewCell1.m; sourceTree = "<group>"; };
+		1A4CEB382149F81400F5A98D /* SeckillTableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeckillTableViewCell1.xib; sourceTree = "<group>"; };
+		1A4CEB3C2149FCE000F5A98D /* ConvertDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvertDetailController.h; sourceTree = "<group>"; };
+		1A4CEB3D2149FCE000F5A98D /* ConvertDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConvertDetailController.m; sourceTree = "<group>"; };
+		1A4CEB3F2149FF0600F5A98D /* ConvertDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvertDetailCell.h; sourceTree = "<group>"; };
+		1A4CEB402149FF0600F5A98D /* ConvertDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConvertDetailCell.m; sourceTree = "<group>"; };
+		1A4CEB412149FF0600F5A98D /* ConvertDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConvertDetailCell.xib; sourceTree = "<group>"; };
+		1A4CEB44214A01E600F5A98D /* ConvertHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvertHeaderView.h; sourceTree = "<group>"; };
+		1A4CEB45214A01E600F5A98D /* ConvertHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConvertHeaderView.m; sourceTree = "<group>"; };
+		1A4CEB47214A05C900F5A98D /* ConvertBannerHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvertBannerHeaderView.h; sourceTree = "<group>"; };
+		1A4CEB48214A05C900F5A98D /* ConvertBannerHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConvertBannerHeaderView.m; sourceTree = "<group>"; };
 		1A4DF29421145F79009854B9 /* DWAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWAnimatedLabel.h; sourceTree = "<group>"; };
 		1A4DF29521145F79009854B9 /* DWAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DWAnimator.swift; sourceTree = "<group>"; };
 		1A4DF29621145F79009854B9 /* DWAnimatedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DWAnimatedLabel.swift; sourceTree = "<group>"; };
@@ -835,6 +857,7 @@
 		1A2BDFFA20C3C54A0023C55D /* 活动 */ = {
 			isa = PBXGroup;
 			children = (
+				1A4CEB3B2149FC8400F5A98D /* 积分商城 */,
 				1AE959A220EB4D6B00C5BDE4 /* TFCloseBothLabel.h */,
 				1AE959A320EB4D6B00C5BDE4 /* TFCloseBothLabel.m */,
 				1A03A70720DC96F500576A03 /* 秒杀团购(仿京东) */,
@@ -880,6 +903,27 @@
 				1AE423C920FC660F009E8D13 /* UIView+UITapGestureRecognizer.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		1A4CEB3B2149FC8400F5A98D /* 积分商城 */ = {
+			isa = PBXGroup;
+			children = (
+				1A4CEB332149F6C000F5A98D /* ConvertViewController.h */,
+				1A4CEB342149F6C000F5A98D /* ConvertViewController.m */,
+				1A4CEB362149F81400F5A98D /* SeckillTableViewCell1.h */,
+				1A4CEB372149F81400F5A98D /* SeckillTableViewCell1.m */,
+				1A4CEB382149F81400F5A98D /* SeckillTableViewCell1.xib */,
+				1A4CEB3C2149FCE000F5A98D /* ConvertDetailController.h */,
+				1A4CEB3D2149FCE000F5A98D /* ConvertDetailController.m */,
+				1A4CEB3F2149FF0600F5A98D /* ConvertDetailCell.h */,
+				1A4CEB402149FF0600F5A98D /* ConvertDetailCell.m */,
+				1A4CEB412149FF0600F5A98D /* ConvertDetailCell.xib */,
+				1A4CEB44214A01E600F5A98D /* ConvertHeaderView.h */,
+				1A4CEB45214A01E600F5A98D /* ConvertHeaderView.m */,
+				1A4CEB47214A05C900F5A98D /* ConvertBannerHeaderView.h */,
+				1A4CEB48214A05C900F5A98D /* ConvertBannerHeaderView.m */,
+			);
+			path = "积分商城";
 			sourceTree = "<group>";
 		};
 		1A4DF28A21145B06009854B9 /* label各种样式显示字 */ = {
@@ -2011,6 +2055,7 @@
 				1A66B92D20F6F75800464F4E /* LoginViewController.xib in Resources */,
 				1AE959AE20ECA04C00C5BDE4 /* HomeheaderReusableView.xib in Resources */,
 				1AC2885C21096CC0009DBC77 /* PartimeTableViewCell.xib in Resources */,
+				1A4CEB3A2149F81500F5A98D /* SeckillTableViewCell1.xib in Resources */,
 				1A66B8E720F3397F00464F4E /* ShoppingListTextCell.xib in Resources */,
 				1ABDDDF920D0F09200E900A8 /* MeCollectionViewCell.xib in Resources */,
 				1AE4240420FDB867009E8D13 /* TF_Address_2.plist in Resources */,
@@ -2022,6 +2067,7 @@
 				1ABDDE0A20D34A1D00E900A8 /* ImgAndTextCollectionViewCell.xib in Resources */,
 				1AE423DF20FD882F009E8D13 /* address_circle@2x.png in Resources */,
 				1AED00F42109E07200ECB82C /* center_white.png in Resources */,
+				1A4CEB432149FF0600F5A98D /* ConvertDetailCell.xib in Resources */,
 				1A2BDFC720C3C4390023C55D /* Assets.xcassets in Resources */,
 				1AC816FC20E2238100B1EE89 /* PrintPhotoTableViewCell.xib in Resources */,
 				1AE4242720FDED52009E8D13 /* address_cancel@2x.png in Resources */,
@@ -2097,6 +2143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A9329F1210EA3DA0041B71E /* DVPieCenterView.m in Sources */,
+				1A4CEB49214A05C900F5A98D /* ConvertBannerHeaderView.m in Sources */,
 				90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */,
 				1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */,
 				1A7181CE213F7AD60034CEE7 /* TFShoppingTableView.m in Sources */,
@@ -2191,6 +2238,7 @@
 				1AC816C920E102C700B1EE89 /* iBeaconViewController.m in Sources */,
 				1AC816FB20E2238100B1EE89 /* PrintPhotoTableViewCell.m in Sources */,
 				1AE959C020EE0D2900C5BDE4 /* DrinksCollectionViewCell.m in Sources */,
+				1A4CEB46214A01E600F5A98D /* ConvertHeaderView.m in Sources */,
 				1ABDDE4520D3B62200E900A8 /* MASCompositeConstraint.m in Sources */,
 				1A66B8CA20EF429000464F4E /* LogoutView.m in Sources */,
 				1A66B8EA20F344C400464F4E /* ShowShoppingCarView.m in Sources */,
@@ -2220,6 +2268,7 @@
 				1AB64A0621017BE0004342C5 /* TFAPIConfig.m in Sources */,
 				1AED00F82109E07200ECB82C /* XYRotatedView.m in Sources */,
 				1A66B94020F844CB00464F4E /* TFVerification.m in Sources */,
+				1A4CEB3E2149FCE000F5A98D /* ConvertDetailController.m in Sources */,
 				1A9329EF210EA3DA0041B71E /* DVFoodPieModel.m in Sources */,
 				1AC8170820E237D700B1EE89 /* EventCalendar.m in Sources */,
 				1A66B91220F5BCE500464F4E /* TFAPIBaseManager.m in Sources */,
@@ -2234,6 +2283,7 @@
 				1A4DF29821145F7A009854B9 /* DWAnimator.swift in Sources */,
 				1A7181DB2140F55C0034CEE7 /* SlideFoodModel.m in Sources */,
 				1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */,
+				1A4CEB352149F6C000F5A98D /* ConvertViewController.m in Sources */,
 				1AE4242320FDE44A009E8D13 /* YXTableViewCell.m in Sources */,
 				1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */,
 				9027FEE120F8EF25003F0A51 /* UIView+LYExtension.m in Sources */,
@@ -2244,8 +2294,10 @@
 				9027FEE320F8EF25003F0A51 /* LYEmptyView.m in Sources */,
 				1AE4242020FDE44A009E8D13 /* YXAlertController.m in Sources */,
 				1A66B8CD20EF429B00464F4E /* LoginView.m in Sources */,
+				1A4CEB422149FF0600F5A98D /* ConvertDetailCell.m in Sources */,
 				90F492CF20FCD1E100C56DD4 /* LHRatingView.m in Sources */,
 				1A9329FE210EB0FB0041B71E /* GradeCollectionReusableView.m in Sources */,
+				1A4CEB392149F81500F5A98D /* SeckillTableViewCell1.m in Sources */,
 				1AC28846210704C6009DBC77 /* UITextView+XMExtension.m in Sources */,
 				1AE959B620ECA81200C5BDE4 /* TFUtils+Device.m in Sources */,
 				1ABDDE0920D34A1D00E900A8 /* ImgAndTextCollectionViewCell.m in Sources */,
