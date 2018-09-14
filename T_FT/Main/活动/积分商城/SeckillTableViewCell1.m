@@ -19,6 +19,9 @@
 //    
 //    self.button.layer.cornerRadius = 2;
     
+    self.shifouxiaoshou.layer.cornerRadius = 8;
+    self.shifouxiaoshou.layer.masksToBounds = YES;
+    self.shifouxiaoshou.backgroundColor = THEME_BACKGROUND_VIEW_GRAY;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 

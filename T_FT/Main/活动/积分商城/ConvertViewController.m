@@ -68,7 +68,10 @@
     
     
     SeckillTableViewCell1 *cell = [tableView dequeueReusableCellWithIdentifier:@"SeckillTableViewCell1"];
-    [cell.soldStatus sold:[sold_count integerValue]  total:[count integerValue]];
+//    [cell.soldStatus sold:[sold_count integerValue]  total:[count integerValue]];
+    
+    cell.shifouxiaoshou.text = @"暂未销售";
+    cell.xiaoshouTime.text = @"9/18 20:00 开售";
     cell.name.text = name;
     cell.price.attributedText = attributedStr;
     cell.yuanjia.text = original_price;

@@ -154,18 +154,22 @@
 //        NSLog(@"%@",NSStringFromCGPoint(scrollView.contentOffset));
         
         self.segment.index = x/w;
+        _currentIndex = self.segment.index;
     }
     
     self.isTapSegment = NO;
 }
 
-
+- (void)updateRedCircle:(NSInteger)number atIndex:(NSInteger)index{
+    [self.segment updateRedCircle:number atIndex:index];
+}
 
 - (void)segmentView:(SegmentView *)segmengtView didSelectedAtIndex:(NSInteger)index{
     NSLog(@"%ld",index);
     self.isTapSegment = YES;
     CGFloat screenWidth = self.bounds.size.width;
     self.scrollView.contentOffset = CGPointMake(screenWidth*index, 0);
+    _currentIndex = index;
 }
 
 

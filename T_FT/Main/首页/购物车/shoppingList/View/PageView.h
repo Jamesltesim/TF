@@ -19,6 +19,8 @@
 
 @property (nonatomic) CGFloat segmentViewHeight; //default 50
 
+//当前显示的segment
+@property (nonatomic) NSInteger currentIndex;
 
 - (instancetype)initWithFrame:(CGRect)frame dataArray:(NSArray *)dataArray;
 
@@ -26,6 +28,8 @@
 - (void)reloadCurrentTableView;
 
 - (void)registerNib:(UINib *)nib forCellReuseIdentifier:(NSString *)identifier;
+
+- (void)updateRedCircle:(NSInteger)number atIndex:(NSInteger)index;
 
 - (void)showCashierDeskWithHeight:(CGFloat)height;
 - (void)hiddenCashierDeskWithHeight:(CGFloat)height;

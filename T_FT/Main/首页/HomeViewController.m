@@ -82,7 +82,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createCollectionView];
-    [self.view addSubview:self.navView];                                                                                                                                                                                                                                                                             
+    [self.view addSubview:self.navView];
+  
      self.navigationController.navigationBar.hidden = YES;
     
     self.view.backgroundColor = [UIColor whiteColor];

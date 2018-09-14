@@ -158,9 +158,15 @@
         _titleLab.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_titleLab];
         
-        _circleLab = [[UILabel alloc]initWithFrame:CGRectMake(frame.size.width-12, 0, 12, 12)];
+        _circleLab = [[UILabel alloc]initWithFrame:CGRectMake(frame.size.width-15, 0, 15, 15)];
         _circleLab.backgroundColor = [UIColor redColor];
-        _circleLab.text = @"1";
+//        _circleLab.text = @"1";
+        _circleLab.hidden = YES;
+        _circleLab.textColor = [UIColor whiteColor];
+        _circleLab.textAlignment = NSTextAlignmentCenter;
+        _circleLab.font = [UIFont systemFontOfSize:12];
+        _circleLab.layer.cornerRadius = _circleLab.frame.size.height/2;
+        _circleLab.layer.masksToBounds = YES;
         [self addSubview:_circleLab];
         
     }
@@ -174,7 +180,14 @@
 
 - (void)setMarkRedCircle:(NSString *)markRedCircle{
     _markRedCircle = markRedCircle;
-    _circleLab.text = markRedCircle;
+    
+    if([markRedCircle integerValue] == 0){
+        _circleLab.hidden = YES;
+    }else{
+        _circleLab.hidden = NO;
+         _circleLab.text = markRedCircle;
+    }
+   
 }
 
 @end

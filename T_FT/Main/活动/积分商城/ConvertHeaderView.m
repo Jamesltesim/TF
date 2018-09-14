@@ -22,12 +22,16 @@
         markView.backgroundColor = [UIColor redColor];
         markView.layer.cornerRadius = 1;
         
-        UILabel *titleLab = [[UILabel alloc]initWithFrame:CGRectMake(markView.right+5, 10, 150, 20)];
+        UILabel *titleLab = [[UILabel alloc]initWithFrame:CGRectMake(markView.right+5, 0, 150, frame.size.height)];
         titleLab.text = title;
         
         [self addSubview:topLineView];
         [self addSubview:markView];
         [self addSubview:titleLab];
+        
+        UIView *bottomLine = [[UIView alloc]initWithFrame:CGRectMake(10,self.height-1, frame.size.width-10, 1)];
+        bottomLine.backgroundColor = THEME_BACKGROUND_VIEW_GRAY;
+        [self addSubview:bottomLine];
     }
     return self;
 }

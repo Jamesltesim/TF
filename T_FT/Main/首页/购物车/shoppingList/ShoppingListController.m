@@ -74,7 +74,10 @@
     
     [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
     [self.pageView reloadCurrentTableView];
-   
+    
+    NSLog(@"当前界面 用户已经选择:%ld 商品",[self getSelectedGoodCountAtCurrentView]);
+    [self.pageView updateRedCircle:[self getSelectedGoodCountAtCurrentView] atIndex:self.pageView.currentIndex];
+    
 }
 #pragma mark---  get set  ---
 
@@ -90,7 +93,7 @@
 
 - (PageView *)pageView{
     if (!_pageView){
-         _pageView = [[PageView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.height-100) dataArray:@[]];
+        _pageView = [[PageView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.height-100) dataArray:@[]];
         _pageView.delegate = self;
     }
     return _pageView;
@@ -111,6 +114,8 @@
     }
     
     [self.pageView reloadData:array];
+    
+    [self getSelectedGoodCountAtCurrentView];
 }
 
 - (void)TFAPICallBackDidFailed:(TFAPIBaseManager *)manager{
@@ -126,7 +131,7 @@
 #pragma mark ---  PageViewDelegate  ---
 
 - (CGFloat)shoppingTableView:(TFShoppingTableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-     NSArray *array = self.contentArray[tableView.segmentIndex];
+    NSArray *array = self.contentArray[tableView.segmentIndex];
     GoodModel *model = array[indexPath.row];
     NSString *imgUrl = model.imgUrl;
     if([imgUrl isEqualToString:@""]){
@@ -188,31 +193,68 @@
     NSArray *array = self.contentArray[tableView.segmentIndex];
     GoodModel *model = array[indexPath.row];
     ShoppingTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        NSLog(@"%@ : titleIndex:%ld rowIndex:%ld",NSStringFromSelector(_cmd),index,indexPath.row);
+    NSLog(@"%@ : titleIndex:%ld rowIndex:%ld",NSStringFromSelector(_cmd),index,indexPath.row);
     
-        //如果需要选择辅食 就弹出新界面
-        if(model.isHaveSlideFood){
-            SlideFoodViewController *slideFoodController = [[SlideFoodViewController alloc] init];
-            slideFoodController.goodModel = model;
-            dispatch_async(dispatch_get_main_queue(),^{
-                [self presentViewController:slideFoodController animated:YES completion:nil];
-            });
+    //如果需要选择辅食 就弹出新界面
+    if(model.isHaveSlideFood){
+        SlideFoodViewController *slideFoodController = [[SlideFoodViewController alloc] init];
+        slideFoodController.goodModel = model;
+        dispatch_async(dispatch_get_main_queue(),^{
+            [self presentViewController:slideFoodController animated:YES completion:nil];
+        });
+        
+    }else{
+        //        否则 就更新购物篮
+        
+        [self showCashierDesk];
+        
+        [ShoppingCarData addGood:model];
+        [cell setGoodsCount:[ShoppingCarData countOfGood:model]];
+        [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
+    }
     
-        }else{
-            //        否则 就更新购物篮
+    [ShoppingCarData showOrder];
+    NSLog(@"当前界面 用户已经选择:%ld 商品",[self getSelectedGoodCountAtCurrentView]);
+    [self.pageView updateRedCircle:[self getSelectedGoodCountAtCurrentView] atIndex:tableView.segmentIndex];
     
-            [self showCashierDesk];
-    
-            [ShoppingCarData addGood:model];
-           [cell setGoodsCount:[ShoppingCarData countOfGood:model]];
-            [self.carView setNumber:[ShoppingCarData getCount] price:[ShoppingCarData getTotalPrices]];
-        }
-    
-        [ShoppingCarData showOrder];
 }
 
 - (NSInteger)getSelectedGoodCountAtCurrentView{
-    return 0;
+    
+    NSArray *array1 = self.contentArray[self.pageView.currentIndex];
+    NSArray *array2 = [ShoppingCarData getAllGoods][GOODS_KEY];
+    
+    NSInteger count = 0;
+    for (ShoppingCarModel *shoppingModel in array2){
+        for (GoodModel *model in array1){
+            if ([shoppingModel.goodId isEqualToNumber:model.goodId]){
+                count += shoppingModel.count;
+            }
+        }
+    }
+    return count;
+}
+
+- (NSArray *)getSelectedAllGoodCount{
+
+    
+    NSMutableArray *marr = [[NSMutableArray alloc]initWithCapacity:0];
+    NSArray *array2 = [ShoppingCarData getAllGoods][GOODS_KEY];
+    for (int i=0;i<self.contentArray.count;i++){
+    
+        NSArray *array1 = self.contentArray[i];
+        
+        NSInteger count = 0;
+        for (ShoppingCarModel *shoppingModel in array2){
+            for (GoodModel *model in array1){
+                if ([shoppingModel.goodId isEqualToNumber:model.goodId]){
+                    count += shoppingModel.count;
+                }
+            }
+        }
+        [marr addObject:[NSNumber numberWithInteger:count]];
+    }
+    return marr;
 }
 
 #pragma mark ---  内部方法  ---
@@ -241,13 +283,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
+
