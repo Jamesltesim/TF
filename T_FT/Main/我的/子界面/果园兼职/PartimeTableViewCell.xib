@@ -23,7 +23,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uw-35-a8f" userLabel="top">
-                        <rect key="frame" x="20" y="11" width="469" height="72.5"/>
+                        <rect key="frame" x="20" y="21" width="469" height="72.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android开发工程师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvi-Ps-6WN">
                                 <rect key="frame" x="8" y="15" width="147" height="21"/>
@@ -65,7 +65,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJV-ke-Uqz" userLabel="middle">
-                        <rect key="frame" x="20" y="83.5" width="469" height="80"/>
+                        <rect key="frame" x="20" y="93.5" width="469" height="80"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kbe-gC-fQJ">
                                 <rect key="frame" x="10" y="12" width="56" height="56"/>
@@ -100,7 +100,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="职位描述" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMD-rx-pxq">
-                        <rect key="frame" x="20" y="183.5" width="469" height="107"/>
+                        <rect key="frame" x="20" y="193.5" width="469" height="97"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -114,21 +114,32 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4t-0y-hW7" userLabel="bottomLine">
+                        <rect key="frame" x="0.0" y="378.5" width="509" height="1"/>
+                        <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="bID-yR-gzX"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="wcF-sf-O0E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="19Q-57-Rn7"/>
                     <constraint firstItem="1uw-35-a8f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="2N4-5N-Mnu"/>
+                    <constraint firstAttribute="bottom" secondItem="l4t-0y-hW7" secondAttribute="bottom" id="3t1-gb-k4G"/>
                     <constraint firstItem="RJV-ke-Uqz" firstAttribute="top" secondItem="1uw-35-a8f" secondAttribute="bottom" id="7Se-5Q-J1f"/>
                     <constraint firstAttribute="bottomMargin" secondItem="wcF-sf-O0E" secondAttribute="bottom" constant="20" id="AJN-I8-ZRk"/>
                     <constraint firstAttribute="trailingMargin" secondItem="wcF-sf-O0E" secondAttribute="trailing" constant="8" id="LrI-qg-X8F"/>
+                    <constraint firstItem="l4t-0y-hW7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MFo-Ud-7mY"/>
                     <constraint firstItem="RJV-ke-Uqz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="PYF-tl-mhX"/>
                     <constraint firstAttribute="trailingMargin" secondItem="RJV-ke-Uqz" secondAttribute="trailing" id="V2q-wU-0dZ"/>
                     <constraint firstItem="KMD-rx-pxq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Y3l-Le-3LP"/>
                     <constraint firstItem="KMD-rx-pxq" firstAttribute="top" secondItem="RJV-ke-Uqz" secondAttribute="bottom" constant="20" id="g1K-YG-PcE"/>
                     <constraint firstAttribute="trailingMargin" secondItem="1uw-35-a8f" secondAttribute="trailing" id="nc5-w4-1JU"/>
+                    <constraint firstAttribute="trailing" secondItem="l4t-0y-hW7" secondAttribute="trailing" id="sQ3-lP-6lH"/>
                     <constraint firstItem="wcF-sf-O0E" firstAttribute="top" secondItem="KMD-rx-pxq" secondAttribute="bottom" constant="20" id="tac-qX-hLE"/>
                     <constraint firstAttribute="trailingMargin" secondItem="KMD-rx-pxq" secondAttribute="trailing" id="u0n-hK-zXN"/>
-                    <constraint firstItem="1uw-35-a8f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="xvw-T3-c0g"/>
+                    <constraint firstItem="1uw-35-a8f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="xvw-T3-c0g"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>

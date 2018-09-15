@@ -380,7 +380,7 @@ static NSString *iden = @"cell";
         [self.navigationController pushViewController:account animated:YES];
     }
     
-    else if([title isEqualToString:@"失物招领"]){
+    else if([title isEqualToString:@"失物招领公益平台"]){
         LostViewController *lost = [[LostViewController alloc]init];
         lost.navView.title = title;
         [self.navigationController pushViewController:lost animated:YES];
@@ -411,7 +411,7 @@ static NSString *iden = @"cell";
     }
     
     else if([title isEqualToString:@"果园兼职"]){
-        FindWorkViewController *controller = [[FindWorkViewController alloc]initWithTableViewFrame:RECT_NAVBAR_AND_NOTABBAR style:UITableViewStylePlain];
+        FindWorkViewController *controller = [[FindWorkViewController alloc]init];
         controller.hidesBottomBarWhenPushed = YES;
 //        controller.navView.title = title;
         [self.navigationController pushViewController:controller animated:YES];

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 James. All rights reserved.
 //
 
-#import "TFTableViewController.h"
+#import "MeSubViewController.h"
 
-@interface FindWorkViewController : TFTableViewController
+@interface FindWorkViewController : MeSubViewController
 
 @end

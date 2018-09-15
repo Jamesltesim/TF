@@ -26,6 +26,7 @@
 		1A2BE02420C4DA390023C55D /* UIImage+imgaeWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02220C4DA390023C55D /* UIImage+imgaeWithColor.m */; };
 		1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02920C519950023C55D /* GradualNavBarController.m */; };
 		1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02C20C5250F0023C55D /* MeHeaderView.m */; };
+		1A4CE2B1214CDA2B00931D83 /* TBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CE2B0214CDA2B00931D83 /* TBTableView.m */; };
 		1A4CEB352149F6C000F5A98D /* ConvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB342149F6C000F5A98D /* ConvertViewController.m */; };
 		1A4CEB392149F81500F5A98D /* SeckillTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB372149F81400F5A98D /* SeckillTableViewCell1.m */; };
 		1A4CEB3A2149F81500F5A98D /* SeckillTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A4CEB382149F81400F5A98D /* SeckillTableViewCell1.xib */; };
@@ -308,6 +309,8 @@
 		1A2BE02920C519950023C55D /* GradualNavBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradualNavBarController.m; sourceTree = "<group>"; };
 		1A2BE02B20C5250F0023C55D /* MeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeHeaderView.h; sourceTree = "<group>"; };
 		1A2BE02C20C5250F0023C55D /* MeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeHeaderView.m; sourceTree = "<group>"; };
+		1A4CE2AF214CDA2B00931D83 /* TBTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBTableView.h; sourceTree = "<group>"; };
+		1A4CE2B0214CDA2B00931D83 /* TBTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBTableView.m; sourceTree = "<group>"; };
 		1A4CEB332149F6C000F5A98D /* ConvertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvertViewController.h; sourceTree = "<group>"; };
 		1A4CEB342149F6C000F5A98D /* ConvertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConvertViewController.m; sourceTree = "<group>"; };
 		1A4CEB362149F81400F5A98D /* SeckillTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeckillTableViewCell1.h; sourceTree = "<group>"; };
@@ -836,6 +839,8 @@
 				1A66B91E20F5DB1400464F4E /* Controller */,
 				1A66B8B820EF194000464F4E /* Network */,
 				1A873A1F20DBA84C00B1357E /* View */,
+				1A4CE2AF214CDA2B00931D83 /* TBTableView.h */,
+				1A4CE2B0214CDA2B00931D83 /* TBTableView.m */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -2147,6 +2152,7 @@
 				90BBBDD720F8FCD600D71B62 /* TBKeyChain.m in Sources */,
 				1ACD2F0720E35F9000301950 /* SeckillViewController.m in Sources */,
 				1A7181CE213F7AD60034CEE7 /* TFShoppingTableView.m in Sources */,
+				1A4CE2B1214CDA2B00931D83 /* TBTableView.m in Sources */,
 				1AE4241C20FDE44A009E8D13 /* NSString+lineSpace.m in Sources */,
 				1AB649FE210046B7004342C5 /* TFTableView.m in Sources */,
 				905233FB2106062C00127250 /* SlideFoodTableViewCell.m in Sources */,
