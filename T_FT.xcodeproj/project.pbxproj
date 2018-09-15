@@ -27,6 +27,7 @@
 		1A2BE02A20C519950023C55D /* GradualNavBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02920C519950023C55D /* GradualNavBarController.m */; };
 		1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02C20C5250F0023C55D /* MeHeaderView.m */; };
 		1A4CE2B1214CDA2B00931D83 /* TBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CE2B0214CDA2B00931D83 /* TBTableView.m */; };
+		1A4CE2B4214CE3E400931D83 /* ShoppingListNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CE2B3214CE3E400931D83 /* ShoppingListNavView.m */; };
 		1A4CEB352149F6C000F5A98D /* ConvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB342149F6C000F5A98D /* ConvertViewController.m */; };
 		1A4CEB392149F81500F5A98D /* SeckillTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB372149F81400F5A98D /* SeckillTableViewCell1.m */; };
 		1A4CEB3A2149F81500F5A98D /* SeckillTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A4CEB382149F81400F5A98D /* SeckillTableViewCell1.xib */; };
@@ -311,6 +312,8 @@
 		1A2BE02C20C5250F0023C55D /* MeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeHeaderView.m; sourceTree = "<group>"; };
 		1A4CE2AF214CDA2B00931D83 /* TBTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBTableView.h; sourceTree = "<group>"; };
 		1A4CE2B0214CDA2B00931D83 /* TBTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBTableView.m; sourceTree = "<group>"; };
+		1A4CE2B2214CE3E400931D83 /* ShoppingListNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingListNavView.h; sourceTree = "<group>"; };
+		1A4CE2B3214CE3E400931D83 /* ShoppingListNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingListNavView.m; sourceTree = "<group>"; };
 		1A4CEB332149F6C000F5A98D /* ConvertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvertViewController.h; sourceTree = "<group>"; };
 		1A4CEB342149F6C000F5A98D /* ConvertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConvertViewController.m; sourceTree = "<group>"; };
 		1A4CEB362149F81400F5A98D /* SeckillTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeckillTableViewCell1.h; sourceTree = "<group>"; };
@@ -1219,6 +1222,8 @@
 				1A66B90D20F49B8400464F4E /* ShoppingTableViewCell.m */,
 				1A7181CB213F7A800034CEE7 /* PageViewDelegate.h */,
 				1A7181CF213F80060034CEE7 /* View */,
+				1A4CE2B2214CE3E400931D83 /* ShoppingListNavView.h */,
+				1A4CE2B3214CE3E400931D83 /* ShoppingListNavView.m */,
 			);
 			path = shoppingList;
 			sourceTree = "<group>";
@@ -2290,6 +2295,7 @@
 				1A7181DB2140F55C0034CEE7 /* SlideFoodModel.m in Sources */,
 				1A66B8F520F363EA00464F4E /* ShoppingCarModel.m in Sources */,
 				1A4CEB352149F6C000F5A98D /* ConvertViewController.m in Sources */,
+				1A4CE2B4214CE3E400931D83 /* ShoppingListNavView.m in Sources */,
 				1AE4242320FDE44A009E8D13 /* YXTableViewCell.m in Sources */,
 				1A873A1920DB96CA00B1357E /* ShowImageViewController.m in Sources */,
 				9027FEE120F8EF25003F0A51 /* UIView+LYExtension.m in Sources */,

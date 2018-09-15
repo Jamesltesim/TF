@@ -13,12 +13,15 @@
 #import "ShoppingCarCell.h"
 
 #import "ShoppingCarFoodView.h"
+#import "TFForwardNavView.h"
 
 @interface ShoppingCarViewController ()<UITableViewDelegate,UITableViewDataSource,ShoppingCarDelegate>
 
 @property (nonatomic,strong)ShowShoppingCarView *carView;
 @property (nonatomic,strong) UITableView *tabView;
 @property (nonatomic,strong) NSArray *dataArray;
+
+@property (nonatomic,strong) TFForwardNavView *navView;
 
 @end
 
@@ -29,7 +32,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     NSLog(@"%@",[ShoppingCarData getAllGoods]);
-    
     
     
     self.dataArray = [ShoppingCarData getAllGoods][GOODS_KEY];
@@ -44,6 +46,8 @@
     [_tabView registerNib:[UINib nibWithNibName:@"ShoppingCarCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     _tabView.tableFooterView = [[ShoppingCarFoodView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 150) xiaoji:20.0 discount:45.8 total:22.8];
     [self.view addSubview:_tabView];
+    
+    [self.view addSubview:self.navView];
     
 }
 - (void)didReceiveMemoryWarning {
@@ -85,6 +89,17 @@
 
 #pragma mark---  get set  ---
 
+
+- (TFForwardNavView *)navView{
+    if(!_navView){
+        _navView = [[TFForwardNavView alloc]init];
+        [_navView addBackButtonWithTarget:self action:@selector(back)];
+    }
+    return _navView;
+}
+- (void)back{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (ShowShoppingCarView *)carView{
     if(!_carView){
         _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-HOME_INDICATOR_HEIGHT - 50, SCREEN_WIDTH, 50)];

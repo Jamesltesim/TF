@@ -20,14 +20,19 @@
 #import "UIView+LXShadowPath.h"
 #import "ShoppingCarViewController.h"
 
+#import "ShoppingListNavView.h"
+
 @interface ShoppingListController ()<TFAPICallBackProtocol,PageViewDelegate,ShoppingCarDelegate>
 
+@property (nonatomic,strong) UIImageView *headerImgView;
 @property (nonatomic,strong)PageView *pageView;
 
 @property (nonatomic,strong)NSMutableArray *titleArray;
 @property (nonatomic,strong)NSMutableArray *contentArray;
 
 @property (nonatomic,strong)ShowShoppingCarView *carView;
+
+@property (nonatomic,strong) ShoppingListNavView *navView;
 
 @end
 
@@ -46,6 +51,9 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+
+    [self.view addSubview:self.headerImgView];
+        [self.view addSubview:self.navView];
     [self.view addSubview:self.pageView];
     
     
@@ -81,6 +89,18 @@
 }
 #pragma mark---  get set  ---
 
+- (ShoppingListNavView *)navView{
+    if(!_navView){
+        _navView = [[ShoppingListNavView alloc]init];
+        [_navView addBackButtonWithTarget:self action:@selector(back)];
+    }
+    return _navView;
+}
+
+- (void)back{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (ShowShoppingCarView *)carView{
     if(!_carView){
         _carView = [[ShowShoppingCarView alloc]initWithFrame:CGRectMake(0,SCREEN_HEIGHT-HOME_INDICATOR_HEIGHT - 50, SCREEN_WIDTH, 50)];
@@ -91,6 +111,13 @@
     return _carView;
 }
 
+- (UIImageView *)headerImgView{
+    if(!_headerImgView){
+        _headerImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 100)];
+        _headerImgView.backgroundColor = [UIColor purpleColor];
+    }
+    return _headerImgView;
+}
 - (PageView *)pageView{
     if (!_pageView){
         _pageView = [[PageView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.height-100) dataArray:@[]];

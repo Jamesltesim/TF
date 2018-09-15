@@ -34,6 +34,7 @@
         
         [self addSubview:self.contentBgView];
         [self addSubview:self.clearBgView];
+//        self.clearBgView.alpha = 0;
 
     }
     return self;
