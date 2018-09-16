@@ -58,10 +58,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrG-Zk-HyB">
-                        <rect key="frame" x="376" y="83.5" width="135" height="47"/>
+                        <rect key="frame" x="411" y="83.5" width="100" height="47"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="show_1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiO-64-T4x">
-                                <rect key="frame" x="27.5" y="0.0" width="80" height="18"/>
+                                <rect key="frame" x="10" y="0.0" width="80" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="z3m-H9-fNI"/>
                                 </constraints>
@@ -70,7 +70,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="show_2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRq-IJ-WOB">
-                                <rect key="frame" x="0.0" y="29" width="135" height="18"/>
+                                <rect key="frame" x="0.0" y="29" width="100" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,7 +78,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="135" id="9Wi-KP-Zid"/>
+                            <constraint firstAttribute="width" constant="100" id="9Wi-KP-Zid"/>
                             <constraint firstItem="JiO-64-T4x" firstAttribute="top" secondItem="QrG-Zk-HyB" secondAttribute="top" id="Yjz-KE-yzq"/>
                             <constraint firstAttribute="height" constant="47" id="ZLV-IN-oG7"/>
                             <constraint firstItem="JiO-64-T4x" firstAttribute="centerX" secondItem="QrG-Zk-HyB" secondAttribute="centerX" id="f49-h8-1Gf"/>

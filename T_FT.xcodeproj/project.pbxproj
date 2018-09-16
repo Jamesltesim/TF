@@ -28,6 +28,8 @@
 		1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BE02C20C5250F0023C55D /* MeHeaderView.m */; };
 		1A4CE2B1214CDA2B00931D83 /* TBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CE2B0214CDA2B00931D83 /* TBTableView.m */; };
 		1A4CE2B4214CE3E400931D83 /* ShoppingListNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CE2B3214CE3E400931D83 /* ShoppingListNavView.m */; };
+		1A4CE2C3214E533F00931D83 /* GradeHeaderView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CE2C1214E533F00931D83 /* GradeHeaderView1.m */; };
+		1A4CE2C4214E533F00931D83 /* GradeHeaderView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A4CE2C2214E533F00931D83 /* GradeHeaderView1.xib */; };
 		1A4CEB352149F6C000F5A98D /* ConvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB342149F6C000F5A98D /* ConvertViewController.m */; };
 		1A4CEB392149F81500F5A98D /* SeckillTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CEB372149F81400F5A98D /* SeckillTableViewCell1.m */; };
 		1A4CEB3A2149F81500F5A98D /* SeckillTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A4CEB382149F81400F5A98D /* SeckillTableViewCell1.xib */; };
@@ -314,6 +316,9 @@
 		1A4CE2B0214CDA2B00931D83 /* TBTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBTableView.m; sourceTree = "<group>"; };
 		1A4CE2B2214CE3E400931D83 /* ShoppingListNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingListNavView.h; sourceTree = "<group>"; };
 		1A4CE2B3214CE3E400931D83 /* ShoppingListNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingListNavView.m; sourceTree = "<group>"; };
+		1A4CE2C0214E533F00931D83 /* GradeHeaderView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradeHeaderView1.h; sourceTree = "<group>"; };
+		1A4CE2C1214E533F00931D83 /* GradeHeaderView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradeHeaderView1.m; sourceTree = "<group>"; };
+		1A4CE2C2214E533F00931D83 /* GradeHeaderView1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeHeaderView1.xib; sourceTree = "<group>"; };
 		1A4CEB332149F6C000F5A98D /* ConvertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvertViewController.h; sourceTree = "<group>"; };
 		1A4CEB342149F6C000F5A98D /* ConvertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConvertViewController.m; sourceTree = "<group>"; };
 		1A4CEB362149F81400F5A98D /* SeckillTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeckillTableViewCell1.h; sourceTree = "<group>"; };
@@ -1391,6 +1396,9 @@
 				1A9329FB210EB0FB0041B71E /* GradeCollectionReusableView.h */,
 				1A9329FC210EB0FB0041B71E /* GradeCollectionReusableView.m */,
 				1A9329FD210EB0FB0041B71E /* GradeCollectionReusableView.xib */,
+				1A4CE2C0214E533F00931D83 /* GradeHeaderView1.h */,
+				1A4CE2C1214E533F00931D83 /* GradeHeaderView1.m */,
+				1A4CE2C2214E533F00931D83 /* GradeHeaderView1.xib */,
 			);
 			path = "会员";
 			sourceTree = "<group>";
@@ -2054,6 +2062,7 @@
 				1A66B99720F9D80E00464F4E /* ReadMe.md in Resources */,
 				1A873A0820DA35F800B1357E /* timg-2.jpeg in Resources */,
 				90F492D120FCD21500C56DD4 /* README.md in Resources */,
+				1A4CE2C4214E533F00931D83 /* GradeHeaderView1.xib in Resources */,
 				1AE423EC20FD8D9D009E8D13 /* address_check@2x.png in Resources */,
 				1AE4240120FDB867009E8D13 /* 2.gif in Resources */,
 				1A66B8DF20F2F4B400464F4E /* ShoppingListImageCell.xib in Resources */,
@@ -2267,6 +2276,7 @@
 				1A2BE02D20C5250F0023C55D /* MeHeaderView.m in Sources */,
 				1A66B93A20F74AA600464F4E /* FingerprintViewController.m in Sources */,
 				1A2BDFFE20C3C5690023C55D /* HomeViewController.m in Sources */,
+				1A4CE2C3214E533F00931D83 /* GradeHeaderView1.m in Sources */,
 				1ABDDE4C20D3B62200E900A8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				1A03A70520DC836200576A03 /* SeckillTableViewCell.m in Sources */,
 				1AED00F52109E07200ECB82C /* XYCommon.m in Sources */,

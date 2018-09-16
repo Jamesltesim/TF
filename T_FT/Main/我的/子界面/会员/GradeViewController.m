@@ -9,6 +9,7 @@
 #import "GradeViewController.h"
 #import "GradeCollectionViewCell.h"
 #import "GradeCollectionReusableView.h"
+#import "GradeHeaderView1.h"
 
 @interface GradeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -123,11 +124,14 @@
 
     if([kind isEqualToString:UICollectionElementKindSectionHeader]){
         UICollectionReusableView *headerView = nil;
-//        if(indexPath.section == 0){
+        if(indexPath.section == 0){
             headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"GradeCollectionReusableView" forIndexPath:indexPath];
-        return headerView;
-//        }
         
+        }else if (indexPath.section == 1){
+            headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"GradeHeaderView1" forIndexPath:indexPath];
+        }
+        return headerView;
+    
     }
     else if ([kind isEqualToString:UICollectionElementKindSectionFooter]){
        
@@ -151,7 +155,7 @@
     if(section == 0){
         return CGSizeMake(self.view.frame.size.width, 230);
     }
-    return CGSizeMake(self.view.frame.size.width, 30);
+    return CGSizeMake(self.view.frame.size.width, 50);
 }
 //
 //- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
@@ -186,6 +190,7 @@
     
     //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView
     [_collectionView registerNib:[UINib nibWithNibName:@"GradeCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"GradeCollectionReusableView"];
+     [_collectionView registerNib:[UINib nibWithNibName:@"GradeHeaderView1" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"GradeHeaderView1"];
 //    [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"index0_ReusableView"];
 //    [_collectionView registerNib:[UINib nibWithNibName:@"HomeFooterReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"HomeFooterReusableView"];
     

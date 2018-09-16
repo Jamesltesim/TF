@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="GradeHeaderView1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的特权" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4W-Ap-97n">
+                    <rect key="frame" x="10" y="0.0" width="77.5" height="50"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等级越高 权益越多" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eL-8g-Yr7">
+                    <rect key="frame" x="191.5" y="0.0" width="118.5" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0eL-8g-Yr7" secondAttribute="trailing" constant="10" id="F8U-R6-qMf"/>
+                <constraint firstItem="0eL-8g-Yr7" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="FWi-tj-N6C"/>
+                <constraint firstAttribute="bottom" secondItem="0eL-8g-Yr7" secondAttribute="bottom" id="Q0t-Cs-6ON"/>
+                <constraint firstItem="r4W-Ap-97n" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="WOh-e6-Skd"/>
+                <constraint firstAttribute="bottom" secondItem="r4W-Ap-97n" secondAttribute="bottom" id="oDz-cO-VCO"/>
+                <constraint firstItem="r4W-Ap-97n" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="qr2-cT-JWl"/>
+            </constraints>
+            <connections>
+                <outlet property="content" destination="0eL-8g-Yr7" id="atw-ZR-KiZ"/>
+                <outlet property="name" destination="r4W-Ap-97n" id="R9a-Bf-y5d"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>
